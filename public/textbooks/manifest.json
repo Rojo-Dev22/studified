@@ -1,0 +1,740 @@
+{
+  "generatedAt": "2026-06-07T15:50:45.843Z",
+  "books": [
+    {
+      "id": "book_9_1",
+      "grade": 9,
+      "subject": "Mathematics",
+      "language": "en",
+      "title": "Mathematics Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/Math's.pdf",
+      "chunksFile": "g9_mathematics_en.json",
+      "keywords": [
+        "mathematics",
+        "grade",
+        "9",
+        "mathematics"
+      ]
+    },
+    {
+      "id": "book_9_2",
+      "grade": 9,
+      "subject": "English",
+      "language": "en",
+      "title": "English Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/English.pdf",
+      "chunksFile": "g9_english_en.json",
+      "keywords": [
+        "english",
+        "grade",
+        "9",
+        "english"
+      ]
+    },
+    {
+      "id": "book_9_3",
+      "grade": 9,
+      "subject": "Physics",
+      "language": "en",
+      "title": "Physics Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/Physics.pdf",
+      "chunksFile": "g9_physics_en.json",
+      "keywords": [
+        "physics",
+        "grade",
+        "9",
+        "physics"
+      ]
+    },
+    {
+      "id": "book_9_4",
+      "grade": 9,
+      "subject": "Chemistry",
+      "language": "en",
+      "title": "Chemistry Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/Chemistry.pdf",
+      "chunksFile": "g9_chemistry_en.json",
+      "keywords": [
+        "chemistry",
+        "grade",
+        "9",
+        "chemistry"
+      ]
+    },
+    {
+      "id": "book_9_5",
+      "grade": 9,
+      "subject": "Biology",
+      "language": "en",
+      "title": "Biology Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/Biology.pdf",
+      "chunksFile": "g9_biology_en.json",
+      "keywords": [
+        "biology",
+        "grade",
+        "9",
+        "biology"
+      ]
+    },
+    {
+      "id": "book_9_6",
+      "grade": 9,
+      "subject": "Economics",
+      "language": "en",
+      "title": "Economics Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/Economics.pdf",
+      "chunksFile": "g9_economics_en.json",
+      "keywords": [
+        "economics",
+        "grade",
+        "9",
+        "economics"
+      ]
+    },
+    {
+      "id": "book_9_7",
+      "grade": 9,
+      "subject": "Amharic",
+      "language": "am",
+      "title": "Amharic Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/Amharic.pdf",
+      "chunksFile": "g9_amharic_am.json",
+      "keywords": [
+        "amharic",
+        "grade",
+        "9",
+        "amharic"
+      ]
+    },
+    {
+      "id": "book_9_8",
+      "grade": 9,
+      "subject": "Citizenship",
+      "language": "en",
+      "title": "Citizenship Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/Citizenship.pdf",
+      "chunksFile": "g9_citizenship_en.json",
+      "keywords": [
+        "citizenship",
+        "grade",
+        "9",
+        "citizenship"
+      ]
+    },
+    {
+      "id": "book_9_9",
+      "grade": 9,
+      "subject": "History",
+      "language": "en",
+      "title": "History Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/History.pdf",
+      "chunksFile": "g9_history_en.json",
+      "keywords": [
+        "history",
+        "grade",
+        "9",
+        "history"
+      ]
+    },
+    {
+      "id": "book_9_10",
+      "grade": 9,
+      "subject": "Geography",
+      "language": "en",
+      "title": "Geography Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/Geography.pdf",
+      "chunksFile": "g9_geography_en.json",
+      "keywords": [
+        "geography",
+        "grade",
+        "9",
+        "geography"
+      ]
+    },
+    {
+      "id": "book_9_11",
+      "grade": 9,
+      "subject": "IT",
+      "language": "en",
+      "title": "Information Technology Student Textbook (New Curriculum) Grade 9",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/Information%20Technology.pdf",
+      "chunksFile": "g9_ict_en.json",
+      "keywords": [
+        "it",
+        "grade",
+        "9",
+        "information technology"
+      ]
+    },
+    {
+      "id": "book_10_12",
+      "grade": 10,
+      "subject": "Mathematics",
+      "language": "en",
+      "title": "Mathematics Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/Math's.pdf",
+      "chunksFile": "g10_mathematics_en.json",
+      "keywords": [
+        "mathematics",
+        "grade",
+        "10",
+        "mathematics"
+      ]
+    },
+    {
+      "id": "book_10_13",
+      "grade": 10,
+      "subject": "English",
+      "language": "en",
+      "title": "English Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/English.pdf",
+      "chunksFile": "g10_english_en.json",
+      "keywords": [
+        "english",
+        "grade",
+        "10",
+        "english"
+      ]
+    },
+    {
+      "id": "book_10_14",
+      "grade": 10,
+      "subject": "Physics",
+      "language": "en",
+      "title": "Physics Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/Physics.pdf",
+      "chunksFile": "g10_physics_en.json",
+      "keywords": [
+        "physics",
+        "grade",
+        "10",
+        "physics"
+      ]
+    },
+    {
+      "id": "book_10_15",
+      "grade": 10,
+      "subject": "Chemistry",
+      "language": "en",
+      "title": "Chemistry Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/Chemistry.pdf",
+      "chunksFile": "g10_chemistry_en.json",
+      "keywords": [
+        "chemistry",
+        "grade",
+        "10",
+        "chemistry"
+      ]
+    },
+    {
+      "id": "book_10_16",
+      "grade": 10,
+      "subject": "Biology",
+      "language": "en",
+      "title": "Biology Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/Biology.pdf",
+      "chunksFile": "g10_biology_en.json",
+      "keywords": [
+        "biology",
+        "grade",
+        "10",
+        "biology"
+      ]
+    },
+    {
+      "id": "book_10_17",
+      "grade": 10,
+      "subject": "Economics",
+      "language": "en",
+      "title": "Economics Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/Economics.pdf",
+      "chunksFile": "g10_economics_en.json",
+      "keywords": [
+        "economics",
+        "grade",
+        "10",
+        "economics"
+      ]
+    },
+    {
+      "id": "book_10_18",
+      "grade": 10,
+      "subject": "Amharic",
+      "language": "am",
+      "title": "Amharic Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/Amharic.pdf",
+      "chunksFile": "g10_amharic_am.json",
+      "keywords": [
+        "amharic",
+        "grade",
+        "10",
+        "amharic"
+      ]
+    },
+    {
+      "id": "book_10_19",
+      "grade": 10,
+      "subject": "Citizenship",
+      "language": "en",
+      "title": "Citizenship Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/Citizenship.pdf",
+      "chunksFile": "g10_citizenship_en.json",
+      "keywords": [
+        "citizenship",
+        "grade",
+        "10",
+        "citizenship"
+      ]
+    },
+    {
+      "id": "book_10_20",
+      "grade": 10,
+      "subject": "History",
+      "language": "en",
+      "title": "History Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/History.pdf",
+      "chunksFile": "g10_history_en.json",
+      "keywords": [
+        "history",
+        "grade",
+        "10",
+        "history"
+      ]
+    },
+    {
+      "id": "book_10_21",
+      "grade": 10,
+      "subject": "Geography",
+      "language": "en",
+      "title": "Geography Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/Geography.pdf",
+      "chunksFile": "g10_geography_en.json",
+      "keywords": [
+        "geography",
+        "grade",
+        "10",
+        "geography"
+      ]
+    },
+    {
+      "id": "book_10_22",
+      "grade": 10,
+      "subject": "IT",
+      "language": "en",
+      "title": "Information Technology Student Textbook (New Curriculum) Grade 10",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/Information%20Technology.pdf",
+      "chunksFile": "g10_ict_en.json",
+      "keywords": [
+        "it",
+        "grade",
+        "10",
+        "information technology"
+      ]
+    },
+    {
+      "id": "book_11_23",
+      "grade": 11,
+      "subject": "Mathematics",
+      "language": "en",
+      "title": "Mathematics Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Math's.pdf",
+      "chunksFile": "g11_mathematics_en.json",
+      "keywords": [
+        "mathematics",
+        "grade",
+        "11",
+        "mathematics"
+      ]
+    },
+    {
+      "id": "book_11_24",
+      "grade": 11,
+      "subject": "English",
+      "language": "en",
+      "title": "English Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/English.pdf",
+      "chunksFile": "g11_english_en.json",
+      "keywords": [
+        "english",
+        "grade",
+        "11",
+        "english"
+      ]
+    },
+    {
+      "id": "book_11_25",
+      "grade": 11,
+      "subject": "Physics",
+      "language": "en",
+      "title": "Physics Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Physics.pdf",
+      "chunksFile": "g11_physics_en.json",
+      "keywords": [
+        "physics",
+        "grade",
+        "11",
+        "physics"
+      ]
+    },
+    {
+      "id": "book_11_26",
+      "grade": 11,
+      "subject": "Chemistry",
+      "language": "en",
+      "title": "Chemistry Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Chemistry.pdf",
+      "chunksFile": "g11_chemistry_en.json",
+      "keywords": [
+        "chemistry",
+        "grade",
+        "11",
+        "chemistry"
+      ]
+    },
+    {
+      "id": "book_11_27",
+      "grade": 11,
+      "subject": "Biology",
+      "language": "en",
+      "title": "Biology Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Biology.pdf",
+      "chunksFile": "g11_biology_en.json",
+      "keywords": [
+        "biology",
+        "grade",
+        "11",
+        "biology"
+      ]
+    },
+    {
+      "id": "book_11_28",
+      "grade": 11,
+      "subject": "Economics",
+      "language": "en",
+      "title": "Economics Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Economics.pdf",
+      "chunksFile": "g11_economics_en.json",
+      "keywords": [
+        "economics",
+        "grade",
+        "11",
+        "economics"
+      ]
+    },
+    {
+      "id": "book_11_29",
+      "grade": 11,
+      "subject": "History",
+      "language": "en",
+      "title": "History Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/History.pdf",
+      "chunksFile": "g11_history_en.json",
+      "keywords": [
+        "history",
+        "grade",
+        "11",
+        "history"
+      ]
+    },
+    {
+      "id": "book_11_30",
+      "grade": 11,
+      "subject": "Geography",
+      "language": "en",
+      "title": "Geography Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Geography.pdf",
+      "chunksFile": "g11_geography_en.json",
+      "keywords": [
+        "geography",
+        "grade",
+        "11",
+        "geography"
+      ]
+    },
+    {
+      "id": "book_11_31",
+      "grade": 11,
+      "subject": "Accounting and Finance",
+      "language": "en",
+      "title": "Accounting and Finance Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Accounting%20and%20Finance.pdf",
+      "chunksFile": "g11_accounting_and_finance_en.json",
+      "keywords": [
+        "accounting and finance",
+        "grade",
+        "11",
+        "accounting and finance"
+      ]
+    },
+    {
+      "id": "book_11_32",
+      "grade": 11,
+      "subject": "Marketing",
+      "language": "en",
+      "title": "Marketing Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Marketing.pdf",
+      "chunksFile": "g11_marketing_en.json",
+      "keywords": [
+        "marketing",
+        "grade",
+        "11",
+        "marketing"
+      ]
+    },
+    {
+      "id": "book_11_33",
+      "grade": 11,
+      "subject": "Computer Maintenance",
+      "language": "en",
+      "title": "Computer Maintenance Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Computer%20Maintenance.pdf",
+      "chunksFile": "g11_computer_maintenance_en.json",
+      "keywords": [
+        "computer maintenance",
+        "grade",
+        "11",
+        "computer maintenance"
+      ]
+    },
+    {
+      "id": "book_11_34",
+      "grade": 11,
+      "subject": "IT",
+      "language": "en",
+      "title": "Information Technology Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Information%20Technology.pdf",
+      "chunksFile": "g11_ict_en.json",
+      "keywords": [
+        "it",
+        "grade",
+        "11",
+        "information technology"
+      ]
+    },
+    {
+      "id": "book_11_35",
+      "grade": 11,
+      "subject": "Web Design",
+      "language": "en",
+      "title": "Web Design Student Textbook (New Curriculum) Grade 11",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/Web%20Design.pdf",
+      "chunksFile": "g11_web_design_en.json",
+      "keywords": [
+        "web design",
+        "grade",
+        "11",
+        "web design"
+      ]
+    },
+    {
+      "id": "book_12_36",
+      "grade": 12,
+      "subject": "Mathematics",
+      "language": "en",
+      "title": "Mathematics Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Math's.pdf",
+      "chunksFile": "g12_mathematics_en.json",
+      "keywords": [
+        "mathematics",
+        "grade",
+        "12",
+        "mathematics"
+      ]
+    },
+    {
+      "id": "book_12_37",
+      "grade": 12,
+      "subject": "English",
+      "language": "en",
+      "title": "English Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/English.pdf",
+      "chunksFile": "g12_english_en.json",
+      "keywords": [
+        "english",
+        "grade",
+        "12",
+        "english"
+      ]
+    },
+    {
+      "id": "book_12_38",
+      "grade": 12,
+      "subject": "Physics",
+      "language": "en",
+      "title": "Physics Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Physics.pdf",
+      "chunksFile": "g12_physics_en.json",
+      "keywords": [
+        "physics",
+        "grade",
+        "12",
+        "physics"
+      ]
+    },
+    {
+      "id": "book_12_39",
+      "grade": 12,
+      "subject": "Chemistry",
+      "language": "en",
+      "title": "Chemistry Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Chemistry.pdf",
+      "chunksFile": "g12_chemistry_en.json",
+      "keywords": [
+        "chemistry",
+        "grade",
+        "12",
+        "chemistry"
+      ]
+    },
+    {
+      "id": "book_12_40",
+      "grade": 12,
+      "subject": "Biology",
+      "language": "en",
+      "title": "Biology Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Biology.pdf",
+      "chunksFile": "g12_biology_en.json",
+      "keywords": [
+        "biology",
+        "grade",
+        "12",
+        "biology"
+      ]
+    },
+    {
+      "id": "book_12_41",
+      "grade": 12,
+      "subject": "Economics",
+      "language": "en",
+      "title": "Economics Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Economics.pdf",
+      "chunksFile": "g12_economics_en.json",
+      "keywords": [
+        "economics",
+        "grade",
+        "12",
+        "economics"
+      ]
+    },
+    {
+      "id": "book_12_42",
+      "grade": 12,
+      "subject": "Citizenship",
+      "language": "en",
+      "title": "Citizenship Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Citizenship.pdf",
+      "chunksFile": "g12_citizenship_en.json",
+      "keywords": [
+        "citizenship",
+        "grade",
+        "12",
+        "citizenship"
+      ]
+    },
+    {
+      "id": "book_12_43",
+      "grade": 12,
+      "subject": "History",
+      "language": "en",
+      "title": "History Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/History.pdf",
+      "chunksFile": "g12_history_en.json",
+      "keywords": [
+        "history",
+        "grade",
+        "12",
+        "history"
+      ]
+    },
+    {
+      "id": "book_12_44",
+      "grade": 12,
+      "subject": "Geography",
+      "language": "en",
+      "title": "Geography Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Geography.pdf",
+      "chunksFile": "g12_geography_en.json",
+      "keywords": [
+        "geography",
+        "grade",
+        "12",
+        "geography"
+      ]
+    },
+    {
+      "id": "book_12_45",
+      "grade": 12,
+      "subject": "Accounting and Finance",
+      "language": "en",
+      "title": "Accounting and Finance Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Accounting%20and%20Finance.pdf",
+      "chunksFile": "g12_accounting_and_finance_en.json",
+      "keywords": [
+        "accounting and finance",
+        "grade",
+        "12",
+        "accounting and finance"
+      ]
+    },
+    {
+      "id": "book_12_46",
+      "grade": 12,
+      "subject": "Marketing",
+      "language": "en",
+      "title": "Marketing Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Marketing.pdf",
+      "chunksFile": "g12_marketing_en.json",
+      "keywords": [
+        "marketing",
+        "grade",
+        "12",
+        "marketing"
+      ]
+    },
+    {
+      "id": "book_12_47",
+      "grade": 12,
+      "subject": "Computer Maintenance",
+      "language": "en",
+      "title": "Computer Maintenance Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Computer%20Maintenance.pdf",
+      "chunksFile": "g12_computer_maintenance_en.json",
+      "keywords": [
+        "computer maintenance",
+        "grade",
+        "12",
+        "computer maintenance"
+      ]
+    },
+    {
+      "id": "book_12_48",
+      "grade": 12,
+      "subject": "IT",
+      "language": "en",
+      "title": "Information Technology Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Information%20Technology.pdf",
+      "chunksFile": "g12_ict_en.json",
+      "keywords": [
+        "it",
+        "grade",
+        "12",
+        "information technology"
+      ]
+    },
+    {
+      "id": "book_12_49",
+      "grade": 12,
+      "subject": "Web Design",
+      "language": "en",
+      "title": "Web Design Student Textbook (New Curriculum) Grade 12",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/Web%20Design.pdf",
+      "chunksFile": "g12_web_design_en.json",
+      "keywords": [
+        "web design",
+        "grade",
+        "12",
+        "web design"
+      ]
+    }
+  ]
+}

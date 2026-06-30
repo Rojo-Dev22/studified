@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "id": "g9_new_dir",
+      "grade": 9,
+      "subject": "All",
+      "language": "en",
+      "title": "Grade 9 Textbooks (New Curriculum)",
+      "type": "directory",
+      "url": "https://addisentrancehub.com/books/Grade%209/New%20Curriculum/Student%20Textbook/"
+    },
+    {
+      "id": "g10_new_dir",
+      "grade": 10,
+      "subject": "All",
+      "language": "en",
+      "title": "Grade 10 Textbooks (New Curriculum)",
+      "type": "directory",
+      "url": "https://addisentrancehub.com/books/Grade%2010/New%20Curriculum/Student%20Textbook/"
+    },
+    {
+      "id": "g11_new_dir",
+      "grade": 11,
+      "subject": "All",
+      "language": "en",
+      "title": "Grade 11 Textbooks (New Curriculum)",
+      "type": "directory",
+      "url": "https://addisentrancehub.com/books/Grade%2011/New%20Curriculum/Student%20Textbook/"
+    },
+    {
+      "id": "g12_new_dir",
+      "grade": 12,
+      "subject": "All",
+      "language": "en",
+      "title": "Grade 12 Textbooks (New Curriculum)",
+      "type": "directory",
+      "url": "https://addisentrancehub.com/books/Grade%2012/New%20Curriculum/Student%20Textbook/"
+    }
+  ]
+}

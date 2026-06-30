@@ -1,0 +1,95 @@
+import { ThemeProvider } from 'next-themes';
+import { Toaster } from '@/components/ui/toaster';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClientInstance } from '@/lib/query-client';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import PageNotFound from './lib/PageNotFound';
+import { AuthProvider, useAuth } from '@/lib/AuthContext';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import Landing from './pages/Landing';
+import AppLayout from './components/layout/AppLayout';
+import Dashboard from './pages/Dashboard';
+import Quests from './pages/Quests';
+import Focus from './pages/Focus';
+import Guild from './pages/Guild';
+import GuildRoom from './pages/GuildRoom';
+import Raids from './pages/Raids';
+import AITools from './pages/AITools';
+import Lessons from './pages/Lessons';
+import Leaderboard from './pages/Leaderboard';
+import Profile from './pages/Profile';
+import MiniGames from './pages/MiniGames';
+import { motion } from 'framer-motion';
+
+function AppLoading() {
+  return (
+    <div className="fixed inset-0 flex items-center justify-center bg-background">
+      <motion.div
+        className="text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <motion.div
+          className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center mx-auto mb-4"
+          animate={{ scale: [1, 1.08, 1] }}
+          transition={{ duration: 1.2, repeat: Infinity }}
+        >
+          <span className="text-accent font-bold">S</span>
+        </motion.div>
+        <p className="text-xs text-muted-foreground tracking-widest uppercase">Loading Studified</p>
+      </motion.div>
+    </div>
+  );
+}
+
+function AppRoutes() {
+  const { isLoadingAuth, authChecked, isAuthenticated, dbReady } = useAuth();
+
+  if (!authChecked || (isAuthenticated && (isLoadingAuth || !dbReady))) {
+    return <AppLoading />;
+  }
+
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={
+          isAuthenticated && dbReady ? <Navigate to="/dashboard" replace /> : <Landing />
+        }
+      />
+      <Route element={<ProtectedRoute />}>
+        <Route element={<AppLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/quests" element={<Quests />} />
+          <Route path="/focus" element={<Focus />} />
+          <Route path="/guild" element={<Guild />} />
+          <Route path="/guild/:guildId" element={<GuildRoom />} />
+          <Route path="/raids" element={<Raids />} />
+          <Route path="/ai-tools" element={<AITools />} />
+          <Route path="/lessons" element={<Lessons />} />
+          <Route path="/minigames" element={<MiniGames />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+      </Route>
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+      <AuthProvider>
+        <QueryClientProvider client={queryClientInstance}>
+          <Router>
+            <AppRoutes />
+          </Router>
+          <Toaster />
+        </QueryClientProvider>
+      </AuthProvider>
+    </ThemeProvider>
+  );
+}
+
+export default App;

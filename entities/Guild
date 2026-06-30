@@ -1,0 +1,59 @@
+{
+  "name": "Guild",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Guild name"
+    },
+    "description": {
+      "type": "string"
+    },
+    "emblem": {
+      "type": "string",
+      "enum": [
+        "shield",
+        "sword",
+        "crown",
+        "star",
+        "flame",
+        "moon"
+      ],
+      "default": "shield"
+    },
+    "rank": {
+      "type": "string",
+      "enum": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A",
+        "S"
+      ],
+      "default": "E"
+    },
+    "total_xp": {
+      "type": "number",
+      "default": 0
+    },
+    "member_emails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of member emails"
+    },
+    "leader_email": {
+      "type": "string",
+      "description": "Guild leader email"
+    },
+    "max_members": {
+      "type": "number",
+      "default": 10
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

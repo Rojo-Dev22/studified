@@ -1,0 +1,80 @@
+{
+  "name": "Quest",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Quest title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Quest description"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly",
+        "story",
+        "raid"
+      ],
+      "default": "daily",
+      "description": "Type of quest"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A",
+        "S"
+      ],
+      "default": "E",
+      "description": "Quest difficulty rank"
+    },
+    "xp_reward": {
+      "type": "number",
+      "default": 50,
+      "description": "XP awarded on completion"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "active",
+        "completed",
+        "failed"
+      ],
+      "default": "available"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "math",
+        "physics",
+        "chemistry",
+        "biology",
+        "history",
+        "economics",
+        "english",
+        "geography"
+      ],
+      "default": "math"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "default": 30,
+      "description": "Estimated quest duration in minutes"
+    },
+    "accepted_by": {
+      "type": "string",
+      "description": "Email of user who accepted the quest"
+    }
+  },
+  "required": [
+    "title",
+    "xp_reward"
+  ]
+}

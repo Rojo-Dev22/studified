@@ -1,0 +1,63 @@
+{
+  "name": "Raid",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "B",
+        "A",
+        "S"
+      ],
+      "default": "B"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "recruiting",
+        "active",
+        "completed",
+        "failed"
+      ],
+      "default": "recruiting"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "xp_reward": {
+      "type": "number",
+      "default": 500
+    },
+    "duration_minutes": {
+      "type": "number",
+      "default": 60
+    },
+    "max_participants": {
+      "type": "number",
+      "default": 5
+    },
+    "participant_emails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "leader_email": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "title",
+    "xp_reward"
+  ]
+}
