@@ -239,8 +239,10 @@ export default function Profile() {
 
       if (firebaseUser) {
         try {
+          // Refresh user data from database to get the latest values
+          const updatedUser = await db.auth.me();
           const store = db.getStore();
-          await flushSaveUserGameData(firebaseUser.uid, store, { ...store.currentUser, ...data });
+          await flushSaveUserGameData(firebaseUser.uid, store, updatedUser);
         } catch (e) {
           console.warn('Firebase sync skipped:', e);
         }
