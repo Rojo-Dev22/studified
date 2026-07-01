@@ -29,8 +29,8 @@ export const AuthProvider = ({ children }) => {
       initialStore = syncCurriculumToStore({
         ...initialStore,
         currentUser: {
-          ...profile,
           ...initialStore.currentUser,
+          ...profile,
           id: fbUser.uid,
           email: profile.email,
           full_name: profile.full_name || initialStore.currentUser?.full_name,
