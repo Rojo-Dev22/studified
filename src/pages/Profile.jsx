@@ -267,8 +267,8 @@ export default function Profile() {
 
   const handleSuccessClose = () => {
     setShowSuccess(false);
-    // Hard reload to ensure all pages see fresh data
-    window.location.reload();
+    // Queries are already invalidated in handleSave, so they will refetch with fresh data
+    // No page reload needed - React Query will update the UI automatically
   };
 
   const handleAvatarChange = (config, dataUri) => {
