@@ -14,12 +14,43 @@ import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { Loader2, Mail, Lock, User } from 'lucide-react';
 
+function getAuthErrorMessage(err) {
+  if (!err || typeof err !== 'object') return 'Authentication failed';
+  
+  const code = err.code;
+  const message = err.message;
+  
+  switch (code) {
+    case 'auth/email-already-in-use':
+      return 'Email already registered — try logging in';
+    case 'auth/operation-not-allowed':
+      return 'Email/Password sign-in is disabled in Firebase. Enable it in Firebase Console → Authentication.';
+    case 'auth/invalid-credential':
+      return 'Invalid email or password';
+    case 'auth/unauthorized-domain':
+      return 'This domain is not authorized for Firebase Auth. Add it in Firebase Console → Authentication → Settings → Authorized domains.';
+    case 'auth/network-request-failed':
+      return 'Network error — check your connection and try again';
+    case 'auth/too-many-requests':
+      return 'Too many attempts — try again later';
+    case 'auth/user-disabled':
+      return 'This user account is disabled';
+    case 'auth/weak-password':
+      return 'Password should be at least 6 characters';
+    case 'auth/popup-closed-by-user':
+      return 'Sign in cancelled';
+    default:
+      return message || 'Authentication failed';
+  }
+}
+
 export default function AuthForm() {
   const [mode, setMode] = useState('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   if (!isFirebaseConfigured()) {
     return (
@@ -34,12 +65,31 @@ export default function AuthForm() {
     );
   }
 
+  const handleGoogleSignIn = async () => {
+    try {
+      setError('');
+      setLoading(true);
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      toast.success('Welcome back!');
+    } catch (err) {
+      const msg = getAuthErrorMessage(err);
+      setError(msg);
+      toast.error(msg);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email.trim() || password.length < 6) {
-      toast.error('Use a valid email and password (6+ characters)');
+      const msg = 'Use a valid email and password (6+ characters)';
+      setError(msg);
+      toast.error(msg);
       return;
     }
+    setError('');
     setLoading(true);
     try {
       if (mode === 'signup') {
@@ -53,24 +103,8 @@ export default function AuthForm() {
         toast.success('Welcome back!');
       }
     } catch (err) {
-      const msg =
-        err.code === 'auth/email-already-in-use'
-          ? 'Email already registered — try logging in'
-          : err.code === 'auth/operation-not-allowed'
-            ? 'Email/Password sign-in is disabled in Firebase. Enable it in Firebase Console → Authentication.'
-          : err.code === 'auth/invalid-credential'
-            ? 'Invalid email or password'
-            : err.code === 'auth/unauthorized-domain'
-              ? 'This domain is not authorized for Firebase Auth. Add it in Firebase Console → Authentication → Settings → Authorized domains.'
-            : err.code === 'auth/network-request-failed'
-              ? 'Network error — check your connection and try again'
-            : err.code === 'auth/too-many-requests'
-              ? 'Too many attempts — try again later'
-            : err.code === 'auth/user-disabled'
-              ? 'This user account is disabled'
-            : err.code === 'auth/weak-password'
-              ? 'Password should be at least 6 characters'
-              : err.message || 'Authentication failed';
+      const msg = getAuthErrorMessage(err);
+      setError(msg);
       toast.error(msg);
     } finally {
       setLoading(false);
@@ -84,7 +118,7 @@ export default function AuthForm() {
           <button
             key={m}
             type="button"
-            onClick={() => setMode(m)}
+            onClick={() => { setMode(m); setError(''); }}
             className={`flex-1 py-2 text-xs font-medium rounded-md transition-all ${
               mode === m ? 'bg-card text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'
             }`}
@@ -103,6 +137,15 @@ export default function AuthForm() {
           onSubmit={handleSubmit}
           className="space-y-3"
         >
+          {error && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="p-3 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-xs"
+            >
+              {error}
+            </motion.div>
+          )}
           {mode === 'signup' && (
             <div>
               <Label className="text-xs text-muted-foreground">Full name</Label>
@@ -150,22 +193,7 @@ export default function AuthForm() {
            {/* Google Sign In Button */}
            <Button
              type="button"
-             onClick={async () => {
-               try {
-                 setLoading(true);
-                 const provider = new GoogleAuthProvider();
-                 await signInWithPopup(auth, provider);
-                 toast.success('Welcome back!');
-               } catch (err) {
-                 const msg =
-                   err.code === 'auth/popup-closed-by-user'
-                     ? 'Sign in cancelled'
-                     : err.message || 'Authentication failed';
-                 toast.error(msg);
-               } finally {
-                 setLoading(false);
-               }
-             }}
+             onClick={handleGoogleSignIn}
              disabled={loading}
              className="w-full h-10 flex items-center justify-center gap-2 bg-white text-muted-foreground border border-input hover:bg-muted/50"
            >
