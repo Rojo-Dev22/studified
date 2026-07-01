@@ -29,11 +29,11 @@ export const AuthProvider = ({ children }) => {
       initialStore = syncCurriculumToStore({
         ...initialStore,
         currentUser: {
-          ...initialStore.currentUser,
           ...profile,
+          ...initialStore.currentUser,
           id: fbUser.uid,
           email: profile.email,
-          full_name: profile.full_name || initialStore.currentUser?.full_name,
+          full_name: initialStore.currentUser?.full_name || profile.full_name,
         },
       });
     } else {
