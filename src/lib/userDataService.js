@@ -22,25 +22,69 @@ export function profileFromFirebaseUser(fbUser, displayName) {
   };
 }
 
-/** Remove undefined values from an object recursively */
-function removeUndefined(obj) {
+/** Remove undefined and null values from an object recursively */
+function removeUndefinedAndNull(obj) {
   if (!obj || typeof obj !== 'object') return obj;
   
   if (Array.isArray(obj)) {
-    return obj.map(item => removeUndefined(item));
+    return obj.map(item => removeUndefinedAndNull(item)).filter(item => item !== undefined && item !== null);
   }
   
   const cleaned = {};
   for (const [key, value] of Object.entries(obj)) {
-    if (value !== undefined) {
-      if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-        cleaned[key] = removeUndefined(value);
+    if (value !== undefined && value !== null) {
+      if (typeof value === 'object' && !Array.isArray(value)) {
+        const nested = removeUndefinedAndNull(value);
+        if (Object.keys(nested).length > 0) {
+          cleaned[key] = nested;
+        }
       } else {
         cleaned[key] = value;
       }
     }
   }
   return cleaned;
+}
+
+/** Clean profile object to ensure no undefined values */
+function cleanProfile(profile) {
+  if (!profile || typeof profile !== 'object') {
+    return {
+      email: '',
+      full_name: 'Student',
+      caption: '',
+      specialities: [],
+      avatar: '',
+      interests: [],
+      location: '',
+      social_github: '',
+      social_twitter: '',
+      social_website: '',
+      total_xp: 0,
+      quests_completed: 0,
+      focus_hours: 0,
+      streak_days: 0,
+      grade: 10,
+    };
+  }
+  
+  return {
+    email: String(profile.email || ''),
+    full_name: String(profile.full_name || 'Student'),
+    caption: String(profile.caption || ''),
+    specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
+    avatar: String(profile.avatar || ''),
+    interests: Array.isArray(profile.interests) ? profile.interests : [],
+    location: String(profile.location || ''),
+    social_github: String(profile.social_github || ''),
+    social_twitter: String(profile.social_twitter || ''),
+    social_website: String(profile.social_website || ''),
+    total_xp: Number(profile.total_xp) || 0,
+    quests_completed: Number(profile.quests_completed) || 0,
+    focus_hours: Number(profile.focus_hours) || 0,
+    streak_days: Number(profile.streak_days) || 0,
+    grade: Number(profile.grade) || 10,
+  };
 }
 
 /** Load game store from Firestore for this user. */
@@ -94,24 +138,9 @@ export function scheduleSaveUserGameData(uid, store, profile) {
 
   const timer = setTimeout(async () => {
     try {
+      const cleanedProfile = cleanProfile(profile);
       const dataToSave = {
-        profile: {
-          email: profile.email || '',
-          full_name: profile.full_name || 'Student',
-          caption: profile.caption || '',
-          specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
-          avatar: profile.avatar || '',
-          interests: Array.isArray(profile.interests) ? profile.interests : [],
-          location: profile.location || '',
-          social_github: profile.social_github || '',
-          social_twitter: profile.social_twitter || '',
-          social_website: profile.social_website || '',
-          total_xp: Number(store.currentUser?.total_xp) || 0,
-          quests_completed: Number(store.currentUser?.quests_completed) || 0,
-          focus_hours: Number(store.currentUser?.focus_hours) || 0,
-          streak_days: Number(store.currentUser?.streak_days) || 0,
-          grade: Number(store.currentUser?.grade) || 10,
-        },
+        profile: cleanedProfile,
         gameData: {
           Quest: Array.isArray(store.Quest) ? store.Quest : [],
           Raid: Array.isArray(store.Raid) ? store.Raid : [],
@@ -123,8 +152,7 @@ export function scheduleSaveUserGameData(uid, store, profile) {
         updatedAt: serverTimestamp(),
       };
       
-      const cleanedData = removeUndefined(dataToSave);
-      await setDoc(doc(firestore, 'users', uid), cleanedData, { merge: true });
+      await setDoc(doc(firestore, 'users', uid), dataToSave, { merge: true });
     } catch (err) {
       console.error('Firestore save failed:', err);
     }
@@ -142,24 +170,9 @@ export async function flushSaveUserGameData(uid, store, profile) {
   
   try {
     const userRef = doc(firestore, 'users', uid);
+    const cleanedProfile = cleanProfile(profile);
     const dataToSave = {
-      profile: {
-        email: profile.email || '',
-        full_name: profile.full_name || 'Student',
-        caption: profile.caption || '',
-        specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
-        avatar: profile.avatar || '',
-        interests: Array.isArray(profile.interests) ? profile.interests : [],
-        location: profile.location || '',
-        social_github: profile.social_github || '',
-        social_twitter: profile.social_twitter || '',
-        social_website: profile.social_website || '',
-        total_xp: Number(store.currentUser?.total_xp) || 0,
-        quests_completed: Number(store.currentUser?.quests_completed) || 0,
-        focus_hours: Number(store.currentUser?.focus_hours) || 0,
-        streak_days: Number(store.currentUser?.streak_days) || 0,
-        grade: Number(store.currentUser?.grade) || 10,
-      },
+      profile: cleanedProfile,
       gameData: {
         Quest: Array.isArray(store.Quest) ? store.Quest : [],
         Raid: Array.isArray(store.Raid) ? store.Raid : [],
@@ -171,8 +184,7 @@ export async function flushSaveUserGameData(uid, store, profile) {
       updatedAt: serverTimestamp(),
     };
     
-    const cleanedData = removeUndefined(dataToSave);
-    await setDoc(userRef, cleanedData, { merge: true });
+    await setDoc(userRef, dataToSave, { merge: true });
     console.log('✅ Profile saved to Firebase successfully');
   } catch (err) {
     console.error('❌ Firestore save failed:', err);
@@ -189,27 +201,10 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
   
   try {
     const userRef = doc(firestore, 'users', uid);
+    const cleanedProfile = cleanProfile(profile);
     
-    const profileData = {
-      email: profile.email || '',
-      full_name: profile.full_name || 'Student',
-      caption: profile.caption || '',
-      specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
-      avatar: profile.avatar || '',
-      interests: Array.isArray(profile.interests) ? profile.interests : [],
-      location: profile.location || '',
-      social_github: profile.social_github || '',
-      social_twitter: profile.social_twitter || '',
-      social_website: profile.social_website || '',
-      total_xp: Number(profile.total_xp) || 0,
-      quests_completed: Number(profile.quests_completed) || 0,
-      focus_hours: Number(profile.focus_hours) || 0,
-      streak_days: Number(profile.streak_days) || 0,
-      grade: Number(profile.grade) || 10,
-    };
-
     const dataToSave = {
-      profile: removeUndefined(profileData),
+      profile: cleanedProfile,
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     };
@@ -226,9 +221,8 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
       };
     }
     
-    const cleanedData = removeUndefined(dataToSave);
-    await setDoc(userRef, cleanedData, { merge: true });
-    console.log('✅ User profile saved to Firebase:', uid, cleanedData.profile);
+    await setDoc(userRef, dataToSave, { merge: true });
+    console.log('✅ User profile saved to Firebase:', uid, cleanedProfile);
     return true;
   } catch (err) {
     console.error('❌ Failed to save user profile to Firebase:', err);
@@ -257,21 +251,21 @@ export async function fetchAllUsersFromFirebase(limitCount = 50) {
       const profile = data.profile || {};
       users.push({
         id: doc.id,
-        email: profile.email || '',
-        full_name: profile.full_name || 'Anonymous',
-        avatar: profile.avatar || '',
+        email: String(profile.email || ''),
+        full_name: String(profile.full_name || 'Anonymous'),
+        avatar: String(profile.avatar || ''),
         total_xp: Number(profile.total_xp) || 0,
         quests_completed: Number(profile.quests_completed) || 0,
         focus_hours: Number(profile.focus_hours) || 0,
         streak_days: Number(profile.streak_days) || 0,
         grade: Number(profile.grade) || 10,
-        caption: profile.caption || '',
+        caption: String(profile.caption || ''),
         specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
         interests: Array.isArray(profile.interests) ? profile.interests : [],
-        location: profile.location || '',
-        social_github: profile.social_github || '',
-        social_twitter: profile.social_twitter || '',
-        social_website: profile.social_website || '',
+        location: String(profile.location || ''),
+        social_github: String(profile.social_github || ''),
+        social_twitter: String(profile.social_twitter || ''),
+        social_website: String(profile.social_website || ''),
       });
     });
     
