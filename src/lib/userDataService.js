@@ -159,6 +159,45 @@ export async function flushSaveUserGameData(uid, store, profile) {
   }
 }
 
+/** Save user profile to Firebase (for new users or profile updates) */
+export async function saveUserProfileToFirebase(uid, profile) {
+  if (!isFirebaseConfigured() || !firestore || !uid) return;
+  
+  try {
+    const userRef = doc(firestore, 'users', uid);
+    await setDoc(
+      userRef,
+      {
+        profile: {
+          email: profile.email || '',
+          full_name: profile.full_name || 'Student',
+          caption: profile.caption || '',
+          specialities: profile.specialities || [],
+          avatar: profile.avatar || '',
+          interests: profile.interests || [],
+          location: profile.location || '',
+          social_github: profile.social_github || '',
+          social_twitter: profile.social_twitter || '',
+          social_website: profile.social_website || '',
+          total_xp: profile.total_xp ?? 0,
+          quests_completed: profile.quests_completed ?? 0,
+          focus_hours: profile.focus_hours ?? 0,
+          streak_days: profile.streak_days ?? 0,
+          grade: profile.grade ?? 10,
+        },
+        gameData: profile.gameData || {},
+        createdAt: serverTimestamp(),
+        updatedAt: serverTimestamp(),
+      },
+      { merge: true }
+    );
+    console.log('User profile saved to Firebase:', uid);
+  } catch (err) {
+    console.error('Failed to save user profile to Firebase:', err);
+    throw err;
+  }
+}
+
 /** Fetch all users from Firebase for leaderboard */
 export async function fetchAllUsersFromFirebase(limitCount = 50) {
   if (!isFirebaseConfigured() || !firestore) return [];

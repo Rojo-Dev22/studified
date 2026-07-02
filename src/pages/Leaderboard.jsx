@@ -1,5 +1,5 @@
-import React from 'react';
-import { useQuery } from '@tanstack/react-query';
+import React, { useState } from 'react';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
@@ -8,15 +8,27 @@ import AvatarDisplay from '../components/profile/AvatarDisplay';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
 import { fetchAllUsersFromFirebase } from '@/lib/userDataService';
 import { useAuth } from '@/lib/AuthContext';
+import { RefreshCw } from 'lucide-react';
 
 export default function Leaderboard() {
   const { data: currentUser } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
+  const queryClient = useQueryClient();
+  const [isRefreshing, setIsRefreshing] = useState(false);
   
-  const { data: users = [], isLoading } = useQuery({
+  const { data: users = [], isLoading, refetch } = useQuery({
     queryKey: ['leaderboard'],
     queryFn: () => fetchAllUsersFromFirebase(50),
     refetchInterval: 30000, // Refetch every 30 seconds to get latest data
   });
+
+  const handleRefresh = async () => {
+    setIsRefreshing(true);
+    try {
+      await refetch();
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
 
   const medals = ['🥇', '🥈', '🥉'];
 
@@ -24,9 +36,20 @@ export default function Leaderboard() {
     <div className="relative min-h-screen w-full overflow-hidden">
       <AnimatedBackground colors={['emerald']} orbs={2} grid={true} />
       <div className="relative z-10 p-5 md:p-8 max-w-2xl mx-auto">
-      <div className="mb-6">
-        <h1 className="text-lg font-semibold text-foreground">Leaderboard</h1>
-        <p className="text-xs text-muted-foreground mt-0.5">Top students this week</p>
+      <div className="mb-6 flex items-center justify-between">
+        <div>
+          <h1 className="text-lg font-semibold text-foreground">Leaderboard</h1>
+          <p className="text-xs text-muted-foreground mt-0.5">Top students this week</p>
+        </div>
+        <button
+          onClick={handleRefresh}
+          disabled={isRefreshing || isLoading}
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-secondary/50 hover:bg-secondary text-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          title="Refresh leaderboard"
+        >
+          <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin' : ''}`} />
+          Refresh
+        </button>
       </div>
 
       <div className="space-y-2">

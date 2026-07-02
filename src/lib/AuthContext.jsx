@@ -5,6 +5,7 @@ import {
   profileFromFirebaseUser,
   loadUserGameData,
   flushSaveUserGameData,
+  saveUserProfileToFirebase,
 } from '@/lib/userDataService';
 import { initDbForUser, clearDb, getDb } from '@/lib/db';
 import { syncCurriculumToStore } from '@/lib/curriculumSync';
@@ -44,6 +45,14 @@ export const AuthProvider = ({ children }) => {
     const me = await getDb().auth.me();
     setUser(me);
     setDbReady(true);
+
+    // Save user profile to Firebase so they appear in leaderboard
+    try {
+      await saveUserProfileToFirebase(fbUser.uid, me);
+    } catch (err) {
+      console.error('Failed to save profile to Firebase:', err);
+    }
+
     return me;
   }, []);
 
