@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, getDoc, setDoc, serverTimestamp, collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { firestore, isFirebaseConfigured } from './firebase';
 
 const SAVE_DEBOUNCE_MS = 600;
@@ -118,10 +118,11 @@ export async function flushSaveUserGameData(uid, store, profile) {
   const pending = pendingSaves.get(uid);
   if (pending?.timer) clearTimeout(pending.timer);
   pendingSaves.delete(uid);
-  if (!isFirebaseConfigured() || !firestore) return;
-  await setDoc(
-    doc(firestore, 'users', uid),
-    {
+  if (!isFirebaseConfigured() || !firestore || !uid) return;
+  
+  try {
+    const userRef = doc(firestore, 'users', uid);
+    const updateData = {
       profile: {
         email: profile.email,
         full_name: profile.full_name,
@@ -148,7 +149,52 @@ export async function flushSaveUserGameData(uid, store, profile) {
         User: store.User,
       },
       updatedAt: serverTimestamp(),
-    },
-    { merge: true }
-  );
+    };
+    
+    await setDoc(userRef, updateData, { merge: true });
+    console.log('Profile saved to Firebase successfully');
+  } catch (err) {
+    console.error('Firestore save failed:', err);
+    throw err;
+  }
+}
+
+/** Fetch all users from Firebase for leaderboard */
+export async function fetchAllUsersFromFirebase(limitCount = 50) {
+  if (!isFirebaseConfigured() || !firestore) return [];
+  
+  try {
+    const usersRef = collection(firestore, 'users');
+    const q = query(usersRef, orderBy('profile.total_xp', 'desc'), limit(limitCount));
+    const querySnapshot = await getDocs(q);
+    
+    const users = [];
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const profile = data.profile || {};
+      users.push({
+        id: doc.id,
+        email: profile.email || '',
+        full_name: profile.full_name || 'Anonymous',
+        avatar: profile.avatar || '',
+        total_xp: profile.total_xp || 0,
+        quests_completed: profile.quests_completed || 0,
+        focus_hours: profile.focus_hours || 0,
+        streak_days: profile.streak_days || 0,
+        grade: profile.grade || 10,
+        caption: profile.caption || '',
+        specialities: profile.specialities || [],
+        interests: profile.interests || [],
+        location: profile.location || '',
+        social_github: profile.social_github || '',
+        social_twitter: profile.social_twitter || '',
+        social_website: profile.social_website || '',
+      });
+    });
+    
+    return users;
+  } catch (err) {
+    console.error('Failed to fetch users from Firebase:', err);
+    return [];
+  }
 }

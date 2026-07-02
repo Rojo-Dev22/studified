@@ -94,11 +94,31 @@ export const AuthProvider = ({ children }) => {
     try {
       if (globalThis.__B44_DB__ && firebaseUser) {
         const store = globalThis.__B44_DB__.getStore();
-        const profile = store.currentUser;
-        await flushSaveUserGameData(firebaseUser.uid, store, profile);
+        const profile = store.currentUser || {};
+        
+        // Ensure profile has all required fields
+        const completeProfile = {
+          email: profile.email || firebaseUser.email || '',
+          full_name: profile.full_name || 'Student',
+          caption: profile.caption || '',
+          specialities: profile.specialities || [],
+          avatar: profile.avatar || '',
+          interests: profile.interests || [],
+          location: profile.location || '',
+          social_github: profile.social_github || '',
+          social_twitter: profile.social_twitter || '',
+          social_website: profile.social_website || '',
+          total_xp: store.currentUser?.total_xp ?? 0,
+          quests_completed: store.currentUser?.quests_completed ?? 0,
+          focus_hours: store.currentUser?.focus_hours ?? 0,
+          streak_days: store.currentUser?.streak_days ?? 0,
+          grade: store.currentUser?.grade ?? 10,
+        };
+        
+        await flushSaveUserGameData(firebaseUser.uid, store, completeProfile);
       }
     } catch (e) {
-      console.error(e);
+      console.error('Logout save error:', e);
     }
     clearDb();
     setDbReady(false);

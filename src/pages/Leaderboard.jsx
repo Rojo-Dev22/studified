@@ -6,14 +6,17 @@ import AnimatedBackground from '../components/ui/AnimatedBackground';
 import XPBar from '../components/ui/XPBar';
 import AvatarDisplay from '../components/profile/AvatarDisplay';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
-import { db } from '@/lib/db';
+import { fetchAllUsersFromFirebase } from '@/lib/userDataService';
+import { useAuth } from '@/lib/AuthContext';
 
 export default function Leaderboard() {
+  const { data: currentUser } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
+  
   const { data: users = [], isLoading } = useQuery({
     queryKey: ['leaderboard'],
-    queryFn: () => db.entities.User.list('-total_xp', 50),
+    queryFn: () => fetchAllUsersFromFirebase(50),
+    refetchInterval: 30000, // Refetch every 30 seconds to get latest data
   });
-  const { data: currentUser } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
 
   const medals = ['🥇', '🥈', '🥉'];
 
