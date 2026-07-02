@@ -22,6 +22,27 @@ export function profileFromFirebaseUser(fbUser, displayName) {
   };
 }
 
+/** Remove undefined values from an object recursively */
+function removeUndefined(obj) {
+  if (!obj || typeof obj !== 'object') return obj;
+  
+  if (Array.isArray(obj)) {
+    return obj.map(item => removeUndefined(item));
+  }
+  
+  const cleaned = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (value !== undefined) {
+      if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+        cleaned[key] = removeUndefined(value);
+      } else {
+        cleaned[key] = value;
+      }
+    }
+  }
+  return cleaned;
+}
+
 /** Load game store from Firestore for this user. */
 export async function loadUserGameData(uid) {
   if (!isFirebaseConfigured() || !firestore) return null;
@@ -73,38 +94,37 @@ export function scheduleSaveUserGameData(uid, store, profile) {
 
   const timer = setTimeout(async () => {
     try {
-      await setDoc(
-        doc(firestore, 'users', uid),
-        {
-          profile: {
-            email: profile.email,
-            full_name: profile.full_name,
-            caption: profile.caption || '',
-            specialities: profile.specialities || [],
-            avatar: profile.avatar || '',
-            interests: profile.interests || [],
-            location: profile.location || '',
-            social_github: profile.social_github || '',
-            social_twitter: profile.social_twitter || '',
-            social_website: profile.social_website || '',
-            total_xp: store.currentUser?.total_xp ?? 0,
-            quests_completed: store.currentUser?.quests_completed ?? 0,
-            focus_hours: store.currentUser?.focus_hours ?? 0,
-            streak_days: store.currentUser?.streak_days ?? 0,
-            grade: store.currentUser?.grade ?? 10,
-          },
-          gameData: {
-            Quest: store.Quest,
-            Raid: store.Raid,
-            Guild: store.Guild,
-            GuildMessage: store.GuildMessage,
-            FocusSession: store.FocusSession,
-            User: store.User,
-          },
-          updatedAt: serverTimestamp(),
+      const dataToSave = {
+        profile: {
+          email: profile.email || '',
+          full_name: profile.full_name || 'Student',
+          caption: profile.caption || '',
+          specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
+          avatar: profile.avatar || '',
+          interests: Array.isArray(profile.interests) ? profile.interests : [],
+          location: profile.location || '',
+          social_github: profile.social_github || '',
+          social_twitter: profile.social_twitter || '',
+          social_website: profile.social_website || '',
+          total_xp: Number(store.currentUser?.total_xp) || 0,
+          quests_completed: Number(store.currentUser?.quests_completed) || 0,
+          focus_hours: Number(store.currentUser?.focus_hours) || 0,
+          streak_days: Number(store.currentUser?.streak_days) || 0,
+          grade: Number(store.currentUser?.grade) || 10,
         },
-        { merge: true }
-      );
+        gameData: {
+          Quest: Array.isArray(store.Quest) ? store.Quest : [],
+          Raid: Array.isArray(store.Raid) ? store.Raid : [],
+          Guild: Array.isArray(store.Guild) ? store.Guild : [],
+          GuildMessage: Array.isArray(store.GuildMessage) ? store.GuildMessage : [],
+          FocusSession: Array.isArray(store.FocusSession) ? store.FocusSession : [],
+          User: Array.isArray(store.User) ? store.User : [],
+        },
+        updatedAt: serverTimestamp(),
+      };
+      
+      const cleanedData = removeUndefined(dataToSave);
+      await setDoc(doc(firestore, 'users', uid), cleanedData, { merge: true });
     } catch (err) {
       console.error('Firestore save failed:', err);
     }
@@ -122,52 +142,6 @@ export async function flushSaveUserGameData(uid, store, profile) {
   
   try {
     const userRef = doc(firestore, 'users', uid);
-    const updateData = {
-      profile: {
-        email: profile.email,
-        full_name: profile.full_name,
-        caption: profile.caption || '',
-        specialities: profile.specialities || [],
-        avatar: profile.avatar || '',
-        interests: profile.interests || [],
-        location: profile.location || '',
-        social_github: profile.social_github || '',
-        social_twitter: profile.social_twitter || '',
-        social_website: profile.social_website || '',
-        total_xp: store.currentUser?.total_xp ?? 0,
-        quests_completed: store.currentUser?.quests_completed ?? 0,
-        focus_hours: store.currentUser?.focus_hours ?? 0,
-        streak_days: store.currentUser?.streak_days ?? 0,
-        grade: store.currentUser?.grade ?? 10,
-      },
-      gameData: {
-        Quest: store.Quest,
-        Raid: store.Raid,
-        Guild: store.Guild,
-        GuildMessage: store.GuildMessage,
-        FocusSession: store.FocusSession,
-        User: store.User,
-      },
-      updatedAt: serverTimestamp(),
-    };
-    
-    await setDoc(userRef, updateData, { merge: true });
-    console.log('Profile saved to Firebase successfully');
-  } catch (err) {
-    console.error('Firestore save failed:', err);
-    throw err;
-  }
-}
-
-/** Save user profile to Firebase (for new users or profile updates) */
-export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
-  if (!isFirebaseConfigured() || !firestore || !uid) {
-    console.error('Firebase not configured or missing uid');
-    return;
-  }
-  
-  try {
-    const userRef = doc(firestore, 'users', uid);
     const dataToSave = {
       profile: {
         email: profile.email || '',
@@ -180,12 +154,62 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
         social_github: profile.social_github || '',
         social_twitter: profile.social_twitter || '',
         social_website: profile.social_website || '',
-        total_xp: Number(profile.total_xp) || 0,
-        quests_completed: Number(profile.quests_completed) || 0,
-        focus_hours: Number(profile.focus_hours) || 0,
-        streak_days: Number(profile.streak_days) || 0,
-        grade: Number(profile.grade) || 10,
+        total_xp: Number(store.currentUser?.total_xp) || 0,
+        quests_completed: Number(store.currentUser?.quests_completed) || 0,
+        focus_hours: Number(store.currentUser?.focus_hours) || 0,
+        streak_days: Number(store.currentUser?.streak_days) || 0,
+        grade: Number(store.currentUser?.grade) || 10,
       },
+      gameData: {
+        Quest: Array.isArray(store.Quest) ? store.Quest : [],
+        Raid: Array.isArray(store.Raid) ? store.Raid : [],
+        Guild: Array.isArray(store.Guild) ? store.Guild : [],
+        GuildMessage: Array.isArray(store.GuildMessage) ? store.GuildMessage : [],
+        FocusSession: Array.isArray(store.FocusSession) ? store.FocusSession : [],
+        User: Array.isArray(store.User) ? store.User : [],
+      },
+      updatedAt: serverTimestamp(),
+    };
+    
+    const cleanedData = removeUndefined(dataToSave);
+    await setDoc(userRef, cleanedData, { merge: true });
+    console.log('✅ Profile saved to Firebase successfully');
+  } catch (err) {
+    console.error('❌ Firestore save failed:', err);
+    throw err;
+  }
+}
+
+/** Save user profile to Firebase (for new users or profile updates) */
+export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
+  if (!isFirebaseConfigured() || !firestore || !uid) {
+    console.error('Firebase not configured or missing uid');
+    return false;
+  }
+  
+  try {
+    const userRef = doc(firestore, 'users', uid);
+    
+    const profileData = {
+      email: profile.email || '',
+      full_name: profile.full_name || 'Student',
+      caption: profile.caption || '',
+      specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
+      avatar: profile.avatar || '',
+      interests: Array.isArray(profile.interests) ? profile.interests : [],
+      location: profile.location || '',
+      social_github: profile.social_github || '',
+      social_twitter: profile.social_twitter || '',
+      social_website: profile.social_website || '',
+      total_xp: Number(profile.total_xp) || 0,
+      quests_completed: Number(profile.quests_completed) || 0,
+      focus_hours: Number(profile.focus_hours) || 0,
+      streak_days: Number(profile.streak_days) || 0,
+      grade: Number(profile.grade) || 10,
+    };
+
+    const dataToSave = {
+      profile: removeUndefined(profileData),
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     };
@@ -202,8 +226,9 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
       };
     }
     
-    await setDoc(userRef, dataToSave, { merge: true });
-    console.log('✅ User profile saved to Firebase:', uid, dataToSave.profile);
+    const cleanedData = removeUndefined(dataToSave);
+    await setDoc(userRef, cleanedData, { merge: true });
+    console.log('✅ User profile saved to Firebase:', uid, cleanedData.profile);
     return true;
   } catch (err) {
     console.error('❌ Failed to save user profile to Firebase:', err);
