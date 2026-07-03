@@ -8,7 +8,8 @@ import AvatarDisplay from '../components/profile/AvatarDisplay';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
 import { fetchAllUsersFromFirebase } from '@/lib/userDataService';
 import { useAuth } from '@/lib/AuthContext';
-import { RefreshCw } from 'lucide-react';
+import { RefreshCw, AlertCircle } from 'lucide-react';
+import { db } from '@/lib/db';
 
 export default function Leaderboard() {
   const { data: currentUser } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
@@ -51,6 +52,21 @@ export default function Leaderboard() {
           Refresh
         </button>
       </div>
+
+      {users.length === 1 && (
+        <GlassCard hover={false} className="mb-4 border-amber-500/30 bg-amber-500/5">
+          <div className="flex items-start gap-2">
+            <AlertCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="text-xs font-medium text-foreground">Only your account is visible</p>
+              <p className="text-[10px] text-muted-foreground mt-1">
+                To see ALL users from ALL devices, you must deploy Firebase security rules. 
+                Check the FIREBASE_SETUP.md file in the project for instructions.
+              </p>
+            </div>
+          </div>
+        </GlassCard>
+      )}
 
       <div className="space-y-2">
         {users.map((u, i) => {
