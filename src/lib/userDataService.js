@@ -64,7 +64,43 @@ export async function loadUserGameData(uid) {
   }
 }
 
-/** Simple save - only saves essential fields, no undefined values possible */
+/** Build a completely clean profile object with NO undefined values */
+function buildCleanProfile(profile, store) {
+  // Start with a completely clean object
+  const clean = {
+    email: '',
+    full_name: 'Student',
+    total_xp: 0,
+    quests_completed: 0,
+    focus_hours: 0,
+    streak_days: 0,
+    grade: 10,
+  };
+
+  // Only add values that are actually defined
+  if (profile && typeof profile === 'object') {
+    if (profile.email !== undefined && profile.email !== null) clean.email = String(profile.email);
+    if (profile.full_name !== undefined && profile.full_name !== null) clean.full_name = String(profile.full_name);
+    if (profile.total_xp !== undefined && profile.total_xp !== null) clean.total_xp = Number(profile.total_xp);
+    if (profile.quests_completed !== undefined && profile.quests_completed !== null) clean.quests_completed = Number(profile.quests_completed);
+    if (profile.focus_hours !== undefined && profile.focus_hours !== null) clean.focus_hours = Number(profile.focus_hours);
+    if (profile.streak_days !== undefined && profile.streak_days !== null) clean.streak_days = Number(profile.streak_days);
+    if (profile.grade !== undefined && profile.grade !== null) clean.grade = Number(profile.grade);
+  }
+
+  // Override with store values if available
+  if (store && store.currentUser) {
+    if (store.currentUser.total_xp !== undefined && store.currentUser.total_xp !== null) clean.total_xp = Number(store.currentUser.total_xp);
+    if (store.currentUser.quests_completed !== undefined && store.currentUser.quests_completed !== null) clean.quests_completed = Number(store.currentUser.quests_completed);
+    if (store.currentUser.focus_hours !== undefined && store.currentUser.focus_hours !== null) clean.focus_hours = Number(store.currentUser.focus_hours);
+    if (store.currentUser.streak_days !== undefined && store.currentUser.streak_days !== null) clean.streak_days = Number(store.currentUser.streak_days);
+    if (store.currentUser.grade !== undefined && store.currentUser.grade !== null) clean.grade = Number(store.currentUser.grade);
+  }
+
+  return clean;
+}
+
+/** Persist full game store to Firestore (debounced). */
 export function scheduleSaveUserGameData(uid, store, profile) {
   if (!isFirebaseConfigured() || !firestore || !uid) return;
 
@@ -73,17 +109,9 @@ export function scheduleSaveUserGameData(uid, store, profile) {
 
   const timer = setTimeout(async () => {
     try {
-      // Only save the fields we actually need - all with defaults
+      const cleanProfile = buildCleanProfile(profile, store);
       const data = {
-        profile: {
-          email: String(profile.email || ''),
-          full_name: String(profile.full_name || 'Student'),
-          total_xp: Number(store.currentUser?.total_xp) || 0,
-          quests_completed: Number(store.currentUser?.quests_completed) || 0,
-          focus_hours: Number(store.currentUser?.focus_hours) || 0,
-          streak_days: Number(store.currentUser?.streak_days) || 0,
-          grade: Number(store.currentUser?.grade) || 10,
-        },
+        profile: cleanProfile,
         updatedAt: serverTimestamp(),
       };
       
@@ -104,17 +132,9 @@ export async function flushSaveUserGameData(uid, store, profile) {
   if (!isFirebaseConfigured() || !firestore || !uid) return;
   
   try {
-    // Only save the fields we actually need - all with defaults
+    const cleanProfile = buildCleanProfile(profile, store);
     const data = {
-      profile: {
-        email: String(profile.email || ''),
-        full_name: String(profile.full_name || 'Student'),
-        total_xp: Number(store.currentUser?.total_xp) || 0,
-        quests_completed: Number(store.currentUser?.quests_completed) || 0,
-        focus_hours: Number(store.currentUser?.focus_hours) || 0,
-        streak_days: Number(store.currentUser?.streak_days) || 0,
-        grade: Number(store.currentUser?.grade) || 10,
-      },
+      profile: cleanProfile,
       updatedAt: serverTimestamp(),
     };
     
@@ -134,23 +154,15 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
   }
   
   try {
-    // Only save the fields we actually need - all with defaults
+    const cleanProfile = buildCleanProfile(profile, null);
     const data = {
-      profile: {
-        email: String(profile.email || ''),
-        full_name: String(profile.full_name || 'Student'),
-        total_xp: Number(profile.total_xp) || 0,
-        quests_completed: Number(profile.quests_completed) || 0,
-        focus_hours: Number(profile.focus_hours) || 0,
-        streak_days: Number(profile.streak_days) || 0,
-        grade: Number(profile.grade) || 10,
-      },
+      profile: cleanProfile,
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     };
 
-    // Include game data if provided
-    if (gameData) {
+    // Only include gameData if it exists and has content
+    if (gameData && gameData.Quest && gameData.Quest.length > 0) {
       data.gameData = {
         Quest: Array.isArray(gameData.Quest) ? gameData.Quest : [],
         Raid: Array.isArray(gameData.Raid) ? gameData.Raid : [],
