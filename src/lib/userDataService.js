@@ -99,7 +99,7 @@ export function scheduleSaveUserGameData(uid, store, profile) {
 
 export async function flushSaveUserGameData(uid, store, profile) {
   const pending = pendingSaves.get(uid);
-  if (pending?.timer) clearTimeout(prev.timer);
+  if (pending?.timer) clearTimeout(pending.timer);
   pendingSaves.delete(uid);
   if (!isFirebaseConfigured() || !firestore || !uid) return;
   
