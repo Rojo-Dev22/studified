@@ -22,71 +22,6 @@ export function profileFromFirebaseUser(fbUser, displayName) {
   };
 }
 
-/** Remove undefined and null values from an object recursively */
-function removeUndefinedAndNull(obj) {
-  if (!obj || typeof obj !== 'object') return obj;
-  
-  if (Array.isArray(obj)) {
-    return obj.map(item => removeUndefinedAndNull(item)).filter(item => item !== undefined && item !== null);
-  }
-  
-  const cleaned = {};
-  for (const [key, value] of Object.entries(obj)) {
-    if (value !== undefined && value !== null) {
-      if (typeof value === 'object' && !Array.isArray(value)) {
-        const nested = removeUndefinedAndNull(value);
-        if (Object.keys(nested).length > 0) {
-          cleaned[key] = nested;
-        }
-      } else {
-        cleaned[key] = value;
-      }
-    }
-  }
-  return cleaned;
-}
-
-/** Clean profile object to ensure no undefined values */
-function cleanProfile(profile) {
-  if (!profile || typeof profile !== 'object') {
-    return {
-      email: '',
-      full_name: 'Student',
-      caption: '',
-      specialities: [],
-      avatar: '',
-      interests: [],
-      location: '',
-      social_github: '',
-      social_twitter: '',
-      social_website: '',
-      total_xp: 0,
-      quests_completed: 0,
-      focus_hours: 0,
-      streak_days: 0,
-      grade: 10,
-    };
-  }
-  
-  return {
-    email: String(profile.email || ''),
-    full_name: String(profile.full_name || 'Student'),
-    caption: String(profile.caption || ''),
-    specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
-    avatar: String(profile.avatar || ''),
-    interests: Array.isArray(profile.interests) ? profile.interests : [],
-    location: String(profile.location || ''),
-    social_github: String(profile.social_github || ''),
-    social_twitter: String(profile.social_twitter || ''),
-    social_website: String(profile.social_website || ''),
-    total_xp: Number(profile.total_xp) || 0,
-    quests_completed: Number(profile.quests_completed) || 0,
-    focus_hours: Number(profile.focus_hours) || 0,
-    streak_days: Number(profile.streak_days) || 0,
-    grade: Number(profile.grade) || 10,
-  };
-}
-
 /** Load game store from Firestore for this user. */
 export async function loadUserGameData(uid) {
   if (!isFirebaseConfigured() || !firestore) return null;
@@ -129,7 +64,7 @@ export async function loadUserGameData(uid) {
   }
 }
 
-/** Persist full game store to Firestore (debounced). */
+/** Simple save - only saves essential fields, no undefined values possible */
 export function scheduleSaveUserGameData(uid, store, profile) {
   if (!isFirebaseConfigured() || !firestore || !uid) return;
 
@@ -138,21 +73,21 @@ export function scheduleSaveUserGameData(uid, store, profile) {
 
   const timer = setTimeout(async () => {
     try {
-      const cleanedProfile = cleanProfile(profile);
-      const dataToSave = {
-        profile: cleanedProfile,
-        gameData: {
-          Quest: Array.isArray(store.Quest) ? store.Quest : [],
-          Raid: Array.isArray(store.Raid) ? store.Raid : [],
-          Guild: Array.isArray(store.Guild) ? store.Guild : [],
-          GuildMessage: Array.isArray(store.GuildMessage) ? store.GuildMessage : [],
-          FocusSession: Array.isArray(store.FocusSession) ? store.FocusSession : [],
-          User: Array.isArray(store.User) ? store.User : [],
+      // Only save the fields we actually need - all with defaults
+      const data = {
+        profile: {
+          email: String(profile.email || ''),
+          full_name: String(profile.full_name || 'Student'),
+          total_xp: Number(store.currentUser?.total_xp) || 0,
+          quests_completed: Number(store.currentUser?.quests_completed) || 0,
+          focus_hours: Number(store.currentUser?.focus_hours) || 0,
+          streak_days: Number(store.currentUser?.streak_days) || 0,
+          grade: Number(store.currentUser?.grade) || 10,
         },
         updatedAt: serverTimestamp(),
       };
       
-      await setDoc(doc(firestore, 'users', uid), dataToSave, { merge: true });
+      await setDoc(doc(firestore, 'users', uid), data, { merge: true });
     } catch (err) {
       console.error('Firestore save failed:', err);
     }
@@ -164,27 +99,26 @@ export function scheduleSaveUserGameData(uid, store, profile) {
 
 export async function flushSaveUserGameData(uid, store, profile) {
   const pending = pendingSaves.get(uid);
-  if (pending?.timer) clearTimeout(pending.timer);
+  if (pending?.timer) clearTimeout(prev.timer);
   pendingSaves.delete(uid);
   if (!isFirebaseConfigured() || !firestore || !uid) return;
   
   try {
-    const userRef = doc(firestore, 'users', uid);
-    const cleanedProfile = cleanProfile(profile);
-    const dataToSave = {
-      profile: cleanedProfile,
-      gameData: {
-        Quest: Array.isArray(store.Quest) ? store.Quest : [],
-        Raid: Array.isArray(store.Raid) ? store.Raid : [],
-        Guild: Array.isArray(store.Guild) ? store.Guild : [],
-        GuildMessage: Array.isArray(store.GuildMessage) ? store.GuildMessage : [],
-        FocusSession: Array.isArray(store.FocusSession) ? store.FocusSession : [],
-        User: Array.isArray(store.User) ? store.User : [],
+    // Only save the fields we actually need - all with defaults
+    const data = {
+      profile: {
+        email: String(profile.email || ''),
+        full_name: String(profile.full_name || 'Student'),
+        total_xp: Number(store.currentUser?.total_xp) || 0,
+        quests_completed: Number(store.currentUser?.quests_completed) || 0,
+        focus_hours: Number(store.currentUser?.focus_hours) || 0,
+        streak_days: Number(store.currentUser?.streak_days) || 0,
+        grade: Number(store.currentUser?.grade) || 10,
       },
       updatedAt: serverTimestamp(),
     };
     
-    await setDoc(userRef, dataToSave, { merge: true });
+    await setDoc(doc(firestore, 'users', uid), data, { merge: true });
     console.log('✅ Profile saved to Firebase successfully');
   } catch (err) {
     console.error('❌ Firestore save failed:', err);
@@ -192,7 +126,7 @@ export async function flushSaveUserGameData(uid, store, profile) {
   }
 }
 
-/** Save user profile to Firebase (for new users or profile updates) */
+/** Save user profile to Firebase (for new users) */
 export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
   if (!isFirebaseConfigured() || !firestore || !uid) {
     console.error('Firebase not configured or missing uid');
@@ -200,18 +134,24 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
   }
   
   try {
-    const userRef = doc(firestore, 'users', uid);
-    const cleanedProfile = cleanProfile(profile);
-    
-    const dataToSave = {
-      profile: cleanedProfile,
+    // Only save the fields we actually need - all with defaults
+    const data = {
+      profile: {
+        email: String(profile.email || ''),
+        full_name: String(profile.full_name || 'Student'),
+        total_xp: Number(profile.total_xp) || 0,
+        quests_completed: Number(profile.quests_completed) || 0,
+        focus_hours: Number(profile.focus_hours) || 0,
+        streak_days: Number(profile.streak_days) || 0,
+        grade: Number(profile.grade) || 10,
+      },
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     };
 
     // Include game data if provided
     if (gameData) {
-      dataToSave.gameData = {
+      data.gameData = {
         Quest: Array.isArray(gameData.Quest) ? gameData.Quest : [],
         Raid: Array.isArray(gameData.Raid) ? gameData.Raid : [],
         Guild: Array.isArray(gameData.Guild) ? gameData.Guild : [],
@@ -221,8 +161,8 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
       };
     }
     
-    await setDoc(userRef, dataToSave, { merge: true });
-    console.log('✅ User profile saved to Firebase:', uid, cleanedProfile);
+    await setDoc(doc(firestore, 'users', uid), data, { merge: true });
+    console.log('✅ User profile saved to Firebase:', uid);
     return true;
   } catch (err) {
     console.error('❌ Failed to save user profile to Firebase:', err);
@@ -253,19 +193,11 @@ export async function fetchAllUsersFromFirebase(limitCount = 50) {
         id: doc.id,
         email: String(profile.email || ''),
         full_name: String(profile.full_name || 'Anonymous'),
-        avatar: String(profile.avatar || ''),
         total_xp: Number(profile.total_xp) || 0,
         quests_completed: Number(profile.quests_completed) || 0,
         focus_hours: Number(profile.focus_hours) || 0,
         streak_days: Number(profile.streak_days) || 0,
         grade: Number(profile.grade) || 10,
-        caption: String(profile.caption || ''),
-        specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
-        interests: Array.isArray(profile.interests) ? profile.interests : [],
-        location: String(profile.location || ''),
-        social_github: String(profile.social_github || ''),
-        social_twitter: String(profile.social_twitter || ''),
-        social_website: String(profile.social_website || ''),
       });
     });
     
