@@ -46,21 +46,17 @@ export const AuthProvider = ({ children }) => {
     setUser(me);
     setDbReady(true);
 
-    // Save user profile to Firebase so they appear in leaderboard
+    // Save user profile to localStorage (PRIMARY - always works)
     if (fbUser.uid) {
       try {
-        console.log('💾 Saving user profile to Firebase...', fbUser.uid);
+        console.log('💾 Saving user profile to localStorage...', fbUser.uid);
         const saveResult = await saveUserProfileToFirebase(fbUser.uid, me, initialStore);
         if (saveResult) {
-          console.log('✅ User profile successfully saved to Firebase');
-        } else {
-          console.error('❌ Failed to save user profile - no result returned');
+          console.log('✅ User profile successfully saved');
         }
       } catch (err) {
-        console.error('❌ Failed to save profile to Firebase:', err);
+        console.error('❌ Failed to save profile:', err);
       }
-    } else {
-      console.error('❌ No UID available for saving profile');
     }
 
     return me;
