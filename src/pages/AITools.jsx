@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   HelpCircle,
@@ -6,7 +6,6 @@ import {
   Layers,
   Key,
   Send,
-  Bot,
   User,
   MessageSquare,
   Sparkles,
@@ -19,6 +18,7 @@ import {
   X,
   FileText,
 } from 'lucide-react';
+import AXO, { useAXOState, STATES } from '@/components/axo/AXO';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
@@ -137,6 +137,7 @@ export default function AITools() {
   const inputRef = useRef(null);
   const fileInputRef = useRef(null);
   const imageInputRef = useRef(null);
+  const axo = useAXOState();
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
@@ -487,6 +488,9 @@ export default function AITools() {
       return;
     }
 
+    axo.startThinking();
+    axo.startLoading();
+
     // Read file contents for display
     let displayContent = text;
     const fileContents = [];
@@ -588,6 +592,7 @@ export default function AITools() {
           type: 'text',
         });
       }
+      axo.celebrate();
     } finally {
       setLoading(false);
       inputRef.current?.focus();
@@ -630,9 +635,9 @@ export default function AITools() {
                   boxShadow: ['0 0 0 0 rgba(16,185,129,0.3)', '0 0 0 12px rgba(16,185,129,0)', '0 0 0 0 rgba(16,185,129,0)'],
                 }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 flex items-center justify-center"
+                className="relative"
               >
-                <Brain className="w-5 h-5 text-emerald-400" />
+                <AXO state={axo.state} size={48} showHat={true} />
               </motion.div>
               <div>
                 <h1 className="text-xl font-bold text-foreground dark:text-white tracking-tight">
@@ -723,16 +728,21 @@ export default function AITools() {
                 className={`flex gap-3 ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}
               >
                 {/* Avatar */}
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${
-                    msg.role === 'user'
-                      ? 'bg-gradient-to-br from-emerald-400 to-emerald-600 text-white shadow-lg shadow-emerald-500/20'
-                      : 'bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 text-emerald-400'
-                  }`}
-                >
-                  {msg.role === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
-                </motion.div>
+                {msg.role === 'user' ? (
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 bg-gradient-to-br from-emerald-400 to-emerald-600 text-white shadow-lg shadow-emerald-500/20"
+                  >
+                    <User className="w-4 h-4" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="shrink-0"
+                  >
+                    <AXO state={axo.state} size={32} showHat={true} />
+                  </motion.div>
+                )}
 
                 <div className={`max-w-[85%] min-w-0 ${msg.role === 'user' ? 'text-right' : ''}`}>
                   {msg.type === 'quiz' && msg.quiz ? (
@@ -900,7 +910,10 @@ export default function AITools() {
               <Textarea
                 ref={inputRef}
                 value={input}
-                onChange={(e) => setInput(e.target.value)}
+                onChange={(e) => {
+                  setInput(e.target.value);
+                  if (e.target.value) axo.activate();
+                }}
                 placeholder={PLACEHOLDERS[feature]}
                 className="bg-transparent border-0 text-sm text-foreground min-h-[44px] max-h-[120px] resize-none flex-1 px-3 py-2.5 placeholder:text-muted-foreground dark:text-white dark:placeholder:text-white/25 focus-visible:ring-0 focus-visible:ring-offset-0 shadow-none"
                 rows={1}
