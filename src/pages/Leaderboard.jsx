@@ -6,7 +6,7 @@ import AnimatedBackground from '../components/ui/AnimatedBackground';
 import XPBar from '../components/ui/XPBar';
 import AvatarDisplay from '../components/profile/AvatarDisplay';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
-import { fetchAllUsersFromFirebase } from '@/lib/userDataService';
+import { getLeaderboard } from '@/lib/cloudDatabase';
 import { useAuth } from '@/lib/AuthContext';
 import { RefreshCw, AlertCircle } from 'lucide-react';
 import { db } from '@/lib/db';
@@ -18,7 +18,15 @@ export default function Leaderboard() {
   
   const { data: users = [], isLoading, refetch } = useQuery({
     queryKey: ['leaderboard'],
-    queryFn: () => fetchAllUsersFromFirebase(50),
+    queryFn: async () => {
+      const leaderboard = await getLeaderboard(50);
+      // If no leaderboard data from Firestore, fall back to localStorage
+      if (leaderboard.length === 0) {
+        const { fetchAllUsersFromFirebase } = await import('@/lib/userDataService');
+        return fetchAllUsersFromFirebase(50);
+      }
+      return leaderboard;
+    },
     refetchInterval: 30000, // Refetch every 30 seconds to get latest data
   });
 

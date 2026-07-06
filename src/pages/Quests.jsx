@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, Play, BookOpen, Scroll, Zap, GraduationCap, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { CheckCircle2, Play, BookOpen, Scroll, Zap, GraduationCap, ChevronDown, ChevronUp, Sparkles, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Input } from '@/components/ui/input';
 import {
   Select,
   SelectContent,
@@ -18,6 +19,7 @@ import AssignmentPlayer from '../components/curriculum/AssignmentPlayer';
 import { toast } from 'sonner';
 import confetti from 'canvas-confetti';
 import { awardXP } from '@/lib/xpRewards';
+import { checkAchievements, checkSpecialAchievements } from '@/lib/achievementChecker';
 import { formatSubject, GRADES, CURRICULUM_FRAMEWORK } from '@/lib/subjects';
 import { getGradeFilter, setGradeFilter } from '@/lib/ethiopianCurriculum';
 import { db } from '@/lib/db';
@@ -31,6 +33,7 @@ export default function Quests() {
   const [contentFilter, setContentFilter] = useState('all');
   const [grade, setGrade] = useState(getGradeFilter);
   const [expandedId, setExpandedId] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const queryClient = useQueryClient();
 
   const { data: user } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
@@ -52,6 +55,16 @@ export default function Quests() {
       if (contentFilter === 'assignments') return ASSIGNMENT_TYPES.includes(q.type);
       if (contentFilter === 'quests') return QUEST_TYPES.includes(q.type);
       return true;
+    })
+    .filter((q) => {
+      if (!searchQuery.trim()) return true;
+      const query = searchQuery.toLowerCase();
+      return (
+        q.title?.toLowerCase().includes(query) ||
+        q.description?.toLowerCase().includes(query) ||
+        q.category?.toLowerCase().includes(query) ||
+        formatSubject(q.category)?.toLowerCase().includes(query)
+      );
     });
 
   useEffect(() => {
@@ -93,9 +106,40 @@ export default function Quests() {
     mutationFn: async (quest) => {
       if (!quest.exercise_passed) throw new Error('Pass the verification quiz first');
       await db.entities.Quest.update(quest.id, { status: 'completed', accepted_by: user.email });
-      await awardXP(db, user, quest.xp_reward, {
-        quests_completed: (user.quests_completed || 0) + 1,
+      const questType = QUEST_TYPES.includes(quest.type) ? 'Quest' : 'Assignment';
+      await awardXP(
+        db, 
+        user, 
+        quest.xp_reward, 
+        {
+          quests_completed: (user.quests_completed || 0) + 1,
+        },
+        'quest_completion',
+        `Completed ${questType}: ${quest.title}`,
+        { questId: quest.id, subject: quest.category, questType: quest.type }
+      );
+
+      // Check for special achievements
+      const specialAchievements = checkSpecialAchievements({
+        completed: true,
+        duration_minutes: quest.duration_minutes,
+        score: quest.exercise_score?.percent,
       });
+
+      // Check all achievements
+      if (user?.id || user?.uid) {
+        const uid = user.id || user.uid;
+        const userStats = {
+          ...user,
+          quests_completed: (user.quests_completed || 0) + 1,
+          early_bird_completed: specialAchievements.includes('early_bird'),
+          night_owl_completed: specialAchievements.includes('night_owl'),
+          speed_demon_completed: specialAchievements.includes('speed_demon'),
+          perfect_score: specialAchievements.includes('perfectionist'),
+        };
+        await checkAchievements(uid, userStats);
+      }
+
       return quest;
     },
     onSuccess: (quest) => {
@@ -159,10 +203,22 @@ export default function Quests() {
               </SelectContent>
             </Select>
           </div>
-          <p className="text-[10px] text-muted-foreground flex-1 min-w-[200px]">
-            Each assignment includes an in-app quiz — pass it (75%+) to prove you completed the lesson.
-          </p>
+          <div className="flex-1 min-w-[200px]">
+            <div className="relative">
+              <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-muted-foreground" />
+              <Input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search assignments..."
+                className="h-8 text-xs pl-8 bg-secondary border-border"
+              />
+            </div>
+          </div>
         </div>
+        <p className="text-[10px] text-muted-foreground mt-2.5">
+          Each assignment includes an in-app quiz — pass it (75%+) to prove you completed the lesson.
+        </p>
       </GlassCard>
 
       <Tabs value={tab} onValueChange={setTab} className="mb-4">

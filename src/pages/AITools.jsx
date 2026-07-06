@@ -14,6 +14,10 @@ import {
   ChevronRight,
   Brain,
   Lightbulb,
+  Image,
+  Paperclip,
+  X,
+  FileText,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -38,7 +42,7 @@ import {
 import { generateQuizJSON, generateFlashcardsJSON, generateSummary } from '@/lib/aiGenerator';
 import QuizArena from '@/components/ai/QuizArena';
 import NoteCardDeck from '@/components/ai/NoteCardDeck';
-import StudyAILoader from '@/components/ai/StudyAILoader';
+import StudyAILoader from '../components/ai/StudyAILoader';
 import { withDelayBudget } from '@/lib/aiDelay';
 import { getTextbookContext } from '@/lib/textbookRetrieval';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
@@ -117,7 +121,7 @@ export default function AITools() {
       id: uid(),
       role: 'assistant',
       content:
-        "Hi! I'm your study assistant. Pick **Summarize**, **Quiz**, or **Note cards** above, or chat with me about anything you're learning.",
+        "Hi! I'm your study assistant. Pick **Summarize**, **Quiz**, or **Note cards** above, or chat with me about anything you're learning. You can also upload images or files for me to analyze!",
       type: 'text',
     },
   ]);
@@ -127,8 +131,12 @@ export default function AITools() {
   const [apiKeyInput, setApiKeyInput] = useState('');
   const [showKeySetup, setShowKeySetup] = useState(!hasLLMConfigured());
   const [activeQuizId, setActiveQuizId] = useState(null);
+  const [uploadedFiles, setUploadedFiles] = useState([]);
+  const [uploadedImages, setUploadedImages] = useState([]);
   const scrollRef = useRef(null);
   const inputRef = useRef(null);
+  const fileInputRef = useRef(null);
+  const imageInputRef = useRef(null);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
@@ -147,6 +155,69 @@ export default function AITools() {
   const pushMessage = (msg) => setMessages((prev) => [...prev, { id: uid(), ...msg }]);
 
   const [lastQuizTopic, setLastQuizTopic] = useState('');
+
+  const handleFileUpload = (e) => {
+    const files = Array.from(e.target.files || []);
+    const newFiles = files.map(file => ({
+      id: uid(),
+      file,
+      name: file.name,
+      size: file.size,
+      type: file.type,
+    }));
+    setUploadedFiles(prev => [...prev, ...newFiles]);
+    toast.success(`${files.length} file(s) uploaded`);
+    // Reset input so same file can be uploaded again
+    if (e.target) {
+      e.target.value = '';
+    }
+  };
+
+  const handleImageUpload = (e) => {
+    const files = Array.from(e.target.files || []);
+    const newImages = files.map(file => ({
+      id: uid(),
+      file,
+      name: file.name,
+      preview: URL.createObjectURL(file),
+    }));
+    setUploadedImages(prev => [...prev, ...newImages]);
+    toast.success(`${files.length} image(s) uploaded`);
+    // Reset input so same file can be uploaded again
+    if (e.target) {
+      e.target.value = '';
+    }
+  };
+
+  const removeFile = (id) => {
+    setUploadedFiles(prev => prev.filter(f => f.id !== id));
+  };
+
+  const removeImage = (id) => {
+    setUploadedImages(prev => {
+      const img = prev.find(i => i.id === id);
+      if (img) URL.revokeObjectURL(img.preview);
+      return prev.filter(i => i.id !== id);
+    });
+  };
+
+  const readFileAsText = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (e) => resolve(e.target.result);
+      reader.onerror = reject;
+      reader.readAsText(file);
+    });
+  };
+
+  const readImageAsBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (e) => resolve(e.target.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  };
 
   const getStudyAdvice = async (topic, score, total, wrongQuestions) => {
     try {
@@ -176,20 +247,116 @@ export default function AITools() {
     return `${context}\n\n${basePrompt}`;
   };
 
-  const runChat = async (userText, history) => {
+  const runChat = async (userText, history, files = [], images = []) => {
     const apiMessages = buildHistoryForApi(history);
-    const context = await getTextbookContext(userText);
-    if (context && apiMessages.length) {
-      apiMessages[apiMessages.length - 1] = {
-        ...apiMessages[apiMessages.length - 1],
-        content: prependContext(apiMessages[apiMessages.length - 1].content, context),
-      };
+    
+    // Add file and image context if present
+    let enhancedText = userText;
+    const uploadedFileNames = [];
+    const uploadedImageNames = [];
+    
+    if (files.length > 0 || images.length > 0) {
+      const fileContexts = [];
+      
+      for (const file of files) {
+        uploadedFileNames.push(file.name);
+        // Try to read text-based files
+        const isTextFile = file.type && (
+          file.type.includes('text') || 
+          file.type.includes('json') || 
+          file.type.includes('csv') ||
+          file.type.includes('markdown') ||
+          file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i)
+        );
+        
+        if (isTextFile) {
+          try {
+            const content = await readFileAsText(file.file);
+            const truncatedContent = content.length > 5000 
+              ? content.substring(0, 5000) + '\n\n[Content truncated due to length...]'
+              : content;
+            fileContexts.push(`\n\n[Uploaded file: ${file.name}]\n${truncatedContent}\n[End of file]`);
+          } catch (err) {
+            fileContexts.push(`\n\n[Uploaded file: ${file.name} - could not read file content]`);
+          }
+        } else {
+          fileContexts.push(`\n\n[Uploaded file: ${file.name} - ${file.type || 'unknown type'}. Please ask questions about this file.]`);
+        }
+      }
+      
+      for (const image of images) {
+        uploadedImageNames.push(image.name);
+        fileContexts.push(`\n\n[Uploaded image: ${image.name} - visual content provided for analysis]`);
+      }
+      
+      enhancedText = userText + fileContexts.join('');
+      
+      // CRITICAL: Update the last user message with the file content
+      if (apiMessages.length > 0) {
+        // Find the last user message and update it with file content
+        for (let i = apiMessages.length - 1; i >= 0; i--) {
+          if (apiMessages[i].role === 'user') {
+            apiMessages[i] = {
+              ...apiMessages[i],
+              content: enhancedText
+            };
+            break;
+          }
+        }
+      }
     }
+    
+    // Get textbook context with the enhanced text
+    const context = await getTextbookContext(enhancedText);
+    if (context && apiMessages.length) {
+      // Find the last user message and prepend context
+      for (let i = apiMessages.length - 1; i >= 0; i--) {
+        if (apiMessages[i].role === 'user') {
+          apiMessages[i] = {
+            ...apiMessages[i],
+            content: prependContext(apiMessages[i].content, context)
+          };
+          break;
+        }
+      }
+    }
+    
     const { text, source } = await withDelayBudget(
       callLLMChat(apiMessages, { system: CHAT_SYSTEM, max_tokens: 1200, timeoutMs: 9000 }),
       { minMs: 5000 }
     );
-    pushMessage({ role: 'assistant', content: text, type: 'text' });
+    
+    let responseText = text;
+    if (files.length > 0 || images.length > 0) {
+      const hasReadableContent = files.some(f => {
+        const isTextFile = f.type && (
+          f.type.includes('text') || 
+          f.type.includes('json') || 
+          f.type.includes('csv') ||
+          f.type.includes('markdown') ||
+          f.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i)
+        );
+        return isTextFile;
+      });
+      
+      if (hasReadableContent) {
+        const fileList = uploadedFileNames.length > 0 ? `file(s): ${uploadedFileNames.join(', ')}` : '';
+        const imageList = uploadedImageNames.length > 0 ? `image(s): ${uploadedImageNames.join(', ')}` : '';
+        const combined = [fileList, imageList].filter(Boolean).join(' and ');
+        responseText = `I've analyzed your ${combined}.\n\n${text}`;
+      } else if (files.length > 0 && images.length === 0) {
+        responseText = `I can see you've uploaded: ${uploadedFileNames.join(', ')}. However, I can only read text-based files (like .txt, .md, .json, .csv, code files). For files like .docx, .pdf, or other binary formats, please copy and paste the text content directly into the chat.\n\n${text}`;
+      } else {
+        const fileList = uploadedFileNames.length > 0 ? `file(s): ${uploadedFileNames.join(', ')}` : '';
+        const imageList = uploadedImageNames.length > 0 ? `image(s): ${uploadedImageNames.join(', ')}` : '';
+        const combined = [fileList, imageList].filter(Boolean).join(' and ');
+        responseText = `I've received your ${combined}.\n\n${text}`;
+      }
+    }
+    
+    pushMessage({ role: 'assistant', content: responseText, type: 'text' });
+    setUploadedFiles([]);
+    setUploadedImages([]);
     if (source === 'local') toast.message('Using offline fallback — add a Groq key for full AI');
   };
 
@@ -311,7 +478,8 @@ export default function AITools() {
 
   const send = async () => {
     const text = input.trim();
-    if (!text || loading) return;
+    if (!text && uploadedFiles.length === 0 && uploadedImages.length === 0) return;
+    if (loading) return;
 
     if (!hasLLMConfigured()) {
       setShowKeySetup(true);
@@ -319,15 +487,65 @@ export default function AITools() {
       return;
     }
 
-    const userMsg = { id: uid(), role: 'user', content: text, type: 'text' };
+    // Read file contents for display
+    let displayContent = text;
+    const fileContents = [];
+    
+    for (const file of uploadedFiles) {
+      const isTextFile = file.type && (
+        file.type.includes('text') || 
+        file.type.includes('json') || 
+        file.type.includes('csv') ||
+        file.type.includes('markdown') ||
+        file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i)
+      );
+      
+      if (isTextFile) {
+        try {
+          const content = await readFileAsText(file.file);
+          const truncated = content.length > 1000 ? content.substring(0, 1000) + '\n\n[Content truncated for display...]' : content;
+          fileContents.push(`**${file.name}:**\n${truncated}`);
+        } catch (err) {
+          fileContents.push(`**${file.name}:** [Could not read file]`);
+        }
+      } else {
+        fileContents.push(`**${file.name}:** [Binary file - ${file.type || 'unknown type'}]`);
+      }
+    }
+
+    // Build the display message with file contents
+    if (fileContents.length > 0) {
+      displayContent = text + '\n\n' + fileContents.join('\n\n---\n\n');
+    }
+
+    const userMsg = { 
+      id: uid(), 
+      role: 'user', 
+      content: displayContent, 
+      type: 'text',
+      files: uploadedFiles.map(f => f.name),
+      images: uploadedImages.map(i => i.name),
+    };
     const nextHistory = [...messages, userMsg];
     setMessages(nextHistory);
     setInput('');
     setLoading(true);
+    
+    // Clear file inputs after sending
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+    if (imageInputRef.current) {
+      imageInputRef.current.value = '';
+    }
 
     try {
       if (feature === 'chat') {
-        await runChat(text, nextHistory);
+        // Capture files before clearing state
+        const filesToAnalyze = [...uploadedFiles];
+        const imagesToAnalyze = [...uploadedImages];
+        // Pass the display content (with file contents) to runChat
+        await runChat(displayContent || 'Analyze the uploaded content and answer my question', nextHistory, filesToAnalyze, imagesToAnalyze);
       } else if (feature === 'summary') {
         await runSummary(text);
       } else if (feature === 'quiz') {
@@ -556,7 +774,25 @@ export default function AITools() {
                             <ReactMarkdown>{msg.content}</ReactMarkdown>
                           </div>
                         ) : (
-                          <p className="whitespace-pre-wrap text-foreground dark:text-white/90">{msg.content}</p>
+                          <div>
+                            <p className="whitespace-pre-wrap text-foreground dark:text-white/90">{msg.content}</p>
+                            {(msg.files?.length > 0 || msg.images?.length > 0) && (
+                              <div className="flex flex-wrap gap-1.5 mt-2">
+                                {msg.files?.map((file, i) => (
+                                  <span key={`file-${i}`} className="text-[10px] px-2 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
+                                    <FileText className="w-3 h-3" />
+                                    {file}
+                                  </span>
+                                ))}
+                                {msg.images?.map((img, i) => (
+                                  <span key={`img-${i}`} className="text-[10px] px-2 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
+                                    <Image className="w-3 h-3" />
+                                    {img}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         )}
                       </div>
                     </div>
@@ -587,11 +823,80 @@ export default function AITools() {
           transition={{ delay: 0.2 }}
           className="flex-shrink-0 p-4 md:p-6 pt-3 border-t border-border bg-gradient-to-t from-background/50 to-transparent backdrop-blur-xl dark:border-white/[0.06] dark:from-black/50"
         >
+          {/* Uploaded files preview */}
+          {(uploadedFiles.length > 0 || uploadedImages.length > 0) && (
+            <div className="flex flex-wrap gap-2 mb-2.5">
+              {uploadedFiles.map((file) => (
+                <div key={file.id} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-secondary border border-border text-xs">
+                  <FileText className="w-3.5 h-3.5 text-muted-foreground" />
+                  <span className="text-foreground max-w-[150px] truncate">{file.name}</span>
+                  <button
+                    type="button"
+                    onClick={() => removeFile(file.id)}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </div>
+              ))}
+              {uploadedImages.map((image) => (
+                <div key={image.id} className="relative group">
+                  <img src={image.preview} alt={image.name} className="w-12 h-12 rounded-lg object-cover border border-border" />
+                  <button
+                    type="button"
+                    onClick={() => removeImage(image.id)}
+                    className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-destructive text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <X className="w-2.5 h-2.5" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+          
           <div className="relative group">
             {/* Glow effect on focus */}
             <div className="absolute -inset-[2px] bg-gradient-to-r from-emerald-500/20 via-emerald-400/10 to-emerald-500/20 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 blur-md" />
             
             <div className="relative flex gap-2 items-end bg-background/80 border border-border rounded-2xl p-1.5 group-focus-within:border-emerald-500/40 transition-all duration-300 dark:bg-white/[0.04] dark:border-white/[0.08] dark:group-focus-within:bg-white/[0.06]">
+              <div className="flex gap-1 px-1">
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  onChange={handleFileUpload}
+                  className="hidden"
+                  multiple
+                />
+                <input
+                  ref={imageInputRef}
+                  type="file"
+                  onChange={handleImageUpload}
+                  className="hidden"
+                  multiple
+                  accept="image/*"
+                />
+                <motion.button
+                  type="button"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => fileInputRef.current?.click()}
+                  className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
+                  title="Attach files"
+                >
+                  <Paperclip className="w-4 h-4" />
+                </motion.button>
+                <motion.button
+                  type="button"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => imageInputRef.current?.click()}
+                  className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
+                  title="Attach images"
+                >
+                  <Image className="w-4 h-4" />
+                </motion.button>
+              </div>
+              
               <Textarea
                 ref={inputRef}
                 value={input}
@@ -612,7 +917,7 @@ export default function AITools() {
               >
                 <Button
                   onClick={send}
-                  disabled={loading || !input.trim()}
+                  disabled={loading || (!input.trim() && uploadedFiles.length === 0 && uploadedImages.length === 0)}
                   size="icon"
                   className="h-10 w-10 shrink-0 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 text-white hover:from-emerald-400 hover:to-emerald-500 shadow-lg shadow-emerald-500/25 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300"
                 >

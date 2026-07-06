@@ -6,16 +6,69 @@ service cloud.firestore {
       allow read: if request.auth != null;
       allow write: if request.auth != null && request.auth.uid == userId;
       
-      // Allow access to game data within user documents
+      // User profile subcollection
+      match /profile/{document=**} {
+        allow read: if request.auth != null;
+        allow write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // XP history subcollection
+      match /xpHistory/{document=**} {
+        allow read: if request.auth != null;
+        allow write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Achievements subcollection
+      match /achievements/{document=**} {
+        allow read: if request.auth != null;
+        allow write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Assignments/Quests history
+      match /assignments/{document=**} {
+        allow read: if request.auth != null;
+        allow write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // AI Chat history
+      match /aiChats/{document=**} {
+        allow read: if request.auth != null;
+        allow write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Activity feed
+      match /activity/{document=**} {
+        allow read: if request.auth != null;
+        allow write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Game data within user documents
       match /gameData/{document=**} {
         allow read: if request.auth != null;
         allow write: if request.auth != null && request.auth.uid == userId;
       }
     }
     
-    // Leaderboard can be read by all authenticated users
-    match /users/{userId} {
+    // Public leaderboard collection (read-only for all authenticated users)
+    match /leaderboard/{document=**} {
       allow read: if request.auth != null;
+      allow write: if false; // Only written by Cloud Functions or admin
+    }
+    
+    // Guilds collection
+    match /guilds/{guildId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null;
+      allow delete: if request.auth != null;
+      
+      // Guild messages subcollection
+      match /messages/{messageId} {
+        allow read: if request.auth != null;
+        allow create: if request.auth != null;
+        allow update: if request.auth != null && request.auth.uid == resource.data.sender_uid;
+        allow delete: if request.auth != null && request.auth.uid == resource.data.sender_uid;
+      }
     }
   }
 }

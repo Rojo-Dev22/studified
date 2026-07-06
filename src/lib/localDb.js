@@ -158,10 +158,6 @@ export function createLocalDb(uid, profile, initialStore = null) {
   const getStore = () => store;
   const setStore = (next) => {
     store = next;
-    if (store.currentUser && profile) {
-      store.currentUser = { ...profile, ...store.currentUser };
-      activeProfile = store.currentUser;
-    }
     persistStore(store);
   };
 

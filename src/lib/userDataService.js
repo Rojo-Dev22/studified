@@ -1,5 +1,6 @@
 import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { firestore, isFirebaseConfigured } from './firebase';
+import { saveUserProfile, addXPTransaction, saveAssignmentCompletion, saveAIChat, addActivity } from './cloudDatabase';
 
 const SAVE_DEBOUNCE_MS = 600;
 const pendingSaves = new Map();
@@ -73,37 +74,13 @@ export function scheduleSaveUserGameData(uid, store, profile) {
 
   const timer = setTimeout(async () => {
     try {
-      // Save to localStorage only
-      const storageKey = `studified_db_${uid}`;
-      const dataToSave = {
-        ...store,
-        currentUser: {
-          ...store.currentUser,
-          email: profile.email || store.currentUser?.email || '',
-          full_name: profile.full_name || store.currentUser?.full_name || 'Student',
-        }
-      };
-      
-      localStorage.setItem(storageKey, JSON.stringify(dataToSave));
-      console.log('✅ Profile saved to localStorage');
+      // Only sync to Firebase in background (localStorage already saved by persistStore)
+      // No need to save to localStorage again - it was already saved immediately
       
       // Try Firebase in background (won't block if it fails)
       if (isFirebaseConfigured() && firestore) {
         try {
-          const cleanProfile = {
-            email: String(profile.email || ''),
-            full_name: String(profile.full_name || 'Student'),
-            total_xp: Number(store.currentUser?.total_xp) || 0,
-            quests_completed: Number(store.currentUser?.quests_completed) || 0,
-            focus_hours: Number(store.currentUser?.focus_hours) || 0,
-            streak_days: Number(store.currentUser?.streak_days) || 0,
-            grade: Number(store.currentUser?.grade) || 10,
-          };
-          
-          await setDoc(doc(firestore, 'users', uid), {
-            profile: cleanProfile,
-            updatedAt: serverTimestamp(),
-          }, { merge: true });
+          await saveUserProfile(uid, profile, store.gameData);
         } catch (firebaseErr) {
           // Silently fail - localStorage is the primary storage
         }
@@ -126,13 +103,26 @@ export async function flushSaveUserGameData(uid, store, profile) {
   try {
     // Save to localStorage first (guaranteed to work)
     const storageKey = `studified_db_${uid}`;
+    
+    // Update currentUser with profile data
+    const updatedCurrentUser = {
+      ...store.currentUser,
+      email: profile.email || store.currentUser?.email || '',
+      full_name: profile.full_name || store.currentUser?.full_name || 'Student',
+      caption: profile.caption || store.currentUser?.caption || '',
+      specialities: profile.specialities || store.currentUser?.specialities || [],
+      avatar: profile.avatar || store.currentUser?.avatar || '',
+      interests: profile.interests || store.currentUser?.interests || [],
+      location: profile.location || store.currentUser?.location || '',
+      social_github: profile.social_github || store.currentUser?.social_github || '',
+      social_twitter: profile.social_twitter || store.currentUser?.social_twitter || '',
+      social_website: profile.social_website || store.currentUser?.social_website || '',
+    };
+    
     const dataToSave = {
       ...store,
-      currentUser: {
-        ...store.currentUser,
-        email: profile.email || store.currentUser?.email || '',
-        full_name: profile.full_name || store.currentUser?.full_name || 'Student',
-      }
+      currentUser: updatedCurrentUser,
+      profile: updatedCurrentUser, // Save profile separately for easy loading
     };
     
     localStorage.setItem(storageKey, JSON.stringify(dataToSave));
@@ -141,20 +131,7 @@ export async function flushSaveUserGameData(uid, store, profile) {
     // Try Firebase in background (won't block if it fails)
     if (isFirebaseConfigured() && firestore) {
       try {
-        const cleanProfile = {
-          email: String(profile.email || ''),
-          full_name: String(profile.full_name || 'Student'),
-          total_xp: Number(store.currentUser?.total_xp) || 0,
-          quests_completed: Number(store.currentUser?.quests_completed) || 0,
-          focus_hours: Number(store.currentUser?.focus_hours) || 0,
-          streak_days: Number(store.currentUser?.streak_days) || 0,
-          grade: Number(store.currentUser?.grade) || 10,
-        };
-        
-        await setDoc(doc(firestore, 'users', uid), {
-          profile: cleanProfile,
-          updatedAt: serverTimestamp(),
-        }, { merge: true });
+        await saveUserProfile(uid, profile, store.gameData);
       } catch (firebaseErr) {
         // Silently fail - localStorage is the primary storage
       }
@@ -178,6 +155,14 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
     const cleanProfile = {
       email: String(profile.email || ''),
       full_name: String(profile.full_name || 'Student'),
+      caption: String(profile.caption || ''),
+      specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
+      avatar: String(profile.avatar || ''),
+      interests: Array.isArray(profile.interests) ? profile.interests : [],
+      location: String(profile.location || ''),
+      social_github: String(profile.social_github || ''),
+      social_twitter: String(profile.social_twitter || ''),
+      social_website: String(profile.social_website || ''),
       total_xp: Number(profile.total_xp) || 0,
       quests_completed: Number(profile.quests_completed) || 0,
       focus_hours: Number(profile.focus_hours) || 0,
@@ -192,7 +177,7 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
     };
 
     if (gameData && gameData.Quest && gameData.Quest.length > 0) {
-      dataToSave.gameData = {
+      dataToSave['gameData'] = {
         Quest: Array.isArray(gameData.Quest) ? gameData.Quest : [],
         Raid: Array.isArray(gameData.Raid) ? gameData.Raid : [],
         Guild: Array.isArray(gameData.Guild) ? gameData.Guild : [],
@@ -208,7 +193,7 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
     // Try Firebase in background (won't block if it fails)
     if (isFirebaseConfigured() && firestore) {
       try {
-        await setDoc(doc(firestore, 'users', uid), dataToSave, { merge: true });
+        await saveUserProfile(uid, profile, gameData);
         console.log('✅ Also saved to Firebase');
       } catch (firebaseErr) {
         // Silently fail - localStorage is the primary storage

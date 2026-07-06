@@ -23,8 +23,18 @@ export const AuthProvider = ({ children }) => {
   const [dbReady, setDbReady] = useState(false);
 
   const setupUserDb = useCallback(async (fbUser) => {
-    const profile = profileFromFirebaseUser(fbUser);
+    const authProfile = profileFromFirebaseUser(fbUser);
     let initialStore = await loadUserGameData(fbUser.uid);
+
+    // Merge stored profile from Firestore with auth profile
+    // Stored profile takes precedence for user-edited fields
+    const storedProfile = initialStore?.profile || {};
+    const profile = {
+      ...authProfile,
+      ...storedProfile,
+      email: storedProfile.email || authProfile.email,
+      full_name: storedProfile.full_name || authProfile.full_name,
+    };
 
     if (initialStore?.Quest?.length) {
       initialStore = syncCurriculumToStore({
@@ -34,7 +44,7 @@ export const AuthProvider = ({ children }) => {
           ...initialStore.currentUser,
           id: fbUser.uid,
           email: profile.email,
-          full_name: initialStore.currentUser?.full_name || profile.full_name,
+          full_name: profile.full_name,
         },
       });
     } else {

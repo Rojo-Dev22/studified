@@ -2,16 +2,15 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Pause, Square, Lock, Unlock, AlertCircle, Flame, Sparkles } from 'lucide-react';
+import { Play, Pause, Square, Lock, Unlock, AlertCircle, Flame, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 import { toast } from 'sonner';
 import confetti from 'canvas-confetti';
 import { awardXP } from '@/lib/xpRewards';
-
+import { checkAchievements } from '@/lib/achievementChecker';
 import { db } from '@/lib/db';
 
 
@@ -118,9 +117,28 @@ export default function Focus() {
       await db.entities.FocusSession.update(sessionId, { status: 'completed', actual_minutes: actualMinutes, xp_earned: xpEarned, distraction_count: distractions });
     }
     if (user && xpEarned > 0) {
-      await awardXP(db, user, xpEarned, {
-        focus_hours: (user.focus_hours || 0) + (actualMinutes / 60),
-      });
+      await awardXP(
+        db, 
+        user, 
+        xpEarned, 
+        {
+          focus_hours: (user.focus_hours || 0) + (actualMinutes / 60),
+        },
+        'focus_session',
+        `Focused for ${actualMinutes} minutes on ${subject || 'General study'}`,
+        { sessionId, subject: subject || 'General study', duration: actualMinutes, distractions }
+      );
+
+      // Check achievements
+      if (user?.id || user?.uid) {
+        const uid = user.id || user.uid;
+        const userStats = {
+          ...user,
+          focus_hours: (user.focus_hours || 0) + (actualMinutes / 60),
+          focus_sessions: (user.focus_sessions || 0) + 1,
+        };
+        await checkAchievements(uid, userStats);
+      }
     }
     queryClient.invalidateQueries({ queryKey: ['currentUser'] });
     queryClient.invalidateQueries({ queryKey: ['recentSessions'] });
@@ -134,7 +152,7 @@ export default function Focus() {
       colors: ['#10b981', '#34d399', '#6ee7b7', '#3b82f6', '#8b5cf6', '#ffffff'],
       disableForReducedMotion: true
     });
-  }, [sessionId, distractions, user, queryClient]);
+  }, [sessionId, distractions, user, queryClient, subject]);
 
   const stopSession = useCallback(async (reason) => {
     if (endingRef.current) return;
@@ -152,7 +170,15 @@ export default function Focus() {
       });
     }
     if (user && xpEarned > 0) {
-      await awardXP(db, user, xpEarned);
+      await awardXP(
+        db, 
+        user, 
+        xpEarned, 
+        {},
+        'focus_session',
+        `Partial focus session: ${actualMinutes} minutes on ${subject || 'General study'}`,
+        { sessionId, subject: subject || 'General study', duration: actualMinutes, distractions, reason }
+      );
     }
     queryClient.invalidateQueries({ queryKey: ['currentUser'] });
     queryClient.invalidateQueries({ queryKey: ['recentSessions'] });
@@ -166,7 +192,7 @@ export default function Focus() {
     movementWindowRef.current = [];
     lastMouseRef.current = null;
     endingRef.current = false;
-  }, [sessionId, distractions, user, queryClient]);
+  }, [sessionId, distractions, user, queryClient, subject]);
 
   stopSessionRef.current = stopSession;
 
@@ -293,6 +319,56 @@ export default function Focus() {
           </div>
         </div>
 
+        {/* iPhone-style Time Picker */}
+        {!isRunning && (
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-4"
+          >
+            <div className="flex items-center gap-3 bg-secondary/60 border border-border/80 rounded-2xl p-3 backdrop-blur-sm">
+              <button
+                type="button"
+                onClick={() => setDuration(prev => Math.max(15, prev - 5))}
+                className="w-10 h-10 rounded-full bg-background/80 border border-border hover:border-accent/40 hover:bg-accent/5 flex items-center justify-center transition-all active:scale-95"
+              >
+                <ChevronDown className="w-5 h-5 text-foreground" />
+              </button>
+              
+              <div className="flex flex-col items-center min-w-[80px]">
+                <span className="text-3xl font-bold tabular-nums text-foreground">{duration}</span>
+                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">minutes</span>
+              </div>
+              
+              <button
+                type="button"
+                onClick={() => setDuration(prev => Math.min(120, prev + 5))}
+                className="w-10 h-10 rounded-full bg-background/80 border border-border hover:border-accent/40 hover:bg-accent/5 flex items-center justify-center transition-all active:scale-95"
+              >
+                <ChevronUp className="w-5 h-5 text-foreground" />
+              </button>
+            </div>
+            
+            {/* Quick time presets */}
+            <div className="flex gap-2 mt-2.5 justify-center">
+              {[15, 30, 45, 60, 90, 120].map(time => (
+                <button
+                  key={time}
+                  type="button"
+                  onClick={() => setDuration(time)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                    duration === time
+                      ? 'bg-accent/20 text-accent border border-accent/40 shadow-sm'
+                      : 'bg-secondary/40 text-muted-foreground border border-border hover:text-foreground hover:border-border/80'
+                  }`}
+                >
+                  {time >= 60 ? `${time / 60}h` : `${time}m`}
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
         {/* Paused Warning Alert */}
         <AnimatePresence>
           {isPaused && isRunning && (
@@ -321,15 +397,6 @@ export default function Focus() {
                 placeholder="e.g. Calculus, History essay..." 
                 className="bg-secondary/60 border-border text-sm h-9 px-3 rounded-md focus:border-accent/40 focus:ring-1 focus:ring-accent/20 transition-all" 
               />
-            </div>
-            <div>
-              <label className="text-xs text-muted-foreground font-semibold uppercase tracking-wider block mb-1.5">Duration</label>
-              <Select value={String(duration)} onValueChange={(v) => setDuration(parseInt(v))}>
-                <SelectTrigger className="bg-secondary/60 border-border h-9 text-sm rounded-md"><SelectValue /></SelectTrigger>
-                <SelectContent>
-                  {[15, 25, 45, 60, 90].map(m => <SelectItem key={m} value={String(m)}>{m} minutes</SelectItem>)}
-                </SelectContent>
-              </Select>
             </div>
             
             <div className="flex items-center justify-between pt-2 border-t border-border/40">

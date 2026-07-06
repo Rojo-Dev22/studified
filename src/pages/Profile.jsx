@@ -242,7 +242,27 @@ export default function Profile() {
           // Refresh user data from database to get the latest values
           const updatedUser = await db.auth.me();
           const store = db.getStore();
-          await flushSaveUserGameData(firebaseUser.uid, store, updatedUser);
+          
+          // Create complete profile with all fields for saving
+          const completeProfile = {
+            email: updatedUser.email || '',
+            full_name: updatedUser.full_name || 'Student',
+            caption: updatedUser.caption || '',
+            specialities: updatedUser.specialities || [],
+            avatar: updatedUser.avatar || '',
+            interests: updatedUser.interests || [],
+            location: updatedUser.location || '',
+            social_github: updatedUser.social_github || '',
+            social_twitter: updatedUser.social_twitter || '',
+            social_website: updatedUser.social_website || '',
+            total_xp: updatedUser.total_xp || 0,
+            quests_completed: updatedUser.quests_completed || 0,
+            focus_hours: updatedUser.focus_hours || 0,
+            streak_days: updatedUser.streak_days || 0,
+            grade: updatedUser.grade || 10,
+          };
+          
+          await flushSaveUserGameData(firebaseUser.uid, store, completeProfile);
         } catch (e) {
           console.warn('Firebase sync skipped:', e);
         }
@@ -259,6 +279,7 @@ export default function Profile() {
       // Invalidate queries so they refetch when coming back
       queryClient.invalidateQueries({ queryKey: ['currentUser'] });
       queryClient.invalidateQueries({ queryKey: ['userSessions'] });
+      queryClient.invalidateQueries({ queryKey: ['leaderboard'] });
     } catch (err) {
       console.error('Save failed:', err);
       alert('Failed to save changes. Please try again.');
