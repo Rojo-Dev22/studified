@@ -142,7 +142,7 @@ export async function flushSaveUserGameData(uid, store, profile) {
   }
 }
 
-/** Save user profile to localStorage (PRIMARY) and Firebase (OPTIONAL) */
+/** Save user profile to Firebase (OPTIONAL - localStorage is PRIMARY) */
 export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
   if (!uid) {
     console.error('Missing uid');
@@ -150,54 +150,14 @@ export async function saveUserProfileToFirebase(uid, profile, gameData = null) {
   }
   
   try {
-    // Save to localStorage first (guaranteed to work)
-    const storageKey = `studified_db_${uid}`;
-    const cleanProfile = {
-      email: String(profile.email || ''),
-      full_name: String(profile.full_name || 'Student'),
-      caption: String(profile.caption || ''),
-      specialities: Array.isArray(profile.specialities) ? profile.specialities : [],
-      avatar: String(profile.avatar || ''),
-      interests: Array.isArray(profile.interests) ? profile.interests : [],
-      location: String(profile.location || ''),
-      social_github: String(profile.social_github || ''),
-      social_twitter: String(profile.social_twitter || ''),
-      social_website: String(profile.social_website || ''),
-      total_xp: Number(profile.total_xp) || 0,
-      quests_completed: Number(profile.quests_completed) || 0,
-      focus_hours: Number(profile.focus_hours) || 0,
-      streak_days: Number(profile.streak_days) || 0,
-      grade: Number(profile.grade) || 10,
-    };
-    
-    const dataToSave = {
-      profile: cleanProfile,
-      createdAt: serverTimestamp(),
-      updatedAt: serverTimestamp(),
-    };
-
-    if (gameData && gameData.Quest && gameData.Quest.length > 0) {
-      dataToSave['gameData'] = {
-        Quest: Array.isArray(gameData.Quest) ? gameData.Quest : [],
-        Raid: Array.isArray(gameData.Raid) ? gameData.Raid : [],
-        Guild: Array.isArray(gameData.Guild) ? gameData.Guild : [],
-        GuildMessage: Array.isArray(gameData.GuildMessage) ? gameData.GuildMessage : [],
-        FocusSession: Array.isArray(gameData.FocusSession) ? gameData.FocusSession : [],
-        User: Array.isArray(gameData.User) ? gameData.User : [],
-      };
-    }
-    
-    localStorage.setItem(storageKey, JSON.stringify(dataToSave));
-    console.log('✅ User profile saved to localStorage:', uid);
-    
     // Try Firebase in background (won't block if it fails)
     if (isFirebaseConfigured() && firestore) {
       try {
         await saveUserProfile(uid, profile, gameData);
-        console.log('✅ Also saved to Firebase');
+        console.log('✅ Saved to Firebase');
       } catch (firebaseErr) {
         // Silently fail - localStorage is the primary storage
-        console.log('⚠️ Firebase save failed, but localStorage succeeded');
+        console.log('⚠️ Firebase save failed');
       }
     }
     

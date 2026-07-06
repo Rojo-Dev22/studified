@@ -21,16 +21,7 @@ function storageKey(uid) {
 }
 
 function loadStore(uid, initialStore) {
-  if (initialStore) {
-    const synced = syncCurriculumToStore(initialStore);
-    try {
-      localStorage.setItem(storageKey(uid), JSON.stringify(synced));
-    } catch {
-      /* ignore */
-    }
-    return synced;
-  }
-
+  // FIRST: Check localStorage for existing data (highest priority - user's real data)
   try {
     const raw = localStorage.getItem(storageKey(uid));
     if (raw) {
@@ -42,6 +33,18 @@ function loadStore(uid, initialStore) {
     /* ignore */
   }
 
+  // SECOND: If no localStorage data, use the initialStore (from Firestore or fresh)
+  if (initialStore) {
+    const synced = syncCurriculumToStore(initialStore);
+    try {
+      localStorage.setItem(storageKey(uid), JSON.stringify(synced));
+    } catch {
+      /* ignore */
+    }
+    return synced;
+  }
+
+  // LAST RESORT: Create fresh seed data
   const seed = uid && activeProfile
     ? createInitialStoreForUser(activeProfile)
     : getSeedData();
