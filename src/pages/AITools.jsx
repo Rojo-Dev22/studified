@@ -639,15 +639,15 @@ export default function AITools() {
               >
                 <AXO state={axo.state} size={48} showHat={true} />
               </motion.div>
-              <div>
+                  <div>
                 <h1 className="text-xl font-bold text-foreground dark:text-white tracking-tight">
                   <span className="bg-gradient-to-r from-emerald-300 via-emerald-400 to-teal-300 bg-clip-text text-transparent">
-                    Professor Amare
+                    AXO AI
                   </span>
                 </h1>
                 <p className="text-[11px] text-muted-foreground dark:text-white/40 font-medium tracking-wide flex items-center gap-1.5">
                   <Sparkles className="w-3 h-3 text-emerald-400/60" />
-                  <span>Study AI · Powered by Groq LLM</span>
+                  <span>Your Study Companion · Powered by Groq LLM</span>
                 </p>
               </div>
             </div>

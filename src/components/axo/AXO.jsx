@@ -13,7 +13,7 @@ const STATES = {
 const IDLE_TIMEOUT_MS = 8000;
 const ECSTATIC_TIMEOUT_MS = 4000;
 
-// ─── SVG Components ──────────────────────────────────────────────
+// ─── SVG Sub-components (Head only) ──────────────────────────────
 
 function Gills({ side, animate = false }) {
   const x = side === 'left' ? -1 : 1;
@@ -36,14 +36,14 @@ function Gills({ side, animate = false }) {
     >
       {/* Top gill */}
       <path
-        d={`M${50 + 18 * x},${40} Q${50 + 38 * x},${25} ${50 + 28 * x},${15}`}
+        d={`M${50 + 18 * x},${42} Q${50 + 38 * x},${25} ${50 + 28 * x},${15}`}
         stroke="#2d6a4f"
         strokeWidth="3"
         fill="none"
         strokeLinecap="round"
       />
       <path
-        d={`M${50 + 18 * x},${40} Q${50 + 35 * x},${30} ${50 + 25 * x},${20}`}
+        d={`M${50 + 18 * x},${42} Q${50 + 35 * x},${30} ${50 + 25 * x},${20}`}
         stroke="#40916c"
         strokeWidth="2"
         fill="none"
@@ -51,14 +51,14 @@ function Gills({ side, animate = false }) {
       />
       {/* Middle gill */}
       <path
-        d={`M${50 + 20 * x},${45} Q${50 + 42 * x},${35} ${50 + 35 * x},${25}`}
+        d={`M${50 + 20 * x},${48} Q${50 + 42 * x},${38} ${50 + 35 * x},${28}`}
         stroke="#2d6a4f"
         strokeWidth="3"
         fill="none"
         strokeLinecap="round"
       />
       <path
-        d={`M${50 + 20 * x},${45} Q${50 + 38 * x},${38} ${50 + 32 * x},${28}`}
+        d={`M${50 + 20 * x},${48} Q${50 + 38 * x},${42} ${50 + 32 * x},${32}`}
         stroke="#40916c"
         strokeWidth="2"
         fill="none"
@@ -66,14 +66,14 @@ function Gills({ side, animate = false }) {
       />
       {/* Bottom gill */}
       <path
-        d={`M${50 + 18 * x},${50} Q${50 + 40 * x},${48} ${50 + 36 * x},${38}`}
+        d={`M${50 + 18 * x},${54} Q${50 + 40 * x},${52} ${50 + 36 * x},${42}`}
         stroke="#2d6a4f"
         strokeWidth="3"
         fill="none"
         strokeLinecap="round"
       />
       <path
-        d={`M${50 + 18 * x},${50} Q${50 + 36 * x},${50} ${50 + 33 * x},${42}`}
+        d={`M${50 + 18 * x},${54} Q${50 + 36 * x},${55} ${50 + 33 * x},${46}`}
         stroke="#40916c"
         strokeWidth="2"
         fill="none"
@@ -116,27 +116,24 @@ function Eyes({ state }) {
 
   return (
     <g>
-      {/* Left eye */}
       <motion.circle
-        cx="38" cy="42" r="5"
+        cx="38" cy="46" r="5"
         fill="#1a1a2e"
         variants={eyeVariants}
         animate={getVariant()}
-        style={{ transformOrigin: '38px 42px' }}
+        style={{ transformOrigin: '38px 46px' }}
       />
-      {/* Right eye */}
       <motion.circle
-        cx="62" cy="42" r="5"
+        cx="62" cy="46" r="5"
         fill="#1a1a2e"
         variants={eyeVariants}
         animate={getVariant()}
-        style={{ transformOrigin: '62px 42px' }}
+        style={{ transformOrigin: '62px 46px' }}
       />
-      {/* Eye shine */}
       {!isDormant && (
         <>
-          <circle cx="36" cy="40" r="1.5" fill="white" opacity={0.8} />
-          <circle cx="60" cy="40" r="1.5" fill="white" opacity={0.8} />
+          <circle cx="36" cy="44" r="1.5" fill="white" opacity={0.8} />
+          <circle cx="60" cy="44" r="1.5" fill="white" opacity={0.8} />
         </>
       )}
     </g>
@@ -145,11 +142,11 @@ function Eyes({ state }) {
 
 function Mouth({ state }) {
   const mouthVariants = {
-    dormant: { d: 'M40,55 Q50,58 60,55' },
-    active: { d: 'M38,54 Q50,60 62,54' },
-    thinking: { d: 'M40,56 Q50,52 60,56' },
-    loading: { d: 'M40,55 Q50,58 60,55' },
-    ecstatic: { d: 'M35,52 Q50,65 65,52' },
+    dormant: { d: 'M40,60 Q50,63 60,60' },
+    active: { d: 'M38,59 Q50,65 62,59' },
+    thinking: { d: 'M40,61 Q50,57 60,61' },
+    loading: { d: 'M40,60 Q50,63 60,60' },
+    ecstatic: { d: 'M35,57 Q50,70 65,57' },
   };
 
   return (
@@ -162,21 +159,6 @@ function Mouth({ state }) {
       strokeLinecap="round"
       transition={{ duration: 0.3, ease: 'easeOut' }}
     />
-  );
-}
-
-function Body() {
-  return (
-    <g>
-      {/* Body */}
-      <ellipse cx="50" cy="75" rx="22" ry="18" fill="#a8e6cf" />
-      {/* Left arm nub */}
-      <ellipse cx="28" cy="72" rx="6" ry="4" fill="#a8e6cf" />
-      {/* Right arm nub */}
-      <ellipse cx="72" cy="72" rx="6" ry="4" fill="#a8e6cf" />
-      {/* Belly highlight */}
-      <ellipse cx="50" cy="78" rx="12" ry="10" fill="#c4f0e0" opacity={0.6} />
-    </g>
   );
 }
 
@@ -208,13 +190,15 @@ function Head({ state }) {
     <motion.g
       variants={headVariants}
       animate={state}
-      style={{ transformOrigin: '50px 45px' }}
+      style={{ transformOrigin: '50px 50px' }}
     >
-      {/* Head shape */}
-      <ellipse cx="50" cy="45" rx="28" ry="24" fill="#a8e6cf" />
+      {/* Head - centered, larger without body */}
+      <ellipse cx="50" cy="50" rx="30" ry="27" fill="#a8e6cf" />
       {/* Cheek blush */}
-      <ellipse cx="30" cy="50" rx="6" ry="3" fill="#ffb3c6" opacity={0.4} />
-      <ellipse cx="70" cy="50" rx="6" ry="3" fill="#ffb3c6" opacity={0.4} />
+      <ellipse cx="28" cy="56" rx="7" ry="4" fill="#ffb3c6" opacity={0.4} />
+      <ellipse cx="72" cy="56" rx="7" ry="4" fill="#ffb3c6" opacity={0.4} />
+      {/* Small neck hint */}
+      <ellipse cx="50" cy="74" rx="14" ry="6" fill="#a8e6cf" opacity={0.7} />
     </motion.g>
   );
 }
@@ -235,16 +219,13 @@ function LightbulbIcon() {
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         style={{ transformOrigin: '80px 20px' }}
       >
-        {/* Lightbulb body */}
         <path
           d="M78,15 Q78,10 80,8 Q82,10 82,15 L82,18 Q82,20 80,22 Q78,20 78,18 Z"
           fill="#fbbf24"
           stroke="#d97706"
           strokeWidth="1"
         />
-        {/* Lightbulb base */}
         <rect x="79" y="22" width="2" height="3" rx="0.5" fill="#d97706" />
-        {/* Glow */}
         <circle cx="80" cy="15" r="8" fill="#fbbf24" opacity={0.2}>
           <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" />
           <animate attributeName="opacity" values="0.2;0.1;0.2" dur="2s" repeatCount="indefinite" />
@@ -263,7 +244,7 @@ function LoadingDots() {
         const rad = (angle * Math.PI) / 180;
         const radius = 14;
         const cx = 50 + Math.cos(rad) * radius;
-        const cy = 15 + Math.sin(rad) * radius;
+        const cy = 18 + Math.sin(rad) * radius;
         return (
           <motion.circle
             key={i}
@@ -291,12 +272,12 @@ function LoadingDots() {
 
 function Sparkles() {
   const sparklePositions = [
-    { x: 20, y: 10 },
-    { x: 80, y: 5 },
-    { x: 15, y: 30 },
-    { x: 85, y: 25 },
-    { x: 25, y: 60 },
-    { x: 75, y: 55 },
+    { x: 20, y: 15 },
+    { x: 80, y: 10 },
+    { x: 15, y: 35 },
+    { x: 85, y: 30 },
+    { x: 25, y: 65 },
+    { x: 75, y: 60 },
   ];
 
   return (
@@ -318,7 +299,6 @@ function Sparkles() {
           }}
           style={{ transformOrigin: `${pos.x}px ${pos.y}px` }}
         >
-          {/* Four-point star */}
           <path
             d={`M${pos.x},${pos.y - 5} Q${pos.x},${pos.y} ${pos.x + 5},${pos.y} Q${pos.x},${pos.y} ${pos.x},${pos.y + 5} Q${pos.x},${pos.y} ${pos.x - 5},${pos.y} Q${pos.x},${pos.y} ${pos.x},${pos.y - 5}Z`}
             fill="#fbbf24"
@@ -331,24 +311,21 @@ function Sparkles() {
 
 function MortarboardHat() {
   return (
-    <g transform="translate(50, 8)">
-      {/* Hat base */}
+    <g transform="translate(50, 10)">
       <path
         d="M-12,0 L-8,-8 L8,-8 L12,0 Z"
         fill="#1a1a2e"
         stroke="#1a1a2e"
         strokeWidth="1"
       />
-      {/* Hat top */}
       <rect x="-10" y="-10" width="20" height="3" rx="1" fill="#1a1a2e" />
-      {/* Tassel */}
       <line x1="10" y1="-8" x2="14" y2="-2" stroke="#fbbf24" strokeWidth="1.5" />
       <circle cx="14" cy="-2" r="1.5" fill="#fbbf24" />
     </g>
   );
 }
 
-// ─── Main AXO Component ──────────────────────────────────────────
+// ─── Main AXO Component (Head Only) ──────────────────────────────
 
 export default function AXO({
   state: externalState,
@@ -361,7 +338,6 @@ export default function AXO({
   const idleTimerRef = useRef(null);
   const ecstaticTimerRef = useRef(null);
 
-  // Use external state if provided, otherwise use internal
   const currentState = externalState || internalState;
 
   const setState = useCallback(
@@ -376,7 +352,6 @@ export default function AXO({
     [externalState, onStateChange]
   );
 
-  // Idle timeout: transition to Dormant after inactivity
   const resetIdleTimer = useCallback(() => {
     if (idleTimerRef.current) clearTimeout(idleTimerRef.current);
     if (currentState === STATES.DORMANT) return;
@@ -385,7 +360,6 @@ export default function AXO({
     }, IDLE_TIMEOUT_MS);
   }, [currentState, setState]);
 
-  // Ecstatic timeout: return to Active after celebration
   useEffect(() => {
     if (currentState === STATES.ECSTATIC) {
       ecstaticTimerRef.current = setTimeout(() => {
@@ -397,7 +371,6 @@ export default function AXO({
     };
   }, [currentState, setState]);
 
-  // Reset idle timer on state change
   useEffect(() => {
     resetIdleTimer();
     return () => {
@@ -405,14 +378,13 @@ export default function AXO({
     };
   }, [currentState, resetIdleTimer]);
 
-  const svgSize = size;
   const viewBox = '0 0 100 100';
 
   return (
     <div className={`inline-flex items-center justify-center ${className}`}>
       <svg
-        width={svgSize}
-        height={svgSize}
+        width={size}
+        height={size}
         viewBox={viewBox}
         xmlns="http://www.w3.org/2000/svg"
         style={{ overflow: 'visible' }}
@@ -429,45 +401,32 @@ export default function AXO({
           />
         )}
 
-        {/* Sparkles (Ecstatic state) */}
         <AnimatePresence>
           {currentState === STATES.ECSTATIC && <Sparkles />}
         </AnimatePresence>
 
-        {/* Loading dots */}
         <AnimatePresence>
           {currentState === STATES.LOADING && <LoadingDots />}
         </AnimatePresence>
 
-        {/* Lightbulb (Thinking state) */}
         <AnimatePresence>
           {currentState === STATES.THINKING && <LightbulbIcon />}
         </AnimatePresence>
 
-        {/* Mortarboard hat */}
         {showHat && <MortarboardHat />}
 
-        {/* Gills */}
+        {/* Head-only rendering - no body */}
         <Gills side="left" animate={currentState !== STATES.DORMANT} />
         <Gills side="right" animate={currentState !== STATES.DORMANT} />
-
-        {/* Body */}
-        <Body />
-
-        {/* Head */}
         <Head state={currentState} />
-
-        {/* Eyes */}
         <Eyes state={currentState} />
-
-        {/* Mouth */}
         <Mouth state={currentState} />
       </svg>
     </div>
   );
 }
 
-// ─── Hook for managing AXO state from parent ────────────────────
+// ─── Hook ────────────────────────────────────────────────────
 
 export function useAXOState() {
   const [state, setState] = useState(STATES.DORMANT);
