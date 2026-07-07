@@ -261,14 +261,14 @@ export default function AITools() {
       
       for (const file of files) {
         uploadedFileNames.push(file.name);
-        // Try to read text-based files
-        const isTextFile = file.type && (
-          file.type.includes('text') || 
-          file.type.includes('json') || 
-          file.type.includes('csv') ||
-          file.type.includes('markdown') ||
-          file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i)
-        );
+        // Try to read text-based files - check by extension OR MIME type
+        const isTextFile = file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i) ||
+                          (file.type && (
+                            file.type.includes('text') || 
+                            file.type.includes('json') || 
+                            file.type.includes('csv') ||
+                            file.type.includes('markdown')
+                          ));
         
         if (isTextFile) {
           try {
@@ -278,6 +278,7 @@ export default function AITools() {
               : content;
             fileContexts.push(`\n\n[Uploaded file: ${file.name}]\n${truncatedContent}\n[End of file]`);
           } catch (err) {
+            console.error('Error reading file:', err);
             fileContexts.push(`\n\n[Uploaded file: ${file.name} - could not read file content]`);
           }
         } else {
@@ -489,20 +490,20 @@ export default function AITools() {
     }
 
     axo.startThinking();
-    axo.startLoading();
 
     // Read file contents for display
     let displayContent = text;
     const fileContents = [];
     
     for (const file of uploadedFiles) {
-      const isTextFile = file.type && (
-        file.type.includes('text') || 
-        file.type.includes('json') || 
-        file.type.includes('csv') ||
-        file.type.includes('markdown') ||
-        file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i)
-      );
+      // Check by extension first, then MIME type
+      const isTextFile = file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i) ||
+                        (file.type && (
+                          file.type.includes('text') || 
+                          file.type.includes('json') || 
+                          file.type.includes('csv') ||
+                          file.type.includes('markdown')
+                        ));
       
       if (isTextFile) {
         try {
@@ -510,6 +511,7 @@ export default function AITools() {
           const truncated = content.length > 1000 ? content.substring(0, 1000) + '\n\n[Content truncated for display...]' : content;
           fileContents.push(`**${file.name}:**\n${truncated}`);
         } catch (err) {
+          console.error('Error reading file:', err);
           fileContents.push(`**${file.name}:** [Could not read file]`);
         }
       } else {
@@ -595,6 +597,7 @@ export default function AITools() {
       axo.celebrate();
     } finally {
       setLoading(false);
+      axo.idle();
       inputRef.current?.focus();
     }
   };
@@ -818,9 +821,7 @@ export default function AITools() {
               animate={{ opacity: 1, y: 0 }}
               className="flex items-center gap-2.5"
             >
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 flex items-center justify-center">
-                <Bot className="w-4 h-4 text-emerald-400" />
-              </div>
+              <AXO state={axo.state} size={32} showHat={true} />
               <StudyAILoader feature={feature} />
             </motion.div>
           )}

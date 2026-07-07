@@ -229,7 +229,7 @@ export function generateFlashcardsJSON(topicOrText) {
 export function generateSummary(topic) {
   const t = topic || 'your topic';
   return `## Study Notes: ${t}
-*Professor Amare's Expert Study Guide*
+*Expert Study Guide*
 
 ### Overview
 ${t} is a fascinating topic that connects to many areas of your curriculum. Let's build a deep understanding — not just memorize facts.
@@ -250,7 +250,7 @@ Walk through the main process or chain of reasoning for ${t}:
 - ❌ **Mistake 2**: Confusing related terms — compare definitions carefully
 - ✅ **Fix**: Explain each concept aloud in your own words before moving on
 
-### Professor's Challenge Questions
+### Challenge Questions
 1. How would you explain ${t} to a classmate who missed the lesson?
 2. What real-world situation uses ${t} in a way that surprised you?
 3. Can you connect ${t} to something you learned in a different subject?
