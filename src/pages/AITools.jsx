@@ -121,7 +121,7 @@ export default function AITools() {
       id: uid(),
       role: 'assistant',
       content:
-        "Hi! I'm your study assistant. Pick **Summarize**, **Quiz**, or **Note cards** above, or chat with me about anything you're learning. You can also upload images or files for me to analyze!",
+        "Hello! I am Axo, your study buddy. Pick **Summarize**, **Quiz**, or **Note cards** above, or chat with me about anything you're learning. You can also upload images or files for me to analyze!",
       type: 'text',
     },
   ]);

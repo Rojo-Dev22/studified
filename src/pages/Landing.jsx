@@ -50,12 +50,13 @@ const floatingVariants = {
   }),
 };
 
-function GlowOrb({ className, delay = 0 }) {
+function GlowOrb({ className, delay = 0, style }) {
   return (
     <motion.div
       className={`absolute rounded-full blur-3xl pointer-events-none ${className}`}
       animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.65, 0.4] }}
       transition={{ duration: 6, repeat: Infinity, delay }}
+      style={style}
     />
   );
 }
@@ -89,125 +90,166 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
        <div className="fixed inset-0 -z-10">
-         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(142_71%_45%/0.15),transparent)]" />
-         <GlowOrb 
-           className={`w-[650px] h-[650px] bg-accent/20 -top-40 -left-40`} 
-           style={{ 
-             transform: `translate(${mousePos.x * 20}px, ${mousePos.y * 20}px)` 
-           }} 
-           delay={0} 
-         />
-         <GlowOrb 
-           className={`w-[600px] h-[600px] bg-blue-500/15 top-1/3 -right-32`} 
-           style={{ 
-             transform: `translate(${-mousePos.x * 15}px, ${-mousePos.y * 15}px)` 
-           }} 
-           delay={2} 
-         />
-         <GlowOrb 
-           className={`w-[550px] h-[550px] bg-violet-500/10 bottom-0 left-1/4`} 
-           style={{ 
-             transform: `translate(${mousePos.x * 10}px, ${-mousePos.y * 10}px)` 
-           }} 
-           delay={1} 
-         />
-         <div
-           className="absolute inset-0 opacity-[0.03]"
-           style={{
-             backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-             backgroundSize: '32px 32px',
-           }}
-         />
-       </div>
+          <motion.div 
+            className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(142_71%_45%/0.15),transparent)]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+          />
+          <GlowOrb 
+            className={`w-[650px] h-[650px] bg-accent/20 -top-40 -left-40`} 
+            style={{ 
+              transform: `translate(${mousePos.x * 20}px, ${mousePos.y * 20}px)` 
+            }} 
+            delay={0} 
+          />
+          <GlowOrb 
+            className={`w-[600px] h-[600px] bg-blue-500/15 top-1/3 -right-32`} 
+            style={{ 
+              transform: `translate(${-mousePos.x * 15}px, ${-mousePos.y * 15}px)` 
+            }} 
+            delay={2} 
+          />
+          <GlowOrb 
+            className={`w-[550px] h-[550px] bg-violet-500/10 bottom-0 left-1/4`} 
+            style={{ 
+              transform: `translate(${mousePos.x * 10}px, ${-mousePos.y * 10}px)` 
+            }} 
+            delay={1} 
+          />
+          <motion.div
+            className="absolute inset-0 opacity-[0.03]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.03 }}
+            transition={{ duration: 2, delay: 0.5 }}
+            style={{
+              backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
+              backgroundSize: '32px 32px',
+            }}
+          />
+        </div>
 
-      <header className="relative z-10 flex items-center justify-between px-5 md:px-10 py-5">
+      <motion.header 
+        className="relative z-10 flex items-center justify-between px-5 md:px-10 py-5"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="flex items-center gap-2.5"
         >
           <motion.div
             className="w-9 h-9 rounded-lg bg-foreground flex items-center justify-center"
             whileHover={{ scale: 1.05, rotate: 3 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
             <span className="text-background text-sm font-bold">S</span>
           </motion.div>
           <span className="text-lg font-semibold tracking-tight">Studified</span>
         </motion.div>
-         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
+         <motion.div 
+           initial={{ opacity: 0, x: 20 }} 
+           animate={{ opacity: 1, x: 0 }}
+           transition={{ duration: 0.6, delay: 0.3 }}
+         >
            <a href="#" onClick={(e) => { e.preventDefault(); setShowAuth(true); }} className="text-xs text-muted-foreground hover:text-accent transition-colors">
              Jump to sign in →
            </a>
          </motion.div>
-      </header>
+      </motion.header>
 
-         <section ref={heroRef} className="relative px-5 md:px-10 pt-8 pb-20 md:pt-16">
-           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-             <motion.div style={{ y: heroY, opacity: heroOpacity }}>
-               <motion.div
-                 initial={{ opacity: 0, y: 24 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ duration: 0.6 }}
-               >
-                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-accent/30 bg-accent/10 text-[10px] font-medium text-accent uppercase tracking-wider mb-4">
-                   <GraduationCap className="w-3 h-3" />
-                   Ethiopian General Education · Grades 9–12
-                 </span>
-                 <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
-                   Study smarter.
-                   <br />
-                   <span className="text-accent">Level up</span> your grades.
-                 </h1>
-                 <p className="text-muted-foreground mt-4 text-sm md:text-base max-w-lg leading-relaxed">
-                   Assignments, challenges, focus sessions, and AI tools — all built for the MoE curriculum.
-                   Your progress syncs to your account.
-                 </p>
-               </motion.div>
+         <section 
+           ref={heroRef} 
+           className="relative px-5 md:px-10 pt-8 pb-20 md:pt-16"
+         >
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <motion.div style={{ y: heroY, opacity: heroOpacity }}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease: 'easeOut' }}
+                >
+                  <motion.span 
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-accent/30 bg-accent/10 text-[10px] font-medium text-accent uppercase tracking-wider mb-4"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                  >
+                    <GraduationCap className="w-3 h-3" />
+                    Ethiopian General Education · Grades 9–12
+                  </motion.span>
+                  <motion.h1 
+                    className="text-3xl md:text-5xl font-bold leading-tight tracking-tight"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.7 }}
+                  >
+                    Study smarter.
+                    <br />
+                    <span className="text-accent">Level up</span> your grades.
+                  </motion.h1>
+                  <motion.p 
+                    className="text-muted-foreground mt-4 text-sm md:text-base max-w-lg leading-relaxed"
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5, duration: 0.6 }}
+                  >
+                    Assignments, challenges, focus sessions, and AI tools — all built for the MoE curriculum.
+                    Your progress syncs to your account.
+                  </motion.p>
+                </motion.div>
  
-               <motion.div
-                 className="flex flex-wrap gap-3 mt-8"
-                 initial={{ opacity: 0, y: 16 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ delay: 0.2 }}
-               >
-                 <a href="#" onClick={(e) => { e.preventDefault(); setShowAuth(true); }}>
-                   <Button className="h-10 px-5 bg-accent text-accent-foreground hover:bg-accent/90 group">
-                     Get started
-                     <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
-                   </Button>
-                 </a>
-                 <a href="#features">
-                   <Button variant="outline" className="h-10 px-5 border-border">
-                     See features
-                   </Button>
-                 </a>
-               </motion.div>
+                <motion.div
+                  className="flex flex-wrap gap-3 mt-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
+                >
+                  <motion.a href="#" onClick={(e) => { e.preventDefault(); setShowAuth(true); }}>
+                    <Button className="h-10 px-5 bg-accent text-accent-foreground hover:bg-accent/90 group">
+                      Get started
+                      <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
+                    </Button>
+                  </motion.a>
+                  <motion.a 
+                    href="#features"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <Button variant="outline" className="h-10 px-5 border-border">
+                      See features
+                    </Button>
+                  </motion.a>
+                </motion.div>
  
-               <motion.div
-                 className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-border/60"
-                 initial={{ opacity: 0 }}
-                 animate={{ opacity: 1 }}
-                 transition={{ delay: 0.4 }}
-               >
-                 {[
-                   { n: '20+', l: 'MoE assignments' },
-                   { n: '10', l: 'Group challenges' },
-                   { n: '∞', l: 'AI study help' },
-                 ].map((stat, i) => (
-                   <motion.div
-                     key={i}
-                     initial={{ opacity: 0, scale: 0.9 }}
-                     animate={{ opacity: 1, scale: 1 }}
-                     transition={{ delay: i * 0.1 }}
-                     whileHover={{ scale: 1.05 }}
-                   >
-                     <div key={i}>
-                       <p className="text-xl font-bold text-accent">{stat.n}</p>
-                       <p className="text-[10px] text-muted-foreground">{stat.l}</p>
-                     </div>
-                   </motion.div>
-                 ))}
-               </motion.div>
+                <motion.div
+                  className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-border/60"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                >
+                  {[
+                    { n: '20+', l: 'MoE assignments' },
+                    { n: '10', l: 'Group challenges' },
+                    { n: '∞', l: 'AI study help' },
+                  ].map((stat, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0.8, y: 10 }}
+                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                      transition={{ delay: 0.9 + i * 0.1, duration: 0.5, type: 'spring' }}
+                      whileHover={{ scale: 1.08, y: -2 }}
+                    >
+                      <div key={i}>
+                        <p className="text-xl font-bold text-accent">{stat.n}</p>
+                        <p className="text-[10px] text-muted-foreground">{stat.l}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
              </motion.div>
 
          {showAuth && (
