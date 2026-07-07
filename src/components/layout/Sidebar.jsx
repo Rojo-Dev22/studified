@@ -113,8 +113,8 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       {/* Logo */}
       <div className="h-14 flex items-center justify-between px-3.5 border-b border-sidebar-border flex-shrink-0">
         <div className="flex items-center gap-2 min-w-0">
-          <div className="w-7 h-7 rounded-md bg-foreground flex items-center justify-center flex-shrink-0">
-            <span className="text-background text-xs font-bold">S</span>
+          <div className="w-7 h-7 rounded-md bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center flex-shrink-0">
+            <span className="text-white text-xs font-bold">A</span>
           </div>
           <AnimatePresence>
             {!collapsed && (
@@ -125,7 +125,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                 transition={{ duration: 0.15 }}
                 className="text-sm font-semibold text-foreground tracking-tight overflow-hidden whitespace-nowrap"
               >
-                Studified
+                AXO AI
               </motion.span>
             )}
           </AnimatePresence>
