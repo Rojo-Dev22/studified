@@ -13,7 +13,7 @@ const navItems = [
   { path: '/focus', icon: Timer, label: 'Focus' },
   { path: '/guild', icon: Users, label: 'Study Groups' },
   { path: '/raids', icon: Zap, label: 'Challenges' },
-  { path: '/ai-tools', icon: Sparkles, label: 'Study AI' },
+  { path: '/ai-tools', icon: Sparkles, label: 'AXO AI' },
   { path: '/minigames', icon: Gamepad2, label: 'Mini Games' },
   { path: '/leaderboard', icon: Trophy, label: 'Leaderboard' },
   { path: '/profile', icon: User, label: 'Profile' },
@@ -110,28 +110,28 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       transition={{ duration: 0.25, ease: 'easeInOut' }}
       className="fixed left-0 top-0 h-screen bg-sidebar border-r border-sidebar-border z-50 flex flex-col overflow-hidden"
     >
-      {/* Logo */}
-      <div className="h-14 flex items-center justify-between px-3.5 border-b border-sidebar-border flex-shrink-0">
-        <div className="flex items-center gap-2 min-w-0">
-          <div className="w-7 h-7 rounded-md bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center flex-shrink-0">
-            <span className="text-white text-xs font-bold">A</span>
-          </div>
-          <AnimatePresence>
-            {!collapsed && (
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.15 }}
-                className="text-sm font-semibold text-foreground tracking-tight overflow-hidden whitespace-nowrap"
-              >
-                AXO AI
-              </motion.span>
-            )}
-          </AnimatePresence>
-        </div>
-        <ThemeToggle />
-      </div>
+       {/* Logo */}
+       <div className="h-14 flex items-center justify-between px-3.5 border-b border-sidebar-border flex-shrink-0">
+         <div className="flex items-center gap-2 min-w-0">
+           <div className="w-7 h-7 rounded-md bg-foreground flex items-center justify-center flex-shrink-0">
+             <span className="text-background text-xs font-bold">S</span>
+           </div>
+           <AnimatePresence>
+             {!collapsed && (
+               <motion.span
+                 initial={{ opacity: 0 }}
+                 animate={{ opacity: 1 }}
+                 exit={{ opacity: 0 }}
+                 transition={{ duration: 0.15 }}
+                 className="text-sm font-semibold text-foreground tracking-tight overflow-hidden whitespace-nowrap"
+               >
+                 Studified
+               </motion.span>
+             )}
+           </AnimatePresence>
+         </div>
+         <ThemeToggle />
+       </div>
 
       <nav className="flex-1 py-3 px-2 space-y-1 overflow-y-auto relative">
         {navItems.map((item) => {

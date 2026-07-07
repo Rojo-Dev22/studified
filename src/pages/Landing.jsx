@@ -31,7 +31,7 @@ const features = [
   },
   {
     icon: Sparkles,
-    title: 'Study AI',
+    title: 'AXO AI',
     desc: 'Chat, summarize, 15-question quizzes, and note cards tuned for Grades 9–12.',
     color: 'text-violet-400',
   },
