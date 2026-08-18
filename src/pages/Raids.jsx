@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Users, Clock, CheckCircle2, GraduationCap, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { Zap, Users, Clock, CheckCircle2, GraduationCap, ChevronDown, ChevronUp, Sparkles } from '@/components/ui/icons';
 import { Button } from '@/components/ui/button';
 import {
   Select,

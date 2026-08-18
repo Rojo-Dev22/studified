@@ -8,7 +8,7 @@ import AvatarDisplay from '../components/profile/AvatarDisplay';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
 import { getLeaderboard } from '@/lib/cloudDatabase';
 import { useAuth } from '@/lib/AuthContext';
-import { RefreshCw, AlertCircle } from 'lucide-react';
+import { RefreshCw, AlertCircle } from '@/components/ui/icons';
 import { db } from '@/lib/db';
 
 export default function Leaderboard() {

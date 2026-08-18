@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shuffle, Palette, Layers, Shapes, Sparkles, Smile } from 'lucide-react';
+import { Shuffle, Palette, Layers, Shapes, Sparkles, Smile } from '@/components/ui/icons';
 
 // ─── Pattern Definitions ───────────────────────────────────────────────
 

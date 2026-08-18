@@ -4,7 +4,7 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import { Link } from 'react-router-dom';
-import { BookOpen, ArrowRight } from 'lucide-react';
+import { BookOpen, ArrowRight } from '@/components/ui/icons';
 import GlassCard from '../ui/GlassCard';
 import { Skeleton } from '@/components/ui/skeleton';
 import { formatSubject } from '@/lib/subjects';

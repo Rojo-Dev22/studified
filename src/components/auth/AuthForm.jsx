@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
-import { Loader2, Mail, Lock, User } from 'lucide-react';
+import { Loader2, Mail, Lock, User } from '@/components/ui/icons';
 
 function getAuthErrorMessage(err) {
   if (!err || typeof err !== 'object') return 'Authentication failed';

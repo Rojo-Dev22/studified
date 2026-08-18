@@ -11,8 +11,6 @@ import AppLayout from './components/layout/AppLayout';
 import Dashboard from './pages/Dashboard';
 import Quests from './pages/Quests';
 import Focus from './pages/Focus';
-import Guild from './pages/Guild';
-import GuildRoom from './pages/GuildRoom';
 import Raids from './pages/Raids';
 import AITools from './pages/AITools';
 import Lessons from './pages/Lessons';
@@ -107,8 +105,6 @@ function AppRoutes() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/quests" element={<Quests />} />
           <Route path="/focus" element={<Focus />} />
-          <Route path="/guild" element={<Guild />} />
-          <Route path="/guild/:guildId" element={<GuildRoom />} />
           <Route path="/raids" element={<Raids />} />
           <Route path="/ai-tools" element={<AITools />} />
           <Route path="/lessons" element={<Lessons />} />

@@ -7,7 +7,7 @@ import {
   Calendar, Activity, Trophy, Heart, Hash, Quote, Palette,
   Sword, Shield, MapPin, Github, Twitter, Globe, Camera,
   Lightbulb, Music, PenTool, Code, Coffee, Compass, Sparkle,
-} from 'lucide-react';
+} from '@/components/ui/icons';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 import XPBar from '../components/ui/XPBar';

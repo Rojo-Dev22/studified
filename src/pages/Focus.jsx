@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Pause, Square, Lock, Unlock, AlertCircle, Flame, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
+import { Play, Pause, Square, Lock, Unlock, AlertCircle, Flame, Sparkles, RotateCcw } from '@/components/ui/icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import GlassCard from '../components/ui/GlassCard';
@@ -45,11 +45,94 @@ const Sparks = () => {
   );
 };
 
+// ── iOS-style wheel picker ────────────────────────────────────────
+// A scrollable column of values that snaps to the center line.
+// Users can drag/scroll directly to the desired timestamp (momentum
+// scrolling + snap). The centered value is reported via onChange.
+const WheelPicker = ({ value, onChange, min, max, step, height = 'h-44' }) => {
+  const scrollRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  // Values from min → max in `step` increments
+  const values = [];
+  for (let v = min; v <= max; v += step) values.push(v);
+
+  const ITEM_H = 36; // px per row
+  const PADDING = 72; // keeps first/last items reachable at the center line
+
+  // Scroll to the item for `value` (center it under the selection line)
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const index = values.indexOf(value);
+    if (index >= 0) {
+      // Only re-center when not actively being scrolled by the user
+      if (!isDragging) {
+        el.scrollTo({ top: index * ITEM_H, behavior: 'auto' });
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value, isDragging, min, max, step]);
+
+  // Determine the selected value from scroll position
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const index = Math.round(el.scrollTop / ITEM_H);
+    const clamped = Math.min(Math.max(index, 0), values.length - 1);
+    onChange(values[clamped]);
+  };
+
+  return (
+    <div className="relative flex flex-col items-center select-none">
+      {/* Center selection line */}
+      <div className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-14 h-9 rounded-lg bg-accent/10 border border-accent/30" />
+      <div className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-14 flex justify-between px-1">
+        <span className="w-1 h-9 bg-accent/40 rounded-full" />
+        <span className="w-1 h-9 bg-accent/40 rounded-full" />
+      </div>
+
+      {/* Scrollable column */}
+      <div
+        ref={scrollRef}
+        onScroll={handleScroll}
+        onTouchStart={() => setIsDragging(true)}
+        onTouchEnd={() => setIsDragging(false)}
+        onMouseDown={() => setIsDragging(true)}
+        onMouseUp={() => setIsDragging(false)}
+        onMouseLeave={() => setIsDragging(false)}
+        className={`relative ${height} w-16 overflow-y-auto no-scrollbar snap-y snap-mandatory`}
+        style={{ scrollPaddingTop: PADDING, scrollPaddingBottom: PADDING }}
+      >
+        {/* Top + bottom spacer so first/last values center properly */}
+        <div style={{ height: PADDING }} />
+        {values.map((v) => (
+          <div
+            key={v}
+            className={`snap-center h-9 flex items-center justify-center text-lg font-bold tabular-nums tracking-tight transition-colors duration-150 ${
+              v === value ? 'text-foreground scale-110' : 'text-muted-foreground/50 scale-90'
+            }`}
+          >
+            {String(v).padStart(2, '0')}
+          </div>
+        ))}
+        <div style={{ height: PADDING }} />
+      </div>
+
+      {/* Friction overlay for a subtle wheel groove look */}
+      <div className="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-16 rounded-xl bg-gradient-to-b from-background/40 via-transparent to-background/40" />
+    </div>
+  );
+};
+
 export default function Focus() {
   const queryClient = useQueryClient();
   const { data: user } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
 
   const [duration, setDuration] = useState(25);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(25);
+  const [timeSet, setTimeSet] = useState(false);
   const [subject, setSubject] = useState('');
   const [isRunning, setIsRunning] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -227,7 +310,7 @@ export default function Focus() {
     return () => window.removeEventListener('mousemove', onMouseMove);
   }, [isRunning, isPaused]);
 
-  const minutes = Math.floor(timeLeft / 60);
+  const displayMinutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
   const totalSeconds = duration * 60;
   const progress = totalSeconds > 0 ? ((totalSeconds - timeLeft) / totalSeconds) : 0;
@@ -250,186 +333,213 @@ export default function Focus() {
             <h1 className="text-lg font-bold text-foreground tracking-tight">Focus Timer</h1>
             <p className="text-[10px] text-muted-foreground font-medium tracking-wide flex items-center gap-1">
               <Sparkles className="w-3 h-3 text-emerald-400/60" />
-              Pomodoro sessions with XP rewards
+              Quiet time for studying
             </p>
           </div>
         </motion.div>
 
-      {/* Timer Display Area */}
-      <div className="flex flex-col items-center mb-6 relative">
-        {/* Breathing aura visualizer */}
-        {isRunning && !isPaused && (
-          <motion.div
-            className="absolute w-56 h-56 rounded-full bg-accent/15 blur-3xl pointer-events-none"
-            animate={{
-              scale: [1, 1.25, 1],
-              opacity: [0.35, 0.75, 0.35],
-            }}
-            transition={{
-              duration: 8, // 8-second breathing cycle
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-        )}
-
-        <div className="relative w-52 h-52 mb-5 flex items-center justify-center">
-          {/* Animated floating particles inside timer area */}
-          {isRunning && !isPaused && <Sparks />}
-
-          <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 200 200">
-            <defs>
-              <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="3.5" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
-            {/* Background track circle */}
-            <circle cx="100" cy="100" r="88" fill="none" stroke="hsl(var(--secondary))" strokeWidth="4.5" />
-            
-            {/* Active glowing ring */}
-            <circle
-              cx="100" cy="100" r="88"
-              fill="none"
-              stroke="hsl(var(--accent))"
-              strokeWidth="5"
-              strokeLinecap="round"
-              strokeDasharray={circumference}
-              strokeDashoffset={circumference * (1 - progress)}
-              filter={isRunning && !isPaused ? 'url(#glow-filter)' : undefined}
-              className="transition-all duration-1000"
+        {/* Timer Display Area */}
+        <div className="flex flex-col items-center mb-6 relative">
+          {/* Breathing aura visualizer */}
+          {isRunning && !isPaused && (
+            <motion.div
+              className="absolute w-56 h-56 rounded-full bg-accent/15 blur-3xl pointer-events-none"
+              animate={{
+                scale: [1, 1.25, 1],
+                opacity: [0.35, 0.75, 0.35],
+              }}
+              transition={{
+                duration: 8, // 8-second breathing cycle
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
             />
-          </svg>
-          
-          <div className="relative z-10 flex flex-col items-center justify-center select-none">
-            <motion.span 
-              className="text-4xl font-bold tabular-nums text-foreground tracking-tight"
-              animate={isRunning && !isPaused ? { scale: [1, 1.025, 1] } : {}}
-              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
-            </motion.span>
-            
-            <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider mt-1.5">
-              {isRunning ? (isPaused ? 'paused' : `${distractions} switch${distractions !== 1 ? 'es' : ''}`) : 'ready'}
-            </span>
-          </div>
-        </div>
+          )}
 
-        {/* iPhone-style Time Picker */}
-        {!isRunning && (
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-4"
-          >
-            <div className="flex items-center gap-3 bg-secondary/60 border border-border/80 rounded-2xl p-3 backdrop-blur-sm">
-              <button
-                type="button"
-                onClick={() => setDuration(prev => Math.max(15, prev - 5))}
-                className="w-10 h-10 rounded-full bg-background/80 border border-border hover:border-accent/40 hover:bg-accent/5 flex items-center justify-center transition-all active:scale-95"
-              >
-                <ChevronDown className="w-5 h-5 text-foreground" />
-              </button>
-              
-              <div className="flex flex-col items-center min-w-[80px]">
-                <span className="text-3xl font-bold tabular-nums text-foreground">{duration}</span>
-                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">minutes</span>
-              </div>
-              
-              <button
-                type="button"
-                onClick={() => setDuration(prev => Math.min(120, prev + 5))}
-                className="w-10 h-10 rounded-full bg-background/80 border border-border hover:border-accent/40 hover:bg-accent/5 flex items-center justify-center transition-all active:scale-95"
-              >
-                <ChevronUp className="w-5 h-5 text-foreground" />
-              </button>
-            </div>
-            
-            {/* Quick time presets */}
-            <div className="flex gap-2 mt-2.5 justify-center">
-              {[15, 30, 45, 60, 90, 120].map(time => (
-                <button
-                  key={time}
-                  type="button"
-                  onClick={() => setDuration(time)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                    duration === time
-                      ? 'bg-accent/20 text-accent border border-accent/40 shadow-sm'
-                      : 'bg-secondary/40 text-muted-foreground border border-border hover:text-foreground hover:border-border/80'
-                  }`}
-                >
-                  {time >= 60 ? `${time / 60}h` : `${time}m`}
-                </button>
-              ))}
-            </div>
-          </motion.div>
-        )}
-
-        {/* Paused Warning Alert */}
-        <AnimatePresence>
-          {isPaused && isRunning && (
+          {/* If time is not set yet, show the centered slider */}
+          {!timeSet && !isRunning && (
             <motion.div 
-              initial={{ opacity: 0, y: -10, scale: 0.95 }} 
-              animate={{ opacity: 1, y: 0, scale: 1 }} 
-              exit={{ opacity: 0, y: -10, scale: 0.95 }}
-              className="flex items-center gap-2 text-xs text-muted-foreground bg-secondary/80 border border-border/80 backdrop-blur-md rounded-lg px-3 py-2 mb-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="w-full flex flex-col items-center py-6"
             >
-              <AlertCircle className="w-3.5 h-3.5 text-accent" />
-              Tab switched — return to resume
+              {/* iPhone-style hours & minutes vertical sliders */}
+              <div className="flex items-start justify-center gap-4 w-full py-4">
+                {/* Hours column */}
+                <div className="flex flex-col items-center">
+                  <span className="text-4xl font-bold tabular-nums text-foreground tracking-tight">{hours}</span>
+                  <WheelPicker value={hours} onChange={setHours} min={0} max={2} step={1} height="h-44" />
+                  <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">hr</span>
+                </div>
+
+                <div className="text-4xl font-bold text-muted-foreground mt-2">:</div>
+
+                {/* Minutes column */}
+                <div className="flex flex-col items-center">
+                  <span className="text-4xl font-bold tabular-nums text-foreground tracking-tight">{String(minutes).padStart(2, '0')}</span>
+                  <WheelPicker value={minutes} onChange={setMinutes} min={0} max={59} step={1} height="h-44" />
+                  <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">min</span>
+                </div>
+              </div>
+
+              {/* Quick time presets */}
+              <div className="flex gap-2 mt-4 justify-center">
+                {[15, 30, 45, 60, 90, 120].map(time => (
+                  <button
+                    key={time}
+                    type="button"
+                    onClick={() => {
+                      setHours(Math.floor(time / 60));
+                      setMinutes(time % 60);
+                    }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                      (hours * 60 + minutes) === time
+                        ? 'bg-accent/20 text-accent border border-accent/40 shadow-sm'
+                        : 'bg-secondary/40 text-muted-foreground border border-border hover:text-foreground hover:border-border/80'
+                    }`}
+                  >
+                    {time >= 60 ? `${time / 60}h` : `${time}m`}
+                  </button>
+                ))}
+              </div>
+
+              {/* Set Timer button */}
+              <Button 
+                onClick={() => {
+                  setDuration(Math.max(5, hours * 60 + minutes));
+                  setTimeSet(true);
+                }} 
+                className="mt-6 bg-foreground text-background hover:bg-foreground/90 h-10 text-sm px-8 font-semibold shadow-md"
+              >
+                Set Timer
+              </Button>
             </motion.div>
           )}
-        </AnimatePresence>
-      </div>
 
-      {/* Control panel */}
-      {!isRunning ? (
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
-          <GlassCard hover={false} className="space-y-4 shadow-md border-border/80">
-            <div>
-              <label className="text-xs text-muted-foreground font-semibold uppercase tracking-wider block mb-1.5">What are you studying?</label>
-              <Input 
-                value={subject} 
-                onChange={(e) => setSubject(e.target.value)}
-                placeholder="e.g. Calculus, History essay..." 
-                className="bg-secondary/60 border-border text-sm h-9 px-3 rounded-md focus:border-accent/40 focus:ring-1 focus:ring-accent/20 transition-all" 
-              />
-            </div>
-            
-            <div className="flex items-center justify-between pt-2 border-t border-border/40">
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => setFocusLocked(!focusLocked)}
-                className={`flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-full border transition-all duration-300 font-medium
-                  ${focusLocked 
-                    ? 'border-accent/40 bg-accent/5 text-accent shadow-[0_0_10px_rgba(16,185,129,0.05)]' 
-                    : 'border-border bg-secondary/50 text-muted-foreground hover:text-foreground'}`}
+          {/* If time is set, show the circular timer */}
+          {timeSet && (
+            <>
+              <div className="relative w-52 h-52 mb-5 flex items-center justify-center">
+                {/* Animated floating particles inside timer area */}
+                {isRunning && !isPaused && <Sparks />}
+
+                <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 200 200">
+                  <defs>
+                    <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="3.5" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  {/* Background track circle */}
+                  <circle cx="100" cy="100" r="88" fill="none" stroke="hsl(var(--secondary))" strokeWidth="4.5" />
+                  
+                  {/* Active glowing ring */}
+                  <circle
+                    cx="100" cy="100" r="88"
+                    fill="none"
+                    stroke="hsl(var(--accent))"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                    strokeDasharray={circumference}
+                    strokeDashoffset={circumference * (1 - progress)}
+                    filter={isRunning && !isPaused ? 'url(#glow-filter)' : undefined}
+                    className="transition-all duration-1000"
+                  />
+                </svg>
+                
+                <div className="relative z-10 flex flex-col items-center justify-center select-none">
+                  <motion.span 
+                    className="text-4xl font-bold tabular-nums text-foreground tracking-tight"
+                    animate={isRunning && !isPaused ? { scale: [1, 1.025, 1] } : {}}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                  >
+                    {String(displayMinutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
+                  </motion.span>
+                  
+                  <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider mt-1.5">
+                    {isRunning ? (isPaused ? 'paused' : `${distractions} switch${distractions !== 1 ? 'es' : ''}`) : 'ready'}
+                  </span>
+                </div>
+              </div>
+
+              {/* Change time button */}
+              {!isRunning && (
+                <button
+                  type="button"
+                  onClick={() => setTimeSet(false)}
+                  className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors mb-4"
+                >
+                  <RotateCcw className="w-3 h-3" />
+                  Change time
+                </button>
+              )}
+            </>
+          )}
+
+          {/* Paused Warning Alert */}
+          <AnimatePresence>
+            {isPaused && isRunning && (
+              <motion.div 
+                initial={{ opacity: 0, y: -10, scale: 0.95 }} 
+                animate={{ opacity: 1, y: 0, scale: 1 }} 
+                exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                className="flex items-center gap-2 text-xs text-muted-foreground bg-secondary/80 border border-border/80 backdrop-blur-md rounded-lg px-3 py-2 mb-4"
               >
-                {focusLocked ? <Lock className="w-3.5 h-3.5" /> : <Unlock className="w-3.5 h-3.5" />}
-                Focus lock {focusLocked ? 'on' : 'off'}
-              </motion.button>
-              
-              <Button onClick={startSession} className="bg-foreground text-background hover:bg-foreground/90 h-9 text-sm px-6 font-semibold shadow-md">
-                <Play className="w-3.5 h-3.5 mr-1.5 fill-background" /> Start
-              </Button>
-            </div>
-          </GlassCard>
-        </motion.div>
-      ) : (
-        <div className="flex justify-center gap-3">
-          <Button onClick={() => setIsPaused(!isPaused)} variant="outline" className="border-border/80 h-9 text-sm px-5 bg-card hover:bg-secondary transition-colors">
-            {isPaused ? <Play className="w-3.5 h-3.5 mr-1.5" /> : <Pause className="w-3.5 h-3.5 mr-1.5" />}
-            {isPaused ? 'Resume' : 'Pause'}
-          </Button>
-          <Button onClick={() => stopSession()} variant="outline" className="border-border/80 h-9 text-sm px-5 text-muted-foreground hover:text-foreground bg-card hover:bg-secondary transition-colors">
-            <Square className="w-3.5 h-3.5 mr-1.5" /> Stop
-          </Button>
+                <AlertCircle className="w-3.5 h-3.5 text-accent" />
+                Tab switched — return to resume
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-      )}
+
+        {/* Control panel */}
+        {!isRunning ? (
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
+            <GlassCard hover={false} className="space-y-4 shadow-md border-border/80">
+              <div>
+                <label className="text-xs text-muted-foreground font-semibold uppercase tracking-wider block mb-1.5">What are you studying?</label>
+                <Input 
+                  value={subject} 
+                  onChange={(e) => setSubject(e.target.value)}
+                  placeholder="e.g. Calculus, History essay..." 
+                  className="bg-secondary/60 border-border text-sm h-9 px-3 rounded-md focus:border-accent/40 focus:ring-1 focus:ring-accent/20 transition-all" 
+                />
+              </div>
+              
+              <div className="flex items-center justify-between pt-2 border-t border-border/40">
+                <motion.button 
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => setFocusLocked(!focusLocked)}
+                  className={`flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-full border transition-all duration-300 font-medium
+                    ${focusLocked 
+                      ? 'border-accent/40 bg-accent/5 text-accent shadow-[0_0_10px_rgba(16,185,129,0.05)]' 
+                      : 'border-border bg-secondary/50 text-muted-foreground hover:text-foreground'}`}
+                >
+                  {focusLocked ? <Lock className="w-3.5 h-3.5" /> : <Unlock className="w-3.5 h-3.5" />}
+                  Focus lock {focusLocked ? 'on' : 'off'}
+                </motion.button>
+                
+                <Button onClick={startSession} className="bg-foreground text-background hover:bg-foreground/90 h-9 text-sm px-6 font-semibold shadow-md">
+                  <Play className="w-3.5 h-3.5 mr-1.5 fill-background" /> Start
+                </Button>
+              </div>
+            </GlassCard>
+          </motion.div>
+        ) : (
+          <div className="flex justify-center gap-3">
+            <Button onClick={() => setIsPaused(!isPaused)} variant="outline" className="border-border/80 h-9 text-sm px-5 bg-card hover:bg-secondary transition-colors">
+              {isPaused ? <Play className="w-3.5 h-3.5 mr-1.5" /> : <Pause className="w-3.5 h-3.5 mr-1.5" />}
+              {isPaused ? 'Resume' : 'Pause'}
+            </Button>
+            <Button onClick={() => stopSession()} variant="outline" className="border-border/80 h-9 text-sm px-5 text-muted-foreground hover:text-foreground bg-card hover:bg-secondary transition-colors">
+              <Square className="w-3.5 h-3.5 mr-1.5" /> Stop
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

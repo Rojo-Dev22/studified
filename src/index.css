@@ -104,6 +104,59 @@
 .custom-scroll::-webkit-scrollbar-track { background: transparent; }
 .custom-scroll::-webkit-scrollbar-thumb { background: hsl(0 0% 20%); border-radius: 2px; }
 
+/* Sidebar scrollbar — visible so all shortcuts are reachable on short screens */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--sidebar-accent)) transparent;
+}
+.sidebar-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: hsl(var(--sidebar-accent));
+  border-radius: 4px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--sidebar-ring));
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:active {
+  background: hsl(var(--sidebar-ring));
+}
+
+/* Scrollbar utility for mobile nav — hides scrollbar entirely */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile nav mini scrollbar — hidden but scrollable */
+.sidebar-scroll-mini {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--sidebar-accent)) transparent;
+}
+.sidebar-scroll-mini::-webkit-scrollbar {
+  height: 3px;
+}
+.sidebar-scroll-mini::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-scroll-mini::-webkit-scrollbar-thumb {
+  background: hsl(var(--sidebar-accent));
+  border-radius: 4px;
+}
+.sidebar-scroll-mini::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--sidebar-ring));
+}
+.sidebar-scroll-mini::-webkit-scrollbar-thumb:active {
+  background: hsl(var(--sidebar-ring));
+}
+
 /* Custom Progress Stripes Animation */
 @keyframes progress-stripes {
   0% { background-position: 1rem 0; }

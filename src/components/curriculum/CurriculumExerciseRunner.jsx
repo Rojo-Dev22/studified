@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, CheckCircle2, XCircle, Trophy, RotateCcw, ClipboardCheck } from 'lucide-react';
+import { Check, CheckCircle2, XCircle, Trophy, RotateCcw, ClipboardCheck } from '@/components/ui/icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { scoreExercises, PASS_PERCENT } from '@/lib/curriculumExercises';

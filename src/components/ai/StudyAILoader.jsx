@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
+import { Sparkles } from '@/components/ui/icons';
 
 const PROMPTS = [
   'Consulting MoE textbooks for accurate content…',

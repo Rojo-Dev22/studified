@@ -4,7 +4,7 @@ import {
   Zap, BookOpen, Flame, Trophy, Star, Target, Brain, 
   Clock, Award, Medal, Crown, Sparkles, MessageSquare,
   Calendar, TrendingUp
-} from 'lucide-react';
+} from '@/components/ui/icons';
 import GlassCard from '../ui/GlassCard';
 import { formatFirestoreDate, getTimeAgo } from '@/lib/cloudDatabase';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import { motion } from 'framer-motion';
-import { Zap, Sparkles } from 'lucide-react';
+import { Zap, Sparkles } from '@/components/ui/icons';
 import XPBar from '../components/ui/XPBar';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';

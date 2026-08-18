@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Heart, Skull, RotateCcw } from 'lucide-react';
+import { Heart, Skull, RotateCcw } from '@/components/ui/icons';
 
 const ARENA_SIZE = 500;
 const PLAYER_SIZE = 30;

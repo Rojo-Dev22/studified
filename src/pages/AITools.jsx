@@ -11,13 +11,16 @@ import {
   Sparkles,
   GraduationCap,
   ChevronRight,
+  ChevronDown,
+  ChevronUp,
+  Check,
   Brain,
   Lightbulb,
   Image,
   Paperclip,
   X,
   FileText,
-} from 'lucide-react';
+} from '@/components/ui/icons';
 import AXO, { useAXOState, STATES } from '@/components/axo/AXO';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -131,6 +134,8 @@ export default function AITools() {
   const [apiKeyInput, setApiKeyInput] = useState('');
   const [showKeySetup, setShowKeySetup] = useState(!hasLLMConfigured());
   const [activeQuizId, setActiveQuizId] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [featuresCollapsed, setFeaturesCollapsed] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [uploadedImages, setUploadedImages] = useState([]);
   const scrollRef = useRef(null);
@@ -632,7 +637,7 @@ export default function AITools() {
         >
           {/* Title Area */}
           <div className="relative mb-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-between gap-3">
               <motion.div
                 animate={{ 
                   boxShadow: ['0 0 0 0 rgba(16,185,129,0.3)', '0 0 0 12px rgba(16,185,129,0)', '0 0 0 0 rgba(16,185,129,0)'],
@@ -653,6 +658,22 @@ export default function AITools() {
                   <span>Your Study Companion · Powered by Groq LLM</span>
                 </p>
               </div>
+
+              {/* Collapse / expand mode cards */}
+              <motion.button
+                type="button"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  setFeaturesCollapsed((c) => !c);
+                  setMobileMenuOpen(false);
+                }}
+                className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
+                aria-label={featuresCollapsed ? 'Show features' : 'Hide features'}
+                title={featuresCollapsed ? 'Show features' : 'Hide features'}
+              >
+                <ChevronUp className={`w-4 h-4 transition-transform duration-300 ${featuresCollapsed ? 'rotate-180' : ''}`} />
+              </motion.button>
             </div>
           </div>
 
@@ -696,25 +717,105 @@ export default function AITools() {
             </motion.div>
           )}
 
-          {/* Feature Tabs */}
-          <div className="grid grid-cols-4 gap-2">
-            {features.map((f) => (
-              <FeatureButton
-                key={f.id}
-                f={f}
-                isActive={feature === f.id}
-                onClick={() => switchFeature(f.id)}
-              />
-            ))}
+          {/* Feature Tabs — collapsible upward to maximize response space */}
+          <div className="relative">
+            <AnimatePresence initial={false}>
+              {!featuresCollapsed && (
+                <motion.div
+                  key="feature-tabs"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: 'easeInOut' }}
+                  className="overflow-hidden"
+                >
+                  {/* Desktop: 4-card grid */}
+                  <div className="hidden md:grid grid-cols-4 gap-2">
+                    {features.map((f) => (
+                      <FeatureButton
+                        key={f.id}
+                        f={f}
+                        isActive={feature === f.id}
+                        onClick={() => switchFeature(f.id)}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Mobile: 3-bar hamburger button */}
+                  <button
+                    type="button"
+                    onClick={() => setMobileMenuOpen((o) => !o)}
+                    className="md:hidden w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl border border-border bg-secondary/60 dark:bg-white/5 dark:border-white/10 transition-colors"
+                    aria-expanded={mobileMenuOpen}
+                  >
+                    <span className="flex items-center gap-2.5">
+                      {/* 3-bar hamburger */}
+                      <span className="flex flex-col gap-[3px]">
+                        <span className="w-4 h-[2px] rounded-full bg-current" />
+                        <span className="w-4 h-[2px] rounded-full bg-current" />
+                        <span className="w-4 h-[2px] rounded-full bg-current" />
+                      </span>
+                      <span className="text-sm font-semibold text-foreground">
+                        {features.find((f) => f.id === feature)?.label}
+                      </span>
+                    </span>
+                    <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${mobileMenuOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  <motion.p
+                    key={feature}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="text-[11px] text-muted-foreground dark:text-white/40 mt-2.5 text-center font-medium"
+                  >
+                    {features.find((f) => f.id === feature)?.hint}
+                  </motion.p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Mobile dropdown — rendered OUTSIDE the overflow-hidden collapsible
+                so the options are never clipped and always display properly */}
+            <AnimatePresence>
+              {mobileMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -8, scale: 0.98 }}
+                  transition={{ duration: 0.18, ease: 'easeOut' }}
+                  className="md:hidden absolute left-0 right-0 top-0 z-50 rounded-xl border border-border bg-card shadow-2xl overflow-hidden"
+                >
+                  {features.map((f) => {
+                    const Icon = f.icon;
+                    const isActive = feature === f.id;
+                    return (
+                      <button
+                        key={f.id}
+                        type="button"
+                        onClick={() => {
+                          switchFeature(f.id);
+                          setMobileMenuOpen(false);
+                        }}
+                        className={`w-full flex items-center gap-3 px-4 py-3 text-left text-sm transition-colors ${
+                          isActive
+                            ? 'bg-emerald-500/10 text-emerald-400'
+                            : 'text-foreground hover:bg-secondary dark:text-white/80 dark:hover:bg-white/5'
+                        }`}
+                      >
+                        <span className={`p-1.5 rounded-lg ${
+                          isActive ? 'bg-emerald-500/15' : 'bg-secondary dark:bg-white/10'
+                        }`}>
+                          <Icon className="w-4 h-4" />
+                        </span>
+                        <span className="font-medium flex-1">{f.label}</span>
+                        {isActive && <Check className="w-4 h-4" />}
+                      </button>
+                    );
+                  })}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-          <motion.p 
-            key={feature}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="text-[11px] text-muted-foreground dark:text-white/40 mt-2.5 text-center font-medium"
-          >
-            {features.find((f) => f.id === feature)?.hint}
-          </motion.p>
         </motion.div>
 
         {/* Messages Area */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Timer, Flame, Star } from 'lucide-react';
+import { BookOpen, Timer, Flame, Star } from '@/components/ui/icons';
 import GlassCard from '../ui/GlassCard';
 
 export default function StatsGrid({ user, level }) {

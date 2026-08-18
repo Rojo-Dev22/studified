@@ -3,7 +3,7 @@ import { db } from '@/lib/db';
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
-import { Clock } from 'lucide-react';
+import { Clock } from '@/components/ui/icons';
 import GlassCard from '../ui/GlassCard';
 import { Skeleton } from '@/components/ui/skeleton';
 import { format } from 'date-fns';

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw } from '@/components/ui/icons';
 
 const WORDS = [
   'CELLS', 'ATOMS', 'BRAIN', 'HEART', 'WATER', 'LIGHT', 'SOUND', 'PLANT', 'FORCE', 'SPACE',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Gamepad2, Play } from 'lucide-react';
+import { Gamepad2, Play } from '@/components/ui/icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import GlassCard from '@/components/ui/GlassCard';
 import AnimatedBackground from '@/components/ui/AnimatedBackground';

@@ -10,9 +10,9 @@ import {
   Sparkles,
   Circle,
   Lightbulb,
-} from 'lucide-react';
+} from '@/components/ui/icons';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Check } from '@/components/ui/icons';
 import ReactMarkdown from 'react-markdown';
 
 function OptionRow({ option, checked, onToggle, disabled, reveal, isCorrect, isWrong }) {

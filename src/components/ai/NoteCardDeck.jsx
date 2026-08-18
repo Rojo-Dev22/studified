@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, RotateCcw, Layers } from 'lucide-react';
+import { ChevronLeft, ChevronRight, RotateCcw, Layers } from '@/components/ui/icons';
 import { Button } from '@/components/ui/button';
 
 export default function NoteCardDeck({ deck }) {

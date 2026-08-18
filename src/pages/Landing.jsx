@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Ferrofluid from '@/components/ui/Ferrofluid';
 import {
   BookOpen,
   Zap,
@@ -9,7 +10,7 @@ import {
   GraduationCap,
   ChevronRight,
   Users,
-} from 'lucide-react';
+} from '@/components/ui/icons';
 import AuthForm from '@/components/auth/AuthForm';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -50,17 +51,6 @@ const floatingVariants = {
   }),
 };
 
-function GlowOrb({ className, delay = 0, style }) {
-  return (
-    <motion.div
-      className={`absolute rounded-full blur-3xl pointer-events-none ${className}`}
-      animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.65, 0.4] }}
-      transition={{ duration: 6, repeat: Infinity, delay }}
-      style={style}
-    />
-  );
-}
-
 export default function Landing() {
   const { isAuthenticated, dbReady, isLoadingAuth, authError } = useAuth();
   const heroRef = useRef(null);
@@ -68,54 +58,23 @@ export default function Landing() {
   const heroY = useTransform(scrollYProgress, [0, 0.3], [0, 80]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0.3]);
   const [showAuth, setShowAuth] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  // Handle mouse move for interactive background
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePos({
-        x: (e.clientX / window.innerWidth) * 2 - 1, // Normalize to -1 to 1
-        y: (e.clientY / window.innerHeight) * 2 - 1
-      });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
 
   if (isAuthenticated && dbReady && !isLoadingAuth) {
     return <Navigate to="/dashboard" replace />;
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-       <div className="fixed inset-0 -z-10">
+    <div className="min-h-screen text-foreground overflow-x-hidden relative">
+        <div className="fixed inset-0 -z-10 bg-background">
+          <Ferrofluid
+            colors={["#10B981","#06B6D4","#3B82F6"]}
+            speed={0.5}
+          />
           <motion.div 
             className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(142_71%_45%/0.15),transparent)]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-          />
-          <GlowOrb 
-            className={`w-[650px] h-[650px] bg-accent/20 -top-40 -left-40`} 
-            style={{ 
-              transform: `translate(${mousePos.x * 20}px, ${mousePos.y * 20}px)` 
-            }} 
-            delay={0} 
-          />
-          <GlowOrb 
-            className={`w-[600px] h-[600px] bg-blue-500/15 top-1/3 -right-32`} 
-            style={{ 
-              transform: `translate(${-mousePos.x * 15}px, ${-mousePos.y * 15}px)` 
-            }} 
-            delay={2} 
-          />
-          <GlowOrb 
-            className={`w-[550px] h-[550px] bg-violet-500/10 bottom-0 left-1/4`} 
-            style={{ 
-              transform: `translate(${mousePos.x * 10}px, ${-mousePos.y * 10}px)` 
-            }} 
-            delay={1} 
           />
           <motion.div
             className="absolute inset-0 opacity-[0.03]"
@@ -130,7 +89,7 @@ export default function Landing() {
         </div>
 
       <motion.header 
-        className="relative z-10 flex items-center justify-between px-5 md:px-10 py-5"
+        className="relative z-10 mx-5 md:mx-10 mt-5 flex items-center justify-between px-5 md:px-10 py-4 rounded-2xl border border-white/10 bg-background/40 backdrop-blur-xl"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -172,15 +131,6 @@ export default function Landing() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, ease: 'easeOut' }}
                 >
-                  <motion.span 
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-accent/30 bg-accent/10 text-[10px] font-medium text-accent uppercase tracking-wider mb-4"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
-                  >
-                    <GraduationCap className="w-3 h-3" />
-                    Ethiopian General Education · Grades 9–12
-                  </motion.span>
                   <motion.h1 
                     className="text-3xl md:text-5xl font-bold leading-tight tracking-tight"
                     initial={{ opacity: 0, y: 20 }}
@@ -219,14 +169,14 @@ export default function Landing() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <Button variant="outline" className="h-10 px-5 border-border">
+                    <Button variant="outline" className="h-10 px-5 border-border bg-background/30 backdrop-blur-sm">
                       See features
                     </Button>
                   </motion.a>
                 </motion.div>
  
                 <motion.div
-                  className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-border/60"
+                  className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/10 rounded-2xl p-6 bg-background/20 backdrop-blur-sm"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
@@ -265,7 +215,7 @@ export default function Landing() {
                animate={{ opacity: [0.5, 0.8, 0.5] }}
                transition={{ duration: 3, repeat: Infinity }}
              />
-             <div className="relative rounded-2xl border border-border/80 bg-card/90 backdrop-blur-xl p-6 md:p-8 shadow-2xl">
+             <div className="relative rounded-2xl border border-white/10 bg-background/40 backdrop-blur-xl p-6 md:p-8 shadow-2xl">
                <div className="flex justify-between items-center mb-1">
                  <h2 className="text-lg font-semibold">Create your account</h2>
                  <button onClick={() => setShowAuth(false)} aria-label="Close" className="text-muted-foreground hover:text-accent">
@@ -290,7 +240,7 @@ export default function Landing() {
                  custom={i}
                  variants={floatingVariants}
                  animate="animate"
-                 className={`absolute hidden md:flex w-10 h-10 rounded-lg border border-border bg-card/80 items-center justify-center shadow-lg
+                 className={`absolute hidden md:flex w-10 h-10 rounded-lg border border-white/10 bg-background/40 backdrop-blur-md items-center justify-center shadow-lg
                    ${i === 0 ? '-left-4 top-1/4' : i === 1 ? '-right-4 top-1/2' : 'left-1/3 -bottom-4'}`}
                >
                  <Icon className="w-4 h-4 text-accent" />
@@ -301,7 +251,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <section id="features" className="px-5 md:px-10 py-20 border-t border-border/50">
+      <section id="features" className="px-5 md:px-10 py-20">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -324,7 +274,7 @@ export default function Landing() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="group rounded-xl border border-border bg-card/50 p-5 hover:border-accent/30 hover:bg-card transition-colors"
+                className="group rounded-xl border border-white/10 bg-background/30 backdrop-blur-lg p-5 hover:border-accent/30 hover:bg-background/50 transition-all"
               >
                 <f.icon className={`w-8 h-8 mb-3 ${f.color}`} />
                 <h3 className="font-semibold text-foreground">{f.title}</h3>
@@ -340,7 +290,7 @@ export default function Landing() {
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto text-center rounded-2xl border border-accent/25 bg-gradient-to-br from-accent/10 to-transparent p-10"
+          className="max-w-3xl mx-auto text-center rounded-2xl border border-white/10 bg-background/30 backdrop-blur-lg p-10"
         >
           <Trophy className="w-10 h-10 text-accent mx-auto mb-4" />
           <h2 className="text-xl font-bold">Ready to earn XP?</h2>
@@ -355,10 +305,9 @@ export default function Landing() {
         </motion.div>
       </section>
 
-      <footer className="px-5 py-8 border-t border-border text-center text-[10px] text-muted-foreground">
+      <footer className="px-5 py-8 text-center text-[10px] text-muted-foreground">
         Studified · Ethiopian General Education Curriculum (MoE) · Grades 9–12
       </footer>
     </div>
   );
 }
-

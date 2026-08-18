@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, BookMarked, Search, FilterX, ExternalLink } from 'lucide-react';
+import { BookOpen, BookMarked, Search, FilterX, ExternalLink } from '@/components/ui/icons';
 import GlassCard from '../components/ui/GlassCard';
 import { Input } from '@/components/ui/input';
 import {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, FileText } from 'lucide-react';
+import { GraduationCap, FileText } from '@/components/ui/icons';
 import { Button } from '@/components/ui/button';
 import { formatSubject, formatGrade, CURRICULUM_FRAMEWORK } from '@/lib/subjects';
 import CurriculumExerciseRunner from './CurriculumExerciseRunner';

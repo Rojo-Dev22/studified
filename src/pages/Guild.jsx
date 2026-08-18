@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
-import { Users, Plus, UserPlus, MessageCircle, Sparkles } from 'lucide-react';
+import { Users, Plus, UserPlus, MessageCircle, Sparkles } from '@/components/ui/icons';
 import { Button } from '@/components/ui/button';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
