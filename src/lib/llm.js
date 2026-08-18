@@ -110,8 +110,11 @@ export async function callLLM(prompt, { system, temperature, max_tokens, timeout
         `${err.message}. Run: npm run setup:groq — get a free key at https://console.groq.com/keys`
       );
     }
+    // Always fall back to local content when the API call fails,
+    // even if a key is present (it may be invalid, expired, or blocked).
+    // This ensures the AI always responds instead of showing an error.
     const fallback = generateStudyContent(prompt);
-    if (fallback?.trim() && !browserKey) {
+    if (fallback?.trim()) {
       return { text: fallback, source: 'local' };
     }
     throw err;

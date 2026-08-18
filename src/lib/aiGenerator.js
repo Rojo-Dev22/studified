@@ -281,9 +281,57 @@ export function generateFlashcards(topic) {
 }
 
 export function generateStudyContent(prompt) {
-  const lower = (prompt || '').toLowerCase();
-  const topic = extractTopic(prompt);
+  // Normalize: chat calls pass a message array; single-shot calls pass a string.
+  let text = '';
+  if (Array.isArray(prompt)) {
+    // Take the last non-empty user message as the topic/focus.
+    for (let i = prompt.length - 1; i >= 0; i--) {
+      const c = prompt[i];
+      if (c && (c.role === 'user' || typeof c === 'string') && String(c.content || c).trim()) {
+        text = String(c.content || c).trim();
+        break;
+      }
+    }
+  } else {
+    text = String(prompt || '').trim();
+  }
+
+  const lower = text.toLowerCase();
+  const topic = extractTopic(text);
+
+  // Mode detection from the prompt text.
   if (lower.includes('flashcard')) return JSON.stringify(generateFlashcardsJSON(topic));
-  if (lower.includes('summar') || lower.includes('notes')) return generateSummary(topic);
-  return JSON.stringify(generateQuizJSON(topic));
+  if (lower.includes('quiz')) return JSON.stringify(generateQuizJSON(topic));
+  if (lower.includes('summar') || lower.includes('notes') || lower.includes('note card')) return generateSummary(topic);
+
+  // Generic chat / question → return a helpful study-guide style reply.
+  if (lower.startsWith('hi') || lower.startsWith('hello') || lower.startsWith('hey')) {
+    return `Hey! 👋 I'm Axo, your study buddy.
+
+I can help you with:
+- **Chat** — ask anything about your studies
+- **Summarize** — turn a topic into clear study notes
+- **Quiz** — generate a 15-question practice quiz
+- **Note cards** — flip cards to memorize key facts
+
+What would you like to study today?`;
+  }
+
+  // Default: short structured study note on the topic so the chat always replies.
+  return `Here's a quick study guide for **${topic}** while the full AI assistant is unavailable:
+
+### Overview
+${topic} is an important topic in your curriculum. Start by reading the relevant section in your MoE textbook, then use this guide to organise your revision.
+
+### Key Points
+1. **Define it** — write the definition of ${topic} in your own words.
+2. **Core ideas** — list the main concepts, formulas, or processes from your unit.
+3. **Examples** — connect ${topic} to an Ethiopian example or real-world case.
+4. **Practice** — try 3 practice questions without notes, then check your answers.
+
+### Quick Challenge
+- Can you explain ${topic} to a classmate who missed the lesson?
+- What question type is most likely on the exam for ${topic}?
+
+> 💡 Tip: Run a **Summarize** or **Quiz** below to get structured notes and a practice test.`;
 }
