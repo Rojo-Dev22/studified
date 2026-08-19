@@ -1,6 +1,7 @@
 const GROQ_DIRECT = 'https://api.groq.com/openai/v1/chat/completions';
 const GROQ_PROXY = '/api/groq/v1/chat/completions';
-const DEFAULT_MODEL = 'llama-3.1-8b-instant';
+// Model available on the current Groq key (llama-3.1-8b-instant is not).
+const DEFAULT_MODEL = 'groq/compound-mini';
 
 // Client-side rate limiting: max 10 requests per 60s window
 const RATE_LIMIT = { max: 10, windowMs: 60_000 };
