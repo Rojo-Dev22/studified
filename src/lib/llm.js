@@ -1,8 +1,23 @@
-import { generateStudyContent } from './aiGenerator';
-
 const GROQ_DIRECT = 'https://api.groq.com/openai/v1/chat/completions';
 const GROQ_PROXY = '/api/groq/v1/chat/completions';
 const DEFAULT_MODEL = 'llama-3.1-8b-instant';
+
+// Client-side rate limiting: max 10 requests per 60s window
+const RATE_LIMIT = { max: 10, windowMs: 60_000 };
+const requestTimestamps = [];
+
+function checkRateLimit() {
+  const now = Date.now();
+  while (requestTimestamps.length && requestTimestamps[0] <= now - RATE_LIMIT.windowMs) {
+    requestTimestamps.shift();
+  }
+  if (requestTimestamps.length >= RATE_LIMIT.max) {
+    const oldest = requestTimestamps[0];
+    const waitSec = Math.max(1, Math.ceil((oldest + RATE_LIMIT.windowMs - now) / 1000));
+    throw new Error(`Rate limit reached — please wait ${waitSec}s before sending another message.`);
+  }
+  requestTimestamps.push(now);
+}
 
 function getBrowserApiKey() {
   return (
@@ -15,7 +30,6 @@ function getBrowserApiKey() {
 
 export function hasLLMConfigured() {
   if (getBrowserApiKey() && getBrowserApiKey() !== 'your_groq_api_key_here') return true;
-  // In dev, server proxy may have GROQ_API_KEY in .env.local
   return import.meta.env.DEV;
 }
 
@@ -31,11 +45,7 @@ function buildMessages(promptOrMessages, system) {
       system ||
       'You are an expert tutor for Ethiopian secondary students (Grades 9–12) following the Ministry of Education curriculum. Answer clearly using markdown. Be accurate, structured, and study-focused.',
   };
-
-  if (Array.isArray(promptOrMessages)) {
-    return [systemMsg, ...promptOrMessages];
-  }
-
+  if (Array.isArray(promptOrMessages)) return [systemMsg, ...promptOrMessages];
   return [systemMsg, { role: 'user', content: promptOrMessages }];
 }
 
@@ -52,41 +62,23 @@ async function requestGroq(body, { signal } = {}) {
   const browserKey = getBrowserApiKey();
   const useProxy =
     import.meta.env.DEV && (!browserKey || browserKey === 'your_groq_api_key_here');
-
   const url = useProxy ? GROQ_PROXY : GROQ_DIRECT;
   const headers = { 'Content-Type': 'application/json' };
-  if (!useProxy && browserKey) {
-    headers.Authorization = `Bearer ${browserKey}`;
-  }
-
-  const response = await fetch(url, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify(body),
-    signal,
-  });
-
-  return response;
+  if (!useProxy && browserKey) headers.Authorization = `Bearer ${browserKey}`;
+  return fetch(url, { method: 'POST', headers, body: JSON.stringify(body), signal });
 }
 
-/**
- * Call Groq's free Llama model.
- * Dev: uses Vite proxy + GROQ_API_KEY from .env.local (run npm run setup:groq)
- * Prod/browser: VITE_GROQ_API_KEY or key saved in AI Tools UI
- */
-/** Multi-turn chat — messages: [{ role: 'user'|'assistant', content }] */
 export async function callLLMChat(messages, options = {}) {
   return callLLM(messages, options);
 }
 
 export async function callLLM(prompt, { system, temperature, max_tokens, timeoutMs = 9000 } = {}) {
+  checkRateLimit();
   const body = buildBody(prompt, system, { temperature, max_tokens });
   const controller = timeoutMs ? new AbortController() : null;
   const timer = controller ? setTimeout(() => controller.abort(), timeoutMs) : null;
-
   try {
     const response = await requestGroq(body, { signal: controller?.signal });
-
     if (!response.ok) {
       const errBody = await response.text();
       let message = `AI request failed (${response.status})`;
@@ -98,7 +90,6 @@ export async function callLLM(prompt, { system, temperature, max_tokens, timeout
       }
       throw new Error(message);
     }
-
     const data = await response.json();
     const text = data?.choices?.[0]?.message?.content?.trim();
     if (!text) throw new Error('AI returned an empty response');
@@ -109,13 +100,6 @@ export async function callLLM(prompt, { system, temperature, max_tokens, timeout
       throw new Error(
         `${err.message}. Run: npm run setup:groq — get a free key at https://console.groq.com/keys`
       );
-    }
-    // Always fall back to local content when the API call fails,
-    // even if a key is present (it may be invalid, expired, or blocked).
-    // This ensures the AI always responds instead of showing an error.
-    const fallback = generateStudyContent(prompt);
-    if (fallback?.trim()) {
-      return { text: fallback, source: 'local' };
     }
     throw err;
   } finally {

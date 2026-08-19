@@ -389,7 +389,7 @@ export default function AITools() {
     let quiz = null;
     try {
       const context = await getTextbookContext(topic);
-      const { text, source } = await withDelayBudget(
+      const { text } = await withDelayBudget(
         callLLM(prependContext(quizPrompt(topic), context), {
           system: QUIZ_SYSTEM,
           temperature: 0.4,
@@ -399,9 +399,6 @@ export default function AITools() {
         { minMs: 3000 }
       );
       quiz = parseQuizResponse(text);
-      if (!quiz && source === 'local') {
-        quiz = generateQuizJSON(topic);
-      }
       if (!quiz) {
         const { text: retryText } = await withDelayBudget(
           callLLM(`Create a 15-question multiple choice quiz about: "${topic}". Return ONLY valid JSON with the schema: {"title":"Quiz: ...","questions":[{"id":1,"text":"...","options":[{"id":"a","text":"..."},{"id":"b","text":"..."},{"id":"c","text":"..."},{"id":"d","text":"..."}],"correct":["a"]}]}`, {
@@ -414,11 +411,11 @@ export default function AITools() {
         quiz = parseQuizResponse(retryText);
       }
     } catch (err) {
-      console.error('Quiz generation failed, using fallback:', err);
+      console.error('Quiz generation failed:', err);
     }
     
     if (!quiz) {
-      quiz = generateQuizJSON(topic);
+      throw new Error('Could not generate a quiz from the AI response. Please try again.');
     }
 
     setLastQuizTopic(topic);
@@ -454,7 +451,7 @@ export default function AITools() {
     let deck = null;
     try {
       const context = await getTextbookContext(topic);
-      const { text, source } = await withDelayBudget(
+      const { text } = await withDelayBudget(
         callLLM(prependContext(flashcardsPrompt(topic), context), {
           system: FLASHCARDS_SYSTEM,
           temperature: 0.35,
@@ -464,15 +461,12 @@ export default function AITools() {
         { minMs: 5000 }
       );
       deck = parseFlashcardsResponse(text);
-      if (!deck && source === 'local') {
-        deck = generateFlashcardsJSON(topic);
-      }
-      if (deck && isGenericFlashcards(deck)) {
-        deck = generateFlashcardsJSON(topic);
-      }
-      if (!deck) deck = generateFlashcardsJSON(topic);
-    } catch {
-      deck = generateFlashcardsJSON(topic);
+    } catch (err) {
+      console.error('Flashcards generation failed:', err);
+    }
+
+    if (!deck) {
+      throw new Error('Could not generate note cards from the AI response. Please try again.');
     }
 
     pushMessage({
@@ -566,40 +560,13 @@ export default function AITools() {
       }
     } catch (err) {
       console.error(err);
-      if (feature === 'summary') {
-        pushMessage({
-          role: 'assistant',
-          content: generateSummary(text),
-          type: 'summary',
-        });
-        toast.message('Used offline summary');
-      } else if (feature === 'quiz') {
-        const quiz = generateQuizJSON(text);
-        const msgId = uid();
-        pushMessage({
-          id: msgId,
-          role: 'assistant',
-          content: `Offline quiz for **${text}** — 15 questions, finish all to see your score.`,
-          type: 'quiz',
-          quiz,
-        });
-        setActiveQuizId(msgId);
-      } else if (feature === 'flashcards') {
-        pushMessage({
-          role: 'assistant',
-          content: 'Offline note cards generated.',
-          type: 'flashcards',
-          deck: generateFlashcardsJSON(text),
-        });
-      } else {
-        toast.error(err.message || 'Something went wrong');
-        pushMessage({
-          role: 'assistant',
-          content: "I couldn't reach the AI right now. Check your API key or try again.",
-          type: 'text',
-        });
-      }
-      axo.celebrate();
+      // No offline/pre-generated fallback — answers come ONLY from the Groq API.
+      toast.error(err.message || 'Something went wrong');
+      pushMessage({
+        role: 'assistant',
+        content: `I couldn't reach the AI right now. ${err.message || 'Please check your API key and try again.'}`,
+        type: 'text',
+      });
     } finally {
       setLoading(false);
       axo.idle();
