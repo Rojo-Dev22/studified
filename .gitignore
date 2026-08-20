@@ -60,6 +60,7 @@ Desktop.ini
 *.njsproj
 *.sln
 *.sw?
+*.sw?
 
 # =====================
 # FIREBASE
@@ -83,6 +84,10 @@ coverage
 *.seed
 *.pid.lock
 
+# TEXTBOOK CACHE
+.textbooks-cache/
 
-
-# TEXTBOOK CACHE.textbooks-cache/
+# JUNK / BUILD ARTIFACTS
+null
+pairs[k]
+s.c

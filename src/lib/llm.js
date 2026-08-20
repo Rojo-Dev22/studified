@@ -1,11 +1,17 @@
 const GROQ_DIRECT = 'https://api.groq.com/openai/v1/chat/completions';
 const GROQ_PROXY = '/api/groq/v1/chat/completions';
+
 // Model available on the current Groq key (llama-3.1-8b-instant is not).
 const DEFAULT_MODEL = 'groq/compound-mini';
 
 // Client-side rate limiting: max 10 requests per 60s window
 const RATE_LIMIT = { max: 10, windowMs: 60_000 };
 const requestTimestamps = [];
+
+// Determine if we are running in a production build (Firebase Hosting or Vercel).
+// In production there is no Vite dev middleware, so API requests must go to the
+// server-side proxy which holds the real key.
+const isProduction = typeof import.meta !== 'undefined' && !import.meta.env?.DEV;
 
 function checkRateLimit() {
   const now = Date.now();
@@ -29,9 +35,20 @@ function getBrowserApiKey() {
   );
 }
 
+/**
+ * In production the server-side proxy (/api/groq) holds the API key,
+ * so the browser never needs to send it directly to Groq.
+ * A user-provided browser key is only used in local dev when explicitly set.
+ */
 export function hasLLMConfigured() {
-  if (getBrowserApiKey() && getBrowserApiKey() !== 'your_groq_api_key_here') return true;
-  return import.meta.env.DEV;
+  if (!isProduction) {
+    const key = getBrowserApiKey();
+    if (key && key !== 'your_groq_api_key_here') return true;
+  }
+  // In production the server-side proxy handles requests, so the AI is
+  // available even without a browser key (key must be set via env var
+  // on the hosting platform).
+  return true;
 }
 
 export function saveGroqApiKey(key) {
@@ -60,12 +77,17 @@ function buildBody(promptOrMessages, system, { temperature = 0.65, max_tokens = 
 }
 
 async function requestGroq(body, { signal } = {}) {
+  // In production (Firebase Hosting or Vercel), always use the server-side
+  // proxy so the API key is never exposed in the browser bundle.
+  // In dev, use the browser key directly if set, otherwise the Vite proxy.
   const browserKey = getBrowserApiKey();
-  const useProxy =
-    import.meta.env.DEV && (!browserKey || browserKey === 'your_groq_api_key_here');
+  const validBrowserKey = browserKey && browserKey !== 'your_groq_api_key_here';
+  const useProxy = isProduction || !validBrowserKey;
+
   const url = useProxy ? GROQ_PROXY : GROQ_DIRECT;
   const headers = { 'Content-Type': 'application/json' };
-  if (!useProxy && browserKey) headers.Authorization = `Bearer ${browserKey}`;
+  if (!useProxy && validBrowserKey) headers.Authorization = `Bearer ${browserKey}`;
+
   return fetch(url, { method: 'POST', headers, body: JSON.stringify(body), signal });
 }
 
@@ -88,6 +110,13 @@ export async function callLLM(prompt, { system, temperature, max_tokens, timeout
         message = parsed?.error?.message || message;
       } catch {
         if (errBody) message = errBody.slice(0, 300);
+      }
+      // If the server reports that Groq is not configured, give a clear hint.
+      if (message.includes('not configured')) {
+        throw new Error(
+          'AI is not configured on the server. Add GROQ_API_KEY to your hosting ' +
+          'environment variables and redeploy.'
+        );
       }
       throw new Error(message);
     }

@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "/api/:path" },
+    { "source": "/api/groq/v1/chat/completions", "destination": "/api/groq" },
+    { "source": "/api/groq", "destination": "/api/groq" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
