@@ -17,6 +17,8 @@ import Lessons from './pages/Lessons';
 import Leaderboard from './pages/Leaderboard';
 import Profile from './pages/Profile';
 import MiniGames from './pages/MiniGames';
+import Shop from './pages/Shop';
+import Settings from './pages/Settings';
 import { motion } from 'framer-motion';
 
 function AppLoading() {
@@ -110,7 +112,9 @@ function AppRoutes() {
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/minigames" element={<MiniGames />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Route>
       <Route path="*" element={<PageNotFound />} />

@@ -66,6 +66,10 @@ export function createInitialStoreForUser(profile) {
     quests_completed: 0,
     focus_hours: 0,
     streak_days: 0,
+    gamecoin: profile.gamecoin ?? 0,
+    acoin: profile.acoin ?? 0,
+    owned_items: profile.owned_items ?? [],
+    equipped: profile.equipped ?? {},
     guild_id: 'guild-1',
   };
   return {

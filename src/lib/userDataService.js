@@ -19,6 +19,10 @@ export function profileFromFirebaseUser(fbUser, displayName) {
     focus_hours: 0,
     streak_days: 0,
     grade: 10,
+    gamecoin: 0,
+    acoin: 0,
+    owned_items: [],
+    equipped: {},
     created_at: new Date().toISOString(),
   };
 }
@@ -57,6 +61,10 @@ export async function loadUserGameData(uid) {
         focus_hours: profile.focus_hours ?? 0,
         streak_days: profile.streak_days ?? 0,
         grade: profile.grade ?? 10,
+        gamecoin: profile.gamecoin ?? 0,
+        acoin: profile.acoin ?? 0,
+        owned_items: profile.owned_items ?? [],
+        equipped: profile.equipped ?? {},
       },
     };
   } catch (err) {

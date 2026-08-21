@@ -6,6 +6,7 @@ import { Zap, Sparkles } from '@/components/ui/icons';
 import XPBar from '../components/ui/XPBar';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
+import CoinWallet from '../components/ui/CoinWallet';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
 import ActiveQuests from '../components/dashboard/ActiveQuests';
 import StatsGrid from '../components/dashboard/StatsGrid';
@@ -45,6 +46,8 @@ export default function Dashboard() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       <AnimatedBackground colors={['emerald']} orbs={2} grid={true} />
+      {/* Home shows both currencies — stacked so GameCoin never overlaps ACoin */}
+      <CoinWallet types={['gamecoin', 'acoin']} />
       <motion.div
         variants={containerVariants}
         initial="hidden"

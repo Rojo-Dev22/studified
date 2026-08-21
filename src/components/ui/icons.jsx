@@ -94,4 +94,11 @@ export {
   IconSun as Sun,
   IconMoon as Moon,
   IconCalendar as Calendar,
+  IconSettings as Settings,
+  IconSettingsFilled as SettingsFilled,
+  IconShoppingBag as ShoppingBag,
+  IconShoppingCart as ShoppingCart,
+  IconCoinFilled as GameCoinIcon,
+  IconCoins as ACoinIcon,
+  IconLogout as LogOut,
 } from '@tabler/icons-react';

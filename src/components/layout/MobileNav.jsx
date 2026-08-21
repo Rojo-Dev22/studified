@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Book, BookOpen, Timer, Zap, Sparkles, Gamepad2, Trophy, User, ChevronLeft, ChevronRight } from '@/components/ui/icons';
+import { LayoutDashboard, Book, BookOpen, Timer, Zap, Sparkles, Gamepad2, Trophy, User, ChevronLeft, ChevronRight, ShoppingBag, Settings } from '@/components/ui/icons';
 import { motion } from 'framer-motion';
 
 const items = [
@@ -12,7 +12,9 @@ const items = [
   { path: '/ai-tools', icon: Sparkles, label: 'AXO' },
   { path: '/minigames', icon: Gamepad2, label: 'Games' },
   { path: '/leaderboard', icon: Trophy, label: 'Board' },
+  { path: '/shop', icon: ShoppingBag, label: 'Shop' },
   { path: '/profile', icon: User, label: 'Profile' },
+  { path: '/settings', icon: Settings, label: 'Settings' },
 ];
 
 const PAGE_SIZE = 4;

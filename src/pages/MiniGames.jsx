@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 
 import WordleGame from '@/components/minigames/WordleGame';
 import MathSurvivalGame from '@/components/minigames/MathSurvivalGame';
+import CoinWallet from '@/components/ui/CoinWallet';
 
 const GAMES = [
   {
@@ -38,6 +39,8 @@ export default function MiniGames() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       <AnimatedBackground colors={['emerald']} orbs={2} grid={true} />
+      {/* Games section shows GameCoin */}
+      <CoinWallet types={['gamecoin']} />
       <div className="relative z-10 p-5 md:p-8 max-w-4xl mx-auto">
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-1">

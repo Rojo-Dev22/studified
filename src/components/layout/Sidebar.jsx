@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Book, BookOpen, Timer, Trophy, Sparkles, Zap, User, ChevronLeft, ChevronRight, GraduationCap, FolderTree, Gamepad2 } from '@/components/ui/icons';
+import { LayoutDashboard, Book, BookOpen, Timer, Trophy, Sparkles, Zap, User, ChevronLeft, ChevronRight, GraduationCap, FolderTree, Gamepad2, ShoppingBag, Settings } from '@/components/ui/icons';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { GRADES, SUBJECT_LABELS } from '@/lib/subjects';
@@ -15,7 +15,9 @@ const navItems = [
   { path: '/ai-tools', icon: Sparkles, label: 'AXO AI' },
   { path: '/minigames', icon: Gamepad2, label: 'Mini Games' },
   { path: '/leaderboard', icon: Trophy, label: 'Leaderboard' },
+  { path: '/shop', icon: ShoppingBag, label: 'Shop' },
   { path: '/profile', icon: User, label: 'Profile' },
+  { path: '/settings', icon: Settings, label: 'Settings' },
 ];
 
 // ── Unique selection animation per sidebar icon ──────────────────
@@ -28,7 +30,9 @@ const ICON_ANIMS = {
   '/ai-tools': { scale: [1, 1.22, 1], rotate: [0, 12, -12, 0] },  // AXO: sparkle pop
   '/minigames': { y: [0, -3, 0], rotate: [0, -6, 6, 0] },         // Games: controller bounce
   '/leaderboard': { y: [0, -4, 0] },                              // Leaderboard: trophy lift
+  '/shop': { scale: [1, 1.15, 1], rotate: [0, 8, -8, 0] },        // Shop: bag wiggle
   '/profile': { scale: [1, 0.84, 1], opacity: [1, 0.6, 1] },      // Profile: user shrink-fade
+  '/settings': { rotate: [0, -35, 35, 0] },                       // Settings: gear spin
 };
 
 const ICON_TRANSITIONS = {
@@ -39,7 +43,9 @@ const ICON_TRANSITIONS = {
   '/ai-tools': { duration: 1.6, repeat: Infinity, ease: 'easeInOut' },
   '/minigames': { duration: 1.2, repeat: Infinity, ease: 'easeInOut' },
   '/leaderboard': { duration: 1.4, repeat: Infinity, ease: 'easeInOut' },
+  '/shop': { duration: 1.2, repeat: Infinity, ease: 'easeInOut' },
   '/profile': { duration: 1.7, repeat: Infinity, ease: 'easeInOut' },
+  '/settings': { duration: 1.4, repeat: Infinity, ease: 'easeInOut' },
 };
 
 /* ── Lessons Accordion helpers ────────────────────────────────────────── */
@@ -179,8 +185,8 @@ export default function Sidebar({ collapsed, setCollapsed }) {
        {/* Logo + Theme Toggle */}
        <div className={`h-14 flex items-center border-b border-sidebar-border flex-shrink-0 ${collapsed ? 'justify-center gap-1 px-1' : 'justify-between gap-4 px-3.5'}`}>
          <div className={`flex items-center ${collapsed ? 'gap-1.5 justify-center' : 'gap-2 min-w-0 flex-1'}`}>
-           <div className="w-7 h-7 rounded-md bg-foreground flex items-center justify-center flex-shrink-0">
-             <span className="text-background text-xs font-bold">S</span>
+           <div className="w-7 h-7 rounded-md overflow-hidden flex-shrink-0 ring-1 ring-sidebar-border">
+             <img src="/logo.jpg" alt="Studified" className="w-full h-full object-cover" />
            </div>
            <AnimatePresence>
              {!collapsed && (

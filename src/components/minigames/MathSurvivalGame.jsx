@@ -1,12 +1,16 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useQueryClient, useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Heart, Skull, RotateCcw } from '@/components/ui/icons';
+import { db } from '@/lib/db';
+import { awardCoins } from '@/lib/coins';
 
 const ARENA_SIZE = 500;
 const PLAYER_SIZE = 30;
 const ENEMY_SIZE = 20;
+const GAMEOVER_COINS = 50;
 
 function generateQuestion() {
   const types = ['add', 'sub', 'mult', 'linear'];
@@ -41,6 +45,9 @@ export default function MathSurvivalGame({ onClose }) {
   const [gameOver, setGameOver] = useState(false);
   const [question, setQuestion] = useState(generateQuestion());
   const [answerInput, setAnswerInput] = useState('');
+  const queryClient = useQueryClient();
+  const { data: user } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
+  const awardedRef = useRef(false);
   
   const gameState = useRef({
     enemies: [],
@@ -56,6 +63,7 @@ export default function MathSurvivalGame({ onClose }) {
     setGameOver(false);
     setQuestion(generateQuestion());
     setAnswerInput('');
+    awardedRef.current = false;
     gameState.current = {
       enemies: [],
       lastSpawn: performance.now(),
@@ -170,6 +178,16 @@ export default function MathSurvivalGame({ onClose }) {
     };
   }, [gameOver, updateAndDraw]);
 
+  // Award GameCoin once when the game ends
+  useEffect(() => {
+    if (gameOver && !awardedRef.current) {
+      awardedRef.current = true;
+      awardCoins(db, user, 'gamecoin', GAMEOVER_COINS)
+        .then(() => queryClient.invalidateQueries({ queryKey: ['currentUser'] }))
+        .catch(() => {});
+    }
+  }, [gameOver, user, queryClient]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (gameOver) return;
@@ -224,7 +242,8 @@ export default function MathSurvivalGame({ onClose }) {
           <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center text-center p-6">
             <Skull className="w-16 h-16 text-rose-500 mb-4" />
             <h2 className="text-3xl font-black text-white mb-2">GAME OVER</h2>
-            <p className="text-muted-foreground mb-6">You survived {score} waves!</p>
+            <p className="text-muted-foreground mb-2">You survived {score} waves!</p>
+            <p className="text-amber-300 font-semibold mb-6">+{GAMEOVER_COINS} GameCoin 🪙</p>
             <Button onClick={initGame} size="lg" className="bg-accent text-accent-foreground">
               Try Again
             </Button>

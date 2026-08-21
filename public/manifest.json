@@ -6,5 +6,7 @@
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
   "description": "A study productivity app with Firebase-backed progress sync.",
-  "icons": []
+  "icons": [
+    { "src": "/logo.jpg", "sizes": "any", "type": "image/jpeg", "purpose": "any" }
+  ]
 }

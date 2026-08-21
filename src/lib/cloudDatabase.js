@@ -63,6 +63,11 @@ export async function saveUserProfile(uid, profile, gameData = null) {
       focus_hours: Number(profile.focus_hours) || 0,
       streak_days: Number(profile.streak_days) || 0,
       grade: Number(profile.grade) || 10,
+      // Preserve existing balances/inventory when a partial profile omits them
+      gamecoin: profile.gamecoin != null ? Number(profile.gamecoin) || 0 : Number(existingProfile.gamecoin) || 0,
+      acoin: profile.acoin != null ? Number(profile.acoin) || 0 : Number(existingProfile.acoin) || 0,
+      owned_items: Array.isArray(profile.owned_items) ? profile.owned_items : (Array.isArray(existingProfile.owned_items) ? existingProfile.owned_items : []),
+      equipped: (profile.equipped && typeof profile.equipped === 'object') ? profile.equipped : ((existingProfile.equipped && typeof existingProfile.equipped === 'object') ? existingProfile.equipped : {}),
       updatedAt: serverTimestamp(),
     };
 
@@ -702,7 +707,11 @@ export async function syncUserToFirestore(uid, store, profile) {
       quests_completed: Number(store.currentUser?.quests_completed) || 0,
       focus_hours: Number(store.currentUser?.focus_hours) || 0,
       streak_days: Number(store.currentUser?.streak_days) || 0,
-      grade: Number(store.currentUser?.grade) || 10,
+            grade: Number(store.currentUser?.grade) || 10,
+      gamecoin: Number(store.currentUser?.gamecoin) || 0,
+      acoin: Number(store.currentUser?.acoin) || 0,
+      owned_items: Array.isArray(store.currentUser?.owned_items) ? store.currentUser.owned_items : [],
+      equipped: (store.currentUser?.equipped && typeof store.currentUser.equipped === 'object') ? store.currentUser.equipped : {},
     };
 
     const userData = {

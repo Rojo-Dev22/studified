@@ -5,13 +5,14 @@ import MobileNav from './MobileNav';
 import ParticleBackground from './ParticleBackground';
 import AnimatedBackground from '../ui/AnimatedBackground';
 import ThemeToggle from '../ui/ThemeToggle';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function AppLayout() {
   const [collapsed, setCollapsed] = useState(false);
   const location = useLocation();
 
   const isProfile = location.pathname === '/profile';
+  const isSettings = location.pathname === '/settings';
 
   return (
     <div className="min-h-screen bg-background font-body relative overflow-x-hidden">
@@ -24,11 +25,11 @@ export default function AppLayout() {
         <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
       </div>
 
-      {/* Mobile floating theme toggle — top-right (top-left on Profile) */}
+      {/* Mobile floating theme toggle - top-right (top-left on Profile; CSS-hidden on Settings) */}
       <motion.div
         className={`fixed z-40 md:hidden ${
           isProfile ? 'top-3 left-3' : 'top-3 right-3'
-        }`}
+        } ${isSettings ? 'hidden' : ''}`}
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
@@ -49,18 +50,7 @@ export default function AppLayout() {
           collapsed ? 'md:ml-[72px]' : 'md:ml-[220px]'
         }`}
       >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={location.pathname}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="w-full"
-          >
-            <Outlet />
-          </motion.div>
-        </AnimatePresence>
+        <Outlet />
       </main>
     </div>
   );

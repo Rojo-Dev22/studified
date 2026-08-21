@@ -14,6 +14,7 @@ import XPBar from '../components/ui/XPBar';
 import AvatarCreator, { renderAvatarSvg, avatarSvgToDataUri, COLOR_PALETTES } from '../components/profile/AvatarCreator';
 import AvatarDisplay, { getAvatarDataUri, getAvatarPalette } from '../components/profile/AvatarDisplay';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
+import { SHOP_ITEMS } from '../lib/shopItems';
 import { db, getDb } from '@/lib/db';
 import { useAuth } from '@/lib/AuthContext';
 import { flushSaveUserGameData } from '@/lib/userDataService';
@@ -185,8 +186,26 @@ export default function Profile() {
     return parseAvatarConfig(DEFAULT_AVATAR_CONFIG);
   }, [avatarRaw]);
 
-  const avatarDataUri = useMemo(() => getAvatarDataUri(avatarRaw, 128), [avatarRaw]);
-  const bannerPalette = useMemo(() => getAvatarPalette(avatarRaw), [avatarRaw]);
+  const baseAvatarDataUri = useMemo(() => getAvatarDataUri(avatarRaw, 128), [avatarRaw]);
+  const basePalette = useMemo(() => getAvatarPalette(avatarRaw), [avatarRaw]);
+
+  // ── Shop equipped items (backgrounds, palette combos, titles) ─────
+  const equipped = user?.equipped || {};
+  const equippedBg = SHOP_ITEMS.find((it) => it.id === equipped.background);
+  const equippedPaletteItem = SHOP_ITEMS.find((it) => it.id === equipped.palette);
+  const equippedTitleItem = SHOP_ITEMS.find((it) => it.id === equipped.title);
+  // Palette: equipped shop combo overrides the avatar palette
+  const displayPalette = equippedPaletteItem?.palette || basePalette;
+  // Avatar: re-render with effective palette when a shop palette is equipped
+  const avatarDataUri = equippedPaletteItem
+    ? avatarSvgToDataUri(renderAvatarSvg(avatarConfig.bg, avatarConfig.inner, avatarConfig.accent, avatarConfig.face || 'none', displayPalette, 128))
+    : baseAvatarDataUri;
+  // Banner: shop background colors take priority over the palette
+  const bannerGradient = equippedBg
+    ? `linear-gradient(135deg, ${equippedBg.colors[0]}, ${equippedBg.colors[1]}, ${equippedBg.colors[2]})`
+    : `linear-gradient(135deg, ${displayPalette.bg}40, ${displayPalette.inner}30, ${displayPalette.accent}20)`;
+  // Display title: shop title override, else level title
+  const displayTitle = equippedTitleItem?.title || title;
 
   const earnedBadges = useMemo(() => {
     return BADGE_DEFS.map(b => {
@@ -347,7 +366,7 @@ export default function Profile() {
             <div
               className="h-24 relative"
               style={{
-                background: `linear-gradient(135deg, ${bannerPalette.bg}40, ${bannerPalette.inner}30, ${bannerPalette.accent}20)`
+                background: bannerGradient
               }}
             >
               {!isEditing && (
@@ -413,7 +432,7 @@ export default function Profile() {
                       </h1>
                       <p className="text-xs text-muted-foreground/80 flex items-center gap-1.5 justify-center sm:justify-start mt-0.5">
                         <Award className="w-3 h-3 text-violet-400" />
-                        {title} · Level {level}
+                        {displayTitle} · Level {level}
                       </p>
                       {user?.caption && (
                         <p className="text-sm text-muted-foreground mt-1.5 italic flex items-start gap-1.5">

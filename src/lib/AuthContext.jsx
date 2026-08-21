@@ -138,6 +138,10 @@ export const AuthProvider = ({ children }) => {
           focus_hours: store.currentUser?.focus_hours ?? 0,
           streak_days: store.currentUser?.streak_days ?? 0,
           grade: store.currentUser?.grade ?? 10,
+          gamecoin: store.currentUser?.gamecoin ?? 0,
+          acoin: store.currentUser?.acoin ?? 0,
+          owned_items: store.currentUser?.owned_items ?? [],
+          equipped: store.currentUser?.equipped ?? {},
         };
         
         await flushSaveUserGameData(firebaseUser.uid, store, completeProfile);

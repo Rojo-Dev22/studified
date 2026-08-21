@@ -1,7 +1,12 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useQueryClient, useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { RotateCcw } from '@/components/ui/icons';
+import { db } from '@/lib/db';
+import { awardCoins } from '@/lib/coins';
+
+const WIN_COINS = 50;
 
 const WORDS = [
   'CELLS', 'ATOMS', 'BRAIN', 'HEART', 'WATER', 'LIGHT', 'SOUND', 'PLANT', 'FORCE', 'SPACE',
@@ -24,6 +29,9 @@ export default function WordleGame({ onClose }) {
   const [currentGuess, setCurrentGuess] = useState('');
   const [gameOver, setGameOver] = useState(false);
   const [message, setMessage] = useState('');
+  const queryClient = useQueryClient();
+  const awardedRef = useRef(false);
+  const { data: user } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
 
   const initGame = useCallback(() => {
     const randomWord = WORDS[Math.floor(Math.random() * WORDS.length)];
@@ -32,6 +40,7 @@ export default function WordleGame({ onClose }) {
     setCurrentGuess('');
     setGameOver(false);
     setMessage('');
+    awardedRef.current = false;
   }, []);
 
   useEffect(() => {
@@ -52,8 +61,14 @@ export default function WordleGame({ onClose }) {
       setCurrentGuess('');
 
       if (currentGuess === targetWord) {
-        setMessage('You won!');
+        setMessage(`You won! +${WIN_COINS} GameCoin 🪙`);
         setGameOver(true);
+        if (!awardedRef.current) {
+          awardedRef.current = true;
+          awardCoins(db, user, 'gamecoin', WIN_COINS)
+            .then(() => queryClient.invalidateQueries({ queryKey: ['currentUser'] }))
+            .catch(() => {});
+        }
       } else if (newGuesses.length === ROWS) {
         setMessage(`Game Over! Word was ${targetWord}`);
         setGameOver(true);
@@ -65,7 +80,7 @@ export default function WordleGame({ onClose }) {
         setCurrentGuess((prev) => prev + key);
       }
     }
-  }, [currentGuess, gameOver, guesses, targetWord]);
+  }, [currentGuess, gameOver, guesses, targetWord, queryClient, user]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {

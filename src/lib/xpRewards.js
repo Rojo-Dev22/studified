@@ -11,6 +11,14 @@ export async function awardXP(db, user, amount, extraUpdates = {}, source = 'unk
     ...extraUpdates,
   });
 
+  // ACoin is earned through experience / leveling up — award alongside XP.
+  try {
+    const { awardCoins } = await import('@/lib/coins');
+    await awardCoins(db, user, 'acoin', amount);
+  } catch (err) {
+    // Silently fail - coins are non-critical
+  }
+
   // Save XP transaction to cloud database (non-blocking)
   try {
     const { addXPTransaction } = await import('@/lib/cloudDatabase');
