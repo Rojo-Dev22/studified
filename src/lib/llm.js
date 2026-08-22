@@ -1,6 +1,8 @@
 const GROQ_DIRECT = 'https://api.groq.com/openai/v1/chat/completions';
 const GROQ_PROXY = '/api/groq/v1/chat/completions';
 
+import { sanitizeAIText } from './aiFormats';
+
 // Model available on the current Groq key (llama-3.1-8b-instant is not).
 const DEFAULT_MODEL = 'groq/compound-mini';
 
@@ -21,7 +23,7 @@ function checkRateLimit() {
   if (requestTimestamps.length >= RATE_LIMIT.max) {
     const oldest = requestTimestamps[0];
     const waitSec = Math.max(1, Math.ceil((oldest + RATE_LIMIT.windowMs - now) / 1000));
-    throw new Error(`Rate limit reached — please wait ${waitSec}s before sending another message.`);
+    throw new Error(`Rate limit reached: please wait ${waitSec}s before sending another message.`);
   }
   requestTimestamps.push(now);
 }
@@ -61,7 +63,7 @@ function buildMessages(promptOrMessages, system) {
     role: 'system',
     content:
       system ||
-      'You are an expert tutor for Ethiopian secondary students (Grades 9–12) following the Ministry of Education curriculum. Answer clearly using markdown. Be accurate, structured, and study-focused.',
+      'You are Axo, a warm, positive teacher for Ethiopian secondary students (Grades 9–12) following the Ministry of Education curriculum. Explain step-by-step HOW answers come about before stating them, in simple language, using markdown.',
   };
   if (Array.isArray(promptOrMessages)) return [systemMsg, ...promptOrMessages];
   return [systemMsg, { role: 'user', content: promptOrMessages }];
@@ -121,14 +123,15 @@ export async function callLLM(prompt, { system, temperature, max_tokens, timeout
       throw new Error(message);
     }
     const data = await response.json();
-    const text = data?.choices?.[0]?.message?.content?.trim();
+    let text = data?.choices?.[0]?.message?.content?.trim();
     if (!text) throw new Error('AI returned an empty response');
+    text = sanitizeAIText(text);
     return { text, source: 'groq' };
   } catch (err) {
     const browserKey = getBrowserApiKey();
     if (!browserKey && import.meta.env.DEV) {
       throw new Error(
-        `${err.message}. Run: npm run setup:groq — get a free key at https://console.groq.com/keys`
+        `${err.message}. Run: npm run setup:groq: get a free key at https://console.groq.com/keys`
       );
     }
     throw err;

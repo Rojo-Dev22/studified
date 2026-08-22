@@ -29,6 +29,7 @@ import GlassCard from '../components/ui/GlassCard';
 import ReactMarkdown from 'react-markdown';
 import { toast } from 'sonner';
 import { callLLM, callLLMChat, hasLLMConfigured, saveGroqApiKey } from '@/lib/llm';
+import { smartExtractFile } from '@/lib/fileExtract';
 import {
   CHAT_SYSTEM,
   QUIZ_SYSTEM,
@@ -42,7 +43,6 @@ import {
   parseFlashcardsResponse,
   uid,
 } from '@/lib/aiFormats';
-import { generateQuizJSON, generateFlashcardsJSON, generateSummary } from '@/lib/aiGenerator';
 import QuizArena from '@/components/ai/QuizArena';
 import NoteCardDeck from '@/components/ai/NoteCardDeck';
 import StudyAILoader from '../components/ai/StudyAILoader';
@@ -51,17 +51,17 @@ import { getTextbookContext } from '@/lib/textbookRetrieval';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 
 const features = [
-  { id: 'chat', label: 'Chat', icon: MessageSquare, hint: 'Ask anything about your studies', gradient: 'from-emerald-500/20 to-teal-500/10' },
-  { id: 'summary', label: 'Summarize', icon: BookOpen, hint: 'Turn a topic into study notes', gradient: 'from-blue-500/20 to-cyan-500/10' },
-  { id: 'quiz', label: 'Quiz', icon: HelpCircle, hint: '15-question interactive quiz', gradient: 'from-amber-500/20 to-orange-500/10' },
-  { id: 'flashcards', label: 'Note cards', icon: Layers, hint: 'Flip cards to memorize', gradient: 'from-purple-500/20 to-pink-500/10' },
+  { id: 'chat', label: 'Chat', icon: MessageSquare, hint: 'Learn the HOW, step by step', gradient: 'from-emerald-500/20 to-teal-500/10' },
+  { id: 'summary', label: 'Summarize', icon: BookOpen, hint: 'Simple notes that explain why', gradient: 'from-blue-500/20 to-cyan-500/10' },
+  { id: 'quiz', label: 'Quiz', icon: HelpCircle, hint: 'Tricky questions + focus report', gradient: 'from-amber-500/20 to-orange-500/10' },
+  { id: 'flashcards', label: 'Note cards', icon: Layers, hint: 'Easy-to-miss + tricky cards', gradient: 'from-purple-500/20 to-pink-500/10' },
 ];
 
 const PLACEHOLDERS = {
-  chat: 'Ask a question, explain a concept, or get study tips…',
-  summary: 'Enter a topic or paste text to summarize…',
-  quiz: 'What should I quiz you on? e.g. "Photosynthesis" or paste notes…',
-  flashcards: 'Topic for note cards e.g. "World War 2 causes"…',
+  chat: "Ask anything, or attach a doc: I'll walk you through the HOW, step by step…",
+  summary: "Enter a topic, paste text, or attach notes: I'll make them simple and clear…",
+  quiz: 'What should I quiz you on? Topic, sentence, or word dump: e.g. "light reactions calvin cycle chlorophyll"',
+  flashcards: 'Topics for note cards, e.g. "World War 2 causes", or attach your notes…',
 };
 
 function buildHistoryForApi(messages) {
@@ -124,7 +124,7 @@ export default function AITools() {
       id: uid(),
       role: 'assistant',
       content:
-        "Hello! I am Axo, your study buddy. Pick **Summarize**, **Quiz**, or **Note cards** above, or chat with me about anything you're learning. You can also upload images or files for me to analyze!",
+        "Hey hey! 👋 I'm Axo, your study buddy and biggest fan. Ask me anything you're learning and I'll show you HOW the answer comes, step by step. Pick **Summarize**, **Quiz**, or **Note cards** above, or just chat. You can even attach Word docs, slideshows, or notes and I'll read them with you!",
       type: 'text',
     },
   ]);
@@ -207,13 +207,16 @@ export default function AITools() {
     });
   };
 
-  const readFileAsText = (file) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e) => resolve(e.target.result);
-      reader.onerror = reject;
-      reader.readAsText(file);
-    });
+  const readFileAsText = async (file) => {
+    const { text, note } = await smartExtractFile(file);
+    const trimmed = (text || '').trim();
+    if (!trimmed) {
+      throw new Error(
+        note ||
+          'it opened but contained no readable text (it may be scanned images or password-protected)'
+      );
+    }
+    return text;
   };
 
   const readImageAsBase64 = (file) => {
@@ -225,24 +228,47 @@ export default function AITools() {
     });
   };
 
-  const getStudyAdvice = async (topic, score, total, wrongQuestions) => {
+  const getStudyAdvice = async (topic, score, total, wrongQuestions = [], allResults = []) => {
     try {
-      const { text } = await callLLM(studyAdvicePrompt(topic, score, total, wrongQuestions), {
+      const { text } = await callLLM(studyAdvicePrompt(topic, score, total, wrongQuestions, allResults), {
         temperature: 0.5,
-        max_tokens: 800,
+        max_tokens: 900,
         timeoutMs: 9000,
       });
       return text;
     } catch {
+      // Offline fallback: structured analysis built straight from their results.
       const pct = Math.round((score / total) * 100);
-      let advice = `## Focus Areas\n\n`;
+      let advice = `## 🎯 Quiz Feedback\n\n`;
+      let tone;
       if (pct >= 80) {
-        advice += `Great work! You scored ${score}/15. Review the ${wrongQuestions.length} question(s) you missed — those are the edge cases to master. Try re-reading that specific section in your textbook.`;
+        tone = 'Excellent work: you clearly understand the big picture!';
       } else if (pct >= 60) {
-        advice += `You scored ${score}/15. You have a solid foundation but ${wrongQuestions.length} area(s) need attention. Go back to the textbook and re-read the sections covering the questions you got wrong. Then try 3 practice problems for each.`;
+        tone = "Solid foundation: now let's tighten the loose ends.";
       } else {
-        advice += `You scored ${score}/15. This topic needs stronger foundations. Start from the beginning of the chapter, define each key term, and work through the examples step by step. Then retake this quiz.`;
+        tone = "Great effort getting through it: this is exactly how strong understanding starts. Let's build up the foundations next.";
       }
+      const missedItems = wrongQuestions.length
+        ? wrongQuestions
+            .map((q, i) => `${i + 1}. ${(q.text || '').slice(0, 110)}${(q.text || '').length > 110 ? '…' : ''}`)
+            .join(`
+`)
+        : 'Nothing at all. Flawless run! 🎉';
+      advice += `
+You scored **${score}/${total}** (${pct}%) on ${topic}. ${tone}
+
+## 💪 Where You're Strong
+The questions you answered correctly show a real grip on those topics: keep that base warm with quick reviews.
+
+## 🎯 Where to Focus
+Revisit the ideas behind these misses:
+${missedItems}
+
+## 🚀 How to Improve
+- Re-read the textbook section covering each missed question
+- Redo those questions from scratch tomorrow: spaced review sticks
+- Explain each corrected answer out loud: if you can teach it, you own it
+- Retake the quiz in a day or two and watch the score climb 💪`;
       advice += `\n\n### Next Steps\n- Review your wrong answers above\n- Spend 25 minutes on a focused study block\n- Retake the quiz to measure improvement`;
       return advice;
     }
@@ -260,14 +286,16 @@ export default function AITools() {
     let enhancedText = userText;
     const uploadedFileNames = [];
     const uploadedImageNames = [];
+    let anyExtractedText = false;
+    let firstReadError = '';
     
     if (files.length > 0 || images.length > 0) {
       const fileContexts = [];
-      
+
       for (const file of files) {
         uploadedFileNames.push(file.name);
-        // Try to read text-based files - check by extension OR MIME type
-        const isTextFile = file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i) ||
+        // Extract text content (supports .docx, .pptx, .pdf notes, and text files)
+        const isTextFile = file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml|docx|pptx|pdf)$/i) ||
                           (file.type && (
                             file.type.includes('text') || 
                             file.type.includes('json') || 
@@ -278,13 +306,15 @@ export default function AITools() {
         if (isTextFile) {
           try {
             const content = await readFileAsText(file.file);
+            if (content) anyExtractedText = true;
             const truncatedContent = content.length > 5000 
               ? content.substring(0, 5000) + '\n\n[Content truncated due to length...]'
               : content;
             fileContexts.push(`\n\n[Uploaded file: ${file.name}]\n${truncatedContent}\n[End of file]`);
           } catch (err) {
             console.error('Error reading file:', err);
-            fileContexts.push(`\n\n[Uploaded file: ${file.name} - could not read file content]`);
+            firstReadError = (err && err.message) || '';
+            fileContexts.push(`\n\n[Uploaded file: ${file.name} - could not be read: ${(err && err.message) || 'unknown error'}]`);
           }
         } else {
           fileContexts.push(`\n\n[Uploaded file: ${file.name} - ${file.type || 'unknown type'}. Please ask questions about this file.]`);
@@ -335,36 +365,15 @@ export default function AITools() {
     
     let responseText = text;
     if (files.length > 0 || images.length > 0) {
-      const hasReadableContent = files.some(f => {
-        const isTextFile = f.type && (
-          f.type.includes('text') || 
-          f.type.includes('json') || 
-          f.type.includes('csv') ||
-          f.type.includes('markdown') ||
-          f.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i)
-        );
-        return isTextFile;
-      });
-      
-      if (hasReadableContent) {
-        const fileList = uploadedFileNames.length > 0 ? `file(s): ${uploadedFileNames.join(', ')}` : '';
-        const imageList = uploadedImageNames.length > 0 ? `image(s): ${uploadedImageNames.join(', ')}` : '';
-        const combined = [fileList, imageList].filter(Boolean).join(' and ');
-        responseText = `I've analyzed your ${combined}.\n\n${text}`;
-      } else if (files.length > 0 && images.length === 0) {
-        responseText = `I can see you've uploaded: ${uploadedFileNames.join(', ')}. However, I can only read text-based files (like .txt, .md, .json, .csv, code files). For files like .docx, .pdf, or other binary formats, please copy and paste the text content directly into the chat.\n\n${text}`;
-      } else {
-        const fileList = uploadedFileNames.length > 0 ? `file(s): ${uploadedFileNames.join(', ')}` : '';
-        const imageList = uploadedImageNames.length > 0 ? `image(s): ${uploadedImageNames.join(', ')}` : '';
-        const combined = [fileList, imageList].filter(Boolean).join(' and ');
-        responseText = `I've received your ${combined}.\n\n${text}`;
+      if (!anyExtractedText && files.length > 0 && images.length === 0) {
+        responseText = `I could not read text out of: ${uploadedFileNames.join(', ')}. Reason: ${firstReadError || 'that format is not supported in-app yet'}. Save it as .docx or .txt, or paste the key parts here and I will work through them with you.`;
       }
     }
     
     pushMessage({ role: 'assistant', content: responseText, type: 'text' });
     setUploadedFiles([]);
     setUploadedImages([]);
-    if (source === 'local') toast.message('Using offline fallback — add a Groq key for full AI');
+    if (source === 'local') toast.message('Using offline fallback: add a Groq key for full AI');
   };
 
   const runSummary = async (topic) => {
@@ -401,8 +410,9 @@ export default function AITools() {
       quiz = parseQuizResponse(text);
       if (!quiz) {
         const { text: retryText } = await withDelayBudget(
-          callLLM(`Create a 15-question multiple choice quiz about: "${topic}". Return ONLY valid JSON with the schema: {"title":"Quiz: ...","questions":[{"id":1,"text":"...","options":[{"id":"a","text":"..."},{"id":"b","text":"..."},{"id":"c","text":"..."},{"id":"d","text":"..."}],"correct":["a"]}]}`, {
-            temperature: 0.3,
+          callLLM(`Create a tricky 15-question multiple-choice quiz on:"${topic}". Every question must test specific content of the topics mentioned, distractors must be plausible near-misses, and correct answers must be spread randomly across a/b/c/d. Return ONLY valid JSON matching the schema: {"title":"Quiz: ...","questions":[{"id":1,"text":"...","options":[{"id":"a","text":"..."},{"id":"b","text":"..."},{"id":"c","text":"..."},{"id":"d","text":"..."}],"correct":["a"]}]}`, {
+            system: QUIZ_SYSTEM,
+            temperature: 0.55,
             max_tokens: 4000,
             timeoutMs: 15000,
           }),
@@ -423,7 +433,7 @@ export default function AITools() {
     pushMessage({
       id: msgId,
       role: 'assistant',
-      content: `Here's your **${quiz.title}** with ${quiz.questions.length} questions. Select your answers — results unlock when you finish all 15.`,
+      content: `Here's your **${quiz.title}** with ${quiz.questions.length} questions. Select your answers: results unlock when you finish all 15.`,
       type: 'quiz',
       quiz,
     });
@@ -471,7 +481,7 @@ export default function AITools() {
 
     pushMessage({
       role: 'assistant',
-      content: `**${deck.title}** — ${deck.cards.length} note cards ready. Flip each card to reveal the answer.`,
+      content: `**${deck.title}**: ${deck.cards.length} note cards ready. Flip each card to reveal the answer.`,
       type: 'flashcards',
       deck,
     });
@@ -496,7 +506,7 @@ export default function AITools() {
     
     for (const file of uploadedFiles) {
       // Check by extension first, then MIME type
-      const isTextFile = file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml)$/i) ||
+      const isTextFile = file.name.match(/\.(txt|md|json|csv|js|ts|py|java|cpp|c|h|xml|yaml|yml|docx|pptx|pdf)$/i) ||
                         (file.type && (
                           file.type.includes('text') || 
                           file.type.includes('json') || 
@@ -506,15 +516,14 @@ export default function AITools() {
       
       if (isTextFile) {
         try {
-          const content = await readFileAsText(file.file);
-          const truncated = content.length > 1000 ? content.substring(0, 1000) + '\n\n[Content truncated for display...]' : content;
-          fileContents.push(`**${file.name}:**\n${truncated}`);
+          await readFileAsText(file.file);
+          fileContents.push(`Attached: ${file.name}`);
         } catch (err) {
           console.error('Error reading file:', err);
-          fileContents.push(`**${file.name}:** [Could not read file]`);
+          fileContents.push(`**${file.name}:** [${(err && err.message) || 'Could not read file'}]`);
         }
       } else {
-        fileContents.push(`**${file.name}:** [Binary file - ${file.type || 'unknown type'}]`);
+        fileContents.push(`**${file.name}:** [Not readable here. Supported: .docx, .pptx, PDF, and text files.]`);
       }
     }
 
@@ -560,7 +569,7 @@ export default function AITools() {
       }
     } catch (err) {
       console.error(err);
-      // No offline/pre-generated fallback — answers come ONLY from the Groq API.
+      // No offline/pre-generated fallback: answers come ONLY from the Groq API.
       toast.error(err.message || 'Something went wrong');
       pushMessage({
         role: 'assistant',
@@ -684,7 +693,7 @@ export default function AITools() {
             </motion.div>
           )}
 
-          {/* Feature Tabs — collapsible upward to maximize response space */}
+          {/* Feature Tabs: collapsible upward to maximize response space */}
           <div className="relative">
             <AnimatePresence initial={false}>
               {!featuresCollapsed && (
@@ -741,7 +750,7 @@ export default function AITools() {
               )}
             </AnimatePresence>
 
-            {/* Mobile dropdown — rendered OUTSIDE the overflow-hidden collapsible
+            {/* Mobile dropdown: rendered OUTSIDE the overflow-hidden collapsible
                 so the options are never clipped and always display properly */}
             <AnimatePresence>
               {mobileMenuOpen && (
@@ -945,6 +954,7 @@ export default function AITools() {
                   onChange={handleFileUpload}
                   className="hidden"
                   multiple
+                  accept=".txt,.md,.csv,.json,.xml,.yaml,.yml,.log,.docx,.pptx,.pdf"
                 />
                 <input
                   ref={imageInputRef}
@@ -1021,7 +1031,7 @@ export default function AITools() {
             <kbd className="px-1.5 py-0.5 rounded bg-secondary dark:bg-white/5 text-foreground dark:text-white/40 text-[9px] font-mono">Enter</kbd> to send · 
             <kbd className="px-1.5 py-0.5 rounded bg-secondary dark:bg-white/5 text-foreground dark:text-white/40 text-[9px] font-mono ml-1">Shift+Enter</kbd> new line
             {feature === 'quiz' && (
-              <span className="ml-2 text-emerald-400/50">· 15 questions — answers hidden until finish</span>
+              <span className="ml-2 text-emerald-400/50">· 15 questions: answers hidden until finish</span>
             )}
           </p>
         </motion.div>

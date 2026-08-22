@@ -79,24 +79,6 @@ export default function QuizArena({ quiz, onClose, topic, onGetStudyAdvice }) {
     return { correct, total: questions.length };
   }, [finished, questions, answers]);
 
-  const wrongQuestions = useMemo(() => {
-    if (!finished) return [];
-    const wrong = [];
-    questions.forEach((q) => {
-      const sel = [...(answers[q.id] || [])].sort().join(',');
-      const key = [...q.correct].sort().join(',');
-      if (sel !== key) {
-        wrong.push({
-          text: q.text,
-          correct: q.correct,
-          options: q.options,
-          selected: answers[q.id] || [],
-        });
-      }
-    });
-    return wrong;
-  }, [finished, questions, answers]);
-
   const toggleOption = (question, optionId) => {
     if (finished) return;
     setAnswers((prev) => {
@@ -111,13 +93,30 @@ export default function QuizArena({ quiz, onClose, topic, onGetStudyAdvice }) {
     });
   };
 
+  const gradeAnswers = () => {
+    let correctCount = 0;
+    const missed = [];
+    const results = [];
+    questions.forEach((q) => {
+      const selKey = [...(answers[q.id] || [])].sort().join(',');
+      const key = [...q.correct].sort().join(',');
+      const ok = selKey === key;
+      if (ok) correctCount += 1;
+      else missed.push({ text: q.text, correct: q.correct, options: q.options, selected: answers[q.id] || [] });
+      results.push({ text: q.text, ok });
+    });
+    return { correctCount, missed, results };
+  };
+
   const handleFinish = () => {
-    if (!allAnswered) return;
+    if (!allAnswered || finished) return;
+    // Grade synchronously: state updates aren't readable until the next render.
+    const { correctCount, missed, results } = gradeAnswers();
     setFinished(true);
     // Ask for study advice
     if (onGetStudyAdvice && topic) {
       setLoadingAdvice(true);
-      onGetStudyAdvice(topic, score.correct, total, wrongQuestions)
+      Promise.resolve(onGetStudyAdvice(topic, correctCount, total, missed, results))
         .then((advice) => {
           setStudyAdvice(advice);
           setLoadingAdvice(false);
@@ -135,11 +134,11 @@ export default function QuizArena({ quiz, onClose, topic, onGetStudyAdvice }) {
 
   const getGradeMessage = (correct, total) => {
     const pct = correct / total;
-    if (pct >= 0.93) return { emoji: '🏆', title: `Grade: ${correct}/15 — Outstanding!`, msg: 'You have mastered this topic! You clearly understand the concepts deeply.' };
-    if (pct >= 0.80) return { emoji: '🌟', title: `Grade: ${correct}/15 — Excellent!`, msg: 'Strong understanding! A few small areas to polish, but you are well on your way.' };
-    if (pct >= 0.60) return { emoji: '📚', title: `Grade: ${correct}/15 — Good Effort!`, msg: 'You have a solid foundation but there are some key areas to review. Focus on the questions you missed.' };
-    if (pct >= 0.40) return { emoji: '💪', title: `Grade: ${correct}/15 — Keep Going!`, msg: 'You are building understanding but need more review. Don\'t be discouraged — this shows exactly what to study.' };
-    return { emoji: '🎯', title: `Grade: ${correct}/15 — Starting Point!`, msg: 'This topic needs more attention. Use the advice below to focus your studies. Every expert was once a beginner!' };
+    if (pct >= 0.93) return { emoji: '🏆', title: `Outstanding (${correct}/15)!`, msg: 'You have mastered this topic! You clearly understand the concepts deeply.' };
+    if (pct >= 0.80) return { emoji: '🌟', title: `Excellent (${correct}/15)!`, msg: 'Strong understanding! A few small areas to polish, but you are well on your way.' };
+    if (pct >= 0.60) return { emoji: '📚', title: `Good Effort (${correct}/15)`, msg: 'You have a solid foundation but there are some key areas to review. Focus on the questions you missed.' };
+    if (pct >= 0.40) return { emoji: '💪', title: `Keep Going (${correct}/15)`, msg: 'You are building understanding but need more review. Don\'t be discouraged: this shows exactly what to study.' };
+    return { emoji: '🎯', title: `Starting Point (${correct}/15)`, msg: 'This topic needs more attention. Use the advice below to focus your studies. Every expert was once a beginner!' };
   };
 
   if (!total) {
@@ -249,7 +248,7 @@ export default function QuizArena({ quiz, onClose, topic, onGetStudyAdvice }) {
                       </div>
                       <p className="text-[10px] text-violet-300/70 ml-6">
                         Your answer:{' '}
-                        {sel.map((id) => q.options.find((o) => o.id === id)?.text).join(', ') || '—'}
+                        {sel.map((id) => q.options.find((o) => o.id === id)?.text).join(', ') || '-'}
                       </p>
                       {!ok && (
                         <p className="text-[10px] text-emerald-400/90 ml-6 mt-0.5">
@@ -382,7 +381,7 @@ export default function QuizArena({ quiz, onClose, topic, onGetStudyAdvice }) {
 
               {!allAnswered && index === total - 1 && (
                 <p className="text-center text-[10px] text-violet-400/70 mt-3">
-                  Answer every question before submitting — answers stay hidden until then.
+                  Answer every question before submitting: answers stay hidden until then.
                 </p>
               )}
             </motion.div>

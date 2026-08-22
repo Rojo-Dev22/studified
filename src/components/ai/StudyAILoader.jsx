@@ -10,7 +10,7 @@ const PROMPTS = [
   'Crafting intuitive examples and analogies…',
   'Reviewing official curriculum standards…',
   'Preparing critical questions to challenge you…',
-  'Almost ready — great question!',
+  'Almost ready: great question!',
 ];
 
 export default function StudyAILoader({ feature = 'chat' }) {

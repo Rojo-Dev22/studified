@@ -32,6 +32,17 @@ export default function NoteCardDeck({ deck }) {
         <div className="flex items-center gap-2">
           <Layers className="w-4 h-4 text-accent" />
           <span className="text-sm font-medium text-foreground">{deck.title}</span>
+          {card?.tag && (
+            <span
+              className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${
+                card.tag === 'tricky'
+                  ? 'bg-rose-500/10 text-rose-400 border-rose-500/30'
+                  : 'bg-sky-500/10 text-sky-400 border-sky-500/30'
+              }`}
+            >
+              {card.tag === 'tricky' ? '🔥 Tricky' : '💡 Easy-to-miss'}
+            </span>
+          )}
         </div>
         <span className="text-[10px] text-muted-foreground">
           {index + 1} / {cards.length}

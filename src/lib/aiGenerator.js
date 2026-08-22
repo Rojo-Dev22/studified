@@ -21,7 +21,7 @@ export function generateQuizJSON(topic) {
   for (let i = 0; i < 15; i++) {
     const item = QUIZ_POOL[i % QUIZ_POOL.length];
     const labels = ['a', 'b', 'c', 'd'];
-    const question = item.q.replace(/\{topic\}/g, t) + (i >= 5 ? ` — Q${i + 1}` : '');
+    const question = item.q.replace(/\{topic\}/g, t) + (i >= 5 ? ` - Q${i + 1}` : '');
     const options = item.opts.map((opt, j) => ({
       id: labels[j],
       text: opt.replace(/\{topic\}/g, t),
@@ -100,7 +100,7 @@ function extractPairsFromNotes(text) {
       pairs.push([`Define ${normalizeSpace(colon[1])}.`, normalizeSpace(colon[2])]);
       continue;
     }
-    const dash = s.match(/^(.{2,80}?)\s*[-–—]\s*(.{8,300})$/);
+    const dash = s.match(/^(.{2,80}?)\s*[-–-]\s*(.{8,300})$/);
     if (dash) {
       pairs.push([`Define ${normalizeSpace(dash[1])}.`, normalizeSpace(dash[2])]);
       continue;
@@ -232,11 +232,11 @@ export function generateSummary(topic) {
 *Expert Study Guide*
 
 ### Overview
-${t} is a fascinating topic that connects to many areas of your curriculum. Let's build a deep understanding — not just memorize facts.
+${t} is a fascinating topic that connects to many areas of your curriculum. Let's build a deep understanding - not just memorize facts.
 
 ### Core Concepts
 1. **Definition**: Start by defining ${t} in your own words. Check your MoE textbook for the precise definition.
-2. **Why It Matters**: ${t} helps us understand [real-world application — think of an Ethiopian example].
+2. **Why It Matters**: ${t} helps us understand [real-world application - think of an Ethiopian example].
 3. **Key Principles**: Break down the main rules, formulas, or processes step by step.
 
 ### Step-by-Step Walkthrough
@@ -247,7 +247,7 @@ Walk through the main process or chain of reasoning for ${t}:
 
 ### Common Mistakes & Misconceptions
 - ❌ **Mistake 1**: Memorizing without understanding the \`why\` behind each step
-- ❌ **Mistake 2**: Confusing related terms — compare definitions carefully
+- ❌ **Mistake 2**: Confusing related terms - compare definitions carefully
 - ✅ **Fix**: Explain each concept aloud in your own words before moving on
 
 ### Challenge Questions
@@ -271,7 +271,7 @@ export function generateFlashcards(topic) {
     [`What is a common exam question type in ${t}?`, 'Application problems that combine two or more concepts.'],
     [`How do you test if you truly understand ${t}?`, 'Explain it without notes and solve a novel practice problem.'],
     [`What vocabulary must you know for ${t}?`, 'List the 10 most frequent terms from your lectures and define each.'],
-    [`What is the hardest subtopic in ${t} for most students?`, 'The section with the most multi-step reasoning — spend extra time there.'],
+    [`What is the hardest subtopic in ${t} for most students?`, 'The section with the most multi-step reasoning - spend extra time there.'],
     [`What study mistake should you avoid in ${t}?`, 'Passive rereading without practice or self-testing.'],
     [`How does ${t} connect to last unit?`, 'Identify the prerequisite concept and write the link in one sentence.'],
     [`What is one mnemonic for ${t}?`, 'Create a phrase or image that triggers the main formula or idea.'],
@@ -309,10 +309,10 @@ export function generateStudyContent(prompt) {
     return `Hey! 👋 I'm Axo, your study buddy.
 
 I can help you with:
-- **Chat** — ask anything about your studies
-- **Summarize** — turn a topic into clear study notes
-- **Quiz** — generate a 15-question practice quiz
-- **Note cards** — flip cards to memorize key facts
+- **Chat** - ask anything about your studies
+- **Summarize** - turn a topic into clear study notes
+- **Quiz** - generate a 15-question practice quiz
+- **Note cards** - flip cards to memorize key facts
 
 What would you like to study today?`;
   }
@@ -324,10 +324,10 @@ What would you like to study today?`;
 ${topic} is an important topic in your curriculum. Start by reading the relevant section in your MoE textbook, then use this guide to organise your revision.
 
 ### Key Points
-1. **Define it** — write the definition of ${topic} in your own words.
-2. **Core ideas** — list the main concepts, formulas, or processes from your unit.
-3. **Examples** — connect ${topic} to an Ethiopian example or real-world case.
-4. **Practice** — try 3 practice questions without notes, then check your answers.
+1. **Define it** - write the definition of ${topic} in your own words.
+2. **Core ideas** - list the main concepts, formulas, or processes from your unit.
+3. **Examples** - connect ${topic} to an Ethiopian example or real-world case.
+4. **Practice** - try 3 practice questions without notes, then check your answers.
 
 ### Quick Challenge
 - Can you explain ${topic} to a classmate who missed the lesson?
