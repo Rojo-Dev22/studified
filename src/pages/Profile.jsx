@@ -1,21 +1,24 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import React, { useState, useMemo } from 'react';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   User, Edit3, Check, X, Plus, Tag, Sparkles, Zap, BookOpen,
-  Timer, Flame, Award, Medal, Star, Target, Brain, Clock,
-  Calendar, Activity, Trophy, Heart, Hash, Quote, Palette,
-  Sword, Shield, MapPin, Github, Twitter, Globe, Camera,
+  Timer, Flame, Award, Medal, Star, Target, Brain, Activity, Trophy, Heart, Hash, Quote, Palette,
+  Sword, MapPin, Github, Twitter, Globe,
   Lightbulb, Music, PenTool, Code, Coffee, Compass, Sparkle,
 } from '@/components/ui/icons';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 import XPBar from '../components/ui/XPBar';
-import AvatarCreator, { renderAvatarSvg, avatarSvgToDataUri, COLOR_PALETTES } from '../components/profile/AvatarCreator';
-import AvatarDisplay, { getAvatarDataUri, getAvatarPalette } from '../components/profile/AvatarDisplay';
+import GlassTabs from '../components/ui/GlassTabs';
+import AvatarCreator from '../components/profile/AvatarCreator';
+import { getAvatarDataUri, getAvatarPalette } from '../components/profile/AvatarDisplay';
+import {
+  renderAvatarSvg, avatarSvgToDataUri, normalizeAvatarConfig,
+} from '../lib/avatarRenderer';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
 import { SHOP_ITEMS } from '../lib/shopItems';
-import { db, getDb } from '@/lib/db';
+import { db } from '@/lib/db';
 import { useAuth } from '@/lib/AuthContext';
 import { flushSaveUserGameData } from '@/lib/userDataService';
 
@@ -34,23 +37,8 @@ const BADGE_DEFS = [
   { id: 'social',        label: 'Social Butterfly',icon: Heart,  desc: 'Join a guild',                   threshold: 1 },
 ];
 
-const DEFAULT_AVATAR_CONFIG = JSON.stringify({
-  bg: 'hexagon', inner: 'geometric', accent: 'halo', face: 'none',
-  palette: { name: 'Indigo', bg: '#4338ca', inner: '#6366f1', accent: '#818cf8', key: 'indigo' }
-});
-
-function parseAvatarConfig(raw) {
-  try {
-    const parsed = JSON.parse(raw);
-    if (parsed.palette?.key) {
-      const found = COLOR_PALETTES.find(p => p.key === parsed.palette.key);
-      if (found) parsed.palette = found;
-    }
-    return parsed;
-  } catch {
-    return JSON.parse(DEFAULT_AVATAR_CONFIG);
-  }
-}
+// Avatar configs are normalized via lib/avatarRenderer — legacy
+// {bg, inner, accent, palette} saves are migrated automatically.
 
 const TABS = [
   { id: 'about',   label: 'About',    icon: User },
@@ -165,6 +153,7 @@ export default function Profile() {
     interests: [], location: '', social_github: '', social_twitter: '', social_website: '',
   });
   const [newSpeciality, setNewSpeciality] = useState('');
+  const [unlockHint, setUnlockHint] = useState('');
 
   const { data: user } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
   const { data: sessions = [] } = useQuery({
@@ -181,25 +170,31 @@ export default function Profile() {
   const sessionCount = sessions.length;
   const avatarRaw = user?.avatar || '';
 
-  const avatarConfig = useMemo(() => {
-    if (avatarRaw.startsWith('{')) return parseAvatarConfig(avatarRaw);
-    return parseAvatarConfig(DEFAULT_AVATAR_CONFIG);
-  }, [avatarRaw]);
+  const avatarConfig = useMemo(() => normalizeAvatarConfig(avatarRaw), [avatarRaw]);
 
-  const baseAvatarDataUri = useMemo(() => getAvatarDataUri(avatarRaw, 128), [avatarRaw]);
-  const basePalette = useMemo(() => getAvatarPalette(avatarRaw), [avatarRaw]);
-
-  // ── Shop equipped items (backgrounds, palette combos, titles) ─────
+  // ── Shop equipped items (backgrounds, color duos, titles) ──────────
   const equipped = user?.equipped || {};
+  const ownedItems = useMemo(
+    () => Array.from(new Set([...(user?.owned_items || []), 'bg-ocean'])),
+    [user?.owned_items]
+  );
   const equippedBg = SHOP_ITEMS.find((it) => it.id === equipped.background);
-  const equippedPaletteItem = SHOP_ITEMS.find((it) => it.id === equipped.palette);
+  const equippedColorItem = SHOP_ITEMS.find((it) => it.id === equipped.color && it.type === 'profile_color');
   const equippedTitleItem = SHOP_ITEMS.find((it) => it.id === equipped.title);
-  // Palette: equipped shop combo overrides the avatar palette
-  const displayPalette = equippedPaletteItem?.palette || basePalette;
-  // Avatar: re-render with effective palette when a shop palette is equipped
-  const avatarDataUri = equippedPaletteItem
-    ? avatarSvgToDataUri(renderAvatarSvg(avatarConfig.bg, avatarConfig.inner, avatarConfig.accent, avatarConfig.face || 'none', displayPalette, 128))
-    : baseAvatarDataUri;
+  // Color duos sold in the Shop feed the editor's "Royal Duos" row
+  const colorDuos = useMemo(() => SHOP_ITEMS.filter((it) => it.type === 'profile_color'), []);
+
+  // Effective avatar: an equipped shop color duo overrides the saved hues
+  const effectiveConfig = useMemo(
+    () => (equippedColorItem ? { ...avatarConfig, ...equippedColorItem.apply } : avatarConfig),
+    [avatarConfig, equippedColorItem]
+  );
+  const displayPalette = useMemo(() => getAvatarPalette(effectiveConfig), [effectiveConfig]);
+  const avatarDataUri = useMemo(
+    () => avatarSvgToDataUri(renderAvatarSvg(effectiveConfig, 128)),
+    [effectiveConfig]
+  );
+
   // Banner: shop background colors take priority over the palette
   const bannerGradient = equippedBg
     ? `linear-gradient(135deg, ${equippedBg.colors[0]}, ${equippedBg.colors[1]}, ${equippedBg.colors[2]})`
@@ -242,16 +237,34 @@ export default function Profile() {
   const handleSave = async () => {
     setIsSaving(true);
     try {
+      const finalAvatar = editValues.avatar || avatarRaw;
+      const finalCfg = normalizeAvatarConfig(finalAvatar);
+      // Drop shop "equipped" badges whose piece no longer matches the saved avatar
+      const nextEquipped = { ...(user?.equipped || {}) };
+      ['shape', 'avatar', 'style', 'face'].forEach((k) => {
+        const it = SHOP_ITEMS.find((x) => x.id === nextEquipped[k]);
+        if (it?.apply && finalCfg[k] !== it.apply[k]) delete nextEquipped[k];
+      });
+      const colorIt = SHOP_ITEMS.find((x) => x.id === nextEquipped.color);
+      if (
+        colorIt?.apply &&
+        (finalCfg.shapeColor !== colorIt.apply.shapeColor ||
+          finalCfg.styleColor !== colorIt.apply.styleColor)
+      ) {
+        delete nextEquipped.color;
+      }
+
       const data = {
         full_name: editValues.full_name,
         caption: editValues.caption,
         specialities: editValues.specialities,
-        avatar: editValues.avatar,
+        avatar: finalAvatar,
         interests: editValues.interests,
         location: editValues.location,
         social_github: editValues.social_github,
         social_twitter: editValues.social_twitter,
         social_website: editValues.social_website,
+        equipped: nextEquipped,
       };
 
       await db.auth.updateMe(data);
@@ -288,7 +301,6 @@ export default function Profile() {
       }
 
       // Set success dialog data before reload
-      const finalAvatar = editValues.avatar || avatarRaw;
       const uri = getAvatarDataUri(finalAvatar, 128);
       const pal = getAvatarPalette(finalAvatar);
       setSuccessData({ avatarUri: uri, palette: pal, fullName: editValues.full_name || user?.full_name || '' });
@@ -315,6 +327,11 @@ export default function Profile() {
 
   const handleAvatarChange = (config, dataUri) => {
     setEditValues({ ...editValues, avatar: JSON.stringify(config) });
+  };
+
+  const flashUnlock = (name) => {
+    setUnlockHint(`"${name}" is a Shop exclusive — unlock it there first! 🛍️`);
+    setTimeout(() => setUnlockHint(''), 2600);
   };
 
   const handleCancel = () => {
@@ -392,13 +409,16 @@ export default function Profile() {
             <div className="px-5 pb-5 -mt-12">
               <div className="flex flex-col sm:flex-row items-center sm:items-end gap-4">
                 {/* Avatar */}
-                <div className="relative flex-shrink-0">
+                <div className="relative flex-shrink-0 w-full sm:w-[320px]">
                   {isEditing ? (
                     <div className="w-full">
                       <AvatarCreator
-                        value={parseAvatarConfig(editValues.avatar || DEFAULT_AVATAR_CONFIG)}
+                        value={editValues.avatar || avatarRaw}
                         onChange={handleAvatarChange}
                         size={112}
+                        ownedItems={ownedItems}
+                        onLockedAttempt={flashUnlock}
+                        colorDuos={colorDuos}
                       />
                     </div>
                   ) : (
@@ -543,25 +563,18 @@ export default function Profile() {
           </GlassCard>
         </motion.div>
 
-        {/* TABS */}
+        {/* TABS — glassmorphism segmented navigation */}
         <motion.div variants={itemVariants}>
-          <div className="flex gap-1 bg-secondary/40 rounded-lg p-1 backdrop-blur-sm">
-            {TABS.map((tab) => (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-md text-xs font-medium transition-all ${
-                  activeTab === tab.id
-                    ? 'bg-gradient-to-r from-violet-600/20 to-indigo-600/20 text-foreground shadow-sm border border-violet-500/20'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                <tab.icon className="w-3.5 h-3.5" />
-                {tab.label}
-              </button>
-            ))}
-          </div>
+          {unlockHint && (
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-3 px-4 py-2 rounded-lg bg-foreground text-background text-xs font-medium shadow-lg"
+            >
+              {unlockHint}
+            </motion.div>
+          )}
+          <GlassTabs options={TABS} value={activeTab} onChange={setActiveTab} />
         </motion.div>
 
         {/* TAB CONTENT */}

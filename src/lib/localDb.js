@@ -177,6 +177,26 @@ export function createLocalDb(uid, profile, initialStore = null) {
   );
 
   return {
+    /**
+     * Cross-tab sync: re-read the shared localStorage snapshot written by
+     * other tabs (e.g. a game tab awarding GameCoin) into THIS tab's live
+     * store, so subsequent auth.me() calls return the fresh balance.
+     */
+    refreshCurrentUserFromStorage() {
+      try {
+        const raw = localStorage.getItem(storageKey(activeUid));
+        if (raw) {
+          const fresh = syncCurriculumToStore(JSON.parse(raw));
+          if (fresh?.currentUser) {
+            store = fresh;
+            activeProfile = store.currentUser;
+          }
+        }
+      } catch {
+        /* ignore malformed snapshots */
+      }
+      return { ...store.currentUser };
+    },
     auth: {
       async isAuthenticated() {
         return Boolean(activeUid);

@@ -2,12 +2,13 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import { motion } from 'framer-motion';
-import { Zap, Sparkles } from '@/components/ui/icons';
+import { Zap, Flame } from '@/components/ui/icons';
 import XPBar from '../components/ui/XPBar';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 import CoinWallet from '../components/ui/CoinWallet';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
+import { getTowerStreak } from '@/components/minigames/gameShared';
 import ActiveQuests from '../components/dashboard/ActiveQuests';
 import StatsGrid from '../components/dashboard/StatsGrid';
 import RecentActivity from '../components/dashboard/RecentActivity';
@@ -27,6 +28,7 @@ export default function Dashboard() {
 
   const hour = new Date().getHours();
   const greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+  const towerStreak = getTowerStreak();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -54,19 +56,29 @@ export default function Dashboard() {
         animate="show"
         className="relative z-10 p-5 md:p-8 max-w-5xl mx-auto space-y-6"
       >
-      {/* Header */}
-      <motion.div variants={itemVariants}>
-        <p className="text-xs text-muted-foreground mb-0.5 font-medium tracking-wide uppercase">{greeting}</p>
-        <h1 className="text-xl font-bold text-foreground flex items-center gap-1.5">
-          {user?.full_name?.split(' ')[0] || 'Student'}{' '}
-          <motion.span
-            animate={{ rotate: [0, 18, -12, 18, 0] }}
-            transition={{ delay: 0.4, duration: 0.7 }}
-            className="inline-block origin-[70%_70%]"
-          >
-            👋
-          </motion.span>
-        </h1>
+      {/* Header + Logic-Tower streak reminder */}
+      <motion.div variants={itemVariants} className="flex items-start justify-between gap-3">
+        <div>
+          <p className="text-xs text-muted-foreground mb-0.5 font-medium tracking-wide uppercase">{greeting}</p>
+          <h1 className="text-xl font-bold text-foreground flex items-center gap-1.5">
+            {user?.full_name?.split(' ')[0] || 'Student'}{' '}
+            <motion.span
+              animate={{ rotate: [0, 18, -12, 18, 0] }}
+              transition={{ delay: 0.4, duration: 0.7 }}
+              className="inline-block origin-[70%_70%]"
+            >
+              👋
+            </motion.span>
+          </h1>
+        </div>
+        <div
+          className="flex items-center gap-1.5 text-xs bg-orange-500/10 border border-orange-500/25 text-orange-300 px-2.5 py-1.5 rounded-lg shrink-0"
+          title="Play The Logic Tower every day to grow this streak"
+        >
+          <Flame className="w-4 h-4" />
+          <span className="font-bold">{towerStreak.cur}</span>
+          <span className="text-muted-foreground hidden sm:inline">day{towerStreak.cur === 1 ? '' : 's'} Logic streak</span>
+        </div>
       </motion.div>
 
       {/* XP Card */}

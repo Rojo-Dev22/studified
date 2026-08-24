@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Ferrofluid from '@/components/ui/Ferrofluid';
 import {
@@ -7,7 +7,6 @@ import {
   Sparkles,
   Timer,
   Trophy,
-  GraduationCap,
   ChevronRight,
   Users,
 } from '@/components/ui/icons';

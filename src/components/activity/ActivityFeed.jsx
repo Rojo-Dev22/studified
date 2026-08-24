@@ -1,12 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Zap, BookOpen, Flame, Trophy, Star, Target, Brain, 
-  Clock, Award, Medal, Crown, Sparkles, MessageSquare,
-  Calendar, TrendingUp
+  Zap, BookOpen, Flame, Trophy, Target, 
+  Clock, Award, Sparkles, MessageSquare, TrendingUp
 } from '@/components/ui/icons';
 import GlassCard from '../ui/GlassCard';
-import { formatFirestoreDate, getTimeAgo } from '@/lib/cloudDatabase';
+import { getTimeAgo } from '@/lib/cloudDatabase';
 
 const ACTIVITY_ICONS = {
   quest_completed: BookOpen,

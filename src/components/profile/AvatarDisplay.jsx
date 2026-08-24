@@ -1,38 +1,26 @@
 import React from 'react';
-import { renderAvatarSvg, avatarSvgToDataUri, COLOR_PALETTES } from './AvatarCreator';
+import {
+  renderAvatarSvg,
+  avatarSvgToDataUri,
+  normalizeAvatarConfig,
+  getLegacyPalette,
+  DEFAULT_AVATAR_CONFIG,
+} from '../../lib/avatarRenderer';
 
-const DEFAULT_AVATAR_CONFIG = {
-  bg: 'hexagon', inner: 'geometric', accent: 'halo', face: 'none',
-  palette: { name: 'Indigo', bg: '#4338ca', inner: '#6366f1', accent: '#818cf8', key: 'indigo' }
-};
-
-function parseAvatarConfig(raw) {
-  if (!raw) return DEFAULT_AVATAR_CONFIG;
-  try {
-    const parsed = typeof raw === 'string' ? JSON.parse(raw) : raw;
-    if (parsed.palette?.key) {
-      const found = COLOR_PALETTES.find(p => p.key === parsed.palette.key);
-      if (found) parsed.palette = found;
-    }
-    return parsed;
-  } catch {
-    return DEFAULT_AVATAR_CONFIG;
-  }
-}
-
+/** Data-URI for an avatar (accepts raw JSON string, object, or empty). */
 export function getAvatarDataUri(avatarRaw, size = 128) {
-  const c = parseAvatarConfig(avatarRaw);
-  return avatarSvgToDataUri(renderAvatarSvg(c.bg, c.inner, c.accent, c.face || 'none', c.palette, size));
+  const cfg = normalizeAvatarConfig(avatarRaw || DEFAULT_AVATAR_CONFIG);
+  return avatarSvgToDataUri(renderAvatarSvg(cfg, size));
 }
 
+/** Legacy-shaped palette {bg, inner, accent} for gradients & dialogs. */
 export function getAvatarPalette(avatarRaw) {
-  const c = parseAvatarConfig(avatarRaw);
-  return c.palette || DEFAULT_AVATAR_CONFIG.palette;
+  return getLegacyPalette(avatarRaw || DEFAULT_AVATAR_CONFIG);
 }
 
 export function getBannerGradient(avatarRaw) {
   const pal = getAvatarPalette(avatarRaw);
-  return `from-[${pal.bg}]/40 via-[${pal.inner}]/30 to-[${pal.accent}]/20`;
+  return `linear-gradient(135deg, ${pal.bg}40, ${pal.inner}30, ${pal.accent}20)`;
 }
 
 export default function AvatarDisplay({ avatar, size = 40, className = '' }) {

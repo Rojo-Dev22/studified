@@ -17,8 +17,10 @@ import Lessons from './pages/Lessons';
 import Leaderboard from './pages/Leaderboard';
 import Profile from './pages/Profile';
 import MiniGames from './pages/MiniGames';
+import GameArcade from './pages/GameArcade';
 import Shop from './pages/Shop';
 import Settings from './pages/Settings';
+import RootErrorBoundary from '@/components/RootErrorBoundary';
 import { motion } from 'framer-motion';
 
 function AppLoading() {
@@ -116,6 +118,8 @@ function AppRoutes() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
+        {/* Dedicated fullscreen arcade space — launched into its own browser tab */}
+        <Route path="/play/:gameId" element={<GameArcade />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
@@ -127,9 +131,11 @@ function App() {
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
       <AuthProvider>
         <QueryClientProvider client={queryClientInstance}>
-          <Router>
-            <AppRoutes />
-          </Router>
+          <RootErrorBoundary>
+            <Router>
+              <AppRoutes />
+            </Router>
+          </RootErrorBoundary>
           <Toaster />
         </QueryClientProvider>
       </AuthProvider>

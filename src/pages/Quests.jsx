@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, Play, BookOpen, Scroll, Zap, GraduationCap, ChevronDown, ChevronUp, Sparkles, Search } from '@/components/ui/icons';
+import { CheckCircle2, Play, BookOpen, Scroll, Zap, GraduationCap, ChevronDown, ChevronUp, Search } from '@/components/ui/icons';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
@@ -13,7 +13,6 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import GlassCard from '../components/ui/GlassCard';
-import AnimatedBackground from '../components/ui/AnimatedBackground';
 import RankBadge from '../components/ui/RankBadge';
 import AssignmentPlayer from '../components/curriculum/AssignmentPlayer';
 import { toast } from 'sonner';

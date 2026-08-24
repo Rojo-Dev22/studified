@@ -101,4 +101,18 @@ export {
   IconCoinFilled as GameCoinIcon,
   IconCoins as ACoinIcon,
   IconLogout as LogOut,
+
+  // ─── Mini-game suite icons ──────────────────────────────────────
+  IconCalculator as Calculator,
+  IconLanguage as Language,
+  IconPuzzle as Puzzle,
+  IconGrid4x4 as Grid4x4,
+  IconTimeline as Timeline,
+  IconHistory as History,
+  IconShare2 as Share2,
+
+  // ─── Shop / avatar customization icons ──────────────────────────
+  IconPaw as Paw,
+  IconRocket as Rocket,
+  IconDiamond as Diamond,
 } from '@tabler/icons-react';

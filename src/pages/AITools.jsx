@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   HelpCircle,
@@ -9,19 +9,15 @@ import {
   User,
   MessageSquare,
   Sparkles,
-  GraduationCap,
-  ChevronRight,
   ChevronDown,
   ChevronUp,
   Check,
-  Brain,
-  Lightbulb,
   Image,
   Paperclip,
   X,
   FileText,
 } from '@/components/ui/icons';
-import AXO, { useAXOState, STATES } from '@/components/axo/AXO';
+import AXO, { useAXOState } from '@/components/axo/AXO';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';

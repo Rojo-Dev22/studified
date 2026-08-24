@@ -7,12 +7,14 @@ export default function ProtectedRoute() {
 
   if (!authChecked || isLoadingAuth) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-background">
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-background gap-4">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-          className="w-8 h-8 border-2 border-accent/30 border-t-accent rounded-full"
+          className="w-10 h-10 border-2 border-accent/30 border-t-accent rounded-full"
         />
+        <p className="text-sm font-medium text-foreground">Preparing your arcade…</p>
+        <p className="text-[11px] text-muted-foreground">Syncing your profile &amp; coins — this only takes a moment</p>
       </div>
     );
   }

@@ -1,11 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { ArrowLeft, Send, Users, Sparkles } from '@/components/ui/icons';
+import { ArrowLeft, Send, Users } from '@/components/ui/icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import GlassCard from '../components/ui/GlassCard';
-import AvatarDisplay from '../components/profile/AvatarDisplay';
 import { format } from 'date-fns';
 import { toast } from 'sonner';
 
