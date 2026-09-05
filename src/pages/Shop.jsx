@@ -6,6 +6,7 @@ import {
   Rocket, Shapes, Sparkles, Smile, Palette, Paw,
 } from '@/components/ui/icons';
 import GlassCard from '../components/ui/GlassCard';
+import AnimatedBanner from '../components/ui/AnimatedBanner';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 import CoinWallet from '../components/ui/CoinWallet';
 import GlassTabs from '../components/ui/GlassTabs';
@@ -271,6 +272,14 @@ function ItemPreview({ item, baseConfig }) {
   }
 
   if (item.type === 'background') {
+    if (item.animated) {
+      return (
+        <div className="w-full h-full relative overflow-hidden">
+          <AnimatedBanner item={item} />
+          <span className="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded-full bg-background/60 backdrop-blur-sm text-[9px] font-black tracking-wider text-foreground/90">ANIMATED</span>
+        </div>
+      );
+    }
     return (
       <div
         className="w-full h-full"

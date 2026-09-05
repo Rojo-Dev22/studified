@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { Shuffle, Lock, Shapes, Sparkles, Smile, Palette, Paw } from '@/components/ui/icons';
+import React, { useState, useMemo, useRef } from 'react';
+import { Shuffle, Lock, Plus, Shapes, Sparkles, Smile, Palette, Paw } from '@/components/ui/icons';
 import GlassTabs from '@/components/ui/GlassTabs';
 import {
   AVATAR_SHAPES,
@@ -8,6 +8,7 @@ import {
   AVATAR_FACES,
   SHAPE_COLORS,
   STYLE_COLORS,
+  BG_COLORS,
   normalizeAvatarConfig,
   renderAvatarSvg,
   avatarSvgToDataUri,
@@ -84,6 +85,7 @@ export default function AvatarCreator({
       face: pick(AVATAR_FACES),
       shapeColor: SHAPE_COLORS[Math.floor(Math.random() * SHAPE_COLORS.length)].hex,
       styleColor: STYLE_COLORS[Math.floor(Math.random() * STYLE_COLORS.length)].hex,
+      bgColor: BG_COLORS[Math.floor(Math.random() * BG_COLORS.length)].hex,
     });
   };
 
@@ -116,8 +118,15 @@ export default function AvatarCreator({
       {isColorTab ? (
         <div className="space-y-3 max-h-48 overflow-y-auto pr-1 custom-scroll">
           <ColorRow
-            title="Shape Hue"
+            title="Backdrop"
             subtitle="The canvas beneath it all"
+            colors={BG_COLORS}
+            activeHex={config.bgColor}
+            onSelect={(hex) => handleChange('bgColor', hex)}
+          />
+          <ColorRow
+            title="Shape Hue"
+            subtitle="Fill of your shape"
             colors={SHAPE_COLORS}
             activeHex={config.shapeColor}
             onSelect={(hex) => handleChange('shapeColor', hex)}
@@ -202,11 +211,13 @@ export default function AvatarCreator({
 
 // ─── Color channel row ────────────────────────────────────────────────
 function ColorRow({ title, subtitle, colors, activeHex, onSelect }) {
+  const inputRef = useRef(null);
+  const isCustom = !!activeHex && !colors.some((c) => c.hex === activeHex);
   return (
     <div>
       <div className="flex items-baseline justify-between mb-1.5">
         <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">{title}</p>
-        <p className="text-[9px] text-muted-foreground/70">{subtitle}</p>
+        <p className="text-[9px] text-muted-foreground/70">{isCustom ? 'Custom - ' + activeHex : subtitle}</p>
       </div>
       <div className="flex flex-wrap gap-2">
         {colors.map((c) => {
@@ -217,13 +228,29 @@ function ColorRow({ title, subtitle, colors, activeHex, onSelect }) {
               type="button"
               title={c.name}
               onClick={() => onSelect(c.hex)}
-              className={`w-8 h-8 rounded-md transition-transform ring-2 ring-white/20 ${
-                active ? 'ring-accent scale-110 shadow-md' : 'hover:scale-105'
-              }`}
+              className={'w-8 h-8 rounded-md transition-transform ring-2 ring-white/20 ' + (active ? 'ring-accent scale-110 shadow-md' : 'hover:scale-105')}
               style={{ background: c.hex }}
             />
           );
         })}
+        <button
+          type="button"
+          title="Pick a custom color"
+          onClick={() => inputRef.current?.click()}
+          className={'relative w-8 h-8 rounded-md transition-transform ring-2 ' + (isCustom ? 'ring-accent scale-110 shadow-md' : 'ring-white/20 hover:scale-105')}
+          style={{ background: 'conic-gradient(#f87171, #fbbf24, #4ade80, #22d3ee, #818cf8, #e879f9, #f87171)' }}
+        >
+          <Plus className="absolute inset-0 m-auto w-3.5 h-3.5 text-white/90 drop-shadow" />
+        </button>
+        <input
+          ref={inputRef}
+          type="color"
+          value={/^#[0-9a-fA-F]{6}$/.test(activeHex || '') ? activeHex : '#ffffff'}
+          onChange={(e) => onSelect(e.target.value)}
+          className="sr-only"
+          aria-label={'Custom ' + title}
+          tabIndex={-1}
+        />
       </div>
     </div>
   );

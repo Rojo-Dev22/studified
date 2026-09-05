@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/icons';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
+import AnimatedBanner from '../components/ui/AnimatedBanner';
 import XPBar from '../components/ui/XPBar';
 import GlassTabs from '../components/ui/GlassTabs';
 import AvatarCreator from '../components/profile/AvatarCreator';
@@ -174,15 +175,31 @@ export default function Profile() {
 
   // ── Shop equipped items (backgrounds, color duos, titles) ──────────
   const equipped = user?.equipped || {};
-  const ownedItems = useMemo(
-    () => Array.from(new Set([...(user?.owned_items || []), 'bg-ocean'])),
-    [user?.owned_items]
-  );
+  const ownedItems = useMemo(() => {
+    const owned = new Set([...(user?.owned_items || []), 'bg-ocean']);
+    // A purchased shop item also unlocks the master-list piece it references
+    for (const it of SHOP_ITEMS) {
+      if (owned.has(it.id) && it.apply) {
+        if (it.apply.shape) owned.add(it.apply.shape);
+        if (it.apply.avatar) owned.add(it.apply.avatar);
+        if (it.apply.style) owned.add(it.apply.style);
+        if (it.apply.face) owned.add(it.apply.face);
+      }
+    }
+    return Array.from(owned);
+  }, [user?.owned_items]);
   const equippedBg = SHOP_ITEMS.find((it) => it.id === equipped.background);
-  const equippedColorItem = SHOP_ITEMS.find((it) => it.id === equipped.color && it.type === 'profile_color');
+  // Only an OWNED color duo may override the saved hues
+  const equippedColorItem = SHOP_ITEMS.find(
+    (it) => it.id === equipped.color && it.type === 'profile_color' && ownedItems.includes(it.id)
+  );
   const equippedTitleItem = SHOP_ITEMS.find((it) => it.id === equipped.title);
-  // Color duos sold in the Shop feed the editor's "Royal Duos" row
-  const colorDuos = useMemo(() => SHOP_ITEMS.filter((it) => it.type === 'profile_color'), []);
+  // Color duos sold in the Shop feed the editor's "Royal Duos" row.
+  // Flagged premium so they stay LOCKED in the editor until bought in the Shop.
+  const colorDuos = useMemo(
+    () => SHOP_ITEMS.filter((it) => it.type === 'profile_color').map((it) => ({ ...it, premium: true })),
+    []
+  );
 
   // Effective avatar: an equipped shop color duo overrides the saved hues
   const effectiveConfig = useMemo(
@@ -245,14 +262,17 @@ export default function Profile() {
         const it = SHOP_ITEMS.find((x) => x.id === nextEquipped[k]);
         if (it?.apply && finalCfg[k] !== it.apply[k]) delete nextEquipped[k];
       });
-      const colorIt = SHOP_ITEMS.find((x) => x.id === nextEquipped.color);
-      if (
-        colorIt?.apply &&
-        (finalCfg.shapeColor !== colorIt.apply.shapeColor ||
-          finalCfg.styleColor !== colorIt.apply.styleColor)
-      ) {
-        delete nextEquipped.color;
-      }
+      // Sync the equipped color badge with the final hues - only a duo the
+      // user OWNS can be reflected; locked shop combos can never be applied.
+      const ownedDuo = SHOP_ITEMS.find(
+        (x) =>
+          x.type === 'profile_color' &&
+          ownedItems.includes(x.id) &&
+          finalCfg.shapeColor === x.apply.shapeColor &&
+          finalCfg.styleColor === x.apply.styleColor
+      );
+      if (ownedDuo) nextEquipped.color = ownedDuo.id;
+      else delete nextEquipped.color;
 
       const data = {
         full_name: editValues.full_name,
@@ -381,11 +401,12 @@ export default function Profile() {
           <GlassCard hover={false} className="p-0 overflow-hidden">
             {/* Gradient header strip — color matches avatar palette */}
             <div
-              className="h-24 relative"
-              style={{
-                background: bannerGradient
-              }}
+              className="h-24 relative overflow-hidden"
+              style={equippedBg?.animated ? undefined : { background: bannerGradient }}
             >
+              {equippedBg?.animated && (
+                <AnimatedBanner item={equippedBg} />
+              )}
               {!isEditing && (
                 <div className="absolute top-3 right-3 flex gap-1">
                   <button

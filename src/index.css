@@ -173,3 +173,146 @@
 html:not(.dark) .particle-canvas {
   mix-blend-mode: multiply;
 }
+
+/* --- Animated shop backgrounds (banner animations) --- */
+@keyframes bannerFlowPos {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes bannerAurora {
+  0%, 100% { transform: translate3d(-6%, -5%, 0) scale(1.05) rotate(-2deg); opacity: .75; }
+  50% { transform: translate3d(6%, 5%, 0) scale(1.12) rotate(2deg); opacity: 1; }
+}
+@keyframes bannerOrbA {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(55%, 38%) scale(1.2); }
+}
+@keyframes bannerOrbB {
+  0%, 100% { transform: translate(0, 0) scale(1.08); }
+  50% { transform: translate(-50%, -40%) scale(.85); }
+}
+@keyframes bannerShimmer {
+  0% { transform: translateX(-140%) skewX(-18deg); }
+  55%, 100% { transform: translateX(340%) skewX(-18deg); }
+}
+@keyframes bannerTwinkle {
+  0%, 100% { opacity: .3; }
+  50% { opacity: .95; }
+}
+.banner-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(16px);
+  opacity: .5;
+  pointer-events: none;
+}
+.banner-shimmer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 34%;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, .32), transparent);
+  animation: bannerShimmer 4.5s ease-in-out infinite;
+}
+.banner-sparkle {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, .85) 1px, transparent 1.6px), radial-gradient(rgba(255, 255, 255, .55) 1px, transparent 1.6px);
+  background-size: 46px 46px, 74px 74px;
+  background-position: 0 0, 22px 30px;
+  animation: bannerTwinkle 3.2s ease-in-out infinite;
+}
+
+/* --- Signature banner animations (pop / ember / aurora / stars / nebula) --- */
+.banner-pop {
+  position: absolute;
+  border-radius: 9999px;
+  aspect-ratio: 1 / 1;
+  filter: blur(10px);
+  opacity: 0;
+  animation: bannerPop 3.6s ease-in-out infinite;
+}
+@keyframes bannerPop {
+  0% { transform: scale(.25); opacity: 0; }
+  35% { opacity: .8; }
+  55% { transform: scale(1); opacity: .9; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+.banner-ember {
+  position: absolute;
+  bottom: -10%;
+  border-radius: 9999px;
+  opacity: 0;
+  animation: bannerRise linear infinite;
+  box-shadow: 0 0 8px 2px rgba(251, 191, 36, .45);
+}
+@keyframes bannerRise {
+  0% { bottom: -12%; opacity: 0; transform: translateX(0) scale(.6); }
+  12% { opacity: 1; }
+  55% { opacity: .85; }
+  100% { bottom: 108%; opacity: 0; transform: translateX(22px) scale(1.2); }
+}
+.banner-curtain {
+  position: absolute;
+  top: -25%;
+  height: 150%;
+  filter: blur(14px);
+  mix-blend-mode: screen;
+  animation: bannerCurtainA 8s ease-in-out infinite;
+}
+@keyframes bannerCurtainA {
+  0%, 100% { transform: translateX(-8%) skewX(-10deg); opacity: .5; }
+  50% { transform: translateX(16%) skewX(12deg); opacity: 1; }
+}
+@keyframes bannerCurtainB {
+  0%, 100% { transform: translateX(12%) skewX(12deg); opacity: .45; }
+  50% { transform: translateX(-14%) skewX(-9deg); opacity: .95; }
+}
+.banner-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, .95) 1.6px, transparent 2.4px);
+  background-size: 110px 84px;
+  animation: bannerTwinkle 2.6s ease-in-out infinite;
+}
+.banner-shoot {
+  position: absolute;
+  left: -30%;
+  width: 32%;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+  opacity: 0;
+  animation: bannerShoot 6s ease-in infinite;
+}
+@keyframes bannerShoot {
+  0% { transform: translate3d(-30%, -60%, 0) rotate(16deg); opacity: 0; }
+  4% { opacity: 1; }
+  13% { transform: translate3d(360%, 260%, 0) rotate(16deg); opacity: 0; }
+  100% { transform: translate3d(360%, 260%, 0) rotate(16deg); opacity: 0; }
+}
+.banner-cloud {
+  position: absolute;
+  border-radius: 9999px;
+  aspect-ratio: 1 / 1;
+  filter: blur(22px);
+  opacity: .62;
+  animation: bannerDriftA 24s ease-in-out infinite;
+}
+@keyframes bannerDriftA {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(26%, -16%) scale(1.15); }
+  66% { transform: translate(-12%, 10%) scale(.95); }
+}
+@keyframes bannerDriftB {
+  0%, 100% { transform: translate(0, 0) scale(1.05); }
+  50% { transform: translate(-28%, 18%) scale(.88); }
+}
+@keyframes bannerDriftC {
+  0%, 100% { transform: translate(0, 0) scale(.95); }
+  50% { transform: translate(16%, 20%) scale(1.18); }
+}
