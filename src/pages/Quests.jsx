@@ -163,8 +163,6 @@ export default function Quests() {
     },
   });
 
-  const difficultyLabel = { E: 'Beginner', D: 'Easy', C: 'Medium', B: 'Hard', A: 'Expert', S: 'Master' };
-
   const emptyMessage = {
     available: `No ${contentFilter === 'all' ? 'tasks' : contentFilter} for Grade ${grade} right now.`,
     active: 'No assignments in progress. Open one from Browse.',

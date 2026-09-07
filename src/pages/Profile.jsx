@@ -345,7 +345,7 @@ export default function Profile() {
     // No page reload needed - React Query will update the UI automatically
   };
 
-  const handleAvatarChange = (config, dataUri) => {
+  const handleAvatarChange = (config, _dataUri) => {
     setEditValues({ ...editValues, avatar: JSON.stringify(config) });
   };
 

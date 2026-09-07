@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import GlassCard from '../components/ui/GlassCard';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
@@ -12,7 +12,6 @@ import { db } from '@/lib/db';
 
 export default function Leaderboard() {
   const { data: currentUser } = useQuery({ queryKey: ['currentUser'], queryFn: () => db.auth.me() });
-  const queryClient = useQueryClient();
   const [isRefreshing, setIsRefreshing] = useState(false);
   
   const { data: users = [], isLoading, refetch } = useQuery({
@@ -26,7 +25,7 @@ export default function Leaderboard() {
       }
       return leaderboard;
     },
-    refetchInterval: 30000, // Refetch every 30 seconds to get latest data
+    refetchInterval: 120000, // Poll every 2 min instead of 30s — Firestore reads are budgeted ($0 architecture §10); manual refresh still available
   });
 
   const handleRefresh = async () => {

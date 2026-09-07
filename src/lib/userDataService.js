@@ -1,6 +1,7 @@
-import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, getDoc, getDocFromCache } from 'firebase/firestore';
 import { firestore, isFirebaseConfigured } from './firebase';
-import { saveUserProfile, addXPTransaction, saveAssignmentCompletion, saveAIChat, addActivity } from './cloudDatabase';
+import { saveUserProfile } from './cloudDatabase';
+import { recordRead, shouldStopBackgroundSync } from './budgetGuard';
 
 const SAVE_DEBOUNCE_MS = 600;
 const pendingSaves = new Map();
@@ -31,7 +32,17 @@ export function profileFromFirebaseUser(fbUser, displayName) {
 export async function loadUserGameData(uid) {
   if (!isFirebaseConfigured() || !firestore) return null;
   try {
-    const snap = await getDoc(doc(firestore, 'users', uid));
+    // Cache-first boot read (§7/§10): returning users load from the persistent
+    // local cache without a billable network read; the server is only hit
+    // when the document is not cached yet.
+    const userRef = doc(firestore, 'users', uid);
+    let snap;
+    try {
+      snap = await getDocFromCache(userRef);
+    } catch (cacheErr) {
+      recordRead(); // server round-trip → counts against the daily read budget
+      snap = await getDoc(userRef);
+    }
     if (!snap.exists()) return null;
     const data = snap.data();
     const gameData = data.gameData || {};
@@ -85,8 +96,10 @@ export function scheduleSaveUserGameData(uid, store, profile) {
       // Only sync to Firebase in background (localStorage already saved by persistStore)
       // No need to save to localStorage again - it was already saved immediately
       
-      // Try Firebase in background (won't block if it fails)
-      if (isFirebaseConfigured() && firestore) {
+      // Try Firebase in background (won't block if it fails).
+      // Background sync pauses at 95% of any daily budget (§6) — localStorage
+      // remains the primary store, so nothing is lost.
+      if (isFirebaseConfigured() && firestore && !shouldStopBackgroundSync()) {
         try {
           await saveUserProfile(uid, profile, store.gameData);
         } catch (firebaseErr) {

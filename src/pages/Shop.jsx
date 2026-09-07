@@ -123,7 +123,7 @@ export default function Shop() {
   const isBoosterActive = (item) =>
     equipped.booster === item.id && (user?.booster_expires || 0) > Date.now();
 
-  const boosterMinutesLeft = (item) =>
+  const boosterMinutesLeft = (_item) =>
     Math.max(0, Math.ceil(((user?.booster_expires || 0) - Date.now()) / 60000));
 
   return (

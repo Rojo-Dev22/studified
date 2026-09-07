@@ -8,6 +8,7 @@ import {
   getProfileHistory,
   getXPHistory,
   getAchievements,
+  unlockAchievement,
   getAssignmentHistory,
   getAIChatHistory,
   getActivityFeed,
@@ -112,6 +113,7 @@ export function useAchievements() {
  */
 export function useAssignments() {
   const { firebaseUser } = useAuth();
+  const queryClient = useQueryClient();
 
   const { data: assignments = [] } = useQuery({
     queryKey: ['assignments', firebaseUser?.uid],

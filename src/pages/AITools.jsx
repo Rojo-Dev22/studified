@@ -215,15 +215,6 @@ export default function AITools() {
     return text;
   };
 
-  const readImageAsBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e) => resolve(e.target.result);
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-  };
-
   const getStudyAdvice = async (topic, score, total, wrongQuestions = [], allResults = []) => {
     try {
       const { text } = await callLLM(studyAdvicePrompt(topic, score, total, wrongQuestions, allResults), {
@@ -434,23 +425,6 @@ ${missedItems}
       quiz,
     });
     setActiveQuizId(msgId);
-  };
-
-  const isGenericFlashcards = (deck) => {
-    const cards = deck?.cards || [];
-    if (!cards.length) return true;
-    const genericHits = cards.filter((c) => {
-      const t = `${c.front || ''} ${c.back || ''}`.toLowerCase();
-      return (
-        t.includes('your topic') ||
-        t.includes('any valid') ||
-        t.includes('mnemonic') ||
-        t.includes('review tomorrow') ||
-        t.includes('study mistake') ||
-        t.includes('active recall')
-      );
-    }).length;
-    return genericHits >= Math.max(3, Math.floor(cards.length / 3));
   };
 
   const runFlashcards = async (topic) => {

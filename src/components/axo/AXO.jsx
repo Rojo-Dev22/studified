@@ -54,7 +54,7 @@ function Defs() {
 }
 
 // ─── Gills (ride the shared breath for a blended, living system) ──
-function Gills({ side, breath, phase }) {
+function Gills({ side, breath, phase: _phase }) {
   const x = side === 'left' ? -1 : 1;
   // Subtle per-side offset so the two sides aren't perfectly mirrored,
   // but both follow the SAME breath so the head reads as one creature.

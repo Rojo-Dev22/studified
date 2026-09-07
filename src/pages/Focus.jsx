@@ -71,7 +71,6 @@ const WheelPicker = ({ value, onChange, min, max, step, height = 'h-44' }) => {
         el.scrollTo({ top: index * ITEM_H, behavior: 'auto' });
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value, isDragging, min, max, step]);
 
   // Determine the selected value from scroll position

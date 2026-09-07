@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { formatSubject, formatGrade, CURRICULUM_FRAMEWORK } from '@/lib/subjects';
 import CurriculumExerciseRunner from './CurriculumExerciseRunner';
 
-export default function AssignmentPlayer({
+export default function AssignmentPlayer(/** @type {any} */ {
   quest,
   interactive = false,
   onSaveExercise,

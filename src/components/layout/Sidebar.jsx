@@ -50,7 +50,7 @@ const ICON_TRANSITIONS = {
 
 /* ── Lessons Accordion helpers ────────────────────────────────────────── */
 
-function GradeSection({ grade, subjects, selectedSubject, collapsed, onSelectGrade, onSelectSubject }) {
+function GradeSection({ grade, subjects, selectedSubject, collapsed: _collapsed, onSelectGrade, onSelectSubject }) {
   const expandedSubjects = subjects.map(s => ({
     subject: s,
     subjectLabel: SUBJECT_LABELS[s] || s,

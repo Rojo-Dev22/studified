@@ -253,7 +253,6 @@ export default function LogicTower() {
     }
   }, [placement, day, status]);
 
-  const tray = [0, 1, 2, 3, 4].filter((it) => !placement.includes(it));
   const canSubmit = placement.every((v) => v != null);
   const latestMarks = attempts.length ? attempts[attempts.length - 1].m : null;
   /* ── Interactions ──────────────────────────────────────────────── */

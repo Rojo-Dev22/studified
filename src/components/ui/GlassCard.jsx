@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
-export default function GlassCard({ children, className = '', hover = true, onClick }) {
+export default function GlassCard(/** @type {any} */ { children, className = '', hover = true, onClick }) {
   const cardRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 

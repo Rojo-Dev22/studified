@@ -2,6 +2,7 @@ const GROQ_DIRECT = 'https://api.groq.com/openai/v1/chat/completions';
 const GROQ_PROXY = '/api/groq/v1/chat/completions';
 
 import { sanitizeAIText } from './aiFormats';
+import { canUseAI, recordAIRequest } from './budgetGuard';
 
 // Model available on the current Groq key (llama-3.1-8b-instant is not).
 const DEFAULT_MODEL = 'groq/compound-mini';
@@ -99,6 +100,14 @@ export async function callLLMChat(messages, options = {}) {
 
 export async function callLLM(prompt, { system, temperature, max_tokens, timeoutMs = 9000 } = {}) {
   checkRateLimit();
+  // $0 hard cap (§17): when the daily AI allowance is used up, remote AI is
+  // disabled until reset — never silently switch to a paid API.
+  if (!canUseAI()) {
+    throw new Error(
+      'Daily AI limit reached — AI is unavailable until the budget resets ' +
+      '(resets at midnight). Local study content is still available.'
+    );
+  }
   const body = buildBody(prompt, system, { temperature, max_tokens });
   const controller = timeoutMs ? new AbortController() : null;
   const timer = controller ? setTimeout(() => controller.abort(), timeoutMs) : null;
@@ -122,6 +131,7 @@ export async function callLLM(prompt, { system, temperature, max_tokens, timeout
       }
       throw new Error(message);
     }
+    recordAIRequest(); // successful request → counts against the daily AI budget
     const data = await response.json();
     let text = data?.choices?.[0]?.message?.content?.trim();
     if (!text) throw new Error('AI returned an empty response');
