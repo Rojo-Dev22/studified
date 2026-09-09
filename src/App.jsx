@@ -7,6 +7,7 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import Landing from './pages/Landing';
+import Login from './pages/Login';
 import AppLayout from './components/layout/AppLayout';
 import Dashboard from './pages/Dashboard';
 import Quests from './pages/Quests';
@@ -102,6 +103,12 @@ function AppRoutes() {
         path="/"
         element={
           isAuthenticated && dbReady ? <Navigate to="/dashboard" replace /> : <Landing />
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          isAuthenticated && dbReady ? <Navigate to="/dashboard" replace /> : <Login />
         }
       />
       <Route element={<ProtectedRoute />}>

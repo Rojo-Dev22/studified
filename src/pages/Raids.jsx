@@ -81,7 +81,7 @@ export default function Raids() {
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#3b82f6', '#8b5cf6', '#10b981', '#ffffff'],
+        colors: ['#3b82f6', '#22d3ee', '#10b981', '#ffffff'],
         disableForReducedMotion: true,
       });
     },

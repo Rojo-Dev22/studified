@@ -231,7 +231,7 @@ export default function Focus() {
       particleCount: 160,
       spread: 90,
       origin: { y: 0.65 },
-      colors: ['#10b981', '#34d399', '#6ee7b7', '#3b82f6', '#8b5cf6', '#ffffff'],
+      colors: ['#10b981', '#34d399', '#6ee7b7', '#3b82f6', '#22d3ee', '#ffffff'],
       disableForReducedMotion: true
     });
   }, [sessionId, distractions, user, queryClient, subject]);

@@ -95,6 +95,9 @@ s.c
 # LOCAL DEV LOGS / SCRATCH OUTPUT
 devserver-*.txt
 lint-out.txt
+lint_out*.txt
 push_out.txt
 validate-done.txt
 Gemini_Generated_Image_*.jpg
+build_out*.txt
+run_build.bat

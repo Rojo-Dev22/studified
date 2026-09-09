@@ -148,7 +148,7 @@ export default function Profile() {
   const [isEditing, setIsEditing] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [successData, setSuccessData] = useState({ avatarUri: '', palette: { bg: '#4338ca', inner: '#6366f1', accent: '#818cf8' }, fullName: '' });
+  const [successData, setSuccessData] = useState({ avatarUri: '', palette: { bg: '#047857', inner: '#10b981', accent: '#34d399' }, fullName: '' });
   const [editValues, setEditValues] = useState({
     full_name: '', caption: '', specialities: [], avatar: '',
     interests: [], location: '', social_github: '', social_twitter: '', social_website: '',
@@ -388,7 +388,7 @@ export default function Profile() {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      <AnimatedBackground colors={['violet']} orbs={3} grid={true} />
+      <AnimatedBackground colors={['emerald']} orbs={3} grid={true} />
 
       <motion.div
         variants={containerVariants}
@@ -727,8 +727,8 @@ export default function Profile() {
                   </div>
                   <div className="grid grid-cols-2 gap-3">
                     {[
-                      { icon: Brain, label: 'Focus Sessions', value: sessionCount, sub: 'total completed', color: 'from-violet-500/20 to-purple-500/20' },
-                      { icon: Medal, label: 'Current Level', value: level, sub: title, color: 'from-indigo-500/20 to-blue-500/20' },
+                      { icon: Brain, label: 'Focus Sessions', value: sessionCount, sub: 'total completed', color: 'from-cyan-500/20 to-sky-500/20' },
+                      { icon: Medal, label: 'Current Level', value: level, sub: title, color: 'from-blue-500/20 to-cyan-500/20' },
                       { icon: Trophy, label: 'Best Streak', value: dayStreak, sub: 'consecutive days', color: 'from-amber-500/20 to-orange-500/20' },
                       { icon: Target, label: 'Total XP', value: formatNumber(totalXP), sub: 'all time', color: 'from-emerald-500/20 to-teal-500/20' },
                     ].map((stat) => (
@@ -750,7 +750,7 @@ export default function Profile() {
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Level Progress</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-violet-500 to-indigo-500 flex items-center justify-center text-lg font-bold text-white flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-lg font-bold text-white flex-shrink-0">
                       {level}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -763,7 +763,7 @@ export default function Profile() {
                           initial={{ width: 0 }}
                           animate={{ width: `${(currentXP / xpToNext) * 100}%` }}
                           transition={{ duration: 1, ease: 'easeOut' }}
-                          className="h-full bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full"
+                          className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"
                         />
                       </div>
                     </div>

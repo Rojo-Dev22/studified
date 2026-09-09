@@ -50,7 +50,7 @@ const features = [
   { id: 'chat', label: 'Chat', icon: MessageSquare, hint: 'Learn the HOW, step by step', gradient: 'from-emerald-500/20 to-teal-500/10' },
   { id: 'summary', label: 'Summarize', icon: BookOpen, hint: 'Simple notes that explain why', gradient: 'from-blue-500/20 to-cyan-500/10' },
   { id: 'quiz', label: 'Quiz', icon: HelpCircle, hint: 'Tricky questions + focus report', gradient: 'from-amber-500/20 to-orange-500/10' },
-  { id: 'flashcards', label: 'Note cards', icon: Layers, hint: 'Easy-to-miss + tricky cards', gradient: 'from-purple-500/20 to-pink-500/10' },
+  { id: 'flashcards', label: 'Note cards', icon: Layers, hint: 'Easy-to-miss + tricky cards', gradient: 'from-cyan-500/20 to-sky-500/10' },
 ];
 
 const PLACEHOLDERS = {

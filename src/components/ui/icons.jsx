@@ -14,6 +14,7 @@ export {
   IconPlus as Plus,
   IconX as X,
   IconCheck as Check,
+  IconCircleCheck as CheckCircle,
   IconCircleCheck as CheckCircle2,
   IconCircleX as XCircle,
   IconCircle as Circle,

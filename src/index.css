@@ -316,3 +316,159 @@ html:not(.dark) .particle-canvas {
   0%, 100% { transform: translate(0, 0) scale(.95); }
   50% { transform: translate(16%, 20%) scale(1.18); }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Landing CTA — "Let's Get Started" underwater arcade animations
+   (mint/emerald palette: #2D6A4F · #52B788 · #74C69D · #A8E6CF)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Gentle idle float of the whole CTA anchor */
+.cta-float {
+  animation: ctaFloat 3.2s ease-in-out infinite;
+}
+@keyframes ctaFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Breathing accent glow behind the button */
+.cta-glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: 18px;
+  background: hsl(142 71% 45% / 0.4);
+  filter: blur(16px);
+  pointer-events: none;
+  animation: ctaGlow 2.6s ease-in-out infinite;
+}
+@keyframes ctaGlow {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.07); }
+}
+
+/* Sonar pulse rings emanating outward (underwater ping) */
+.cta-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 16px;
+  border: 2px solid hsl(142 71% 45% / 0.6);
+  opacity: 0;
+  pointer-events: none;
+  animation: ctaSonar 2.8s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+.cta-ring-b { animation-delay: 1.4s; }
+@keyframes ctaSonar {
+  0% { opacity: 0.75; transform: scale(1); }
+  70%, 100% { opacity: 0; transform: scale(1.45); }
+}
+
+/* Flowing mint gradient fill inside the button */
+.cta-button-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    #2D6A4F 0%,
+    #52B788 26%,
+    #74C69D 48%,
+    #A8E6CF 60%,
+    #74C69D 72%,
+    #52B788 100%
+  );
+  background-size: 260% 260%;
+  animation: ctaFlow 5.5s ease-in-out infinite;
+}
+@keyframes ctaFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Diagonal sheen sweeping across the button */
+.cta-shine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 34%;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: translateX(-160%) skewX(-18deg);
+  animation: ctaShine 3.6s ease-in-out infinite;
+}
+@keyframes ctaShine {
+  0% { transform: translateX(-160%) skewX(-18deg); }
+  55%, 100% { transform: translateX(340%) skewX(-18deg); }
+}
+
+/* Little bubbles rising from behind the button */
+.cta-bubble {
+  position: absolute;
+  bottom: 60%;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  border: 1px solid rgba(168, 230, 207, 0.75);
+  background: rgba(168, 230, 207, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  animation: ctaBubble 3s ease-in infinite;
+}
+.cta-bubble-1 { left: 16%; }
+.cta-bubble-2 { left: 48%; width: 5px; height: 5px; animation-delay: 1s; }
+.cta-bubble-3 { left: 80%; width: 8px; height: 8px; animation-delay: 2s; }
+@keyframes ctaBubble {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  12% { opacity: 0.9; }
+  100% { transform: translateY(-44px) scale(1.1); opacity: 0; }
+}
+
+/* Respect reduced-motion preferences: freeze or hide decorative layers */
+@media (prefers-reduced-motion: reduce) {
+  .cta-float,
+  .cta-glow,
+  .cta-ring,
+  .cta-button-bg,
+  .cta-shine,
+  .cta-bubble {
+    animation: none;
+  }
+  .cta-ring,
+  .cta-bubble {
+    display: none;
+  }
+  .cta-shine {
+    transform: translateX(200%) skewX(-18deg);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Login Page — Floating icon bounce animations
+   ───────────────────────────────────────────────────────────────────────────── */
+.icon-bounce-left {
+  animation: iconBounceLeft 3s ease-in-out infinite;
+}
+.icon-bounce-right {
+  animation: iconBounceRight 3s ease-in-out infinite;
+}
+
+@keyframes iconBounceLeft {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(-5deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(-3px) rotate(3deg); }
+}
+
+@keyframes iconBounceRight {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-3px) rotate(3deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(-6px) rotate(-5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-bounce-left,
+  .icon-bounce-right {
+    animation: none;
+  }
+}

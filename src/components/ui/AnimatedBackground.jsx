@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function AnimatedBackground({ colors = ["emerald", "amber", "violet"], orbs = 3, grid = true }) {
+export default function AnimatedBackground({ colors = ["emerald", "amber", "cyan"], orbs = 3, grid = true }) {
   const colorMap = {
     emerald: {
       primary: "bg-emerald-500/16 dark:bg-emerald-500/8",
@@ -13,20 +13,10 @@ export default function AnimatedBackground({ colors = ["emerald", "amber", "viol
       secondary: "bg-amber-500/9 dark:bg-amber-500/4",
       particle: "bg-amber-400/45",
     },
-    violet: {
-      primary: "bg-violet-500/14 dark:bg-violet-500/5",
-      secondary: "bg-violet-500/9 dark:bg-violet-500/4",
-      particle: "bg-violet-400/40",
-    },
     blue: {
       primary: "bg-blue-500/16 dark:bg-blue-500/8",
       secondary: "bg-blue-500/10 dark:bg-blue-500/5",
       particle: "bg-blue-400/50",
-    },
-    purple: {
-      primary: "bg-purple-500/14 dark:bg-purple-500/5",
-      secondary: "bg-purple-500/9 dark:bg-purple-500/4",
-      particle: "bg-purple-400/40",
     },
     cyan: {
       primary: "bg-cyan-500/16 dark:bg-cyan-500/8",

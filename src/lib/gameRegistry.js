@@ -48,7 +48,7 @@ export const GAME_REGISTRY = [
     icon: Puzzle,
     color: 'text-violet-400',
     bgColor: 'bg-violet-400/10',
-    bgColors: ['purple', 'violet'],
+    bgColors: ['cyan', 'blue'],
     component: LogicTower,
     tips: ['One puzzle per day (UTC)', '6 attempts · 🟩 right · 🟨 wrong spot', 'Progress auto-saves'],
   },
