@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { motion, useSpring, useTransform, useMotionValue } from 'framer-motion';
+import { motion, useMotionValue } from 'framer-motion';
+import { useLowPower } from '@/hooks/useDevicePrefs';
 
 /**
  * AXO — Animated Axolotl HEAD.
@@ -73,14 +74,24 @@ function AxoDefs({ id }) {
 // ─── Main Axolotl Head Experience ───────────────────────────────────────────
 export default function AxolotlHead({
   state = AXO_STATES.IDLE,
-  swimSpeed = 0, // 0 (still) to 1 (full speed)
+  swimSpeed = 0, // 0 (still) to 1 (full speed) — number OR framer-motion MotionValue
   facingRight = true,
-  angle = 0, // pitch/bank angle in degrees (diving, ascending, turning)
+  angle = 0, // pitch/bank angle in degrees — number OR MotionValue
   size = 230,
   className = '',
   bubbleEmit = false,
+  disableGlow = false, // skip the per-frame feDropShadow repaint (mobile perf)
 }) {
   const id = useMemo(() => `axo-${Math.random().toString(36).slice(2, 8)}`, []);
+
+  // ── MotionValue-aware props (mobile perf) ───────────────────────────────
+  // `swimSpeed` and `angle` may be plain numbers OR framer-motion
+  // MotionValues. MotionValues let the parent (Landing) stream scroll-driven
+  // values straight into this component's animation loop with zero React
+  // re-renders per frame.
+  const speedIsMV = !!(swimSpeed && typeof swimSpeed.get === 'function');
+  const angleIsMV = !!(angle && typeof angle.get === 'function');
+  const speedValue = speedIsMV ? swimSpeed.get() : swimSpeed || 0;
 
   // ── Reduced-motion respect ────────────────────────────────────────────────
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -97,7 +108,8 @@ export default function AxolotlHead({
     }
   }, []);
 
-  const activeSpeed = Math.max(0.08, swimSpeed);
+  const activeSpeed = Math.max(0.08, speedValue);
+  const lowPower = useLowPower();
   const isOrbiting = state === AXO_STATES.ORBITING;
   const isSwimming = state === AXO_STATES.SWIMMING || activeSpeed > 0.3;
   const calm = prefersReducedMotion ? 0.16 : 1;
@@ -168,7 +180,6 @@ export default function AxolotlHead({
   const headY = useMotionValue(0);
   const swayX = useMotionValue(0);
   const headRoll = useMotionValue(0);
-  const breath = useMotionValue(0);
   const gillL1 = useMotionValue(0);
   const gillL2 = useMotionValue(0);
   const gillL3 = useMotionValue(0);
@@ -176,11 +187,13 @@ export default function AxolotlHead({
   const gillR2 = useMotionValue(0);
   const gillR3 = useMotionValue(0);
 
-  // Springs give the head weight and water resistance
-  const sHeadY = useSpring(headY, { stiffness: 120, damping: 16 });
-  const sSwayX = useSpring(swayX, { stiffness: 110, damping: 18 });
-  const sHeadRoll = useSpring(headRoll, { stiffness: 130, damping: 16 });
-  const sBreath = useSpring(breath, { stiffness: 90, damping: 14 });
+  // LOW-POWER ANIMATION MODEL (mobile perf rework):
+  // - No framer `useSpring` chain here. Each framer spring ran its own
+  //   perpetual rAF integration, so even a parked page burned 4+ rAF loops —
+  //   one of them feeding an internal `breath` value that was never even
+  //   rendered. All smoothing now happens INSIDE the single rAF loop below
+  //   via exponential blend factors: one loop, one integration pass, zero
+  //   idle work.
 
   // Persistent animation clock — refs (not per-effect locals), so re-renders
   // from new prop values never reset the phase: the bob stays butter-smooth.
@@ -192,24 +205,44 @@ export default function AxolotlHead({
 
   useEffect(() => {
     let rafId;
+    let lastLoop = 0;
+
+    // Frame-rate independent smoothing factors: `1 - exp(-k·dt)` produces the
+    // identical curve at 30fps and 60fps (the old `+= x * 0.04` blends were
+    // frame-rate DEPENDENT — a throttled loop would have moved differently).
+    const smoothDt = (k, dt) => 1 - Math.exp(-k * dt);
+
+    // On low-power devices every other frame is skipped: the rAF callback
+    // returns WITHOUT integrating (near-zero work), so the loop renders ~30fps
+    // and the phone's main thread stays free for scroll input.
+    const minFrame = lowPower ? 1000 / 30 : 0;
 
     const animate = (now) => {
-      const last = lastFrameRef.current || now;
+      rafId = requestAnimationFrame(animate);
+      if (minFrame && now - lastLoop < minFrame - 1) return;
+
+      const last = lastLoop || now - 1000 / 60;
       const dt = Math.min(0.05, (now - last) / 1000);
+      lastLoop = now;
       lastFrameRef.current = now;
       tRef.current += dt;
 
+      // Live speed: when the parent streams a MotionValue, read it here (no
+      // re-render needed); otherwise use the prop captured at render time.
+      const liveSpeed = speedIsMV ? Math.max(0.08, swimSpeed.get()) : activeSpeed;
+      const swimmingNow = isOrbiting || liveSpeed > 0.3;
+
       // Smooth frequency + amplitude blending toward the current state
-      const targetFreq = isOrbiting ? 2.4 : isSwimming ? 3.1 : 1.6;
-      const targetAmp = isOrbiting ? 9 : isSwimming ? 11 : 5;
-      freqRef.current += (targetFreq - freqRef.current) * 0.04;
-      ampRef.current += (targetAmp - ampRef.current) * 0.05;
+      // (exponential, frame-rate independent — see smoothDt above)
+      const targetFreq = isOrbiting ? 2.4 : swimmingNow ? 3.1 : 1.6;
+      const targetAmp = isOrbiting ? 9 : swimmingNow ? 11 : 5;
+      freqRef.current += (targetFreq - freqRef.current) * smoothDt(2.4, dt);
+      ampRef.current += (targetAmp - ampRef.current) * smoothDt(3, dt);
       phaseRef.current += dt * freqRef.current;
       const phase = phaseRef.current;
       const t = tRef.current;
 
       // Behavior for this frame: idle variety while resting, swim while moving
-      const swimmingNow = isSwimming || isOrbiting;
       const behavior = swimmingNow ? 'swim' : idleBehaviorRef.current;
 
       // Calm, SLOW buoyant bob (no more rapid up-and-down); idle behaviors
@@ -269,8 +302,6 @@ export default function AxolotlHead({
           ? Math.sin(phase - 0.4) * rollAmp
           : Math.sin(t * 0.5) * rollAmp) + rollWobble) * calm
       );
-      breath.set(Math.sin(t * 1.15)); // slow, relaxed breathing (was 2.4 — too rapid)
-
       // Six gills flutter with independent phase offsets (symmetric flare).
       // Left gills rotate +, right gills rotate − so tips flare outward.
       // `gillScale` lets the idle behaviors calm or exaggerate the flutter.
@@ -281,21 +312,22 @@ export default function AxolotlHead({
       gillR1.set(-Math.sin(phase - 0.8) * gil * 0.95);
       gillR2.set(-Math.sin(phase - 1.7) * gil * 0.88);
       gillR3.set(-Math.sin(phase - 2.6) * gil * 0.8);
-
-      rafId = requestAnimationFrame(animate);
     };
 
     rafId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(rafId);
   }, [
-    activeSpeed, isSwimming, isOrbiting, calm,
-    headY, swayX, headRoll, breath,
+    activeSpeed, speedIsMV, isOrbiting, calm, lowPower,
+    headY, swayX, headRoll,
     gillL1, gillL2, gillL3, gillR1, gillR2, gillR3,
   ]);
 
   // Rendered aspect ratio (viewBox 140 x 120)
   const viewH = (size * 120) / 140;
 
+  // When `angle` arrives as a MotionValue we attach it via `style` so every
+  // frame lands without a React re-render; the numeric path keeps the
+  // animated spring-flip behavior unchanged.
   return (
     <motion.div
       className={`inline-block relative select-none pointer-events-none ${className}`}
@@ -303,23 +335,27 @@ export default function AxolotlHead({
         width: size,
         height: viewH,
         transformOrigin: '50% 50%',
+        ...(angleIsMV ? { rotate: angle } : null),
       }}
-      animate={{
-        scaleX: facingRight ? 1 : -1,
-        rotate: angle,
-      }}
+      animate={
+        angleIsMV
+          ? { scaleX: facingRight ? 1 : -1 }
+          : { scaleX: facingRight ? 1 : -1, rotate: angle }
+      }
       transition={{
         scaleX: { duration: 0.45, ease: [0.34, 1.56, 0.64, 1] },
         rotate: { duration: 0.35, ease: 'easeOut' },
       }}
     >
+      {/* SVG drop-shadow filter repaints on every animated frame — the
+          heaviest single paint cost on phones — so mobile opts out. */}
       <svg
         viewBox="0 0 140 120"
         width="100%"
         height="100%"
         xmlns="http://www.w3.org/2000/svg"
         style={{ overflow: 'visible' }}
-        filter={`url(#${id}-glow)`}
+        filter={disableGlow ? undefined : `url(#${id}-glow)`}
       >
         <AxoDefs id={id} />
 
@@ -327,43 +363,45 @@ export default function AxolotlHead({
         <motion.g
           style={{
             transformOrigin: PIVOT.head,
-            y: useTransform(sHeadY, (v) => v),
-            x: useTransform(sSwayX, (v) => v),
-            rotate: useTransform(sHeadRoll, (v) => v),
+            // MotionValues stream straight into `style` — no identity
+            // useTransform wrappers needed.
+            y: headY,
+            x: swayX,
+            rotate: headRoll,
           }}
         >
           {/* SIX FEATHERY GILL FRONDS (drawn behind the head silhouette) */}
-          <motion.g style={{ transformOrigin: PIVOT.gillL1, rotate: useTransform(gillL1, (v) => v) }}>
+          <motion.g style={{ transformOrigin: PIVOT.gillL1, rotate: gillL1 }}>
             <path
               d="M39 42 C29 34 20 23 17 10 C26 15 35 25 41 35 C42.5 38 41.5 40.5 39 42 Z"
               fill={`url(#${id}-gill)`}
             />
           </motion.g>
-          <motion.g style={{ transformOrigin: PIVOT.gillL2, rotate: useTransform(gillL2, (v) => v) }}>
+          <motion.g style={{ transformOrigin: PIVOT.gillL2, rotate: gillL2 }}>
             <path
               d="M34 55 C23 52 12 45 5 34 C16 35 27 40 36 48 C37.5 50.5 36.5 53.5 34 55 Z"
               fill={`url(#${id}-gill)`}
             />
           </motion.g>
-          <motion.g style={{ transformOrigin: PIVOT.gillL3, rotate: useTransform(gillL3, (v) => v) }}>
+          <motion.g style={{ transformOrigin: PIVOT.gillL3, rotate: gillL3 }}>
             <path
               d="M37 67 C27 70 16 69 6 62 C17 58 28 57 37 60 C39 62 39 65 37 67 Z"
               fill={`url(#${id}-gill)`}
             />
           </motion.g>
-          <motion.g style={{ transformOrigin: PIVOT.gillR1, rotate: useTransform(gillR1, (v) => v) }}>
+          <motion.g style={{ transformOrigin: PIVOT.gillR1, rotate: gillR1 }}>
             <path
               d="M101 42 C111 34 120 23 123 10 C114 15 105 25 99 35 C97.5 38 98.5 40.5 101 42 Z"
               fill={`url(#${id}-gill)`}
             />
           </motion.g>
-          <motion.g style={{ transformOrigin: PIVOT.gillR2, rotate: useTransform(gillR2, (v) => v) }}>
+          <motion.g style={{ transformOrigin: PIVOT.gillR2, rotate: gillR2 }}>
             <path
               d="M106 55 C117 52 128 45 135 34 C124 35 113 40 104 48 C102.5 50.5 103.5 53.5 106 55 Z"
               fill={`url(#${id}-gill)`}
             />
           </motion.g>
-          <motion.g style={{ transformOrigin: PIVOT.gillR3, rotate: useTransform(gillR3, (v) => v) }}>
+          <motion.g style={{ transformOrigin: PIVOT.gillR3, rotate: gillR3 }}>
             <path
               d="M103 67 C113 70 124 69 134 62 C123 58 112 57 103 60 C101 62 101 65 103 67 Z"
               fill={`url(#${id}-gill)`}

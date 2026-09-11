@@ -118,7 +118,7 @@ export default function AuthForm({ mode, onModeChange }) {
             key={m}
             type="button"
             onClick={() => { onModeChange(m); setError(''); }}
-            className={`flex-1 py-2 text-xs font-medium rounded-md transition-all ${
+            className={`flex-1 py-2 min-h-[40px] md:min-h-0 text-xs font-medium rounded-md transition-all touch-manipulation ${
               mode === m ? 'bg-card text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'
             }`}
           >
@@ -194,7 +194,7 @@ export default function AuthForm({ mode, onModeChange }) {
              type="button"
              onClick={googleSignIn}
              disabled={loading}
-             className="w-full h-11 flex items-center justify-center gap-2.5 rounded-lg bg-white text-gray-800 border border-border hover:bg-muted/60 active:scale-[0.98] transition-all shadow-sm"
+             className="w-full h-11 min-h-[44px] flex items-center justify-center gap-2.5 rounded-lg bg-white text-gray-800 border border-border hover:bg-muted/60 active:scale-[0.98] transition-all shadow-sm touch-manipulation"
            >
              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -208,7 +208,7 @@ export default function AuthForm({ mode, onModeChange }) {
            <Button
             type="submit"
             disabled={loading}
-            className="w-full h-10 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+            className="w-full h-10 min-h-[44px] bg-accent text-accent-foreground hover:bg-accent/90 font-semibold touch-manipulation"
           >
             {loading ? (
               <Loader2 className="w-4 h-4 animate-spin" />

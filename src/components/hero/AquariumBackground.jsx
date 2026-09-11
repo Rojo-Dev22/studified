@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { motion } from 'framer-motion';
+import { useLowPower, useIsMobile } from '@/hooks/useDevicePrefs';
 
 /**
  * Living 2D Aquarium Environment
@@ -8,12 +8,27 @@ import { motion } from 'framer-motion';
  * - Preserves existing site color palette and dark theme
  * - Non-intrusive: Enhances atmosphere without competing with text readability
  * - Respects prefers-reduced-motion
+ *
+ * Performance notes (mobile lag fix):
+ * - Every ambient animation here is a pure CSS keyframe driven by the
+ *   compositor — the browser animates off the main thread, so scrolling and
+ *   React work never contend with the water. (Previously ~44 framer-motion
+ *   springs ran on JS for both the landing and login pages.)
+ * - Element counts are halved on mobile viewports and further reduced on
+ *   low-power devices / reduced-motion preference.
+ * - Bubbles no longer carry per-bubble backdrop-blur or extra gleam layers,
+ *   which forced the compositor to manage dozens of blur masks per frame.
  */
 
 export default function AquariumBackground({ className = '' }) {
-  // Generate deterministic bubbles
+  const lowPower = useLowPower();
+  const isMobile = useIsMobile();
+
+  // Generate deterministic bubbles (pure data — no animation state)
   const bubbles = useMemo(() => {
-    return Array.from({ length: 18 }, (_, i) => ({
+    // 18 on desktop, 8 on mobile, 5 on low-power devices
+    const count = lowPower ? 5 : isMobile ? 8 : 18;
+    return Array.from({ length: count }, (_, i) => ({
       id: i,
       x: 4 + ((i * 17) % 92), // percentage across width
       size: 4 + ((i * 3) % 10), // 4px to 14px
@@ -22,11 +37,13 @@ export default function AquariumBackground({ className = '' }) {
       sway: 12 + ((i * 5) % 20),
       opacity: 0.25 + ((i * 7) % 35) / 100,
     }));
-  }, []);
+  }, [lowPower, isMobile]);
 
   // Generate ambient floating micro-particles (water specks / plankton)
   const particles = useMemo(() => {
-    return Array.from({ length: 24 }, (_, i) => ({
+    // 24 on desktop, 10 on mobile, 6 on low-power devices
+    const count = lowPower ? 6 : isMobile ? 10 : 24;
+    return Array.from({ length: count }, (_, i) => ({
       id: i,
       x: 3 + ((i * 29) % 94),
       y: 5 + ((i * 37) % 90),
@@ -35,7 +52,7 @@ export default function AquariumBackground({ className = '' }) {
       delay: (i * 0.4) % 4,
       color: i % 3 === 0 ? '#A8E6CF' : i % 3 === 1 ? '#52B788' : '#74C69D',
     }));
-  }, []);
+  }, [lowPower, isMobile]);
 
   return (
     <div className={`fixed inset-0 -z-10 overflow-hidden pointer-events-none ${className}`}>
@@ -48,39 +65,29 @@ export default function AquariumBackground({ className = '' }) {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_20%_80%,hsl(142_71%_45%/0.07),transparent_60%)]" />
 
       {/* ─── Slow Ambient Caustic Light Rays ─────────────────────────── */}
-      <motion.div
-        className="absolute -top-20 left-1/4 w-3/4 h-[90vh] opacity-25"
-        animate={{
-          x: [-15, 20, -15],
-          opacity: [0.18, 0.28, 0.18],
-        }}
-        transition={{
-          duration: 16,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+      <div
+        className="aq-ray absolute -top-20 left-1/4 w-3/4 h-[90vh]"
         style={{
           background:
             'radial-gradient(ellipse 60% 80% at 50% 0%, rgba(168, 230, 207, 0.18) 0%, transparent 75%)',
           transform: 'rotate(-12deg)',
+          // The sway keyframes compose this var into their transform. (A bare
+          // inline `transform` is overridden by the animation every frame,
+          // which silently un-tilted the rays while they drifted.)
+          ['--aq-rot']: 'rotate(-12deg)',
+          ['--aq-ray-dur']: '16s',
         }}
       />
 
-      <motion.div
-        className="absolute -top-32 right-1/4 w-2/3 h-[85vh] opacity-20"
-        animate={{
-          x: [25, -20, 25],
-          opacity: [0.15, 0.24, 0.15],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+      <div
+        className="aq-ray absolute -top-32 right-1/4 w-2/3 h-[85vh]"
         style={{
           background:
             'radial-gradient(ellipse 50% 80% at 50% 0%, rgba(82, 183, 136, 0.16) 0%, transparent 75%)',
           transform: 'rotate(15deg)',
+          // Same tilt var for the second ray (see note above).
+          ['--aq-rot']: 'rotate(15deg)',
+          ['--aq-ray-dur']: '20s',
         }}
       />
 
@@ -95,64 +102,40 @@ export default function AquariumBackground({ className = '' }) {
 
       {/* ─── Drifting Micro-Particles ─────────────────────────────────── */}
       {particles.map((p) => (
-        <motion.div
+        <div
           key={p.id}
-          className="absolute rounded-full"
+          className="aq-particle absolute rounded-full"
           style={{
             left: `${p.x}%`,
             top: `${p.y}%`,
             width: p.size,
             height: p.size,
             backgroundColor: p.color,
-          }}
-          animate={{
-            y: [-12, 12, -12],
-            x: [-8, 8, -8],
-            opacity: [0.2, 0.7, 0.2],
-          }}
-          transition={{
-            duration: p.duration,
-            repeat: Infinity,
-            delay: p.delay,
-            ease: 'easeInOut',
+            ['--aq-dur']: `${p.duration}s`,
+            ['--aq-delay']: `${p.delay}s`,
+            ['--aq-color']: p.color,
           }}
         />
       ))}
 
       {/* ─── Gentle Rising Aquarium Bubbles ───────────────────────────── */}
       {bubbles.map((b) => (
-        <motion.div
+        <div
           key={b.id}
-          className="absolute bottom-[-30px] rounded-full border border-[#A8E6CF]/40 bg-[#A8E6CF]/10 backdrop-blur-[0.5px]"
+          className="aq-bubble absolute bottom-[-30px] rounded-full border border-[#A8E6CF]/40 bg-[#A8E6CF]/10"
           style={{
             left: `${b.x}%`,
             width: b.size,
             height: b.size,
+            // Single soft highlight replaces the old nested gleam div +
+            // backdrop-blur layer (two composited surfaces per bubble).
             boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 0 6px rgba(168, 230, 207, 0.2)',
+            ['--aq-dur']: `${b.duration}s`,
+            ['--aq-delay']: `${b.delay}s`,
+            ['--aq-sway']: `${b.sway}px`,
+            ['--aq-opacity']: b.opacity,
           }}
-          animate={{
-            y: ['0vh', '-110vh'],
-            x: [0, b.sway, -b.sway, 0],
-            opacity: [0, b.opacity, b.opacity, 0],
-          }}
-          transition={{
-            duration: b.duration,
-            repeat: Infinity,
-            delay: b.delay,
-            ease: 'linear',
-          }}
-        >
-          {/* Bubble specular gleam */}
-          <div
-            className="absolute rounded-full bg-white/70"
-            style={{
-              top: '20%',
-              left: '25%',
-              width: Math.max(1.5, b.size * 0.3),
-              height: Math.max(1.5, b.size * 0.3),
-            }}
-          />
-        </motion.div>
+        />
       ))}
 
       {/* ─── Gentle Vignette ─────────────────────────────────────────── */}

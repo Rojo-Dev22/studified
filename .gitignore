@@ -101,3 +101,6 @@ validate-done.txt
 Gemini_Generated_Image_*.jpg
 build_out*.txt
 run_build.bat
+
+# TOOL SCAFFOLDING (agent/dev-tool working dir — regenerates its own junk)
+.freebuff/

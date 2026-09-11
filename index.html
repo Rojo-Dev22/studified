@@ -1,12 +1,24 @@
-
 <!doctype html>
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/logo.jpg" />
     <link rel="apple-touch-icon" href="/logo.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#060B0E" />
     <link rel="manifest" href="/manifest.json" />
+    <!-- Font loading: preconnect + stylesheet in the document (non-blocking
+         fallback) replaces the old render-blocking CSS @import, which serialized
+         fonts behind CSS download on mobile networks. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
     <title>Studified</title>
   </head>
   <body>
