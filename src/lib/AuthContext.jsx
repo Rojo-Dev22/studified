@@ -10,6 +10,7 @@ import {
 import { initDbForUser, clearDb, getDb } from '@/lib/db';
 import { syncCurriculumToStore } from '@/lib/curriculumSync';
 import { createInitialStoreForUser } from '@/lib/seedData';
+import { toast } from 'sonner';
 
 const AuthContext = createContext(null);
 
@@ -24,10 +25,16 @@ export const AuthProvider = ({ children }) => {
 
   const setupUserDb = useCallback(async (fbUser) => {
     const authProfile = profileFromFirebaseUser(fbUser);
-    let initialStore = await loadUserGameData(fbUser.uid);
+    
+    // Try to load existing user data, but don't fail if it doesn't work
+    let initialStore = null;
+    try {
+      initialStore = await loadUserGameData(fbUser.uid);
+    } catch (loadErr) {
+      console.warn('[Auth] Could not load user data, using defaults:', loadErr.message);
+    }
 
     // Merge stored profile from Firestore with auth profile
-    // Stored profile takes precedence for user-edited fields
     const storedProfile = initialStore?.profile || {};
     const profile = {
       ...authProfile,
@@ -36,6 +43,7 @@ export const AuthProvider = ({ children }) => {
       full_name: storedProfile.full_name || authProfile.full_name,
     };
 
+    // Build the initial store - use loaded data or create fresh defaults
     if (initialStore?.Quest?.length) {
       initialStore = syncCurriculumToStore({
         ...initialStore,
@@ -51,21 +59,18 @@ export const AuthProvider = ({ children }) => {
       initialStore = syncCurriculumToStore(createInitialStoreForUser(profile));
     }
 
+    // Initialize the database for this user
     initDbForUser(fbUser.uid, profile, initialStore);
     const me = await getDb().auth.me();
     setUser(me);
     setDbReady(true);
 
-    // Save user profile to localStorage (PRIMARY - always works)
+    // Save user profile in background (non-blocking)
     if (fbUser.uid) {
       try {
-        console.log('💾 Saving user profile to localStorage...', fbUser.uid);
-        const saveResult = await saveUserProfileToFirebase(fbUser.uid, me, initialStore);
-        if (saveResult) {
-          console.log('✅ User profile successfully saved');
-        }
+        await saveUserProfileToFirebase(fbUser.uid, me, initialStore);
       } catch (err) {
-        console.error('❌ Failed to save profile:', err);
+        console.warn('[Auth] Background save failed:', err.message);
       }
     }
 
@@ -87,6 +92,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     const unsubscribe = onAuthStateChanged(auth, async (fbUser) => {
+      console.log('[Auth] State changed:', fbUser ? `User: ${fbUser.email}` : 'No user');
       setIsLoadingAuth(true);
       setAuthError(null);
       setDbReady(false);
@@ -94,8 +100,15 @@ export const AuthProvider = ({ children }) => {
       try {
         if (fbUser) {
           setFirebaseUser(fbUser);
-          await setupUserDb(fbUser);
           setIsAuthenticated(true);
+          // Setup DB in background - don't block auth on data loading
+          try {
+            await setupUserDb(fbUser);
+            console.log('[Auth] User data loaded successfully');
+          } catch (dbErr) {
+            console.warn('[Auth] Data load failed, using defaults:', dbErr.message);
+            // Still let user in - they'll get default data
+          }
         } else {
           clearDb();
           setFirebaseUser(null);
@@ -103,8 +116,8 @@ export const AuthProvider = ({ children }) => {
           setIsAuthenticated(false);
         }
       } catch (err) {
-        console.error('Auth setup failed:', err);
-        setAuthError({ type: 'unknown', message: err.message || 'Failed to load your data' });
+        console.error('[Auth] Auth state error:', err.code, err.message);
+        setAuthError({ type: 'unknown', message: err.message || 'Failed to authenticate' });
         setIsAuthenticated(false);
       } finally {
         setIsLoadingAuth(false);
@@ -114,6 +127,8 @@ export const AuthProvider = ({ children }) => {
 
     return () => unsubscribe();
   }, [setupUserDb]);
+
+
 
   const logout = useCallback(async () => {
     try {

@@ -19,7 +19,7 @@ export default function ProtectedRoute() {
     );
   }
 
-  if (!isAuthenticated || !dbReady) {
+  if (!isAuthenticated) {
     return <Navigate to="/" replace />;
   }
 

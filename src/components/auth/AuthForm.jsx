@@ -24,7 +24,7 @@ function getAuthErrorMessage(err) {
     case 'auth/email-already-in-use':
       return 'Email already registered — try logging in';
     case 'auth/operation-not-allowed':
-      return 'Email/Password sign-in is disabled in Firebase. Enable it in Firebase Console → Authentication.';
+      return 'Sign-in method is disabled in Firebase. Enable it in Firebase Console → Authentication → Sign-in method.';
     case 'auth/invalid-credential':
       return 'Invalid email or password';
     case 'auth/unauthorized-domain':
@@ -69,13 +69,28 @@ export default function AuthForm({ mode, onModeChange }) {
       setError('');
       setLoading(true);
       const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
-      toast.success('Welcome back!');
+      provider.setCustomParameters({
+        prompt: 'select_account',
+      });
+      console.log('[Auth] Starting Google sign-in popup...');
+      const result = await signInWithPopup(auth, provider);
+      console.log('[Auth] Sign-in successful:', result.user.email);
+      toast.success('Welcome! Signing you in...');
     } catch (err) {
+      console.error('[Auth] Google sign-in error:', err.code, err.message);
       const msg = getAuthErrorMessage(err);
-      setError(msg);
-      toast.error(msg);
-    } finally {
+      
+      // If popup was blocked, provide helpful message
+      if (err.code === 'auth/popup-blocked' || err.code === 'auth/cancelled-popup-request') {
+        setError('Popup was blocked. Please allow popups for this site and try again.');
+        toast.error('Popup was blocked. Please allow popups for this site.', { duration: 5000 });
+      } else if (err.code === 'auth/popup-closed-by-user') {
+        setError('Sign in was cancelled.');
+        toast.error('Sign in was cancelled.');
+      } else {
+        setError(msg);
+        toast.error(msg);
+      }
       setLoading(false);
     }
   };

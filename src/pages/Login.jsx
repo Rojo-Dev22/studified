@@ -33,10 +33,10 @@ import { BookOpen, Trophy, Sparkles, ArrowLeft, UserPlus, GraduationCap } from '
  */
 
 export default function Login() {
-  const { isAuthenticated, dbReady, isLoadingAuth, authError } = useAuth();
+  const { isAuthenticated, isLoadingAuth, authError } = useAuth();
   const [mode, setMode] = useState('login');
 
-  if (isAuthenticated && dbReady && !isLoadingAuth) {
+  if (isAuthenticated && !isLoadingAuth) {
     return <Navigate to="/dashboard" replace />;
   }
 
@@ -164,7 +164,15 @@ export default function Login() {
                 {authError?.message && (
                   <Alert variant="destructive" className="mb-4">
                     <AlertTitle>Authentication notice</AlertTitle>
-                    <AlertDescription>{authError.message}</AlertDescription>
+                    <AlertDescription>
+                      <p className="mb-2">{authError.message}</p>
+                      <button
+                        onClick={() => window.location.reload()}
+                        className="text-xs underline hover:no-underline font-medium"
+                      >
+                        Try again
+                      </button>
+                    </AlertDescription>
                   </Alert>
                 )}
 
@@ -204,7 +212,15 @@ export default function Login() {
                 {authError?.message && (
                   <Alert variant="destructive" className="mb-4">
                     <AlertTitle>Authentication notice</AlertTitle>
-                    <AlertDescription>{authError.message}</AlertDescription>
+                    <AlertDescription>
+                      <p className="mb-2">{authError.message}</p>
+                      <button
+                        onClick={() => window.location.reload()}
+                        className="text-xs underline hover:no-underline font-medium"
+                      >
+                        Try again
+                      </button>
+                    </AlertDescription>
                   </Alert>
                 )}
 
