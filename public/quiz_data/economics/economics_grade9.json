@@ -1,0 +1,2047 @@
+{
+  "subject": "Economics",
+  "grade": 9,
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": "ECON-09-01-001",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "easy",
+      "question": "Economics mainly studies how people and institutions",
+      "options": [
+        "Classify living organisms",
+        "Allocate scarce resources among competing wants",
+        "Measure rainfall",
+        "Describe rock layers"
+      ],
+      "correctAnswer": "Allocate scarce resources among competing wants",
+      "explanation": "Economics examines choices made under scarcity.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-01-002",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "easy",
+      "question": "Which branch studies individual consumers and firms?",
+      "options": [
+        "Microeconomics",
+        "Macroeconomics",
+        "Biochemistry",
+        "Geology"
+      ],
+      "correctAnswer": "Microeconomics",
+      "explanation": "Microeconomics focuses on individual agents and markets.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-01-003",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "medium",
+      "question": "Which branch studies national output and unemployment?",
+      "options": [
+        "Microeconomics",
+        "Taxonomy",
+        "Cartography",
+        "Macroeconomics"
+      ],
+      "correctAnswer": "Macroeconomics",
+      "explanation": "Macroeconomics studies economy-wide outcomes.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-01-004",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "medium",
+      "question": "A statement that can be tested with evidence is usually a",
+      "options": [
+        "Normative statement",
+        "Moral rule",
+        "Positive economic statement",
+        "Legal command"
+      ],
+      "correctAnswer": "Positive economic statement",
+      "explanation": "Positive analysis concerns testable descriptions or relationships.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-01-005",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "hard",
+      "question": "“The government should reduce taxes” is mainly a",
+      "options": [
+        "Positive statement",
+        "Normative statement",
+        "Physical measurement",
+        "Production function"
+      ],
+      "correctAnswer": "Normative statement",
+      "explanation": "Normative statements contain judgments about what should be done.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-01-006",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "easy",
+      "question": "An economist uses data from households to test whether income affects food spending. This is an example of",
+      "options": [
+        "Empirical analysis",
+        "Pure opinion",
+        "Historical fiction",
+        "Geological mapping"
+      ],
+      "correctAnswer": "Empirical analysis",
+      "explanation": "Empirical analysis uses observed evidence or data.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-01-007",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "easy",
+      "question": "A model in economics is useful because it",
+      "options": [
+        "Includes every real-world detail",
+        "Guarantees exact forecasts",
+        "Removes the need for evidence",
+        "Highlights important relationships by simplifying reality"
+      ],
+      "correctAnswer": "Highlights important relationships by simplifying reality",
+      "explanation": "Models simplify complex systems for analysis.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-01-008",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "medium",
+      "question": "Which is a decision-making unit?",
+      "options": [
+        "Mountain",
+        "River",
+        "Household",
+        "Climate zone"
+      ],
+      "correctAnswer": "Household",
+      "explanation": "Households are economic decision makers.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-01-009",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "medium",
+      "question": "A business choosing how many workers to hire is acting as a",
+      "options": [
+        "Household only",
+        "Firm",
+        "Natural resource",
+        "Taxonomic group"
+      ],
+      "correctAnswer": "Firm",
+      "explanation": "Firms make production decisions.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-01-010",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "hard",
+      "question": "A household deciding how much to save is mainly making a",
+      "options": [
+        "Consumption-and-saving decision",
+        "Geological decision",
+        "Taxonomic decision",
+        "Climate decision"
+      ],
+      "correctAnswer": "Consumption-and-saving decision",
+      "explanation": "Households decide how to allocate income among uses including saving.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-01-011",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "easy",
+      "question": "A municipality deciding whether to build a clinic or market is making a",
+      "options": [
+        "Biological classification",
+        "Chemical measurement",
+        "Weather observation",
+        "Resource-allocation decision"
+      ],
+      "correctAnswer": "Resource-allocation decision",
+      "explanation": "Limited public resources must be allocated among alternative uses.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-01-012",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "easy",
+      "question": "Which situation best illustrates economic reasoning?",
+      "options": [
+        "Choosing randomly",
+        "Ignoring alternatives",
+        "Comparing expected benefits and costs before choosing",
+        "Avoiding evidence"
+      ],
+      "correctAnswer": "Comparing expected benefits and costs before choosing",
+      "explanation": "Economic reasoning weighs alternatives and consequences.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-01-013",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "medium",
+      "question": "A researcher compares two policy outcomes while holding other factors constant. The purpose is to",
+      "options": [
+        "Eliminate scarcity",
+        "Identify a relationship more clearly",
+        "Change the currency",
+        "Classify firms"
+      ],
+      "correctAnswer": "Identify a relationship more clearly",
+      "explanation": "Holding other factors constant can clarify causal relationships.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-01-014",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "medium",
+      "question": "A consumer chooses between two brands after comparing prices and quality. This shows",
+      "options": [
+        "Choice under scarcity",
+        "Unlimited resources",
+        "Zero opportunity cost",
+        "No trade-off"
+      ],
+      "correctAnswer": "Choice under scarcity",
+      "explanation": "Limited income makes comparison and choice necessary.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-01-015",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Meaning, branches and methods of Economics",
+      "difficulty": "hard",
+      "question": "Why is economics relevant to everyday life?",
+      "options": [
+        "Only governments face choices",
+        "Scarcity affects only firms",
+        "Consumers have unlimited wants with no constraints",
+        "People constantly make choices about limited time, income and resources"
+      ],
+      "correctAnswer": "People constantly make choices about limited time, income and resources",
+      "explanation": "Economic decisions are part of ordinary life.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-02-001",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "easy",
+      "question": "Scarcity means that",
+      "options": [
+        "All wants are satisfied",
+        "Resources are infinite",
+        "Available resources are limited relative to wants",
+        "Goods have no value"
+      ],
+      "correctAnswer": "Available resources are limited relative to wants",
+      "explanation": "Scarcity creates the need to choose.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-02-002",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "easy",
+      "question": "If a student studies instead of working, the forgone wage is the student’s",
+      "options": [
+        "Money supply",
+        "Opportunity cost",
+        "Equilibrium price",
+        "Fixed cost"
+      ],
+      "correctAnswer": "Opportunity cost",
+      "explanation": "Opportunity cost is the best alternative forgone.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-02-003",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "medium",
+      "question": "The central question “what to produce?” concerns",
+      "options": [
+        "Which goods and services should be made",
+        "Which language to teach",
+        "Who owns every resource",
+        "How to measure rainfall"
+      ],
+      "correctAnswer": "Which goods and services should be made",
+      "explanation": "Economies must choose among possible outputs.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-02-004",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "medium",
+      "question": "The central question “how to produce?” concerns",
+      "options": [
+        "Which consumers will buy",
+        "Which currency to print",
+        "Which crop is native",
+        "Which methods and resources should be used"
+      ],
+      "correctAnswer": "Which methods and resources should be used",
+      "explanation": "It concerns production techniques and resource combinations.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-02-005",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "hard",
+      "question": "The central question “for whom to produce?” concerns",
+      "options": [
+        "How factories are designed",
+        "How rainfall is measured",
+        "How output is distributed among people",
+        "How taxes are named"
+      ],
+      "correctAnswer": "How output is distributed among people",
+      "explanation": "It concerns distribution of goods and services.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-02-006",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "easy",
+      "question": "A market economy relies heavily on",
+      "options": [
+        "Central production orders only",
+        "Prices and decentralized decisions",
+        "Barter alone",
+        "Military commands"
+      ],
+      "correctAnswer": "Prices and decentralized decisions",
+      "explanation": "Market systems use prices and decentralized choices.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-02-007",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "easy",
+      "question": "A command economy relies heavily on",
+      "options": [
+        "Government planning",
+        "Household bargaining only",
+        "Random allocation",
+        "Unregulated prices alone"
+      ],
+      "correctAnswer": "Government planning",
+      "explanation": "Central authorities make major allocation decisions.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-02-008",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "medium",
+      "question": "An economy combining markets with government roles is a",
+      "options": [
+        "Pure command economy",
+        "Pure barter economy",
+        "Closed household economy",
+        "Mixed economy"
+      ],
+      "correctAnswer": "Mixed economy",
+      "explanation": "Mixed systems combine market and government mechanisms.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-02-009",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "medium",
+      "question": "If the price of a scarce good rises, the price can signal",
+      "options": [
+        "That resources are unlimited",
+        "That demand is zero",
+        "That the good is relatively scarce or highly demanded",
+        "That no one values it"
+      ],
+      "correctAnswer": "That the good is relatively scarce or highly demanded",
+      "explanation": "Prices transmit information about scarcity and incentives.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-02-010",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "hard",
+      "question": "A farmer chooses maize over beans. The opportunity cost is",
+      "options": [
+        "All farm output",
+        "The value of the best forgone bean opportunity",
+        "The farmer’s total land",
+        "Every possible alternative"
+      ],
+      "correctAnswer": "The value of the best forgone bean opportunity",
+      "explanation": "Opportunity cost is one best alternative, not every alternative.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-02-011",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "easy",
+      "question": "A person has one hour and must choose between work and study. The hour illustrates",
+      "options": [
+        "A scarce resource",
+        "A free good",
+        "Unlimited supply",
+        "A non-economic good"
+      ],
+      "correctAnswer": "A scarce resource",
+      "explanation": "Time is limited and has alternative uses.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-02-012",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "easy",
+      "question": "Why can economic systems not avoid all choices?",
+      "options": [
+        "Wants disappear",
+        "Production is unlimited",
+        "All goods are free",
+        "Resources have alternative uses"
+      ],
+      "correctAnswer": "Resources have alternative uses",
+      "explanation": "Alternative uses create trade-offs.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-02-013",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "medium",
+      "question": "Private ownership is especially associated with",
+      "options": [
+        "Pure command allocation",
+        "Barter-only systems",
+        "Market-oriented systems",
+        "No economic system"
+      ],
+      "correctAnswer": "Market-oriented systems",
+      "explanation": "Private ownership is a key feature of market-oriented economies.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-02-014",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "medium",
+      "question": "Government-set production targets are most typical of",
+      "options": [
+        "A pure market system",
+        "A centrally planned system",
+        "A household economy",
+        "A competitive consumer market"
+      ],
+      "correctAnswer": "A centrally planned system",
+      "explanation": "Authorities set major production targets in centrally planned systems.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-02-015",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Scarcity, choice, opportunity cost and economic systems",
+      "difficulty": "hard",
+      "question": "Choosing one alternative means giving up another. This is a",
+      "options": [
+        "Trade-off",
+        "Commodity money",
+        "Market equilibrium",
+        "Capital payment"
+      ],
+      "correctAnswer": "Trade-off",
+      "explanation": "Trade-offs arise because scarce resources have competing uses.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-03-001",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "easy",
+      "question": "Labor is a factor of production because it refers to",
+      "options": [
+        "Natural resources only",
+        "Machines only",
+        "Money held by households",
+        "Human effort used in production"
+      ],
+      "correctAnswer": "Human effort used in production",
+      "explanation": "Labor is human physical or mental effort.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-03-002",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "easy",
+      "question": "The factor payment for labor is generally",
+      "options": [
+        "Rent",
+        "Profit",
+        "Wages",
+        "Dividends only"
+      ],
+      "correctAnswer": "Wages",
+      "explanation": "Workers supply labor and receive wages as a factor payment.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-03-003",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "medium",
+      "question": "The factor payment commonly associated with land is",
+      "options": [
+        "Wages",
+        "Rent",
+        "Profit",
+        "Salary"
+      ],
+      "correctAnswer": "Rent",
+      "explanation": "Land and natural resources can generate rent.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-03-004",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "medium",
+      "question": "The factor payment commonly associated with capital is",
+      "options": [
+        "Interest",
+        "Wages",
+        "Rent",
+        "Salary"
+      ],
+      "correctAnswer": "Interest",
+      "explanation": "Capital providers can receive interest.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-03-005",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "hard",
+      "question": "Entrepreneurship is rewarded mainly through",
+      "options": [
+        "Rent",
+        "Wages only",
+        "Interest only",
+        "Profit"
+      ],
+      "correctAnswer": "Profit",
+      "explanation": "Entrepreneurs organize resources and bear risk in pursuit of profit.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-03-006",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "easy",
+      "question": "A machine used to produce shoes is",
+      "options": [
+        "Land",
+        "Labor",
+        "Capital",
+        "A consumer good"
+      ],
+      "correctAnswer": "Capital",
+      "explanation": "Capital consists of produced resources used in production.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-03-007",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "easy",
+      "question": "A mineral deposit is classified as",
+      "options": [
+        "Capital",
+        "Land/natural resource",
+        "Labor",
+        "Entrepreneurship"
+      ],
+      "correctAnswer": "Land/natural resource",
+      "explanation": "Natural resources fall under the economic category of land.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-03-008",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "medium",
+      "question": "A fish population that can replenish under proper management is",
+      "options": [
+        "A renewable resource",
+        "A non-renewable resource",
+        "Capital",
+        "Money"
+      ],
+      "correctAnswer": "A renewable resource",
+      "explanation": "Renewable resources can regenerate over time.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-03-009",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "medium",
+      "question": "Coal is non-renewable because",
+      "options": [
+        "It is never useful",
+        "It is produced by firms",
+        "It is always free",
+        "Its natural formation is far slower than human extraction"
+      ],
+      "correctAnswer": "Its natural formation is far slower than human extraction",
+      "explanation": "Its replenishment occurs over geological timescales.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-03-010",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "hard",
+      "question": "A market with many sellers offering identical products approximates",
+      "options": [
+        "Monopoly",
+        "Monopsony",
+        "Perfect competition",
+        "Duopoly"
+      ],
+      "correctAnswer": "Perfect competition",
+      "explanation": "Perfect competition has many buyers and sellers and homogeneous products.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-03-011",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "easy",
+      "question": "A market with one seller is a",
+      "options": [
+        "Perfect competition",
+        "Monopoly",
+        "Monopolistic competition",
+        "Duopoly"
+      ],
+      "correctAnswer": "Monopoly",
+      "explanation": "A monopoly has one seller.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-03-012",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "easy",
+      "question": "In the circular flow, households supply firms with",
+      "options": [
+        "Factors of production",
+        "Final goods only",
+        "Government laws",
+        "Exports only"
+      ],
+      "correctAnswer": "Factors of production",
+      "explanation": "Households supply labor and other factors.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-03-013",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "medium",
+      "question": "Firms supply households with",
+      "options": [
+        "Only taxes",
+        "Only land",
+        "Only labor",
+        "Goods and services"
+      ],
+      "correctAnswer": "Goods and services",
+      "explanation": "Firms produce goods and services purchased by households.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-03-014",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "medium",
+      "question": "When households buy goods, money generally flows",
+      "options": [
+        "From firms to households as wages",
+        "From government to households",
+        "From households to firms",
+        "Out of the economy"
+      ],
+      "correctAnswer": "From households to firms",
+      "explanation": "Households pay firms for goods and services.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-03-015",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Economic resources, markets and circular flow",
+      "difficulty": "hard",
+      "question": "When firms pay wages, money generally flows",
+      "options": [
+        "From households to firms only",
+        "From firms to households",
+        "From government to exporters",
+        "From consumers to banks only"
+      ],
+      "correctAnswer": "From firms to households",
+      "explanation": "Wages are payments from firms to households.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-04-001",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "easy",
+      "question": "Demand is the quantity of a good consumers are",
+      "options": [
+        "Willing and able to buy at different prices",
+        "Able to produce",
+        "Forced to accept",
+        "Required to save"
+      ],
+      "correctAnswer": "Willing and able to buy at different prices",
+      "explanation": "Demand combines willingness and ability to purchase.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-04-002",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "easy",
+      "question": "According to the law of demand, other things equal, quantity demanded generally",
+      "options": [
+        "Rises when price rises",
+        "Never changes",
+        "Becomes zero at every price",
+        "Falls when price rises"
+      ],
+      "correctAnswer": "Falls when price rises",
+      "explanation": "Price and quantity demanded generally move inversely.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-04-003",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "medium",
+      "question": "Supply is the quantity producers are",
+      "options": [
+        "Required to consume",
+        "Forced to buy",
+        "Willing and able to sell at different prices",
+        "Unable to produce"
+      ],
+      "correctAnswer": "Willing and able to sell at different prices",
+      "explanation": "Supply describes sellers’ willingness and ability to offer output.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-04-004",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "medium",
+      "question": "According to the law of supply, other things equal, quantity supplied generally",
+      "options": [
+        "Falls when price rises",
+        "Rises when price rises",
+        "Never changes",
+        "Becomes zero at all prices"
+      ],
+      "correctAnswer": "Rises when price rises",
+      "explanation": "Price and quantity supplied generally move together.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-04-005",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "hard",
+      "question": "A change in a good’s own price causes a",
+      "options": [
+        "Movement along the demand or supply curve",
+        "Shift caused by income",
+        "Change in population",
+        "Change in technology"
+      ],
+      "correctAnswer": "Movement along the demand or supply curve",
+      "explanation": "The good’s own price changes quantity demanded or supplied.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-04-006",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "easy",
+      "question": "A rise in consumer income tends to raise demand for a normal good. This is a",
+      "options": [
+        "Movement caused by the good’s own price",
+        "Supply shift",
+        "Change in fixed cost",
+        "Demand shift"
+      ],
+      "correctAnswer": "Demand shift",
+      "explanation": "Income is a determinant that shifts demand.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-04-007",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "easy",
+      "question": "A fall in input costs tends to",
+      "options": [
+        "Decrease supply",
+        "Eliminate demand",
+        "Increase supply",
+        "Create a shortage automatically"
+      ],
+      "correctAnswer": "Increase supply",
+      "explanation": "Lower costs encourage producers to supply more.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-04-008",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "medium",
+      "question": "Equilibrium occurs when",
+      "options": [
+        "Demand is maximum",
+        "Quantity demanded equals quantity supplied",
+        "Supply is minimum",
+        "Price is zero"
+      ],
+      "correctAnswer": "Quantity demanded equals quantity supplied",
+      "explanation": "Equilibrium balances planned buying and selling.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-04-009",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "medium",
+      "question": "A shortage at a given price occurs when",
+      "options": [
+        "Quantity demanded exceeds quantity supplied",
+        "Supply exceeds demand",
+        "Both are zero",
+        "Price equals cost"
+      ],
+      "correctAnswer": "Quantity demanded exceeds quantity supplied",
+      "explanation": "A shortage means buyers want more than sellers offer.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-04-010",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "hard",
+      "question": "A surplus at a given price occurs when",
+      "options": [
+        "Demand exceeds supply",
+        "Demand is zero",
+        "All firms leave the market",
+        "Quantity supplied exceeds quantity demanded"
+      ],
+      "correctAnswer": "Quantity supplied exceeds quantity demanded",
+      "explanation": "A surplus means sellers offer more than buyers want.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-04-011",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "easy",
+      "question": "If a substitute becomes more expensive, demand for this good may",
+      "options": [
+        "Decrease",
+        "Remain impossible to predict in every case",
+        "Increase",
+        "Become zero"
+      ],
+      "correctAnswer": "Increase",
+      "explanation": "Consumers may switch from the more expensive substitute.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-04-012",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "easy",
+      "question": "If a complement becomes more expensive, demand for the related good may",
+      "options": [
+        "Increase",
+        "Decrease",
+        "Double automatically",
+        "Become perfectly elastic"
+      ],
+      "correctAnswer": "Decrease",
+      "explanation": "Complementary goods are consumed together, so higher complement prices can reduce demand.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-04-013",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "medium",
+      "question": "A drought destroys part of a harvest. This most directly shifts",
+      "options": [
+        "Supply leftward",
+        "Demand rightward",
+        "Demand leftward",
+        "Money demand"
+      ],
+      "correctAnswer": "Supply leftward",
+      "explanation": "A production shock reduces supply.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-04-014",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "medium",
+      "question": "A price above equilibrium tends to create",
+      "options": [
+        "A shortage",
+        "An immediate demand increase",
+        "No market pressure",
+        "A surplus"
+      ],
+      "correctAnswer": "A surplus",
+      "explanation": "At above-equilibrium prices, sellers want to sell more than buyers want to purchase.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-04-015",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Demand, supply and market equilibrium",
+      "difficulty": "hard",
+      "question": "A price below equilibrium tends to create",
+      "options": [
+        "A surplus",
+        "No unmet demand",
+        "A shortage",
+        "Lower demand in every case"
+      ],
+      "correctAnswer": "A shortage",
+      "explanation": "At below-equilibrium prices, buyers want more than sellers offer.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-05-001",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "easy",
+      "question": "Production means",
+      "options": [
+        "Only buying goods",
+        "Transforming inputs into goods or services",
+        "Only saving money",
+        "Only advertising"
+      ],
+      "correctAnswer": "Transforming inputs into goods or services",
+      "explanation": "Production creates outputs from inputs.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-05-002",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "easy",
+      "question": "Which is an input for a bakery?",
+      "options": [
+        "Flour",
+        "Bread sold to customers",
+        "Sales revenue",
+        "Customer satisfaction"
+      ],
+      "correctAnswer": "Flour",
+      "explanation": "Flour enters the production process.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-05-003",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "medium",
+      "question": "Which is an output for a bakery?",
+      "options": [
+        "Flour",
+        "Electricity used",
+        "Workers hired",
+        "Bread"
+      ],
+      "correctAnswer": "Bread",
+      "explanation": "Bread is the product resulting from production.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-05-004",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "medium",
+      "question": "In the short run, at least one factor is",
+      "options": [
+        "Always variable",
+        "Absent",
+        "Fixed",
+        "Free"
+      ],
+      "correctAnswer": "Fixed",
+      "explanation": "At least one input cannot be fully adjusted immediately in the short run.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-05-005",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "hard",
+      "question": "In the long run, a firm can generally adjust",
+      "options": [
+        "No factors",
+        "All factors of production",
+        "Only wages",
+        "Only product price"
+      ],
+      "correctAnswer": "All factors of production",
+      "explanation": "The long run allows all factors to vary.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-05-006",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "easy",
+      "question": "A cost that changes with output is a",
+      "options": [
+        "Variable cost",
+        "Fixed cost",
+        "Sunk label",
+        "Factor income"
+      ],
+      "correctAnswer": "Variable cost",
+      "explanation": "Variable cost changes as output changes.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-05-007",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "easy",
+      "question": "Factory rent that does not vary with short-run output is a",
+      "options": [
+        "Variable cost",
+        "Revenue",
+        "Profit",
+        "Fixed cost"
+      ],
+      "correctAnswer": "Fixed cost",
+      "explanation": "Fixed costs remain unchanged over a relevant output range.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-05-008",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "medium",
+      "question": "If total cost is 500 birr for 50 units, average cost is",
+      "options": [
+        "5 birr",
+        "50 birr",
+        "10 birr",
+        "250 birr"
+      ],
+      "correctAnswer": "10 birr",
+      "explanation": "Average cost = 500 ÷ 50 = 10 birr per unit.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-05-009",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "medium",
+      "question": "If output rises from 40 to 45 units after hiring one more worker, the worker’s marginal product is",
+      "options": [
+        "40 units",
+        "5 units",
+        "45 units",
+        "85 units"
+      ],
+      "correctAnswer": "5 units",
+      "explanation": "Marginal product is the additional output from one more input.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-05-010",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "hard",
+      "question": "If total cost rises from 600 to 660 birr when output rises from 30 to 40 units, marginal cost per extra unit is",
+      "options": [
+        "6 birr",
+        "10 birr",
+        "60 birr",
+        "660 birr"
+      ],
+      "correctAnswer": "6 birr",
+      "explanation": "Marginal cost = (660 − 600)/(40 − 30) = 6 birr per unit.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-05-011",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "easy",
+      "question": "A firm’s payment for raw materials is generally a",
+      "options": [
+        "Consumer surplus",
+        "Market equilibrium",
+        "Macroeconomic goal",
+        "Production cost"
+      ],
+      "correctAnswer": "Production cost",
+      "explanation": "Raw materials are purchased inputs and create production costs.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-05-012",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "easy",
+      "question": "A producer comparing extra revenue with extra cost is using",
+      "options": [
+        "Taxonomy",
+        "Circular flow only",
+        "Marginal analysis",
+        "Historical analysis"
+      ],
+      "correctAnswer": "Marginal analysis",
+      "explanation": "Marginal analysis compares incremental benefits and costs.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-05-013",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "medium",
+      "question": "When total output increases after adding an extra worker, the change in output is the worker’s",
+      "options": [
+        "Average cost",
+        "Marginal product",
+        "Fixed cost",
+        "Total revenue"
+      ],
+      "correctAnswer": "Marginal product",
+      "explanation": "Marginal product is additional output caused by one more input.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-05-014",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "medium",
+      "question": "If a firm’s building size is fixed while workers can be added, this is a",
+      "options": [
+        "Short-run setting",
+        "Long-run setting",
+        "No production",
+        "Market equilibrium"
+      ],
+      "correctAnswer": "Short-run setting",
+      "explanation": "At least one input is fixed in the short run.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-05-015",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Production, inputs, outputs, periods and cost",
+      "difficulty": "hard",
+      "question": "Why is cost analysis useful to a producer?",
+      "options": [
+        "It eliminates scarcity",
+        "It guarantees demand",
+        "It replaces production decisions",
+        "It helps evaluate the resource cost of producing output"
+      ],
+      "correctAnswer": "It helps evaluate the resource cost of producing output",
+      "explanation": "Cost information supports production and pricing decisions.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-06-001",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "easy",
+      "question": "Money is most useful when it is",
+      "options": [
+        "Impossible to divide",
+        "Perishable immediately",
+        "Generally accepted in exchange",
+        "Rejected by sellers"
+      ],
+      "correctAnswer": "Generally accepted in exchange",
+      "explanation": "Acceptability allows money to serve as a medium of exchange.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-06-002",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "easy",
+      "question": "The direct exchange of one good for another is",
+      "options": [
+        "Electronic money",
+        "Barter",
+        "Credit creation",
+        "Commodity pricing"
+      ],
+      "correctAnswer": "Barter",
+      "explanation": "Barter is direct exchange without money as the medium.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-06-003",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "medium",
+      "question": "One weakness of barter is the need for",
+      "options": [
+        "A double coincidence of wants",
+        "A central bank",
+        "Electronic devices",
+        "A fixed exchange rate"
+      ],
+      "correctAnswer": "A double coincidence of wants",
+      "explanation": "Barter works easily only when each party wants what the other offers.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-06-004",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "medium",
+      "question": "Money as a medium of exchange",
+      "options": [
+        "Measures rainfall",
+        "Produces goods",
+        "Creates land",
+        "Facilitates buying and selling"
+      ],
+      "correctAnswer": "Facilitates buying and selling",
+      "explanation": "Money is used to make transactions easier.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-06-005",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "hard",
+      "question": "Money as a unit of account allows people to",
+      "options": [
+        "Avoid all scarcity",
+        "Produce goods automatically",
+        "Compare values using a common measure",
+        "Eliminate opportunity cost"
+      ],
+      "correctAnswer": "Compare values using a common measure",
+      "explanation": "Prices expressed in money provide a common measure of value.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-06-006",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "easy",
+      "question": "Money as a store of value means it can",
+      "options": [
+        "Guarantee constant value",
+        "Carry purchasing power into the future",
+        "Replace all assets",
+        "Remove inflation"
+      ],
+      "correctAnswer": "Carry purchasing power into the future",
+      "explanation": "Money can be held for later use, though its value may change.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-06-007",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "easy",
+      "question": "Coins and paper currency are examples of",
+      "options": [
+        "Modern forms of money",
+        "Factors of production",
+        "Natural resources",
+        "Market structures"
+      ],
+      "correctAnswer": "Modern forms of money",
+      "explanation": "Currency is a commonly used form of money.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-06-008",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "medium",
+      "question": "Electronic money is best described as",
+      "options": [
+        "Barter by telephone",
+        "A natural resource",
+        "A physical machine",
+        "Monetary value stored or transferred electronically"
+      ],
+      "correctAnswer": "Monetary value stored or transferred electronically",
+      "explanation": "E-money represents value that can be transferred electronically.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-06-009",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "medium",
+      "question": "A person paying a bill through a mobile-money service is using",
+      "options": [
+        "Barter",
+        "Capital equipment",
+        "Electronic money",
+        "Land"
+      ],
+      "correctAnswer": "Electronic money",
+      "explanation": "The payment transfers monetary value electronically.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-06-010",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "hard",
+      "question": "A useful property of money is divisibility because",
+      "options": [
+        "It makes money edible",
+        "It allows payments of different amounts",
+        "It guarantees profit",
+        "It prevents saving"
+      ],
+      "correctAnswer": "It allows payments of different amounts",
+      "explanation": "Divisibility allows money to be used for transactions of varying sizes.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-06-011",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "easy",
+      "question": "Durability is useful for money because it",
+      "options": [
+        "Allows money to remain usable over repeated transactions",
+        "Makes it increase in value automatically",
+        "Eliminates prices",
+        "Prevents trade"
+      ],
+      "correctAnswer": "Allows money to remain usable over repeated transactions",
+      "explanation": "Money needs to survive ordinary handling.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-06-012",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "easy",
+      "question": "Portability is useful because",
+      "options": [
+        "It must stay in one place",
+        "It prevents exchange",
+        "It removes banks",
+        "Money can be carried or transferred for transactions"
+      ],
+      "correctAnswer": "Money can be carried or transferred for transactions",
+      "explanation": "Portable money is convenient to use.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-06-013",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "medium",
+      "question": "If people lose confidence that an item will be accepted, its usefulness as money",
+      "options": [
+        "Rises automatically",
+        "Becomes unlimited",
+        "Falls",
+        "Stops depending on trust"
+      ],
+      "correctAnswer": "Falls",
+      "explanation": "Acceptability is essential for money.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-06-014",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "medium",
+      "question": "When households keep part of their income as money for future purchases, money is serving as",
+      "options": [
+        "A production input",
+        "A store of value",
+        "A tax",
+        "A market structure"
+      ],
+      "correctAnswer": "A store of value",
+      "explanation": "Holding money for later use reflects store-of-value function.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-06-015",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Money and electronic money",
+      "difficulty": "hard",
+      "question": "Why can electronic money increase transaction convenience?",
+      "options": [
+        "Payments can be transferred quickly without exchanging physical notes",
+        "It makes goods free",
+        "It eliminates the need for trust",
+        "It creates resources"
+      ],
+      "correctAnswer": "Payments can be transferred quickly without exchanging physical notes",
+      "explanation": "Electronic transfer can make payments faster and more convenient.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-07-001",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "easy",
+      "question": "Macroeconomics studies",
+      "options": [
+        "One household only",
+        "One shop only",
+        "One crop only",
+        "Economy-wide outcomes"
+      ],
+      "correctAnswer": "Economy-wide outcomes",
+      "explanation": "Macroeconomics focuses on aggregate economic activity.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-07-002",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "easy",
+      "question": "National unemployment is a",
+      "options": [
+        "Household preference",
+        "Market structure",
+        "Macroeconomic variable",
+        "Factor payment"
+      ],
+      "correctAnswer": "Macroeconomic variable",
+      "explanation": "Unemployment is measured for the economy as a whole.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-07-003",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "medium",
+      "question": "Inflation measures",
+      "options": [
+        "A rise in one product only",
+        "A sustained rise in the general price level",
+        "A fall in output only",
+        "A change in population size"
+      ],
+      "correctAnswer": "A sustained rise in the general price level",
+      "explanation": "Inflation concerns the general level of prices.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-07-004",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "medium",
+      "question": "Economic growth refers to",
+      "options": [
+        "An increase in productive capacity or real output over time",
+        "A one-day sale",
+        "A fall in one firm’s revenue",
+        "A change in one family’s spending"
+      ],
+      "correctAnswer": "An increase in productive capacity or real output over time",
+      "explanation": "Growth is an expansion of the economy’s productive ability.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-07-005",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "hard",
+      "question": "A major macroeconomic goal is",
+      "options": [
+        "Unlimited wants",
+        "Zero scarcity",
+        "No specialization",
+        "High employment"
+      ],
+      "correctAnswer": "High employment",
+      "explanation": "High employment is a common macroeconomic objective.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-07-006",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "easy",
+      "question": "Another major macroeconomic goal is",
+      "options": [
+        "Unlimited inflation",
+        "Permanent shortages",
+        "Price stability",
+        "Zero trade-offs"
+      ],
+      "correctAnswer": "Price stability",
+      "explanation": "Stable prices support predictable economic decisions.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-07-007",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "easy",
+      "question": "A broad fall in economic activity is commonly called",
+      "options": [
+        "An equilibrium",
+        "A recession",
+        "A subsidy",
+        "A monopoly"
+      ],
+      "correctAnswer": "A recession",
+      "explanation": "A recession is an economy-wide downturn.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-07-008",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "medium",
+      "question": "High unemployment can imply",
+      "options": [
+        "Underused labor resources",
+        "Unlimited production",
+        "Higher output automatically",
+        "No opportunity cost"
+      ],
+      "correctAnswer": "Underused labor resources",
+      "explanation": "Unemployment leaves some labor resources unused.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-07-009",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "medium",
+      "question": "Rapid inflation can reduce",
+      "options": [
+        "The number of natural resources",
+        "Population growth automatically",
+        "All production costs to zero",
+        "The purchasing power of money"
+      ],
+      "correctAnswer": "The purchasing power of money",
+      "explanation": "When prices rise, a fixed amount of money buys less.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-07-010",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "hard",
+      "question": "A government tracking total output, prices and unemployment is monitoring",
+      "options": [
+        "Taxonomic ranks",
+        "Microscope data",
+        "Macroeconomic indicators",
+        "Individual firm records only"
+      ],
+      "correctAnswer": "Macroeconomic indicators",
+      "explanation": "These indicators describe economy-wide performance.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-07-011",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "easy",
+      "question": "A change in the average level of prices differs from a change in",
+      "options": [
+        "Inflation concepts",
+        "One firm’s price",
+        "Money purchasing power",
+        "Macroeconomic indicators"
+      ],
+      "correctAnswer": "One firm’s price",
+      "explanation": "Inflation concerns broad changes in the general price level, not one isolated price.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-07-012",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "easy",
+      "question": "Economic growth can improve living standards when it",
+      "options": [
+        "Raises the economy’s ability to produce goods and services",
+        "Reduces all choices",
+        "Eliminates scarcity",
+        "Stops innovation"
+      ],
+      "correctAnswer": "Raises the economy’s ability to produce goods and services",
+      "explanation": "Higher productive capacity can support improved living standards.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-07-013",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "medium",
+      "question": "A fall in production combined with rising unemployment suggests",
+      "options": [
+        "Perfect stability",
+        "Full employment",
+        "Guaranteed growth",
+        "A weakening macroeconomic situation"
+      ],
+      "correctAnswer": "A weakening macroeconomic situation",
+      "explanation": "Falling output and rising unemployment are signs of economic weakness.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-07-014",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "medium",
+      "question": "Macroeconomic policy may face trade-offs because",
+      "options": [
+        "Every policy has identical effects",
+        "Resources are unlimited",
+        "Improving one goal can affect another",
+        "Goals never interact"
+      ],
+      "correctAnswer": "Improving one goal can affect another",
+      "explanation": "Economic policy often involves balancing objectives.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-07-015",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Macroeconomic variables, goals and problems",
+      "difficulty": "hard",
+      "question": "Why is inflation described as a general price-level problem?",
+      "options": [
+        "It affects only imports",
+        "It concerns sustained changes across the economy rather than one product",
+        "It always lowers one price",
+        "It measures unemployment"
+      ],
+      "correctAnswer": "It concerns sustained changes across the economy rather than one product",
+      "explanation": "Inflation is about the general price level.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-08-001",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "easy",
+      "question": "An entrepreneur is a person who",
+      "options": [
+        "Identifies opportunities and organizes resources to pursue them",
+        "Only consumes goods",
+        "Only works for government",
+        "Only lends money"
+      ],
+      "correctAnswer": "Identifies opportunities and organizes resources to pursue them",
+      "explanation": "Entrepreneurs organize resources around opportunities.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-08-002",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "easy",
+      "question": "An enterprise is",
+      "options": [
+        "A natural resource",
+        "A tax payment",
+        "A biological population",
+        "An organized business activity"
+      ],
+      "correctAnswer": "An organized business activity",
+      "explanation": "An enterprise is a business venture or activity.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-08-003",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "medium",
+      "question": "Entrepreneurship involves",
+      "options": [
+        "Avoiding all decisions",
+        "Guaranteeing profit",
+        "Recognizing opportunities, organizing resources and taking calculated risks",
+        "Eliminating competition"
+      ],
+      "correctAnswer": "Recognizing opportunities, organizing resources and taking calculated risks",
+      "explanation": "Entrepreneurship combines opportunity recognition with action under uncertainty.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-08-004",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "medium",
+      "question": "A local problem can become an entrepreneurial opportunity when",
+      "options": [
+        "Nobody needs a solution",
+        "Customers or communities have an unmet need",
+        "Resources are infinite",
+        "The problem has no consequences"
+      ],
+      "correctAnswer": "Customers or communities have an unmet need",
+      "explanation": "Unmet needs can create opportunities for useful enterprises.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-08-005",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "hard",
+      "question": "Creativity in entrepreneurship means",
+      "options": [
+        "Generating new ideas or approaches",
+        "Copying every competitor exactly",
+        "Avoiding change",
+        "Ignoring problems"
+      ],
+      "correctAnswer": "Generating new ideas or approaches",
+      "explanation": "Creativity produces novel ideas or approaches.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-08-006",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "easy",
+      "question": "Innovation means",
+      "options": [
+        "Only imagining ideas",
+        "Refusing feedback",
+        "Avoiding implementation",
+        "Applying useful new ideas or improvements"
+      ],
+      "correctAnswer": "Applying useful new ideas or improvements",
+      "explanation": "Innovation involves implementing new or improved solutions.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-08-007",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "easy",
+      "question": "An entrepreneurial mindset encourages",
+      "options": [
+        "Refusing to change",
+        "Ignoring evidence",
+        "Learning from setbacks and adapting",
+        "Waiting indefinitely"
+      ],
+      "correctAnswer": "Learning from setbacks and adapting",
+      "explanation": "Adaptability and learning support entrepreneurship.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-08-008",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "medium",
+      "question": "A team works better when members",
+      "options": [
+        "Compete destructively",
+        "Have clear roles and shared goals",
+        "Hide information",
+        "Ignore deadlines"
+      ],
+      "correctAnswer": "Have clear roles and shared goals",
+      "explanation": "Coordination and shared goals strengthen teamwork.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-08-009",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "medium",
+      "question": "Diversity in a team can improve",
+      "options": [
+        "The range of perspectives available for solving problems",
+        "Guaranteed agreement",
+        "Elimination of conflict",
+        "Removal of responsibility"
+      ],
+      "correctAnswer": "The range of perspectives available for solving problems",
+      "explanation": "Different experiences can broaden ideas and approaches.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-08-010",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "hard",
+      "question": "A window of entrepreneurial opportunity often opens when",
+      "options": [
+        "Demand disappears",
+        "No one wants a product",
+        "All resources become unlimited",
+        "A new need, problem or market gap appears"
+      ],
+      "correctAnswer": "A new need, problem or market gap appears",
+      "explanation": "Market gaps can create opportunities.",
+      "xp": 20
+    },
+    {
+      "id": "ECON-09-08-011",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "easy",
+      "question": "A business plan is useful because it",
+      "options": [
+        "Guarantees profit",
+        "Removes all risk",
+        "Organizes goals, resources, expected costs and activities",
+        "Makes markets unnecessary"
+      ],
+      "correctAnswer": "Organizes goals, resources, expected costs and activities",
+      "explanation": "Planning helps structure a business idea and its financial needs.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-08-012",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "easy",
+      "question": "A loan is an example of",
+      "options": [
+        "Customer feedback",
+        "External finance",
+        "Natural capital",
+        "Market demand"
+      ],
+      "correctAnswer": "External finance",
+      "explanation": "Borrowed funds are external financing.",
+      "xp": 10
+    },
+    {
+      "id": "ECON-09-08-013",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "medium",
+      "question": "A business owner recording money received and spent is monitoring",
+      "options": [
+        "Cash flow",
+        "Taxonomy",
+        "Climate",
+        "Population density"
+      ],
+      "correctAnswer": "Cash flow",
+      "explanation": "Cash-flow records track money entering and leaving a business.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-08-014",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "medium",
+      "question": "Promotion of entrepreneurship can support communities by",
+      "options": [
+        "Eliminating every market",
+        "Guaranteeing success",
+        "Removing all risks",
+        "Encouraging productive ventures and solutions to local needs"
+      ],
+      "correctAnswer": "Encouraging productive ventures and solutions to local needs",
+      "explanation": "Entrepreneurship can create enterprises and local solutions.",
+      "xp": 15
+    },
+    {
+      "id": "ECON-09-08-015",
+      "grade": 9,
+      "subject": "Economics",
+      "topic": "Basic entrepreneurship, opportunity, teamwork and finance",
+      "difficulty": "hard",
+      "question": "A responsible entrepreneur should evaluate risk before",
+      "options": [
+        "Listening to customers",
+        "Identifying needs",
+        "Committing scarce financial resources",
+        "Setting goals"
+      ],
+      "correctAnswer": "Committing scarce financial resources",
+      "explanation": "Risk assessment supports informed financial decisions.",
+      "xp": 20
+    }
+  ]
+}

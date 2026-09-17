@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Book, BookOpen, Timer, Zap, Sparkles, Gamepad2, Trophy, User, ChevronLeft, ChevronRight, ShoppingBag, Settings } from '@/components/ui/icons';
+import { LayoutDashboard, PenWriting, BookOpen, Timer, Zap, Sparkles, Gamepad2, Trophy, User, ChevronLeft, ChevronRight, ShoppingBag, Settings } from '@/components/ui/icons';
 import { motion } from 'framer-motion';
 
 const items = [
   { path: '/dashboard', icon: LayoutDashboard, label: 'Home' },
-  { path: '/quests', icon: Book, label: 'Assignments' },
+  { path: '/quiz-me', icon: PenWriting, label: 'Quiz Me' },
   { path: '/lessons', icon: BookOpen, label: 'Books' },
   { path: '/focus', icon: Timer, label: 'Focus' },
   { path: '/raids', icon: Zap, label: 'Challenges' },

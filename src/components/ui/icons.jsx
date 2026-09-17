@@ -116,4 +116,14 @@ export {
   IconPaw as Paw,
   IconRocket as Rocket,
   IconDiamond as Diamond,
+
+  // ──── Quiz Me (Grade 9 quiz engine) icons ────────────────────────────
+  IconWriting as PenWriting,
+  IconDna as Dna,
+  IconFlask as Flask,
+  IconAtom as Atom,
+  IconMathFunction as MathFunction,
+  IconChartLine as ChartLine,
+  IconScale as Scale,
+  IconWorld as World,
 } from '@tabler/icons-react';

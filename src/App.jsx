@@ -10,7 +10,7 @@ import Landing from './pages/Landing';
 import Login from './pages/Login';
 import AppLayout from './components/layout/AppLayout';
 import Dashboard from './pages/Dashboard';
-import Quests from './pages/Quests';
+import QuizMe from './pages/QuizMe';
 import Focus from './pages/Focus';
 import Raids from './pages/Raids';
 import AITools from './pages/AITools';
@@ -114,7 +114,8 @@ function AppRoutes() {
       <Route element={<ProtectedRoute />}>
         <Route element={<AppLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/quests" element={<Quests />} />
+          <Route path="/quiz-me" element={<QuizMe />} />
+          <Route path="/quests" element={<Navigate to="/quiz-me" replace />} />
           <Route path="/focus" element={<Focus />} />
           <Route path="/raids" element={<Raids />} />
           <Route path="/ai-tools" element={<AITools />} />

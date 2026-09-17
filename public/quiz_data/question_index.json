@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-17T10:37:17.378Z",
+  "sourceOfTruth": "question bank JSON files (this file is derived - banks always win)",
+  "grades": {
+    "9": {
+      "biology": {
+        "file": "biology/biology_grade9.json",
+        "totalQuestions": 120,
+        "topics": {
+          "bio-01": 20,
+          "bio-02": 20,
+          "bio-03": 20,
+          "bio-04": 20,
+          "bio-05": 20,
+          "bio-06": 20
+        },
+        "difficulties": {
+          "easy": 48,
+          "medium": 48,
+          "hard": 24
+        }
+      },
+      "chemistry": {
+        "file": "chemistry/chemistry_grade9.json",
+        "totalQuestions": 120,
+        "topics": {
+          "chem-01": 24,
+          "chem-02": 24,
+          "chem-03": 15,
+          "chem-04": 24,
+          "chem-05": 33
+        },
+        "difficulties": {
+          "easy": 50,
+          "medium": 49,
+          "hard": 21
+        }
+      },
+      "physics": {
+        "file": "physics/physics_grade9.json",
+        "totalQuestions": 120,
+        "topics": {
+          "phy-01": 10,
+          "phy-02": 15,
+          "phy-03": 20,
+          "phy-04": 25,
+          "phy-05": 20,
+          "phy-06": 15,
+          "phy-07": 15
+        },
+        "difficulties": {
+          "easy": 27,
+          "medium": 60,
+          "hard": 33
+        }
+      },
+      "mathematics": {
+        "file": "mathematics/mathematics_grade9.json",
+        "totalQuestions": 120,
+        "topics": {
+          "math-01": 12,
+          "math-02": 16,
+          "math-03": 16,
+          "math-04": 12,
+          "math-05": 10,
+          "math-06": 12,
+          "math-07": 14,
+          "math-08": 14,
+          "math-09": 14
+        },
+        "difficulties": {
+          "easy": 27,
+          "medium": 56,
+          "hard": 37
+        }
+      },
+      "economics": {
+        "file": "economics/economics_grade9.json",
+        "totalQuestions": 120,
+        "topics": {
+          "econ-01": 15,
+          "econ-02": 15,
+          "econ-03": 15,
+          "econ-04": 15,
+          "econ-05": 15,
+          "econ-06": 15,
+          "econ-07": 15,
+          "econ-08": 15
+        },
+        "difficulties": {
+          "easy": 48,
+          "medium": 48,
+          "hard": 24
+        }
+      },
+      "geography": {
+        "file": "geography/geography_grade9.json",
+        "totalQuestions": 120,
+        "topics": {
+          "geo-01": 14,
+          "geo-02": 16,
+          "geo-03": 16,
+          "geo-04": 15,
+          "geo-05": 17,
+          "geo-06": 12,
+          "geo-07": 10,
+          "geo-08": 20
+        },
+        "difficulties": {
+          "easy": 47,
+          "medium": 51,
+          "hard": 22
+        }
+      },
+      "history": {
+        "file": "history/history_grade9.json",
+        "totalQuestions": 120,
+        "topics": {
+          "hist-01": 14,
+          "hist-02": 16,
+          "hist-03": 14,
+          "hist-04": 16,
+          "hist-05": 15,
+          "hist-06": 11,
+          "hist-07": 14,
+          "hist-08": 10,
+          "hist-09": 10
+        },
+        "difficulties": {
+          "easy": 35,
+          "medium": 55,
+          "hard": 30
+        }
+      },
+      "citizenship": {
+        "file": "citizenship/citizenship_grade9.json",
+        "totalQuestions": 120,
+        "topics": {
+          "civ-01": 15,
+          "civ-02": 15,
+          "civ-03": 15,
+          "civ-04": 15,
+          "civ-05": 15,
+          "civ-06": 15,
+          "civ-07": 15,
+          "civ-08": 15
+        },
+        "difficulties": {
+          "easy": 48,
+          "medium": 48,
+          "hard": 24
+        }
+      }
+    }
+  }
+}

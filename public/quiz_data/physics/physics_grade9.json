@@ -1,0 +1,2047 @@
+{
+  "subject": "Physics",
+  "grade": 9,
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": "PHY-09-01-001",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "easy",
+      "question": "The word “physics” originates from the Greek word “physis,” which most closely means:",
+      "options": [
+        "Nature",
+        "Measurement",
+        "Motion",
+        "Energy"
+      ],
+      "correctAnswer": "Nature",
+      "explanation": "Physics comes from the Greek word \"physis,\" meaning nature. The subject is fundamentally the study of natural phenomena — matter, energy, and how they behave and interact.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-01-002",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "easy",
+      "question": "Which of the following best defines physics as a branch of science?",
+      "options": [
+        "The study of only living organisms and their life processes",
+        "The study of matter, energy, and their interactions in nature",
+        "The study of only the chemical composition of substances",
+        "The study of mathematical formulas without any physical meaning"
+      ],
+      "correctAnswer": "The study of matter, energy, and their interactions in nature",
+      "explanation": "Physics studies matter and energy and the fundamental interactions between them, forming the basis for understanding natural phenomena from the motion of planets to the behavior of atoms.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-01-003",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "easy",
+      "question": "A student wants to understand how sound is produced, how it travels, and why some materials block it better than others. Which branch of physics covers this topic?",
+      "options": [
+        "Optics",
+        "Nuclear physics",
+        "Acoustics",
+        "Astrophysics"
+      ],
+      "correctAnswer": "Acoustics",
+      "explanation": "Acoustics is the branch of physics that specifically studies sound: its production, propagation, and properties such as reflection and absorption.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-01-004",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "easy",
+      "question": "An engineer studying how heat energy from burning fuel is converted into useful mechanical work inside a car engine is working within which branch of physics?",
+      "options": [
+        "Electromagnetism",
+        "Mechanics",
+        "Acoustics",
+        "Thermodynamics"
+      ],
+      "correctAnswer": "Thermodynamics",
+      "explanation": "Thermodynamics is the branch of physics concerned with heat, temperature, and the conversion of heat energy into other forms of energy, such as the mechanical work produced by an engine.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-01-005",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "medium",
+      "question": "A researcher studies how stars form, evolve, and eventually die, as well as the structure of distant galaxies. This researcher is working in which branch of physics?",
+      "options": [
+        "Astrophysics",
+        "Geophysics",
+        "Biophysics",
+        "Nuclear physics"
+      ],
+      "correctAnswer": "Astrophysics",
+      "explanation": "Astrophysics applies the laws of physics to study celestial bodies such as stars, planets, and galaxies, including their formation, structure, and evolution.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-01-006",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "medium",
+      "question": "A scientist uses the principles of physics, such as fluid pressure and elasticity, to explain how blood flows through a person's arteries. This work belongs to a field related to physics known as:",
+      "options": [
+        "Geophysics",
+        "Biophysics",
+        "Engineering",
+        "Chemistry"
+      ],
+      "correctAnswer": "Biophysics",
+      "explanation": "Biophysics is the related field that applies physical principles and methods to study biological systems and living organisms, such as blood flow, muscle mechanics, or nerve signal transmission.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-01-007",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "medium",
+      "question": "An artificial satellite stays in orbit around the Earth because of a force whose mathematical description was first formulated by:",
+      "options": [
+        "Galileo Galilei",
+        "Michael Faraday",
+        "Isaac Newton",
+        "James Prescott Joule"
+      ],
+      "correctAnswer": "Isaac Newton",
+      "explanation": "Isaac Newton formulated the law of universal gravitation and the laws of motion, which together explain why a satellite continuously falls toward Earth while moving forward fast enough to stay in orbit.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-01-008",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "medium",
+      "question": "Galileo Galilei's experiments with rolling and falling objects challenged the earlier belief that:",
+      "options": [
+        "All objects eventually come to rest without a force acting on them",
+        "Objects in motion naturally speed up over time",
+        "Force is only needed to change the direction of motion, never its speed",
+        "Heavier objects always fall faster than lighter objects"
+      ],
+      "correctAnswer": "Heavier objects always fall faster than lighter objects",
+      "explanation": "Before Galileo, it was commonly believed (based on Aristotle's ideas) that heavier objects fall faster. Galileo's experiments showed that, in the absence of air resistance, all objects fall at the same rate regardless of mass.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-01-009",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "hard",
+      "question": "Rotating a coil of wire inside a magnetic field, such as inside a turbine generator at a hydroelectric dam like the Grand Ethiopian Renaissance Dam, produces electric current. This directly relies on the discovery made by:",
+      "options": [
+        "Michael Faraday",
+        "Isaac Newton",
+        "Albert Einstein",
+        "James Prescott Joule"
+      ],
+      "correctAnswer": "Michael Faraday",
+      "explanation": "Michael Faraday discovered electromagnetic induction: a changing magnetic field through a coil of wire induces an electric current. This principle is the basis of all electric generators, including those used in hydroelectric power plants.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-01-010",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physics and Human Society",
+      "difficulty": "medium",
+      "question": "Albert Einstein's equation E = mc² introduced a new idea in physics that goes beyond the ordinary conservation of energy. This equation shows that:",
+      "options": [
+        "Force equals mass multiplied by acceleration",
+        "Mass and energy are equivalent and can be converted into each other",
+        "Work equals force multiplied by distance moved",
+        "Energy in an isolated system is always conserved"
+      ],
+      "correctAnswer": "Mass and energy are equivalent and can be converted into each other",
+      "explanation": "While conservation of energy was known before Einstein, his equation E = mc² specifically revealed that mass itself is a form of energy, and the two can be converted into one another, a concept unique to his work.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-02-001",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "easy",
+      "question": "What is the SI (International System) unit of length?",
+      "options": [
+        "Kilogram",
+        "Second",
+        "Meter",
+        "Newton"
+      ],
+      "correctAnswer": "Meter",
+      "explanation": "The meter (m) is the fundamental SI unit used to measure length or distance.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-02-002",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "easy",
+      "question": "What is the SI unit of mass?",
+      "options": [
+        "Gram",
+        "Pound",
+        "Newton",
+        "Kilogram"
+      ],
+      "correctAnswer": "Kilogram",
+      "explanation": "The kilogram (kg) is the SI base unit of mass, even though the gram is a smaller, related unit commonly used in everyday life.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-02-003",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "easy",
+      "question": "The prefix \"kilo-\" attached to a unit represents a multiplication factor of:",
+      "options": [
+        "10^3",
+        "10^-3",
+        "10^2",
+        "10^6"
+      ],
+      "correctAnswer": "10^3",
+      "explanation": "The prefix \"kilo-\" means one thousand times the base unit (10^3). For example, 1 kilometer equals 1000 meters.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-02-004",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "easy",
+      "question": "Which of the following physical quantities must be described using both a magnitude (size) and a direction to be fully specified?",
+      "options": [
+        "Mass",
+        "Force",
+        "Time",
+        "Temperature"
+      ],
+      "correctAnswer": "Force",
+      "explanation": "Force is a vector quantity, meaning it requires both a magnitude and a direction to be completely described (for example, 10 N to the east). Mass, time, and temperature are scalar quantities that need only a magnitude.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-02-005",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "easy",
+      "question": "Which of the following is a derived physical quantity rather than a fundamental one?",
+      "options": [
+        "Time",
+        "Mass",
+        "Speed",
+        "Length"
+      ],
+      "correctAnswer": "Speed",
+      "explanation": "Speed is a derived quantity because it is calculated by combining two fundamental quantities: distance divided by time. Mass, length, and time are themselves fundamental quantities.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-02-006",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "medium",
+      "question": "How many significant figures are in the measurement 0.00520 kg?",
+      "options": [
+        "2",
+        "5",
+        "6",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "explanation": "Leading zeros before the first nonzero digit are never significant. The significant digits are 5, 2, and the trailing 0 after the decimal point (which is significant because it comes after a decimal), giving 3 significant figures.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-02-007",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "medium",
+      "question": "The distance between two towns is measured as 450,000 meters. Written in proper scientific notation with two significant figures, this distance is:",
+      "options": [
+        "4.5 × 10^5 m",
+        "4.5 × 10^4 m",
+        "45 × 10^4 m",
+        "0.45 × 10^6 m"
+      ],
+      "correctAnswer": "4.5 × 10^5 m",
+      "explanation": "Scientific notation requires a single non-zero digit before the decimal point. 450,000 = 4.5 × 10^5, which correctly keeps the two significant figures given.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-02-008",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "medium",
+      "question": "A minibus travels at a constant speed of 72 km/h. What is this speed expressed in meters per second (m/s)?",
+      "options": [
+        "7.2 m/s",
+        "20 m/s",
+        "13 m/s",
+        "36 m/s"
+      ],
+      "correctAnswer": "20 m/s",
+      "explanation": "To convert km/h to m/s, multiply by 1000/3600 (or 5/18): 72 × (1000/3600) = 20 m/s.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-02-009",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "medium",
+      "question": "Density is calculated by dividing an object's mass by its volume. Density is therefore classified as a:",
+      "options": [
+        "Fundamental quantity, because mass is fundamental",
+        "Vector quantity, because it depends on the shape of the object",
+        "Derived quantity, because it is formed by combining two other quantities",
+        "Scale, similar to the Celsius temperature scale"
+      ],
+      "correctAnswer": "Derived quantity, because it is formed by combining two other quantities",
+      "explanation": "A derived quantity is formed by mathematically combining two or more fundamental quantities. Since density = mass ÷ volume, and volume itself is derived from length, density is a derived quantity.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-02-010",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "medium",
+      "question": "When reading the length of an object on a ruler or the level of a liquid in a graduated cylinder, which practice reduces measurement error?",
+      "options": [
+        "Reading the scale from an angle that is convenient to your seated position",
+        "Estimating the reading without lining up the eye with the marking",
+        "Reading the scale as quickly as possible to avoid eye strain",
+        "Viewing the scale directly at eye level, in line with the marking"
+      ],
+      "correctAnswer": "Viewing the scale directly at eye level, in line with the marking",
+      "explanation": "Viewing a scale from an angle causes parallax error, where the reading appears shifted. Positioning the eye directly level with the marking gives the most accurate reading.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-02-011",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "hard",
+      "question": "Why is the Celsius temperature scale classified as an interval scale rather than a ratio scale?",
+      "options": [
+        "Because its zero point (0°C) is arbitrarily chosen and does not represent a true absence of temperature",
+        "Because it can only measure positive temperatures",
+        "Because it does not have equally spaced units between degrees",
+        "Because Celsius values cannot be added or subtracted meaningfully"
+      ],
+      "correctAnswer": "Because its zero point (0°C) is arbitrarily chosen and does not represent a true absence of temperature",
+      "explanation": "An interval scale has equal spacing between values but an arbitrary zero point, so ratios are not meaningful (30°C is not \"twice as hot\" as 15°C). Celsius's zero is set at water's freezing point, not at the true absence of thermal energy, unlike the Kelvin scale which is a true ratio scale.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-02-012",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "hard",
+      "question": "A rectangular field has an area of 3.2 m². What is this area expressed in square centimeters (cm²)?",
+      "options": [
+        "320 cm²",
+        "32,000 cm²",
+        "3,200 cm²",
+        "320,000 cm²"
+      ],
+      "correctAnswer": "32,000 cm²",
+      "explanation": "Since 1 m = 100 cm, 1 m² = (100 cm)² = 10,000 cm². Therefore, 3.2 m² × 10,000 = 32,000 cm². A common error is multiplying by only 100 instead of 10,000, forgetting that area involves squaring the conversion factor.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-02-013",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "hard",
+      "question": "A student multiplies two measured lengths, 4.52 cm and 2.1 cm, to find an area. The calculator shows 9.492 cm². What should the student report as the correctly rounded answer, based on significant figures?",
+      "options": [
+        "9.492 cm²",
+        "9.49 cm²",
+        "9.5 cm²",
+        "9 cm²"
+      ],
+      "correctAnswer": "9.5 cm²",
+      "explanation": "In multiplication, the result should be rounded to match the smallest number of significant figures among the values used. Since 2.1 cm has only 2 significant figures, the final answer must also be reported with 2 significant figures: 9.5 cm².",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-02-014",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "medium",
+      "question": "The original 18th-century definition of the meter attempted to define it as one ten-millionth of the distance from the equator to the North Pole. What was the main advantage of choosing this kind of definition over, say, the length of a king's foot?",
+      "options": [
+        "It made the meter easier for ordinary people to remember",
+        "It made the meter exactly equal to one yard",
+        "It allowed the meter to be redefined every year for convenience",
+        "It based the unit on a fixed natural reference that does not change and can, in principle, be verified anywhere"
+      ],
+      "correctAnswer": "It based the unit on a fixed natural reference that does not change and can, in principle, be verified anywhere",
+      "explanation": "A good measurement standard should be constant, universal, and reproducible. Tying the meter to a fixed natural feature of the Earth (rather than a body part that varies from person to person) made the standard far more consistent and reliable.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-02-015",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Physical Quantities",
+      "difficulty": "hard",
+      "question": "A laboratory mass balance was not zeroed correctly before use, so every measurement it produces is exactly 2 grams heavier than the true value. This is an example of:",
+      "options": [
+        "Systematic error, because the readings are consistently off in the same direction",
+        "Random error, because the readings vary unpredictably",
+        "A change in precision, because the readings become less repeatable",
+        "A unit conversion error"
+      ],
+      "correctAnswer": "Systematic error, because the readings are consistently off in the same direction",
+      "explanation": "A systematic error consistently shifts every measurement in the same direction by roughly the same amount (here, always +2 g), reducing accuracy while precision (repeatability) may remain unaffected. Random error, in contrast, causes unpredictable scatter in readings.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-03-001",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "easy",
+      "question": "Displacement is best defined as:",
+      "options": [
+        "The total path length covered by a moving object",
+        "The straight-line distance and direction from the starting point to the final position",
+        "The rate of change of speed of an object",
+        "The total time taken for a journey"
+      ],
+      "correctAnswer": "The straight-line distance and direction from the starting point to the final position",
+      "explanation": "Displacement is a vector quantity representing how far, and in what direction, an object's final position is from its starting position, regardless of the actual path taken.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-03-002",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "easy",
+      "question": "Which statement correctly distinguishes distance from displacement?",
+      "options": [
+        "Distance is a vector quantity, while displacement is a scalar quantity",
+        "Distance and displacement are always numerically equal",
+        "Distance is a scalar quantity, while displacement is a vector quantity",
+        "Distance can be negative, while displacement cannot"
+      ],
+      "correctAnswer": "Distance is a scalar quantity, while displacement is a vector quantity",
+      "explanation": "Distance only has magnitude (how much ground was covered), making it scalar. Displacement has both magnitude and direction (how far and which way from start to finish), making it a vector.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-03-003",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "easy",
+      "question": "While training, a cyclist covers 150 km in 3 hours at a roughly steady pace. What is the cyclist's average speed for this ride?",
+      "options": [
+        "30 km/h",
+        "45 km/h",
+        "150 km/h",
+        "50 km/h"
+      ],
+      "correctAnswer": "50 km/h",
+      "explanation": "Average speed = total distance ÷ total time = 150 km ÷ 3 h = 50 km/h.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-03-004",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "easy",
+      "question": "An object is said to be in uniform motion when it:",
+      "options": [
+        "Covers equal displacements in equal intervals of time, moving with constant velocity",
+        "Covers increasing displacements in equal intervals of time",
+        "Changes its speed continuously but keeps the same direction",
+        "Comes to rest after moving for a short time"
+      ],
+      "correctAnswer": "Covers equal displacements in equal intervals of time, moving with constant velocity",
+      "explanation": "Uniform motion means the object moves at a constant velocity: equal displacement occurs in every equal time interval, and the acceleration is zero.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-03-005",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "A student walks 300 m east and then turns around and walks 100 m west. What is the student's total displacement?",
+      "options": [
+        "400 m east",
+        "200 m east",
+        "300 m east",
+        "100 m west"
+      ],
+      "correctAnswer": "200 m east",
+      "explanation": "Displacement only depends on start and end position. Taking east as positive: +300 m + (-100 m) = +200 m, so the displacement is 200 m east. The total distance walked, however, is 400 m (300 m + 100 m).",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-006",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "A runner completes one full lap of a 400 m circular track, ending up back at the exact point where she started, in 80 seconds. What are her average velocity and average speed for this lap?",
+      "options": [
+        "Average velocity = 5 m/s, average speed = 0 m/s",
+        "Both average velocity and average speed equal 5 m/s",
+        "Average velocity = 0 m/s, average speed = 5 m/s",
+        "Both average velocity and average speed equal 0 m/s"
+      ],
+      "correctAnswer": "Average velocity = 0 m/s, average speed = 5 m/s",
+      "explanation": "Since the runner returns to her starting point, her net displacement is zero, so average velocity (displacement ÷ time) is 0 m/s. However, she did cover a total distance of 400 m, giving an average speed of 400 m ÷ 80 s = 5 m/s.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-007",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "The number shown on a moving car's speedometer at any given moment represents the car's:",
+      "options": [
+        "Average speed for the whole trip",
+        "Average velocity",
+        "Total displacement",
+        "Instantaneous speed"
+      ],
+      "correctAnswer": "Instantaneous speed",
+      "explanation": "A speedometer displays the speed of the vehicle at that specific moment in time, which is its instantaneous speed, not an average calculated over the entire trip.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-008",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "A cyclist's velocity increases from 5 m/s to 25 m/s in 4 seconds while riding in a straight line. What is the cyclist's acceleration?",
+      "options": [
+        "5 m/s²",
+        "1.25 m/s²",
+        "6.25 m/s²",
+        "20 m/s²"
+      ],
+      "correctAnswer": "5 m/s²",
+      "explanation": "Acceleration = change in velocity ÷ time taken = (25 m/s − 5 m/s) ÷ 4 s = 20 ÷ 4 = 5 m/s².",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-009",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "A car's driver applies the brakes while moving forward, causing the car to slow down until it stops. During this braking period, the direction of the car's acceleration is:",
+      "options": [
+        "The same as the direction of motion",
+        "Opposite to the direction of motion",
+        "Perpendicular to the direction of motion",
+        "Undefined, since the car is slowing down"
+      ],
+      "correctAnswer": "Opposite to the direction of motion",
+      "explanation": "When a moving object slows down, its acceleration points opposite to its velocity. This deceleration reduces the speed until, in this case, the car comes to rest.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-010",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "On a position-time graph, a horizontal straight line (parallel to the time axis) represents an object that is:",
+      "options": [
+        "Moving with constant, non-zero velocity",
+        "Accelerating uniformly",
+        "At rest (not changing position)",
+        "Moving with increasing speed"
+      ],
+      "correctAnswer": "At rest (not changing position)",
+      "explanation": "The slope of a position-time graph represents velocity. A horizontal line has a slope of zero, meaning the object's position is not changing — it is at rest.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-011",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "A velocity-time graph shows an object's velocity increasing steadily from 0 to 10 m/s over 5 seconds, forming a straight diagonal line from the origin. What is the object's displacement during these 5 seconds?",
+      "options": [
+        "10 m",
+        "15 m",
+        "50 m",
+        "25 m"
+      ],
+      "correctAnswer": "25 m",
+      "explanation": "Displacement equals the area under a velocity-time graph. Here, the area is a triangle with base 5 s and height 10 m/s: Area = ½ × 5 × 10 = 25 m.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-012",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "On a velocity-time graph, a straight line shows velocity increasing from 0 m/s to 20 m/s over 5 seconds. What does the slope of this line represent, and what is its value?",
+      "options": [
+        "Acceleration; 4 m/s²",
+        "Displacement; 100 m",
+        "Average speed; 4 m/s",
+        "Acceleration; 100 m/s²"
+      ],
+      "correctAnswer": "Acceleration; 4 m/s²",
+      "explanation": "The slope of a velocity-time graph gives acceleration. Slope = change in velocity ÷ change in time = (20 − 0) ÷ 5 = 4 m/s².",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-013",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "A taxi drives from Piazza to Bole and then returns to Piazza by the same route. Which of the following statements about this trip is correct?",
+      "options": [
+        "Both the total distance and the total displacement are zero",
+        "The total distance is non-zero, but the total displacement is zero",
+        "The total distance is zero, but the total displacement is non-zero",
+        "Both the total distance and the displacement must be equal and non-zero"
+      ],
+      "correctAnswer": "The total distance is non-zero, but the total displacement is zero",
+      "explanation": "Since the taxi starts and ends at the same point (Piazza), the net displacement is zero. However, the taxi did cover real ground going to Bole and back, so the total distance traveled is greater than zero.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-014",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "medium",
+      "question": "Two cyclists' motions are plotted on the same position-time graph. Cyclist A's line rises more steeply than Cyclist B's line. What does this indicate?",
+      "options": [
+        "Cyclist A is moving more slowly than Cyclist B",
+        "Cyclist A has traveled a shorter distance than Cyclist B",
+        "Cyclist A is moving faster than Cyclist B",
+        "Cyclist A started later than Cyclist B"
+      ],
+      "correctAnswer": "Cyclist A is moving faster than Cyclist B",
+      "explanation": "A steeper slope on a position-time graph means a greater rate of change of position with time, which is a greater speed. Therefore, Cyclist A is moving faster than Cyclist B.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-03-015",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "hard",
+      "question": "A car starts from rest, speeds up steadily for a while, then travels at a constant speed, and finally slows down steadily to a stop. Which description of the velocity-time graph correctly matches this motion?",
+      "options": [
+        "A single horizontal straight line for the entire trip",
+        "A line that stays at zero the whole time",
+        "A line rising steadily and then immediately dropping straight down to zero",
+        "A line rising steadily, then flat, then falling steadily back to zero (a trapezoid shape)"
+      ],
+      "correctAnswer": "A line rising steadily, then flat, then falling steadily back to zero (a trapezoid shape)",
+      "explanation": "Speeding up steadily gives a rising straight-line segment (constant positive acceleration), constant speed gives a flat horizontal segment (zero acceleration), and steadily slowing down gives a falling straight-line segment (constant negative acceleration) back to zero. Together these three segments form a trapezoid shape.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-03-016",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "hard",
+      "question": "A train travels 150 km in 2.5 hours, then continues and travels another 90 km in 1.5 hours. What is the train's average speed for the entire journey?",
+      "options": [
+        "60 km/h",
+        "48 km/h",
+        "64 km/h",
+        "80 km/h"
+      ],
+      "correctAnswer": "60 km/h",
+      "explanation": "Average speed for the whole journey = total distance ÷ total time = (150 km + 90 km) ÷ (2.5 h + 1.5 h) = 240 km ÷ 4 h = 60 km/h. This is not the same as averaging the two individual speeds.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-03-017",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "hard",
+      "question": "A velocity-time graph shows a vehicle accelerating uniformly from 0 to 20 m/s over 4 seconds, then moving at a constant 20 m/s for the next 6 seconds, and finally decelerating uniformly from 20 m/s to 0 over 2 seconds. What is the total displacement of the vehicle?",
+      "options": [
+        "120 m",
+        "180 m",
+        "140 m",
+        "160 m"
+      ],
+      "correctAnswer": "180 m",
+      "explanation": "Break the motion into three regions of the graph: (1) acceleration phase: ½ × 4 × 20 = 40 m, (2) constant speed phase: 20 × 6 = 120 m, (3) deceleration phase: ½ × 2 × 20 = 20 m. Total displacement = 40 + 120 + 20 = 180 m.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-03-018",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "hard",
+      "question": "A ball is thrown straight upward and is momentarily still slowing down as it rises. During this upward motion, how are the ball's velocity and acceleration related?",
+      "options": [
+        "Both velocity and acceleration point upward",
+        "Velocity points downward while acceleration points upward",
+        "Velocity points upward while acceleration (due to gravity) points downward",
+        "Both velocity and acceleration are zero"
+      ],
+      "correctAnswer": "Velocity points upward while acceleration (due to gravity) points downward",
+      "explanation": "While rising, the ball's velocity is directed upward, but gravity continuously acts downward, producing a downward acceleration. Because the acceleration opposes the velocity, the ball continuously slows down until it momentarily stops at its highest point.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-03-019",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "hard",
+      "question": "A car travels at 60 km/h for 2 hours and then at 90 km/h for 1 hour. What is the car's average speed for the entire trip?",
+      "options": [
+        "75 km/h",
+        "80 km/h",
+        "90 km/h",
+        "70 km/h"
+      ],
+      "correctAnswer": "70 km/h",
+      "explanation": "Average speed = total distance ÷ total time = (60×2 + 90×1) ÷ (2+1) = (120 + 90) ÷ 3 = 210 ÷ 3 = 70 km/h. Simply averaging the two speeds, (60+90)÷2 = 75 km/h, is incorrect because the car spent unequal amounts of time at each speed.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-03-020",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Motion in a Straight Line",
+      "difficulty": "hard",
+      "question": "A car starts from rest and accelerates uniformly at 3 m/s² in a straight line for 6 seconds. What is the car's velocity at the end of the 6 seconds?",
+      "options": [
+        "18 m/s",
+        "9 m/s",
+        "24 m/s",
+        "36 m/s"
+      ],
+      "correctAnswer": "18 m/s",
+      "explanation": "Using the relationship between acceleration, initial velocity, and time: final velocity = initial velocity + (acceleration × time) = 0 + (3 m/s² × 6 s) = 18 m/s.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-04-001",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "easy",
+      "question": "Which of the following is an example of a non-contact force?",
+      "options": [
+        "Friction between a box and the floor",
+        "Gravitational force pulling an object toward Earth",
+        "The normal force from a table supporting a book",
+        "A person pushing a cart"
+      ],
+      "correctAnswer": "Gravitational force pulling an object toward Earth",
+      "explanation": "Gravity acts on objects without requiring them to physically touch each other, making it a non-contact force. Friction, normal force, and pushing all require direct physical contact between objects.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-04-002",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "easy",
+      "question": "When a bus suddenly stops, standing passengers tend to lurch forward. This is best explained by:",
+      "options": [
+        "Newton's third law",
+        "The law of conservation of energy",
+        "Newton's first law (inertia)",
+        "The concept of mechanical advantage"
+      ],
+      "correctAnswer": "Newton's first law (inertia)",
+      "explanation": "Newton's first law states that an object in motion tends to stay in motion unless acted on by an external force. When the bus stops suddenly, the passengers' bodies tend to keep moving forward due to inertia, even though the bus has stopped.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-04-003",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "easy",
+      "question": "A net force of 6 N is required to give an object an acceleration of 3 m/s². What is the mass of the object?",
+      "options": [
+        "0.5 kg",
+        "3 kg",
+        "18 kg",
+        "2 kg"
+      ],
+      "correctAnswer": "2 kg",
+      "explanation": "Using Newton's second law, F = ma, so m = F ÷ a = 6 N ÷ 3 m/s² = 2 kg.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-04-004",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "easy",
+      "question": "A spring scale is used to measure how strongly a rope pulls on a hook. Which SI unit should the scale's reading be expressed in?",
+      "options": [
+        "Newton",
+        "Joule",
+        "Watt",
+        "Pascal"
+      ],
+      "correctAnswer": "Newton",
+      "explanation": "The pull exerted by a rope is a force, and force is measured in newtons (N) in the SI system. A spring scale calibrated to measure force therefore reads out its result in newtons.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-04-005",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "easy",
+      "question": "A porter carries a bag at a constant height while walking horizontally across a flat floor. Considering only the upward supporting force the porter exerts on the bag, the work done by this force on the bag is:",
+      "options": [
+        "Positive, because the porter is exerting effort",
+        "Zero, because the force is perpendicular to the direction of motion",
+        "Negative, because the bag is heavy",
+        "Impossible to determine without knowing the bag's mass"
+      ],
+      "correctAnswer": "Zero, because the force is perpendicular to the direction of motion",
+      "explanation": "Work is done only when a force causes displacement in the direction of the force. Since the supporting force is vertical (upward) while the bag's motion is horizontal, the force is perpendicular to the displacement, so it does zero work.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-04-006",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A rocket expels hot gas rapidly downward and backward out of its engines, which propels the rocket forward and upward. This is best explained by:",
+      "options": [
+        "Newton's first law",
+        "Newton's second law",
+        "Newton's third law",
+        "The law of conservation of mass"
+      ],
+      "correctAnswer": "Newton's third law",
+      "explanation": "Newton's third law states that for every action there is an equal and opposite reaction. The rocket pushes the exhaust gas backward (action), and the gas pushes the rocket forward with an equal and opposite force (reaction).",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-007",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A worker needs to push a heavy wooden crate that is initially at rest on a rough floor. Compared to the force needed to keep the crate sliding once it is already moving, the force needed to first get the crate moving is generally:",
+      "options": [
+        "Smaller, because static friction is usually less than kinetic friction",
+        "Exactly the same in both cases",
+        "Zero in both cases, since friction only matters after motion begins",
+        "Larger, because static friction is usually greater than kinetic friction"
+      ],
+      "correctAnswer": "Larger, because static friction is usually greater than kinetic friction",
+      "explanation": "Static friction (which resists the start of motion) is generally greater than kinetic friction (which resists motion once it is underway). This is why it typically takes a bigger push to start moving a heavy object than to keep it sliding.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-008",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A wooden block resting on a table experiences a normal force of 200 N. If the coefficient of friction between the block and table is 0.3, what is the frictional force acting on the block when it is sliding?",
+      "options": [
+        "60 N",
+        "6 N",
+        "66.7 N",
+        "600 N"
+      ],
+      "correctAnswer": "60 N",
+      "explanation": "Frictional force = coefficient of friction × normal force = 0.3 × 200 N = 60 N.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-009",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A person pushes a box with a constant horizontal force of 50 N, moving it 4 m in the direction of the push. How much work is done on the box?",
+      "options": [
+        "12.5 J",
+        "200 J",
+        "54 J",
+        "400 J"
+      ],
+      "correctAnswer": "200 J",
+      "explanation": "Work = force × distance (when the force and displacement are in the same direction) = 50 N × 4 m = 200 J.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-010",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A rope pulls a sled with a force of 100 N directed at 60° above the ground, moving the sled 5 m horizontally. How much work does the rope do on the sled? (cos 60° = 0.5)",
+      "options": [
+        "50 J",
+        "100 J",
+        "250 J",
+        "500 J"
+      ],
+      "correctAnswer": "250 J",
+      "explanation": "Work = force × distance × cosθ = 100 N × 5 m × cos 60° = 100 × 5 × 0.5 = 250 J.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-011",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A 2 kg object moves with a speed of 10 m/s. What is its kinetic energy?",
+      "options": [
+        "10 J",
+        "20 J",
+        "200 J",
+        "100 J"
+      ],
+      "correctAnswer": "100 J",
+      "explanation": "Kinetic energy = ½ × mass × velocity² = ½ × 2 kg × (10 m/s)² = ½ × 2 × 100 = 100 J.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-012",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A 5 kg box is lifted to a height of 3 m above the ground. Taking g = 10 m/s², what is its gravitational potential energy relative to the ground?",
+      "options": [
+        "150 J",
+        "15 J",
+        "30 J",
+        "1500 J"
+      ],
+      "correctAnswer": "150 J",
+      "explanation": "Gravitational potential energy = mass × g × height = 5 kg × 10 m/s² × 3 m = 150 J.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-013",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A motor does 600 J of work in 30 seconds. What is the power delivered by the motor?",
+      "options": [
+        "18,000 W",
+        "20 W",
+        "630 W",
+        "0.05 W"
+      ],
+      "correctAnswer": "20 W",
+      "explanation": "Power = work done ÷ time taken = 600 J ÷ 30 s = 20 W.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-014",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A force of 200 N moves an object at a constant velocity of 3 m/s in the direction of the force. What is the power being delivered?",
+      "options": [
+        "66.7 W",
+        "203 W",
+        "600 W",
+        "6000 W"
+      ],
+      "correctAnswer": "600 W",
+      "explanation": "When force acts in the direction of motion, power = force × velocity = 200 N × 3 m/s = 600 W.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-015",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "An electric bulb transforms 60 joules of electrical energy into light and heat every second. Which SI unit correctly measures this rate of energy transfer?",
+      "options": [
+        "Joule, since it measures the total energy",
+        "Newton, since it measures the force driving the current",
+        "Pascal, since it measures pressure in the filament",
+        "Watt, since it measures energy transferred per second"
+      ],
+      "correctAnswer": "Watt, since it measures energy transferred per second",
+      "explanation": "Power is the rate of energy transfer, measured in watts (W), where 1 watt equals 1 joule transferred per second. A bulb converting 60 joules every second has a power rating of 60 W.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-016",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A pendulum bob swings back and forth. At the exact highest point of its swing, just before it starts moving back down, the bob's energy is best described as:",
+      "options": [
+        "Zero kinetic energy and maximum potential energy (at that swing)",
+        "Maximum kinetic energy and zero potential energy",
+        "Maximum kinetic energy and maximum potential energy",
+        "Zero kinetic energy and zero potential energy"
+      ],
+      "correctAnswer": "Zero kinetic energy and maximum potential energy (at that swing)",
+      "explanation": "At the highest point of its swing, the pendulum bob is momentarily at rest (velocity = 0), so its kinetic energy is zero. At the same time, it is at its greatest height for that swing, giving it maximum gravitational potential energy at that point.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-017",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "medium",
+      "question": "A wooden block rests on a slightly tilted ramp without sliding, even though gravity is pulling it down the slope. What force must be balancing the component of gravity along the ramp?",
+      "options": [
+        "Kinetic friction, because the block is moving",
+        "Static friction, resisting the tendency of the block to slide",
+        "Air resistance, which is generally very small",
+        "There is no opposing force; the block simply has zero weight"
+      ],
+      "correctAnswer": "Static friction, resisting the tendency of the block to slide",
+      "explanation": "Static friction can act even when an object is not moving, opposing the tendency toward motion. Here, static friction balances the component of gravity pulling the block down the slope, keeping the block stationary.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-04-018",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "hard",
+      "question": "A 10 kg cart needs to accelerate at 2 m/s² along a floor where a constant friction force of 15 N opposes its motion. What applied force must be exerted on the cart to achieve this acceleration?",
+      "options": [
+        "5 N",
+        "20 N",
+        "35 N",
+        "50 N"
+      ],
+      "correctAnswer": "35 N",
+      "explanation": "The net force needed for the acceleration is F_net = ma = 10 kg × 2 m/s² = 20 N. Since friction opposes the motion with 15 N, the applied force must overcome friction as well as provide the net force: F_applied = F_net + friction = 20 N + 15 N = 35 N.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-04-019",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "hard",
+      "question": "An object moving at velocity v has a kinetic energy of 50 J. If the object's velocity is doubled to 2v while its mass stays the same, what is its new kinetic energy?",
+      "options": [
+        "100 J",
+        "150 J",
+        "250 J",
+        "200 J"
+      ],
+      "correctAnswer": "200 J",
+      "explanation": "Kinetic energy is proportional to the square of velocity (KE = ½ mv²). Doubling the velocity increases KE by a factor of 2² = 4. New KE = 4 × 50 J = 200 J.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-04-020",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "hard",
+      "question": "An object is dropped from a height of 20 m above the ground, starting from rest. Taking g = 10 m/s² and ignoring air resistance, what is the object's speed just before it hits the ground?",
+      "options": [
+        "20 m/s",
+        "10 m/s",
+        "14.1 m/s",
+        "200 m/s"
+      ],
+      "correctAnswer": "20 m/s",
+      "explanation": "By conservation of energy, the potential energy lost equals the kinetic energy gained: mgh = ½ mv², so v = √(2gh) = √(2 × 10 × 20) = √400 = 20 m/s.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-04-021",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "hard",
+      "question": "Crane A lifts a 500 N load a height of 10 m in 25 seconds. Crane B lifts the same 500 N load the same height of 10 m in 20 seconds. Which crane is more powerful, and why?",
+      "options": [
+        "Crane A, because it takes longer to do the same amount of work",
+        "Crane B, because it does the same amount of work in less time",
+        "Both cranes have equal power, since they do equal work",
+        "Crane A, because power depends only on the size of the load"
+      ],
+      "correctAnswer": "Crane B, because it does the same amount of work in less time",
+      "explanation": "Both cranes do the same work: W = 500 N × 10 m = 5000 J. Power for crane A = 5000 J ÷ 25 s = 200 W. Power for crane B = 5000 J ÷ 20 s = 250 W. Since Crane B does the identical work in less time, it has greater power.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-04-022",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "hard",
+      "question": "A 10 kg box sits on a ramp inclined at an angle where sinθ = 0.6 and cosθ = 0.8. The coefficient of friction between the box and ramp is 0.25. Taking g = 10 m/s², what is the box's acceleration as it slides down the ramp?",
+      "options": [
+        "1 m/s²",
+        "2 m/s²",
+        "4 m/s²",
+        "6 m/s²"
+      ],
+      "correctAnswer": "4 m/s²",
+      "explanation": "The component of gravity pulling the box down the ramp is mg sinθ = 10 × 10 × 0.6 = 60 N. The normal force is mg cosθ = 10 × 10 × 0.8 = 80 N, so the friction force opposing motion is 0.25 × 80 = 20 N. Net force down the ramp = 60 − 20 = 40 N. Acceleration = net force ÷ mass = 40 ÷ 10 = 4 m/s².",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-04-023",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "hard",
+      "question": "A horse pulls a cart forward. According to Newton's third law, the cart pulls back on the horse with an equal and opposite force. If these two forces are always equal and opposite, why does the horse-and-cart system still manage to accelerate forward?",
+      "options": [
+        "Because Newton's third law does not actually apply to horses and carts",
+        "Because the cart's backward force on the horse is always weaker than the horse's forward force on the cart",
+        "Because friction between the cart's wheels and the ground always points forward",
+        "Because the two forces act on different objects (the horse and the cart), so they do not cancel out; the ground's forward reaction force on the horse's hooves is what accelerates the system"
+      ],
+      "correctAnswer": "Because the two forces act on different objects (the horse and the cart), so they do not cancel out; the ground's forward reaction force on the horse's hooves is what accelerates the system",
+      "explanation": "Action-reaction pairs act on two different objects, so they never cancel within the same object's motion analysis. The horse pushes backward against the ground with its hooves, and the ground pushes the horse forward in reaction. This forward push from the ground, transmitted through the horse to the cart, is what accelerates the whole system forward.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-04-024",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "hard",
+      "question": "A ball is thrown straight upward from the ground and eventually returns to the ground. At the highest point of its flight, which statement about its mechanical energy is correct (ignoring air resistance)?",
+      "options": [
+        "Kinetic energy is momentarily zero and potential energy is at its maximum",
+        "Kinetic energy is at its maximum and potential energy is zero",
+        "Both kinetic and potential energy are zero at that instant",
+        "Both kinetic and potential energy are at their maximum at that instant"
+      ],
+      "correctAnswer": "Kinetic energy is momentarily zero and potential energy is at its maximum",
+      "explanation": "At the highest point, the ball's velocity is momentarily zero (it is neither moving up nor down), so its kinetic energy is zero. Since this is also the greatest height reached, its gravitational potential energy is at its maximum, consistent with the conservation of total mechanical energy throughout the flight.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-04-025",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Force, Work, Energy and Power",
+      "difficulty": "hard",
+      "question": "An electric water heater in a home, supplied by the Ethiopian Electric Utility, has a power rating of 1000 W and is used continuously for 3 hours. How much electrical energy does it consume, expressed in kilowatt-hours (kWh), the unit typically used for electricity billing?",
+      "options": [
+        "0.33 kWh",
+        "3 kWh",
+        "300 kWh",
+        "3000 kWh"
+      ],
+      "correctAnswer": "3 kWh",
+      "explanation": "Energy consumed = power × time = 1000 W × 3 h = 1 kW × 3 h = 3 kWh. This is the practical unit used on electricity bills, since 1 kWh represents the energy used by a 1000 W appliance running for one hour.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-05-001",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "easy",
+      "question": "In the operation of a simple machine, the term \"load\" refers to:",
+      "options": [
+        "The force applied by the person operating the machine",
+        "The distance the machine moves",
+        "The resistance force or weight that the machine must overcome",
+        "The material the machine is made from"
+      ],
+      "correctAnswer": "The resistance force or weight that the machine must overcome",
+      "explanation": "The load is the weight or resistance force that needs to be overcome or moved using the machine, while the effort is the force applied by the user to operate the machine.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-05-002",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a genuine purpose of using a simple machine?",
+      "options": [
+        "Changing the direction of an applied force",
+        "Multiplying the applied force",
+        "Multiplying the speed or distance covered by the load",
+        "Creating additional energy that was not put into the machine"
+      ],
+      "correctAnswer": "Creating additional energy that was not put into the machine",
+      "explanation": "Simple machines cannot create energy; this would violate the law of conservation of energy. They can only change the direction of a force, multiply force, or multiply speed/distance, always trading one for the other.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-05-003",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "easy",
+      "question": "A pair of scissors has its fulcrum located between the point where the effort is applied (the handles) and the load (the material being cut). This arrangement classifies the scissors as a:",
+      "options": [
+        "First-class lever",
+        "Second-class lever",
+        "Third-class lever",
+        "Not a lever at all"
+      ],
+      "correctAnswer": "First-class lever",
+      "explanation": "In a first-class lever, the fulcrum is positioned between the effort and the load (Load-Fulcrum-Effort or Effort-Fulcrum-Load arrangement). Scissors and seesaws are classic examples.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-05-004",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "easy",
+      "question": "A fixed pulley, attached to a stationary support, is used to lift a bucket of water from a well. If friction is ignored, what is the ideal mechanical advantage of a single fixed pulley, and what is its main benefit?",
+      "options": [
+        "Mechanical advantage is 2; it doubles the lifting force",
+        "Mechanical advantage is 1; its main benefit is changing the direction of the applied force",
+        "Mechanical advantage is 0.5; it makes lifting harder but faster",
+        "Mechanical advantage is greater than 2; it always multiplies force significantly"
+      ],
+      "correctAnswer": "Mechanical advantage is 1; its main benefit is changing the direction of the applied force",
+      "explanation": "A single fixed pulley has an ideal mechanical advantage of 1, meaning the effort needed equals the load. Its main advantage is that it allows a person to pull downward (often easier and using body weight) instead of lifting straight upward, changing the direction of the applied force.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-05-005",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "medium",
+      "question": "A wheelbarrow has its wheel (fulcrum) at one end, the load placed in the middle, and the effort applied at the handles on the other end. This arrangement, where the load lies between the fulcrum and the effort, classifies the wheelbarrow as a:",
+      "options": [
+        "First-class lever",
+        "Third-class lever",
+        "Second-class lever",
+        "Wheel-and-axle machine only, not a lever"
+      ],
+      "correctAnswer": "Second-class lever",
+      "explanation": "In a second-class lever, the load is positioned between the fulcrum and the effort. This arrangement always gives a mechanical advantage greater than 1, making it useful as a force multiplier, as in a wheelbarrow.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-05-006",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "medium",
+      "question": "When using a fishing rod, the angler's hand applies effort partway along the rod, which is between the fixed grip (fulcrum) and the far tip where the fish (load) pulls. This makes the fishing rod an example of a:",
+      "options": [
+        "First-class lever, which always has a mechanical advantage greater than 1",
+        "Second-class lever, which always has a mechanical advantage greater than 1",
+        "Simple pulley, since it involves a flexible line",
+        "Third-class lever, which always has a mechanical advantage less than 1"
+      ],
+      "correctAnswer": "Third-class lever, which always has a mechanical advantage less than 1",
+      "explanation": "In a third-class lever, the effort is applied between the fulcrum and the load. This arrangement always produces a mechanical advantage less than 1 (it requires more effort than the load), but it multiplies the speed and distance moved by the load, useful for fishing rods and human forearms.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-05-007",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "medium",
+      "question": "An inclined plane used as a loading ramp is 5 m long and rises to a height of 1 m. What is the ideal velocity ratio of this ramp?",
+      "options": [
+        "5",
+        "0.2",
+        "1",
+        "6"
+      ],
+      "correctAnswer": "5",
+      "explanation": "The ideal velocity ratio of an inclined plane equals its length divided by its height: VR = length ÷ height = 5 m ÷ 1 m = 5.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-05-008",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "medium",
+      "question": "A wheel-and-axle machine has a wheel of radius 20 cm and an axle of radius 4 cm. What is its ideal mechanical advantage?",
+      "options": [
+        "0.2",
+        "5",
+        "16",
+        "24"
+      ],
+      "correctAnswer": "5",
+      "explanation": "For a wheel and axle, mechanical advantage equals the radius of the wheel divided by the radius of the axle: MA = 20 cm ÷ 4 cm = 5.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-05-009",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "medium",
+      "question": "A wedge, such as an axe head, is driven into a log to split it apart. How does a wedge make this task easier?",
+      "options": [
+        "It reduces the total work needed to split the wood",
+        "It increases the velocity ratio to exactly 1",
+        "It converts the effort applied along its length into a larger force acting perpendicular to its sloped sides, which pushes the wood apart",
+        "It eliminates the need for any applied force"
+      ],
+      "correctAnswer": "It converts the effort applied along its length into a larger force acting perpendicular to its sloped sides, which pushes the wood apart",
+      "explanation": "A wedge works like two inclined planes back-to-back: the force applied along its length is converted into a magnified splitting force acting sideways, perpendicular to its slanted surfaces, which pushes the wood fibers apart.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-05-010",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "medium",
+      "question": "A screw's handle, when turned, has a radius of 7 cm, and the screw has a pitch (distance advanced per turn) of 2 cm. Using π ≈ 22/7, what is the ideal velocity ratio of this screw?",
+      "options": [
+        "11",
+        "44",
+        "88",
+        "22"
+      ],
+      "correctAnswer": "22",
+      "explanation": "The velocity ratio of a screw equals the circumference traced by the handle divided by the pitch: circumference = 2πr = 2 × (22/7) × 7 = 44 cm. VR = circumference ÷ pitch = 44 ÷ 2 = 22.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-05-011",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "medium",
+      "question": "A single movable pulley is attached directly to a load, with the rope running up over a fixed support and back down to the person pulling. Ignoring friction and the weight of the pulley, what is the ideal mechanical advantage of this single movable pulley?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "explanation": "A single movable pulley has an ideal mechanical advantage of 2, because the load is supported by two rope segments, so the effort needed is half the load's weight (though the effort must move twice the distance the load moves).",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-05-012",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "medium",
+      "question": "In every real simple machine, the actual mechanical advantage is always less than the ideal mechanical advantage (equal to the velocity ratio). What is the main reason for this difference?",
+      "options": [
+        "The load is always heavier than expected",
+        "Friction between moving parts and other energy losses consume part of the input effort",
+        "The formula for ideal mechanical advantage is incorrect",
+        "Real machines always have a velocity ratio of exactly 1"
+      ],
+      "correctAnswer": "Friction between moving parts and other energy losses consume part of the input effort",
+      "explanation": "Ideal mechanical advantage assumes a perfectly frictionless machine. In reality, friction between moving parts (and other losses, such as the weight of the machine itself) means some of the input effort is wasted, so the actual mechanical advantage is always lower than the ideal value.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-05-013",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "medium",
+      "question": "Which of the following is the best example of a simple machine commonly used on a construction site to move heavy building materials over short distances with reduced effort?",
+      "options": [
+        "A pair of scissors",
+        "A bottle opener",
+        "A wheelbarrow",
+        "A pencil sharpener"
+      ],
+      "correctAnswer": "A wheelbarrow",
+      "explanation": "A wheelbarrow is a second-class lever widely used at construction sites and farms to move heavy loads such as sand, bricks, or soil, since it multiplies the applied force and reduces the effort needed compared to carrying the load directly.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-05-014",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "hard",
+      "question": "A lever is used to lift a load of 400 N. The load is placed 0.5 m from the fulcrum, and the effort is applied 2 m from the fulcrum. Assuming an ideal (frictionless) lever, what effort is required to lift the load?",
+      "options": [
+        "50 N",
+        "200 N",
+        "1600 N",
+        "100 N"
+      ],
+      "correctAnswer": "100 N",
+      "explanation": "For a lever in balance, load × load-arm = effort × effort-arm. So effort = (load × load-arm) ÷ effort-arm = (400 N × 0.5 m) ÷ 2 m = 200 ÷ 2 = 100 N.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-05-015",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "hard",
+      "question": "A machine has a velocity ratio of 4. A load of 300 N is lifted using an effort of 100 N. What is the efficiency of this machine?",
+      "options": [
+        "75%",
+        "25%",
+        "33.3%",
+        "100%"
+      ],
+      "correctAnswer": "75%",
+      "explanation": "Actual mechanical advantage (AMA) = load ÷ effort = 300 N ÷ 100 N = 3. Efficiency = (AMA ÷ velocity ratio) × 100% = (3 ÷ 4) × 100% = 75%.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-05-016",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "hard",
+      "question": "A compound pulley system has 4 rope segments supporting the load. If an effort of 150 N is used to lift a load of 500 N, what is the efficiency of this pulley system?",
+      "options": [
+        "37.5%",
+        "83.3%",
+        "60%",
+        "75%"
+      ],
+      "correctAnswer": "83.3%",
+      "explanation": "For this compound pulley, the ideal velocity ratio equals the number of supporting rope segments: VR = 4. Actual mechanical advantage = load ÷ effort = 500 ÷ 150 = 3.33. Efficiency = (AMA ÷ VR) × 100% = (3.33 ÷ 4) × 100% ≈ 83.3%.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-05-017",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "hard",
+      "question": "A ramp is used to load furniture onto a truck. If the height of the truck bed stays the same but the length of the ramp is increased, what happens to the velocity ratio of the ramp and the effort needed to push the furniture up at a constant speed (ignoring friction changes)?",
+      "options": [
+        "The velocity ratio decreases, and less effort is needed",
+        "The velocity ratio increases, but more effort is needed",
+        "The velocity ratio increases, and less effort is needed",
+        "Neither the velocity ratio nor the required effort changes"
+      ],
+      "correctAnswer": "The velocity ratio increases, and less effort is needed",
+      "explanation": "Since velocity ratio = length ÷ height, increasing the length while the height stays fixed increases the velocity ratio. For an ideal inclined plane, a higher velocity ratio means a lower required effort (ideal effort = load × height ÷ length), so a longer ramp makes it easier to push the load up, at the cost of pushing it a greater distance.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-05-018",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "hard",
+      "question": "A technician is checking whether a pulley system (velocity ratio = 3.5) is well-lubricated. Well-maintained pulleys of this type are expected to have an efficiency above 85%. During a test, an effort of 100 N is needed to lift a load of 250 N. Based on the calculated efficiency, what should the technician conclude?",
+      "options": [
+        "The pulley is performing well, since its efficiency of about 71% is close to 85%",
+        "The pulley needs maintenance, since its efficiency of exactly 100% is suspiciously high",
+        "No conclusion can be reached without knowing the mass of the pulley itself",
+        "The pulley needs maintenance, since its actual efficiency of about 71% is well below the 85% target"
+      ],
+      "correctAnswer": "The pulley needs maintenance, since its actual efficiency of about 71% is well below the 85% target",
+      "explanation": "Actual mechanical advantage = load ÷ effort = 250 ÷ 100 = 2.5. Efficiency = (AMA ÷ VR) × 100% = (2.5 ÷ 3.5) × 100% ≈ 71.4%. Since this is noticeably below the 85% benchmark for a well-lubricated pulley, the technician should conclude that friction losses are too high and the system likely needs maintenance.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-05-019",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "hard",
+      "question": "A screw jack has a pitch of 5 mm (0.5 cm) and a handle of radius 21 cm. Using π ≈ 22/7, what is the ideal velocity ratio of this screw jack, and what does this large value explain about its use in lifting heavy vehicles?",
+      "options": [
+        "VR = 264; it explains why a very small effort at the handle can lift a much heavier load",
+        "VR = 26.4; it explains why a very small effort at the handle can lift a much heavier load",
+        "VR = 264; it explains why the screw jack requires more effort than the load being lifted",
+        "VR = 2.64; it means the screw jack is not useful for lifting heavy loads"
+      ],
+      "correctAnswer": "VR = 264; it explains why a very small effort at the handle can lift a much heavier load",
+      "explanation": "Circumference of the handle's circular path = 2πr = 2 × (22/7) × 21 = 132 cm. VR = circumference ÷ pitch = 132 ÷ 0.5 = 264. This very high velocity ratio means the handle must travel a huge distance for each small advance of the screw, which is exactly why a screw jack lets a person apply a small effort force to lift a vehicle weighing far more than that effort.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-05-020",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Simple Machines",
+      "difficulty": "hard",
+      "question": "Two machines of the same type are used to lift identical loads to the same height. Machine X has an efficiency of 80%, while Machine Y has an efficiency of 50%. To lift the same load the same distance, which machine requires more input work from the user, and why?",
+      "options": [
+        "Machine X, because higher efficiency means more wasted energy",
+        "Machine Y, because more of its input work is lost to friction and other losses, so more total input work is needed to accomplish the same useful output work",
+        "Both machines require exactly the same input work, since the load and height are identical",
+        "Machine X, because higher efficiency always requires more effort force"
+      ],
+      "correctAnswer": "Machine Y, because more of its input work is lost to friction and other losses, so more total input work is needed to accomplish the same useful output work",
+      "explanation": "Efficiency = useful output work ÷ total input work. Since both machines must produce the same useful output work (lifting the same load the same height), the less efficient machine (Machine Y, at 50%) must have more total input work supplied to it, since a larger fraction of that input is wasted to friction and other losses.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-06-001",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "easy",
+      "question": "A vibrating object completes 5 full oscillations every second (frequency = 5 Hz). What is the period of this oscillation?",
+      "options": [
+        "0.02 s",
+        "2 s",
+        "0.2 s",
+        "5 s"
+      ],
+      "correctAnswer": "0.2 s",
+      "explanation": "Period and frequency are reciprocals of each other: T = 1 ÷ f = 1 ÷ 5 Hz = 0.2 s.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-06-002",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "easy",
+      "question": "For a simple pendulum swinging with a small angle, which of the following factors does NOT significantly affect its period of oscillation?",
+      "options": [
+        "The length of the pendulum",
+        "The local acceleration due to gravity",
+        "Both the length and gravity together",
+        "The mass of the pendulum bob"
+      ],
+      "correctAnswer": "The mass of the pendulum bob",
+      "explanation": "The period of a simple pendulum depends on its length and the local gravitational acceleration, but not on the mass of the bob. Two pendulums of the same length but different bob masses will swing with the same period.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-06-003",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "easy",
+      "question": "Sound waves traveling through air are classified as longitudinal waves because:",
+      "options": [
+        "The air particles vibrate back and forth parallel to the direction the wave travels, creating compressions and rarefactions",
+        "The air particles vibrate perpendicular to the direction the wave travels",
+        "Sound waves do not require a medium to travel",
+        "The wave carries matter along with it as it travels"
+      ],
+      "correctAnswer": "The air particles vibrate back and forth parallel to the direction the wave travels, creating compressions and rarefactions",
+      "explanation": "In a longitudinal wave, the particles of the medium oscillate parallel to the direction of wave travel, alternately bunching together (compressions) and spreading apart (rarefactions), which is exactly how sound propagates through air.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-06-004",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "medium",
+      "question": "A mass is attached to a spring and set into vertical oscillation. If a heavier mass is attached to the same spring and set oscillating in the same way, what happens to the period of oscillation?",
+      "options": [
+        "The period decreases, since heavier objects oscillate faster",
+        "The period increases, since a greater mass oscillates more slowly on the same spring",
+        "The period stays exactly the same regardless of mass",
+        "The spring stops oscillating entirely with a heavier mass"
+      ],
+      "correctAnswer": "The period increases, since a greater mass oscillates more slowly on the same spring",
+      "explanation": "For a mass-spring system, a larger mass has more inertia and completes each oscillation more slowly, increasing the period, assuming the spring itself (its stiffness) stays the same.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-06-005",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "medium",
+      "question": "A sound wave has a frequency of 250 Hz and a wavelength of 1.36 m. What is the speed of this sound wave?",
+      "options": [
+        "0.0054 m/s",
+        "184 m/s",
+        "340 m/s",
+        "251.36 m/s"
+      ],
+      "correctAnswer": "340 m/s",
+      "explanation": "Wave speed = frequency × wavelength = 250 Hz × 1.36 m = 340 m/s, which matches the typical speed of sound in air.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-06-006",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "medium",
+      "question": "A student shouts toward a large, hard, flat cliff face and toward a thick curtain hung in an open field, from the same distance. From which surface is a clear echo most likely to be heard, and why?",
+      "options": [
+        "The curtain, because soft materials reflect sound more strongly",
+        "Both surfaces produce an equally strong echo",
+        "Neither surface can produce an echo, since echoes only occur underwater",
+        "The cliff face, because a hard, rigid surface reflects sound waves strongly, while a soft curtain absorbs much of the sound energy"
+      ],
+      "correctAnswer": "The cliff face, because a hard, rigid surface reflects sound waves strongly, while a soft curtain absorbs much of the sound energy",
+      "explanation": "A clear echo requires strong reflection of sound waves, which happens best off hard, rigid, flat surfaces like a cliff face. Soft, porous materials such as curtains absorb sound energy rather than reflecting it, greatly weakening or eliminating any echo.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-06-007",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "medium",
+      "question": "On a clear night, air near the ground is often cooler than the air higher up, the opposite of a typical daytime pattern. This temperature layering causes sound waves to bend back down toward the ground as they travel. As a result, sound at night often:",
+      "options": [
+        "Can be heard over a greater distance than during the day, because refraction bends the sound back toward listeners",
+        "Cannot travel through air at all",
+        "Travels a shorter distance and becomes fainter than during the day",
+        "Changes from a longitudinal wave into a transverse wave"
+      ],
+      "correctAnswer": "Can be heard over a greater distance than during the day, because refraction bends the sound back toward listeners",
+      "explanation": "Sound waves refract (bend) when passing through air layers of different temperature. At night, the cooler air near the ground causes sound waves to bend back downward instead of spreading upward and away, which is why sounds often carry farther and seem louder at night.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-06-008",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "medium",
+      "question": "A person can often hear another person talking around the corner of a building, even without being able to see them. This is best explained by which property of sound waves?",
+      "options": [
+        "Reflection of sound waves off the listener's ear",
+        "Diffraction, since sound's relatively long wavelengths allow it to bend noticeably around obstacles and corners",
+        "Interference between two identical sound sources",
+        "The Doppler effect caused by the listener's motion"
+      ],
+      "correctAnswer": "Diffraction, since sound's relatively long wavelengths allow it to bend noticeably around obstacles and corners",
+      "explanation": "Diffraction is the bending of waves around obstacles or through openings, and it is most noticeable when the wavelength is comparable to or larger than the size of the obstacle. Sound waves have relatively long wavelengths, so they diffract strongly, allowing sound to bend around corners far more than visible light does.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-06-009",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "medium",
+      "question": "Two loudspeakers emit sound waves of the same frequency. At certain points in a room, the waves arrive perfectly in step and reinforce each other, while at other points they arrive out of step and largely cancel each other out. This phenomenon, which explains why some seats in an auditorium sound louder than others, is called:",
+      "options": [
+        "Reflection",
+        "Diffraction",
+        "Interference",
+        "Resonance frequency shifting"
+      ],
+      "correctAnswer": "Interference",
+      "explanation": "Interference occurs when two or more waves overlap. Where the waves are in phase, they add together constructively (louder sound); where they are out of phase, they combine destructively (quieter or silent regions). This produces the pattern of louder and quieter spots sometimes noticeable in large rooms.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-06-010",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "medium",
+      "question": "When a standing wave forms on a vibrating string, certain points along the string never move (zero displacement at all times), while other points oscillate with the largest possible amplitude. These points are called, respectively:",
+      "options": [
+        "Antinodes and nodes",
+        "Compressions and rarefactions",
+        "Crests and troughs",
+        "Nodes and antinodes"
+      ],
+      "correctAnswer": "Nodes and antinodes",
+      "explanation": "In a standing wave, nodes are fixed points of zero displacement that never move, formed by destructive interference, while antinodes are points of maximum displacement, formed by constructive interference between the incident and reflected waves.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-06-011",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "medium",
+      "question": "A small bell produces a high-frequency sound, while a large drum produces a low-frequency sound. The main difference a listener perceives between these two sounds, caused directly by their difference in frequency, is a difference in:",
+      "options": [
+        "Pitch",
+        "Loudness",
+        "Timbre only, not pitch",
+        "Speed of sound in air"
+      ],
+      "correctAnswer": "Pitch",
+      "explanation": "Pitch is the characteristic of sound directly determined by frequency: higher frequency sounds are perceived as having a higher pitch, and lower frequency sounds as having a lower pitch.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-06-012",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "medium",
+      "question": "Turning up the volume knob on a speaker increases the amplitude of the sound wave it produces, without significantly changing its frequency. What effect does this have on the sound?",
+      "options": [
+        "The pitch increases, but the loudness stays the same",
+        "The loudness increases, but the pitch stays essentially the same",
+        "Both the pitch and the loudness increase equally",
+        "Neither the pitch nor the loudness is affected"
+      ],
+      "correctAnswer": "The loudness increases, but the pitch stays essentially the same",
+      "explanation": "Loudness is determined mainly by the amplitude of a sound wave, while pitch is determined by frequency. Increasing the volume increases amplitude (and therefore loudness) without necessarily changing the frequency (and therefore the pitch).",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-06-013",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "hard",
+      "question": "A person places their ear on a metal railway track and can hear an approaching train's sound through the metal before hearing it through the air. This is best explained by the fact that:",
+      "options": [
+        "Sound cannot travel through air at all, only through solids",
+        "Metal absorbs sound completely, so no sound reaches the ear through the air",
+        "Sound generally travels faster through solids than through air, because particles in a solid are closely packed and transmit vibrations more efficiently",
+        "The train's sound only exists inside the metal rail"
+      ],
+      "correctAnswer": "Sound generally travels faster through solids than through air, because particles in a solid are closely packed and transmit vibrations more efficiently",
+      "explanation": "The speed of sound depends on the medium: it travels fastest through solids, slower through liquids, and slowest through gases, because the closely packed, strongly bonded particles in a solid transmit vibrations from one particle to the next more quickly than the widely spaced particles in air.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-06-014",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "hard",
+      "question": "A student measures a sound wave's frequency as 340 Hz and its wavelength as 1 m. Using the wave speed equation, is this measurement consistent with the known speed of sound in air at room temperature (approximately 343 m/s)?",
+      "options": [
+        "No, because the calculated speed (0.34 m/s) is far too slow for sound in air",
+        "No, because the calculated speed (34,000 m/s) is far too fast for sound in air",
+        "It cannot be determined without knowing the amplitude of the wave",
+        "Yes, because the calculated speed (340 m/s) closely matches the known speed of sound in air"
+      ],
+      "correctAnswer": "Yes, because the calculated speed (340 m/s) closely matches the known speed of sound in air",
+      "explanation": "Using v = fλ: v = 340 Hz × 1 m = 340 m/s. This value is very close to the accepted speed of sound in air at room temperature (about 343 m/s), so the measurement is consistent and reasonable.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-06-015",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Mechanical Oscillation and Sound Waves",
+      "difficulty": "hard",
+      "question": "A masenqo (a traditional Ethiopian single-stringed instrument) and a guitar are each played to produce a note with the exact same frequency and the exact same loudness. Listeners can still easily tell the two instruments apart. Which property of sound allows listeners to distinguish between them?",
+      "options": [
+        "Timbre, which arises from differences in the waveform and overtone content produced by each instrument, even at the same pitch and loudness",
+        "Pitch, since the two instruments must be producing different frequencies",
+        "Loudness, since one instrument must be producing a louder sound",
+        "Wavelength, since sound waves from different instruments always travel at different speeds"
+      ],
+      "correctAnswer": "Timbre, which arises from differences in the waveform and overtone content produced by each instrument, even at the same pitch and loudness",
+      "explanation": "Timbre (sound quality) is the characteristic that lets us distinguish between two sounds of the same pitch and loudness. It arises because different instruments produce different combinations of overtones layered on top of the fundamental frequency, giving each instrument a distinctive waveform and \"color\" of sound.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-07-001",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "easy",
+      "question": "A liquid has a temperature of 25°C. What is this temperature expressed on the Kelvin scale?",
+      "options": [
+        "25 K",
+        "298 K",
+        "248 K",
+        "525 K"
+      ],
+      "correctAnswer": "298 K",
+      "explanation": "To convert Celsius to Kelvin, add 273: K = °C + 273 = 25 + 273 = 298 K.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-07-002",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "easy",
+      "question": "Two cups of water start at the exact same temperature of 90°C. One cup is left uncovered in a cold room and quickly transfers a large amount of energy to its surroundings as it cools, while the other is placed in an insulated flask and cools very slowly, transferring far less energy in the same time. What does this scenario best illustrate about temperature and heat?",
+      "options": [
+        "Temperature and heat are simply two names for the same physical quantity",
+        "The insulated cup must actually be at a higher temperature than the uncovered cup",
+        "Two objects can start at the same temperature yet transfer very different amounts of heat energy, showing that temperature (a measure of hotness) and heat (energy transferred) are distinct concepts",
+        "Heat can only flow between objects that are at different temperatures from the very start"
+      ],
+      "correctAnswer": "Two objects can start at the same temperature yet transfer very different amounts of heat energy, showing that temperature (a measure of hotness) and heat (energy transferred) are distinct concepts",
+      "explanation": "Both cups start at the same temperature, but the insulated cup loses much less energy over the same time because insulation slows heat transfer. This shows that temperature (how hot an object is) and heat (the energy that flows due to a temperature difference and the surrounding conditions) are different physical concepts.",
+      "xp": 10
+    },
+    {
+      "id": "PHY-09-07-003",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "medium",
+      "question": "A weather report states the temperature is 68°F. What is this temperature in degrees Celsius?",
+      "options": [
+        "15.6°C",
+        "36°C",
+        "154.4°C",
+        "20°C"
+      ],
+      "correctAnswer": "20°C",
+      "explanation": "Using the conversion formula: °C = (°F − 32) × 5/9 = (68 − 32) × 5/9 = 36 × 5/9 = 20°C.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-07-004",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "medium",
+      "question": "A scientist needs to measure a temperature that is expected to drop below −40°C during an experiment. Why would an alcohol thermometer be a better choice than a mercury thermometer for this task?",
+      "options": [
+        "Mercury freezes at about −39°C, so it would solidify and fail to register temperatures below that point, while alcohol remains liquid down to about −115°C",
+        "Alcohol thermometers are always more accurate than mercury thermometers",
+        "Alcohol expands less than mercury, making it safer to use",
+        "Mercury thermometers cannot be read at any temperature below 0°C"
+      ],
+      "correctAnswer": "Mercury freezes at about −39°C, so it would solidify and fail to register temperatures below that point, while alcohol remains liquid down to about −115°C",
+      "explanation": "Mercury has a freezing point of about −39°C, so it cannot be used to measure temperatures colder than that. Alcohol has a much lower freezing point (around −115°C), making alcohol thermometers suitable for measuring very cold temperatures.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-07-005",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "medium",
+      "question": "An engineer needs to continuously monitor the very high temperature inside an industrial furnace, far too hot for a mercury or alcohol thermometer to survive. Which type of thermometer is best suited for this purpose, and how does it work?",
+      "options": [
+        "A resistance thermometer, which relies on a change in electrical resistance with temperature",
+        "A thermocouple, which generates a small voltage from the temperature difference between the junction of two different metals",
+        "A radiation thermometer, which can only be used on objects at room temperature",
+        "An ordinary liquid-in-glass thermometer, since it can withstand any temperature"
+      ],
+      "correctAnswer": "A thermocouple, which generates a small voltage from the temperature difference between the junction of two different metals",
+      "explanation": "A thermocouple consists of two different metal wires joined together; the junction generates a small voltage that depends on the temperature there. Thermocouples can withstand and measure very high temperatures, such as inside furnaces or engines, where liquid thermometers would be destroyed.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-07-006",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "medium",
+      "question": "A thermistor used in a digital medical thermometer measures small, precise changes in body temperature. On what physical principle does a thermistor rely?",
+      "options": [
+        "The expansion and contraction of a liquid inside a glass tube",
+        "The color change of a special chemical coating",
+        "A change in electrical resistance of the sensor material as temperature changes",
+        "The emission of infrared radiation from the patient's skin"
+      ],
+      "correctAnswer": "A change in electrical resistance of the sensor material as temperature changes",
+      "explanation": "A thermistor (and resistance thermometers more generally) works because the electrical resistance of certain materials changes in a predictable way with temperature, allowing precise measurement of small temperature changes.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-07-007",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "medium",
+      "question": "Geologists studying molten lava at the Erta Ale volcano in Ethiopia's Danakil Depression need to measure its extremely high temperature without physically touching it. Which type of thermometer is most suitable for this task?",
+      "options": [
+        "A mercury-in-glass thermometer",
+        "An alcohol thermometer",
+        "A resistance thermometer placed directly into the lava",
+        "A radiation thermometer (pyrometer), which detects emitted infrared radiation from a distance"
+      ],
+      "correctAnswer": "A radiation thermometer (pyrometer), which detects emitted infrared radiation from a distance",
+      "explanation": "A radiation thermometer (pyrometer) measures temperature remotely by detecting the infrared radiation emitted by a hot object, without needing direct contact. This makes it ideal for measuring extremely hot or dangerous/inaccessible objects, such as molten lava.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-07-008",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "medium",
+      "question": "A metal rod with an original length of 2 m has a coefficient of linear expansion of 1.2 × 10⁻⁵ per °C. If its temperature increases by 50°C, what is the increase in its length?",
+      "options": [
+        "0.0012 m",
+        "0.0006 m",
+        "0.06 m",
+        "1.2 m"
+      ],
+      "correctAnswer": "0.0012 m",
+      "explanation": "Using the linear expansion formula: ΔL = L₀ × α × ΔT = 2 m × (1.2 × 10⁻⁵ /°C) × 50°C = 2 × 1.2 × 50 × 10⁻⁵ = 120 × 10⁻⁵ = 0.0012 m (1.2 mm).",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-07-009",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "medium",
+      "question": "Engineers deliberately leave small gaps between sections of railway track and expansion joints in bridges. What is the main physical reason for including these gaps?",
+      "options": [
+        "To reduce the total mass of the structure",
+        "To allow the metal to expand in hot weather without buckling or warping the structure",
+        "To make the structure lighter and cheaper to build",
+        "To allow water to drain away more easily"
+      ],
+      "correctAnswer": "To allow the metal to expand in hot weather without buckling or warping the structure",
+      "explanation": "Metals expand when heated. Without small gaps to accommodate this thermal expansion, railway tracks and bridges could buckle, crack, or become badly warped as temperatures rise, especially during hot weather.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-07-010",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "medium",
+      "question": "When reading the temperature on a liquid-in-glass thermometer, why should the observer's eye be positioned exactly level with the top of the liquid column, rather than looking down or up at an angle?",
+      "options": [
+        "Looking from an angle always makes the reading appear lower than it truly is",
+        "The angle of viewing changes the actual temperature of the liquid",
+        "Looking from an angle can cause a parallax error, making the reading appear either higher or lower than the true value",
+        "Thermometers can only be read correctly in direct sunlight"
+      ],
+      "correctAnswer": "Looking from an angle can cause a parallax error, making the reading appear either higher or lower than the true value",
+      "explanation": "Viewing a scale from an angle rather than straight-on causes parallax error, which can make the reading appear shifted up or down from the true value depending on the direction of the viewing angle. Reading directly at eye level avoids this error.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-07-011",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "medium",
+      "question": "Roads and pavements often develop cracks over time, especially in regions with large daily temperature swings between hot afternoons and cool nights. What is the most likely physical cause of this cracking?",
+      "options": [
+        "The road material chemically reacts with sunlight",
+        "Roads only crack due to the weight of vehicles, never due to temperature",
+        "Cracking is caused by the road absorbing too much water",
+        "Repeated cycles of thermal expansion (heat) and contraction (cooling) gradually weaken and crack the material"
+      ],
+      "correctAnswer": "Repeated cycles of thermal expansion (heat) and contraction (cooling) gradually weaken and crack the material",
+      "explanation": "Repeated expansion during heat and contraction during cooling puts continual stress on road materials. Over many cycles, this thermal stress fatigues the material and can cause cracks to form, especially in climates with large day-to-night temperature differences.",
+      "xp": 15
+    },
+    {
+      "id": "PHY-09-07-012",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "hard",
+      "question": "An outdoor temperature reading of −10°F is recorded during an unusually cold event. What is this temperature expressed on the Kelvin scale (rounded to the nearest whole number)?",
+      "options": [
+        "250 K",
+        "233 K",
+        "263 K",
+        "283 K"
+      ],
+      "correctAnswer": "250 K",
+      "explanation": "First convert Fahrenheit to Celsius: °C = (−10 − 32) × 5/9 = (−42) × 5/9 ≈ −23.3°C. Then convert to Kelvin: K = °C + 273 ≈ −23.3 + 273 ≈ 249.7 K, which rounds to 250 K.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-07-013",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "hard",
+      "question": "Two metal rods of equal original length (2 m) are heated through the same temperature increase of 100°C. Rod A has a coefficient of linear expansion of 1.2 × 10⁻⁵/°C, while Rod B has a coefficient of 2.4 × 10⁻⁵/°C. How does the expansion of Rod B compare to that of Rod A?",
+      "options": [
+        "Rod B expands half as much as Rod A",
+        "Rod B expands twice as much as Rod A",
+        "Rod B expands the same amount as Rod A",
+        "Rod B does not expand at all, since it has a larger coefficient"
+      ],
+      "correctAnswer": "Rod B expands twice as much as Rod A",
+      "explanation": "ΔL = L₀αΔT for both rods, with the same L₀ and ΔT. Rod A: ΔL = 2 × 1.2×10⁻⁵ × 100 = 0.0024 m. Rod B: ΔL = 2 × 2.4×10⁻⁵ × 100 = 0.0048 m. Since Rod B's coefficient of expansion is exactly double Rod A's, and all other factors are equal, Rod B expands exactly twice as much as Rod A.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-07-014",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "hard",
+      "question": "On a cold morning in the Ethiopian highlands, a metal gate handle feels noticeably colder to the touch than a nearby wooden fence post, even though both objects have been outside all night and are at the same air temperature. What is the best physical explanation for this?",
+      "options": [
+        "The metal handle is actually at a lower temperature than the wooden post",
+        "Wood absorbs heat from the air faster than metal does",
+        "Metal has a much higher thermal conductivity than wood, so it conducts heat away from the hand much faster, making it feel colder even at the same temperature",
+        "The difference is only due to differences in color between the two materials"
+      ],
+      "correctAnswer": "Metal has a much higher thermal conductivity than wood, so it conducts heat away from the hand much faster, making it feel colder even at the same temperature",
+      "explanation": "Both objects are at the same actual temperature, but metal is a much better conductor of heat than wood. Touching the metal draws heat away from the hand rapidly, creating a stronger sensation of cold, even though the wood is not actually any warmer.",
+      "xp": 20
+    },
+    {
+      "id": "PHY-09-07-015",
+      "grade": 9,
+      "subject": "Physics",
+      "topic": "Temperature and Thermometry",
+      "difficulty": "hard",
+      "question": "Explain why a temperature of −50 K (negative fifty kelvin) is considered physically impossible, connecting this to the nature of the Kelvin scale.",
+      "options": [
+        "Because Kelvin is only used for measuring extremely hot temperatures, never cold ones",
+        "Because negative numbers cannot be used in any scientific measurement",
+        "Because −50 K would actually correspond to a positive Celsius temperature, which is not allowed",
+        "Because the Kelvin scale is an absolute (ratio) scale whose zero point represents the theoretical minimum possible thermal energy (absolute zero), so no temperature can exist below it"
+      ],
+      "correctAnswer": "Because the Kelvin scale is an absolute (ratio) scale whose zero point represents the theoretical minimum possible thermal energy (absolute zero), so no temperature can exist below it",
+      "explanation": "Unlike Celsius or Fahrenheit, which have arbitrarily chosen zero points, the Kelvin scale is an absolute (ratio) scale where 0 K represents absolute zero, the theoretical state of minimum possible thermal energy. Since there is no physical state with less energy than absolute zero, temperatures below 0 K are not physically meaningful.",
+      "xp": 20
+    }
+  ]
+}

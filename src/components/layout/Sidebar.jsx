@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Book, BookOpen, Timer, Trophy, Sparkles, Zap, User, ChevronLeft, ChevronRight, GraduationCap, FolderTree, Gamepad2, ShoppingBag, Settings } from '@/components/ui/icons';
+import { LayoutDashboard, PenWriting, BookOpen, Timer, Trophy, Sparkles, Zap, User, ChevronLeft, ChevronRight, GraduationCap, FolderTree, Gamepad2, ShoppingBag, Settings } from '@/components/ui/icons';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { GRADES, SUBJECT_LABELS } from '@/lib/subjects';
@@ -9,7 +9,7 @@ import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const navItems = [
   { path: '/dashboard', icon: LayoutDashboard, label: 'Home' },
-  { path: '/quests', icon: Book, label: 'Assignments' },
+  { path: '/quiz-me', icon: PenWriting, label: 'Quiz Me' },
   { path: '/focus', icon: Timer, label: 'Focus' },
   { path: '/raids', icon: Zap, label: 'Challenges' },
   { path: '/ai-tools', icon: Sparkles, label: 'AXO AI' },
@@ -24,7 +24,7 @@ const navItems = [
 // Each route gets its own distinct motion so the active icon stands out.
 const ICON_ANIMS = {
   '/dashboard': { scale: [1, 1.15, 1] },                          // Home: breathing pulse
-  '/quests': { x: [0, -2.5, 2.5, 0] },                            // Assignments: paper wiggle
+  '/quiz-me': { x: [0, -2.5, 2.5, 0] },                           // Quiz Me: pen-writing wiggle
   '/focus': { rotate: [0, -8, 8, 0] },                            // Focus: timer rock
   '/raids': { opacity: [1, 0.35, 1], scale: [1, 1.06, 1] },       // Challenges: zap flash
   '/ai-tools': { scale: [1, 1.22, 1], rotate: [0, 12, -12, 0] },  // AXO: sparkle pop
@@ -37,7 +37,7 @@ const ICON_ANIMS = {
 
 const ICON_TRANSITIONS = {
   '/dashboard': { duration: 2, repeat: Infinity, ease: 'easeInOut' },
-  '/quests': { duration: 1.5, repeat: Infinity, ease: 'easeInOut' },
+  '/quiz-me': { duration: 1.5, repeat: Infinity, ease: 'easeInOut' },
   '/focus': { duration: 1.8, repeat: Infinity, ease: 'easeInOut' },
   '/raids': { duration: 0.9, repeat: Infinity, ease: 'easeInOut' },
   '/ai-tools': { duration: 1.6, repeat: Infinity, ease: 'easeInOut' },

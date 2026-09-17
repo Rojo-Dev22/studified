@@ -1,0 +1,2047 @@
+{
+  "subject": "Chemistry",
+  "grade": 9,
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": "CHEM-09-01-001",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "Chemistry is the study of",
+      "options": [
+        "Only living organisms",
+        "Matter, its properties and the changes it undergoes",
+        "Only motion",
+        "Only landforms"
+      ],
+      "correctAnswer": "Matter, its properties and the changes it undergoes",
+      "explanation": "Chemistry investigates matter, its properties, composition and changes.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-002",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "The branch that studies carbon-containing compounds is",
+      "options": [
+        "Organic chemistry",
+        "Analytical chemistry",
+        "Physical geography",
+        "Inorganic chemistry"
+      ],
+      "correctAnswer": "Organic chemistry",
+      "explanation": "Organic chemistry focuses on carbon-containing compounds.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-003",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "A chemist identifies the concentration of a substance in a sample. This is most closely related to",
+      "options": [
+        "Organic chemistry",
+        "Astronomy",
+        "Botany",
+        "Analytical chemistry"
+      ],
+      "correctAnswer": "Analytical chemistry",
+      "explanation": "Analytical chemistry involves identification and measurement of substances.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-01-004",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "Biochemistry is especially concerned with",
+      "options": [
+        "Only metals",
+        "Only rocks",
+        "Chemical processes in living organisms",
+        "Only weather"
+      ],
+      "correctAnswer": "Chemical processes in living organisms",
+      "explanation": "Biochemistry examines chemical processes and substances in living systems.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-01-005",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "hard",
+      "question": "Chemistry has a close relationship with physics because both study",
+      "options": [
+        "Only biological classification",
+        "Matter and energy and the interactions between them",
+        "Only population growth",
+        "Only cultural practices"
+      ],
+      "correctAnswer": "Matter and energy and the interactions between them",
+      "explanation": "Chemistry and physics overlap in the study of matter, energy and interactions.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-01-006",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "A fertilizer industry uses chemical knowledge to improve crop production. This demonstrates chemistry’s role in",
+      "options": [
+        "Production and agriculture",
+        "Map drawing",
+        "Taxonomy",
+        "Foreign policy"
+      ],
+      "correctAnswer": "Production and agriculture",
+      "explanation": "Chemistry supports industrial and agricultural production.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-007",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "Which Ethiopian industry most directly depends on chemical processing?",
+      "options": [
+        "Map surveying",
+        "Wildlife observation",
+        "Road traffic control",
+        "Cement production"
+      ],
+      "correctAnswer": "Cement production",
+      "explanation": "Cement production involves chemical transformations of raw materials.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-008",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "Inorganic chemistry mainly concerns",
+      "options": [
+        "Only ecosystems",
+        "Only human behavior",
+        "Substances other than most carbon-based organic compounds",
+        "Only monetary systems"
+      ],
+      "correctAnswer": "Substances other than most carbon-based organic compounds",
+      "explanation": "Inorganic chemistry broadly studies inorganic substances.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-01-009",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "Chemistry contributes to society by",
+      "options": [
+        "Eliminating every disease",
+        "Developing materials, medicines and processes",
+        "Replacing all other sciences",
+        "Preventing measurement"
+      ],
+      "correctAnswer": "Developing materials, medicines and processes",
+      "explanation": "Chemical knowledge supports useful products and processes.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-01-010",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "hard",
+      "question": "A scientist studies how heat affects a reaction rate. This question connects chemistry with",
+      "options": [
+        "Physical science principles",
+        "Only literature",
+        "Only history",
+        "Only civics"
+      ],
+      "correctAnswer": "Physical science principles",
+      "explanation": "Chemical reactions involve matter and energy, linking chemistry with physical science.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-01-011",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "Which activity best demonstrates chemistry in everyday life?",
+      "options": [
+        "Measuring political participation",
+        "Classifying languages",
+        "Drawing a map scale",
+        "Understanding how soap interacts with grease and water"
+      ],
+      "correctAnswer": "Understanding how soap interacts with grease and water",
+      "explanation": "Soap and cleaning involve chemical interactions and properties.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-012",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "Chemical industries are important because they",
+      "options": [
+        "Make raw materials unlimited",
+        "Remove the need for safety",
+        "Transform raw materials into useful products",
+        "Prevent innovation"
+      ],
+      "correctAnswer": "Transform raw materials into useful products",
+      "explanation": "Chemical industries convert substances into useful goods.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-013",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "A medicine is designed to interact with a biological target. This most clearly shows the relationship between chemistry and",
+      "options": [
+        "Geology only",
+        "Biology",
+        "Cartography only",
+        "Economics only"
+      ],
+      "correctAnswer": "Biology",
+      "explanation": "Medicinal chemistry relies on chemical understanding of biological systems.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-01-014",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "Why is chemistry considered a natural science?",
+      "options": [
+        "It uses observation and experiment to study matter and its changes",
+        "It depends only on opinion",
+        "It avoids measurement",
+        "It studies laws only abstractly"
+      ],
+      "correctAnswer": "It uses observation and experiment to study matter and its changes",
+      "explanation": "Chemistry uses empirical methods to investigate natural substances and transformations.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-01-015",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "hard",
+      "question": "A student links chemistry knowledge to environmental pollution control. This demonstrates chemistry’s",
+      "options": [
+        "Separation from society",
+        "Irrelevance to production",
+        "Dependence on guessing",
+        "Practical societal application"
+      ],
+      "correctAnswer": "Practical societal application",
+      "explanation": "Chemical knowledge can help address environmental and societal problems.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-01-016",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "A chemist measures the composition of an unknown sample to determine which substances are present. The work is closest to",
+      "options": [
+        "Organic chemistry",
+        "Biochemistry only",
+        "Analytical chemistry",
+        "Geography"
+      ],
+      "correctAnswer": "Analytical chemistry",
+      "explanation": "Analytical chemistry focuses on identifying and measuring substances.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-017",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "Studying the chemical reactions that occur in muscles is an example of",
+      "options": [
+        "Inorganic chemistry only",
+        "Biochemistry",
+        "Cartography",
+        "Macroeconomics"
+      ],
+      "correctAnswer": "Biochemistry",
+      "explanation": "Muscle processes are chemical processes in living organisms.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-018",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "The study of how a medicine changes during storage connects chemistry to",
+      "options": [
+        "Pharmaceutical production and quality control",
+        "Road construction",
+        "Taxonomy",
+        "Population census"
+      ],
+      "correctAnswer": "Pharmaceutical production and quality control",
+      "explanation": "Chemical stability matters in medicines and their production.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-01-019",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "A process that changes raw petroleum into useful fuels mainly illustrates chemistry’s role in",
+      "options": [
+        "Biological classification",
+        "Map projection",
+        "Civic education",
+        "Industrial production"
+      ],
+      "correctAnswer": "Industrial production",
+      "explanation": "Chemical processing converts raw materials into useful products.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-01-020",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "hard",
+      "question": "A scientist uses chemistry to develop a safer water-treatment material. This demonstrates chemistry’s contribution to",
+      "options": [
+        "Only sports",
+        "Only language study",
+        "Public health and environmental management",
+        "Only political voting"
+      ],
+      "correctAnswer": "Public health and environmental management",
+      "explanation": "Chemical knowledge can be applied to water treatment and environmental health.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-01-021",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "The branch most concerned with physical properties, energy changes and reaction behavior is",
+      "options": [
+        "Taxonomy",
+        "Physical chemistry",
+        "Anatomy",
+        "Geography"
+      ],
+      "correctAnswer": "Physical chemistry",
+      "explanation": "Physical chemistry examines relationships among matter, energy and chemical change.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-022",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "easy",
+      "question": "A chemist studies metal compounds that do not primarily consist of carbon frameworks. This is mainly",
+      "options": [
+        "Inorganic chemistry",
+        "Organic chemistry",
+        "Biochemistry",
+        "Ecology"
+      ],
+      "correctAnswer": "Inorganic chemistry",
+      "explanation": "Inorganic chemistry studies many elements and compounds outside the main scope of organic chemistry.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-01-023",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "Chemistry supports agriculture when it is used to understand",
+      "options": [
+        "Map symbols",
+        "Population pyramids",
+        "Foreign treaties",
+        "Fertilizers and soil nutrients"
+      ],
+      "correctAnswer": "Fertilizers and soil nutrients",
+      "explanation": "Chemical knowledge helps analyze nutrients and agricultural inputs.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-01-024",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemistry and its importance",
+      "difficulty": "medium",
+      "question": "The safest conclusion from chemistry’s relationship with other sciences is that",
+      "options": [
+        "Chemistry is independent of all sciences",
+        "Chemistry replaces biology",
+        "Chemical problems can require knowledge from several scientific fields",
+        "Chemistry studies only laboratory glassware"
+      ],
+      "correctAnswer": "Chemical problems can require knowledge from several scientific fields",
+      "explanation": "Chemistry overlaps with physics, biology and other sciences in many applications.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-001",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "The SI base unit for mass is",
+      "options": [
+        "Gram",
+        "Kilogram",
+        "Milligram",
+        "Newton"
+      ],
+      "correctAnswer": "Kilogram",
+      "explanation": "The SI base unit of mass is the kilogram.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-002",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "The SI unit of length is",
+      "options": [
+        "Meter",
+        "Liter",
+        "Second",
+        "Joule"
+      ],
+      "correctAnswer": "Meter",
+      "explanation": "The SI base unit of length is the meter.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-003",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "Which is a derived SI unit?",
+      "options": [
+        "Meter",
+        "Second",
+        "Kilogram",
+        "Newton"
+      ],
+      "correctAnswer": "Newton",
+      "explanation": "The newton is a derived unit equal to kg·m/s².",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-004",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "The prefix kilo- represents",
+      "options": [
+        "10⁻³",
+        "10⁶",
+        "10³",
+        "10⁻⁶"
+      ],
+      "correctAnswer": "10³",
+      "explanation": "Kilo- means one thousand, or 10³.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-005",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "hard",
+      "question": "A measurement that is close to the accepted value is described as",
+      "options": [
+        "Precise only",
+        "Accurate",
+        "Random",
+        "Systematic"
+      ],
+      "correctAnswer": "Accurate",
+      "explanation": "Accuracy refers to closeness to the accepted or true value.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-02-006",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "Repeated measurements that are close to one another show high",
+      "options": [
+        "Precision",
+        "Accuracy necessarily",
+        "Uncertainty elimination",
+        "Mass number"
+      ],
+      "correctAnswer": "Precision",
+      "explanation": "Precision describes agreement among repeated measurements.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-007",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "An error caused by poor calibration of a balance is most likely",
+      "options": [
+        "Random error",
+        "Personal preference",
+        "Chemical change",
+        "Systematic error"
+      ],
+      "correctAnswer": "Systematic error",
+      "explanation": "Calibration problems can shift measurements consistently in one direction.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-008",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "Small unpredictable fluctuations between repeated measurements are",
+      "options": [
+        "Systematic errors",
+        "Unit conversions",
+        "Random errors",
+        "Significant figures"
+      ],
+      "correctAnswer": "Random errors",
+      "explanation": "Random errors vary unpredictably between measurements.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-009",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "How many significant figures are in 0.00450?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "explanation": "The leading zeros are not significant; 4, 5 and the trailing zero are significant.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-010",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "hard",
+      "question": "Which notation correctly represents 4500 with two significant figures?",
+      "options": [
+        "4.5 × 10³",
+        "45 × 10²",
+        "4.50 × 10³",
+        "0.45 × 10⁴"
+      ],
+      "correctAnswer": "4.5 × 10³",
+      "explanation": "4.5 × 10³ clearly shows two significant figures.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-02-011",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "A scientist states a hypothesis before testing it. In the scientific method, this is done after",
+      "options": [
+        "Final conclusion only",
+        "Data disposal",
+        "Publication only",
+        "Observations and a defined question/problem"
+      ],
+      "correctAnswer": "Observations and a defined question/problem",
+      "explanation": "A hypothesis is proposed to explain an observed question or problem before testing.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-012",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "Which section of a lab report explains how the experiment was carried out?",
+      "options": [
+        "Conclusion only",
+        "Title only",
+        "Method or procedure",
+        "References only"
+      ],
+      "correctAnswer": "Method or procedure",
+      "explanation": "The method describes the steps and conditions used in the experiment.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-013",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "If a measured volume is 25.0 mL, the final zero is important because it",
+      "options": [
+        "Makes the unit unnecessary",
+        "Conveys precision of the measurement",
+        "Changes the substance",
+        "Means the value is exact in every sense"
+      ],
+      "correctAnswer": "Conveys precision of the measurement",
+      "explanation": "The trailing zero is significant and communicates measurement precision.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-014",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "When converting 2.5 km to meters, the correct value is",
+      "options": [
+        "2500 m",
+        "25 m",
+        "250 m",
+        "0.25 m"
+      ],
+      "correctAnswer": "2500 m",
+      "explanation": "1 km = 1000 m, so 2.5 km = 2500 m.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-015",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "hard",
+      "question": "A conclusion should be based primarily on",
+      "options": [
+        "The desired answer",
+        "A guess made before testing",
+        "The title only",
+        "The evidence and results obtained"
+      ],
+      "correctAnswer": "The evidence and results obtained",
+      "explanation": "Scientific conclusions should follow from observed evidence and analysis.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-02-016",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "Which measurement has the greatest precision?",
+      "options": [
+        "12 g, 14 g, 11 g",
+        "9 g, 16 g, 12 g",
+        "12.51 g, 12.50 g, 12.51 g",
+        "10 g, 15 g, 20 g"
+      ],
+      "correctAnswer": "12.51 g, 12.50 g, 12.51 g",
+      "explanation": "Repeated values that cluster closely demonstrate high precision.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-017",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "A balance consistently reads 0.20 g too high. This is best described as",
+      "options": [
+        "Random error",
+        "Systematic error",
+        "A significant figure",
+        "A unit prefix"
+      ],
+      "correctAnswer": "Systematic error",
+      "explanation": "A consistent bias in one direction is systematic error.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-018",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "A student records 0.0300 m. How many significant figures are present?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "explanation": "The significant digits are 3, 0 and 0 after the leading zeros.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-019",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "Which value is equivalent to 6.2 × 10⁻³?",
+      "options": [
+        "0.062",
+        "0.00062",
+        "6200",
+        "0.0062"
+      ],
+      "correctAnswer": "0.0062",
+      "explanation": "Moving the decimal three places left gives 0.0062.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-020",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "hard",
+      "question": "Which unit is appropriate for measuring the amount of substance?",
+      "options": [
+        "Meter",
+        "Kelvin",
+        "Mole",
+        "Newton"
+      ],
+      "correctAnswer": "Mole",
+      "explanation": "The mole is the SI base unit for amount of substance.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-02-021",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "The SI unit of temperature is",
+      "options": [
+        "Celsius",
+        "Kelvin",
+        "Joule",
+        "Pascal"
+      ],
+      "correctAnswer": "Kelvin",
+      "explanation": "Kelvin is the SI base unit of thermodynamic temperature.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-022",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "easy",
+      "question": "A student repeats a measurement several times and reports the average. This can help reduce the effect of",
+      "options": [
+        "Random variation",
+        "Systematic calibration bias entirely",
+        "Wrong units",
+        "Chemical bonding"
+      ],
+      "correctAnswer": "Random variation",
+      "explanation": "Averaging repeated readings can reduce random variation but does not automatically remove systematic bias.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-02-023",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "A good experimental procedure should be detailed enough that",
+      "options": [
+        "The result is guaranteed",
+        "No measurements are needed",
+        "The hypothesis cannot change",
+        "Another trained student could repeat the experiment"
+      ],
+      "correctAnswer": "Another trained student could repeat the experiment",
+      "explanation": "A reproducible method allows another investigator to repeat the work.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-02-024",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Measurements and scientific methods",
+      "difficulty": "medium",
+      "question": "A graph in a lab report should be chosen mainly to",
+      "options": [
+        "Decorate the report",
+        "Replace all measurements",
+        "Display relationships in the collected data clearly",
+        "Hide unusual results"
+      ],
+      "correctAnswer": "Display relationships in the collected data clearly",
+      "explanation": "Graphs help communicate patterns and relationships in data.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-03-001",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "easy",
+      "question": "Democritus proposed that matter consists of",
+      "options": [
+        "Continuous fluids only",
+        "Tiny indivisible particles called atoms",
+        "Cells",
+        "Planets"
+      ],
+      "correctAnswer": "Tiny indivisible particles called atoms",
+      "explanation": "Democritus proposed the idea of atoms as tiny particles.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-03-002",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "easy",
+      "question": "One limitation of Democritus’ ideas was that they",
+      "options": [
+        "Lacked experimental evidence",
+        "Included too much modern data",
+        "Used electron microscopes",
+        "Explained every chemical law"
+      ],
+      "correctAnswer": "Lacked experimental evidence",
+      "explanation": "Democritus’ atomism was philosophical and not experimentally established.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-03-003",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "medium",
+      "question": "The law of conservation of mass states that in a chemical reaction",
+      "options": [
+        "Atoms disappear completely",
+        "Products always weigh less",
+        "Mass becomes energy in every reaction",
+        "Total mass is conserved in a closed system"
+      ],
+      "correctAnswer": "Total mass is conserved in a closed system",
+      "explanation": "In ordinary chemical reactions, mass is conserved in a closed system.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-03-004",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "medium",
+      "question": "The law of definite proportions states that a pure compound",
+      "options": [
+        "Contains any ratio at all",
+        "Must be an element",
+        "Contains its elements in a fixed mass ratio",
+        "Changes composition whenever sampled"
+      ],
+      "correctAnswer": "Contains its elements in a fixed mass ratio",
+      "explanation": "A given pure compound has a constant composition by mass.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-03-005",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "hard",
+      "question": "The law of multiple proportions applies when",
+      "options": [
+        "A compound has one element only",
+        "Two elements form more than one compound with simple whole-number mass ratios",
+        "No chemical reaction occurs",
+        "All mixtures are homogeneous"
+      ],
+      "correctAnswer": "Two elements form more than one compound with simple whole-number mass ratios",
+      "explanation": "Different compounds of the same elements can show simple whole-number ratios of one element’s mass combining with a fixed mass of the other.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-03-006",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "easy",
+      "question": "Dalton’s atomic theory helped explain chemical reactions by proposing that atoms",
+      "options": [
+        "Combine in whole-number ratios",
+        "Are made only of light",
+        "Are identical for all elements",
+        "Cannot form compounds"
+      ],
+      "correctAnswer": "Combine in whole-number ratios",
+      "explanation": "Dalton used atoms and simple combining ratios to explain chemical combination.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-03-007",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "easy",
+      "question": "A limitation of Dalton’s original theory is that atoms of an element",
+      "options": [
+        "Cannot form molecules",
+        "Always have different chemical identities",
+        "Never contain subatomic particles",
+        "Can have isotopes with different masses"
+      ],
+      "correctAnswer": "Can have isotopes with different masses",
+      "explanation": "Modern science shows isotopes of the same element can have different masses.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-03-008",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "medium",
+      "question": "The electron was identified as a subatomic particle through experiments associated with",
+      "options": [
+        "Democritus",
+        "Mendeleev",
+        "J. J. Thomson",
+        "Newton"
+      ],
+      "correctAnswer": "J. J. Thomson",
+      "explanation": "Thomson’s cathode-ray work supported the discovery of the electron.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-03-009",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "medium",
+      "question": "The positively charged particle in the nucleus is the",
+      "options": [
+        "Electron",
+        "Proton",
+        "Neutron",
+        "Photon"
+      ],
+      "correctAnswer": "Proton",
+      "explanation": "Protons carry positive charge and are in the nucleus.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-03-010",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "hard",
+      "question": "The neutron differs from the proton mainly because it has",
+      "options": [
+        "No electric charge",
+        "A positive charge",
+        "A negative charge",
+        "No mass"
+      ],
+      "correctAnswer": "No electric charge",
+      "explanation": "Neutrons are electrically neutral.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-03-011",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "easy",
+      "question": "The atomic number of an element equals its number of",
+      "options": [
+        "Neutrons only",
+        "Nucleons only",
+        "Energy levels",
+        "Protons"
+      ],
+      "correctAnswer": "Protons",
+      "explanation": "Atomic number is defined by the number of protons in the nucleus.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-03-012",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "easy",
+      "question": "An atom has 11 protons and 12 neutrons. Its mass number is",
+      "options": [
+        "11",
+        "12",
+        "23",
+        "24"
+      ],
+      "correctAnswer": "23",
+      "explanation": "Mass number = protons + neutrons = 11 + 12 = 23.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-03-013",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "medium",
+      "question": "Isotopes are atoms of the same element with different numbers of",
+      "options": [
+        "Protons",
+        "Neutrons",
+        "Atomic numbers",
+        "Elements"
+      ],
+      "correctAnswer": "Neutrons",
+      "explanation": "Isotopes share the same proton number but differ in neutron number.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-03-014",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "medium",
+      "question": "An atom with electronic configuration 2,8,1 has how many valence electrons?",
+      "options": [
+        "1",
+        "2",
+        "8",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "explanation": "The outermost shell contains one electron.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-03-015",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Atomic structure, laws and theories",
+      "difficulty": "hard",
+      "question": "The average atomic mass of an element reflects",
+      "options": [
+        "Only the mass of the most common isotope",
+        "Only neutron mass",
+        "The atomic number plus one",
+        "The weighted average of its naturally occurring isotopic masses"
+      ],
+      "correctAnswer": "The weighted average of its naturally occurring isotopic masses",
+      "explanation": "Average atomic mass accounts for isotope masses and their relative abundances.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-04-001",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "Dobereiner’s triads grouped elements into sets of",
+      "options": [
+        "Two",
+        "Four",
+        "Three with related properties",
+        "Eight"
+      ],
+      "correctAnswer": "Three with related properties",
+      "explanation": "Dobereiner proposed groups of three elements with related properties.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-002",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "Newlands’ Law of Octaves suggested that properties repeated after every",
+      "options": [
+        "Second element",
+        "Eighth element",
+        "Third element",
+        "Twelfth element"
+      ],
+      "correctAnswer": "Eighth element",
+      "explanation": "Newlands observed approximate repetition at every eighth element.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-003",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "Mendeleev’s major contribution was to",
+      "options": [
+        "Organize elements and leave gaps for undiscovered elements",
+        "Eliminate periodicity",
+        "Use atomic number as the basis from the start",
+        "Reject predictions"
+      ],
+      "correctAnswer": "Organize elements and leave gaps for undiscovered elements",
+      "explanation": "Mendeleev arranged elements by properties and atomic mass and left gaps for predicted elements.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-04-004",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "The modern periodic law is based primarily on atomic",
+      "options": [
+        "Mass only",
+        "Volume",
+        "Density",
+        "Number"
+      ],
+      "correctAnswer": "Number",
+      "explanation": "Modern periodicity is related to atomic number.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-04-005",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "hard",
+      "question": "Elements in the same group generally have similar",
+      "options": [
+        "Mass numbers",
+        "Numbers of isotopes only",
+        "Valence-electron-related chemical properties",
+        "Nuclear sizes only"
+      ],
+      "correctAnswer": "Valence-electron-related chemical properties",
+      "explanation": "Group members often share similar outer-electron patterns and chemical behavior.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-04-006",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "A period in the modern periodic table is a",
+      "options": [
+        "Vertical column",
+        "Horizontal row",
+        "Single isotope",
+        "Chemical bond"
+      ],
+      "correctAnswer": "Horizontal row",
+      "explanation": "Periods are horizontal rows of the periodic table.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-007",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "Representative elements are mainly found in",
+      "options": [
+        "The main groups of the periodic table",
+        "Only transition metals",
+        "Only noble gases",
+        "Only lanthanides"
+      ],
+      "correctAnswer": "The main groups of the periodic table",
+      "explanation": "Representative elements are commonly identified with the main-group elements.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-008",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "Atomic radius generally decreases from left to right across a period because",
+      "options": [
+        "New shells are added each step",
+        "Nuclei become lighter",
+        "Electrons disappear",
+        "Effective nuclear attraction increases across the period"
+      ],
+      "correctAnswer": "Effective nuclear attraction increases across the period",
+      "explanation": "Increasing nuclear charge within the same shell generally pulls electrons closer.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-04-009",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "Atomic radius generally increases down a group because",
+      "options": [
+        "Nuclear charge becomes zero",
+        "Electrons are removed entirely",
+        "Additional energy levels are added",
+        "All atoms become ions"
+      ],
+      "correctAnswer": "Additional energy levels are added",
+      "explanation": "Atoms gain additional occupied shells down a group, increasing size.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-04-010",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "hard",
+      "question": "Ionization energy generally increases across a period because",
+      "options": [
+        "Atoms gain more shells",
+        "Electrons are held more strongly by the increasing effective nuclear attraction",
+        "Nuclei lose charge",
+        "Atoms become larger across every period"
+      ],
+      "correctAnswer": "Electrons are held more strongly by the increasing effective nuclear attraction",
+      "explanation": "Stronger attraction makes electron removal more difficult across a period.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-04-011",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "Ionization energy generally decreases down a group because",
+      "options": [
+        "Outer electrons are farther from the nucleus and more shielded",
+        "Nuclei lose all protons",
+        "Atoms have fewer energy levels",
+        "Electron attraction always increases"
+      ],
+      "correctAnswer": "Outer electrons are farther from the nucleus and more shielded",
+      "explanation": "Greater distance and shielding make outer electrons easier to remove.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-012",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "Electronegativity generally increases across a period",
+      "options": [
+        "Because atomic radius always increases",
+        "Because nuclei lose protons",
+        "Because all elements become metals",
+        "Because atoms increasingly attract bonding electrons"
+      ],
+      "correctAnswer": "Because atoms increasingly attract bonding electrons",
+      "explanation": "Across a period, effective nuclear attraction generally increases, strengthening attraction for bonding electrons.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-013",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "Electronegativity generally decreases down a group because",
+      "options": [
+        "Atomic number becomes zero",
+        "Atoms lose all outer electrons",
+        "Distance and shielding reduce the attraction for bonding electrons",
+        "Nuclei become smaller than protons"
+      ],
+      "correctAnswer": "Distance and shielding reduce the attraction for bonding electrons",
+      "explanation": "Greater distance and shielding weaken attraction for bonding electrons down a group.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-04-014",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "Electron affinity is related to an atom’s tendency to",
+      "options": [
+        "Lose a proton",
+        "Gain an electron",
+        "Gain a neutron",
+        "Lose its nucleus"
+      ],
+      "correctAnswer": "Gain an electron",
+      "explanation": "Electron affinity describes the energy change associated with gaining an electron.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-04-015",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "hard",
+      "question": "If two elements are in the same group, the similarity in their chemistry is most closely related to their",
+      "options": [
+        "Similar outer-electron patterns",
+        "Identical atomic masses",
+        "Identical neutron numbers",
+        "Identical periods"
+      ],
+      "correctAnswer": "Similar outer-electron patterns",
+      "explanation": "Similar valence-electron configurations contribute to similar chemical behavior within groups.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-04-016",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "Which statement correctly compares a group and a period?",
+      "options": [
+        "Both are horizontal",
+        "A group is horizontal; a period is vertical",
+        "Both are diagonal",
+        "A group is vertical; a period is horizontal"
+      ],
+      "correctAnswer": "A group is vertical; a period is horizontal",
+      "explanation": "Groups are columns and periods are rows.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-017",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "As you move down Group 1, atomic radius generally",
+      "options": [
+        "Decreases",
+        "Becomes zero",
+        "Increases",
+        "Remains identical"
+      ],
+      "correctAnswer": "Increases",
+      "explanation": "Additional occupied energy levels make atoms larger down a group.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-018",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "Across a period from left to right, atomic radius generally",
+      "options": [
+        "Increases sharply",
+        "Decreases",
+        "Becomes infinite",
+        "Never changes"
+      ],
+      "correctAnswer": "Decreases",
+      "explanation": "Greater effective nuclear attraction generally pulls electrons closer across a period.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-04-019",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "Down a group, ionization energy generally",
+      "options": [
+        "Decreases",
+        "Increases",
+        "Becomes equal to atomic mass",
+        "Becomes zero in every case"
+      ],
+      "correctAnswer": "Decreases",
+      "explanation": "Outer electrons are farther from the nucleus and more shielded down a group.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-04-020",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "hard",
+      "question": "Across a period, electronegativity generally",
+      "options": [
+        "Decreases",
+        "Becomes identical for all elements",
+        "Depends only on mass number",
+        "Increases"
+      ],
+      "correctAnswer": "Increases",
+      "explanation": "Effective nuclear attraction generally increases across a period.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-04-021",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "Down a group, electronegativity generally",
+      "options": [
+        "Increases",
+        "Becomes zero for all metals",
+        "Decreases",
+        "Stops being measurable"
+      ],
+      "correctAnswer": "Decreases",
+      "explanation": "Greater distance and shielding reduce attraction for bonding electrons.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-022",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "easy",
+      "question": "Which scientist’s table is noted for leaving gaps for elements not yet discovered?",
+      "options": [
+        "Newlands",
+        "Mendeleev",
+        "Dobereiner",
+        "Thomson"
+      ],
+      "correctAnswer": "Mendeleev",
+      "explanation": "Mendeleev left gaps and predicted properties of undiscovered elements.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-04-023",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "The modern periodic table organizes elements primarily according to increasing",
+      "options": [
+        "Atomic number",
+        "Atomic volume",
+        "Melting point",
+        "Mass density"
+      ],
+      "correctAnswer": "Atomic number",
+      "explanation": "Modern periodic classification is based on atomic number.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-04-024",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Periodic classification and trends",
+      "difficulty": "medium",
+      "question": "An element in the same group as another usually shares similar chemistry because the two have similar",
+      "options": [
+        "Neutron counts",
+        "Atomic masses",
+        "Nuclear sizes only",
+        "Valence-electron patterns"
+      ],
+      "correctAnswer": "Valence-electron patterns",
+      "explanation": "Similar outer-electron arrangements lead to related chemical behavior.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-001",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "The octet rule is mainly concerned with atoms tending to achieve",
+      "options": [
+        "Exactly eight protons",
+        "Eight neutrons",
+        "A stable outer-shell electron arrangement",
+        "Eight energy levels"
+      ],
+      "correctAnswer": "A stable outer-shell electron arrangement",
+      "explanation": "The octet rule describes a tendency toward stable valence-shell arrangements resembling noble gases.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-002",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "When sodium loses one electron, it forms",
+      "options": [
+        "Na⁻",
+        "Na⁺",
+        "Ne²⁺",
+        "Mg⁻"
+      ],
+      "correctAnswer": "Na⁺",
+      "explanation": "Loss of one electron gives sodium a +1 charge.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-003",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "When chlorine gains one electron, it forms",
+      "options": [
+        "Cl⁻",
+        "Cl⁺",
+        "Na⁺",
+        "Cl²⁺"
+      ],
+      "correctAnswer": "Cl⁻",
+      "explanation": "Gain of one electron gives chlorine a −1 charge.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-004",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "An ionic bond is formed mainly by",
+      "options": [
+        "Sharing a pair of neutral atoms only",
+        "Attraction between neutrons",
+        "Sharing nuclei",
+        "Electrostatic attraction between oppositely charged ions"
+      ],
+      "correctAnswer": "Electrostatic attraction between oppositely charged ions",
+      "explanation": "Ionic bonding results from attraction between cations and anions formed by electron transfer.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-005",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "hard",
+      "question": "Which pair is most likely to form an ionic compound?",
+      "options": [
+        "Hydrogen and hydrogen",
+        "Carbon and hydrogen",
+        "Sodium and chlorine",
+        "Two noble gases"
+      ],
+      "correctAnswer": "Sodium and chlorine",
+      "explanation": "A metal and a nonmetal commonly form an ionic compound through electron transfer.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-05-006",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "A Lewis formula for NaCl should show",
+      "options": [
+        "Two shared electron pairs",
+        "Na⁺ and Cl⁻ with the chloride ion having a full valence shell",
+        "A metallic lattice only",
+        "No charges"
+      ],
+      "correctAnswer": "Na⁺ and Cl⁻ with the chloride ion having a full valence shell",
+      "explanation": "The Lewis representation emphasizes electron transfer and the resulting ions.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-007",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "Ionic compounds generally have high melting points because",
+      "options": [
+        "Strong electrostatic attractions act throughout the lattice",
+        "Their molecules are always gases",
+        "Their electrons are uncharged",
+        "They contain no ions"
+      ],
+      "correctAnswer": "Strong electrostatic attractions act throughout the lattice",
+      "explanation": "Strong lattice attractions require substantial energy to overcome.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-008",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "Many ionic compounds conduct electricity when molten because",
+      "options": [
+        "Their nuclei move freely",
+        "Their atoms become covalent",
+        "Their electrons disappear",
+        "Their ions can move"
+      ],
+      "correctAnswer": "Their ions can move",
+      "explanation": "Molten ionic compounds contain mobile charged ions.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-009",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "A covalent bond is formed by",
+      "options": [
+        "Complete transfer of all electrons",
+        "Sharing protons",
+        "Sharing electron pairs between atoms",
+        "Merging nuclei"
+      ],
+      "correctAnswer": "Sharing electron pairs between atoms",
+      "explanation": "Covalent bonding involves shared electron pairs.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-010",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "hard",
+      "question": "Which molecule is most likely nonpolar when identical atoms share electrons equally?",
+      "options": [
+        "HCl",
+        "Cl₂",
+        "H₂O",
+        "NH₃"
+      ],
+      "correctAnswer": "Cl₂",
+      "explanation": "Identical atoms have equal electronegativity, so the bond is nonpolar.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-05-011",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "A polar covalent bond occurs when",
+      "options": [
+        "Bonding electrons are shared unequally",
+        "No electrons are involved",
+        "Both atoms are identical metals",
+        "Protons are transferred"
+      ],
+      "correctAnswer": "Bonding electrons are shared unequally",
+      "explanation": "Unequal electronegativity causes unequal sharing of electrons.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-012",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "A coordinate covalent bond differs because",
+      "options": [
+        "No electrons are shared",
+        "Both nuclei are transferred",
+        "Only protons are shared",
+        "Both shared electrons are donated by one atom"
+      ],
+      "correctAnswer": "Both shared electrons are donated by one atom",
+      "explanation": "In a coordinate covalent bond, the shared pair originates from one atom.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-013",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "Metallic bonding is often described as",
+      "options": [
+        "Neutral molecules joined by hydrogen bonds",
+        "Anions floating in water",
+        "Positive metal ions in a lattice with delocalized electrons",
+        "Atoms sharing one fixed pair only"
+      ],
+      "correctAnswer": "Positive metal ions in a lattice with delocalized electrons",
+      "explanation": "Metallic bonding involves a lattice of metal cations with delocalized electrons.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-014",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "A physical property commonly associated with metals is",
+      "options": [
+        "Brittleness in every case",
+        "Electrical conductivity",
+        "Poor heat transfer always",
+        "No ability to deform"
+      ],
+      "correctAnswer": "Electrical conductivity",
+      "explanation": "Delocalized electrons contribute to electrical and thermal conductivity.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-015",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "hard",
+      "question": "Covalent molecular substances often have lower melting points than ionic solids because",
+      "options": [
+        "Intermolecular forces can be weaker than ionic lattice attractions",
+        "They contain no atoms",
+        "They always have charged ions",
+        "Their nuclei repel completely"
+      ],
+      "correctAnswer": "Intermolecular forces can be weaker than ionic lattice attractions",
+      "explanation": "Many molecular covalent substances are held together between molecules by weaker intermolecular forces.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-05-016",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "An atom tends to gain electrons when doing so helps it approach",
+      "options": [
+        "A higher atomic mass only",
+        "A larger nucleus",
+        "Fewer protons",
+        "A stable valence-shell arrangement"
+      ],
+      "correctAnswer": "A stable valence-shell arrangement",
+      "explanation": "Atoms can gain electrons to reach a more stable outer-shell arrangement.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-017",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "Calcium commonly forms an ion with charge",
+      "options": [
+        "1+",
+        "1−",
+        "2+",
+        "2−"
+      ],
+      "correctAnswer": "2+",
+      "explanation": "Calcium tends to lose two valence electrons, forming Ca²⁺.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-018",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "Oxygen commonly forms an ion with charge",
+      "options": [
+        "1+",
+        "2−",
+        "2+",
+        "3−"
+      ],
+      "correctAnswer": "2−",
+      "explanation": "Oxygen tends to gain two electrons to complete its valence shell.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-019",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "Which compound is most likely ionic?",
+      "options": [
+        "MgO",
+        "CO₂",
+        "CH₄",
+        "Cl₂"
+      ],
+      "correctAnswer": "MgO",
+      "explanation": "Magnesium is a metal and oxygen is a nonmetal, favoring ionic bonding.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-020",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "hard",
+      "question": "Which substance contains covalent bonds between identical atoms?",
+      "options": [
+        "NaCl",
+        "MgO",
+        "CaCl₂",
+        "N₂"
+      ],
+      "correctAnswer": "N₂",
+      "explanation": "N₂ consists of two nitrogen atoms sharing electrons covalently.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-05-021",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "A molecule can have polar bonds but still be nonpolar if",
+      "options": [
+        "It has no electrons",
+        "It contains only ions",
+        "Its bond polarities cancel because of its shape",
+        "It has no nuclei"
+      ],
+      "correctAnswer": "Its bond polarities cancel because of its shape",
+      "explanation": "Molecular polarity depends on both bond polarity and the arrangement of bonds.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-022",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "Why can solid NaCl not conduct electricity well?",
+      "options": [
+        "It contains no charged particles",
+        "Its ions are fixed in the crystal lattice",
+        "Its atoms have no electrons",
+        "Its nuclei leave the solid"
+      ],
+      "correctAnswer": "Its ions are fixed in the crystal lattice",
+      "explanation": "In the solid, ions are not free to move through the lattice.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-023",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "Metals are often malleable because metallic bonding allows",
+      "options": [
+        "Layers of metal atoms to shift while remaining bonded",
+        "All electrons to leave the metal",
+        "Ions to disappear",
+        "The lattice to become molecular"
+      ],
+      "correctAnswer": "Layers of metal atoms to shift while remaining bonded",
+      "explanation": "Delocalized metallic bonding can accommodate movement of layers without immediate fracture.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-024",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "In a coordinate covalent bond, the donor atom provides",
+      "options": [
+        "One proton and one electron",
+        "Both nuclei",
+        "No electrons",
+        "Both electrons in the shared pair"
+      ],
+      "correctAnswer": "Both electrons in the shared pair",
+      "explanation": "The shared pair in a coordinate bond originates from one atom.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-025",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "hard",
+      "question": "An ionic compound forms when electrons are transferred mainly from",
+      "options": [
+        "A nonmetal to a metal in every case",
+        "One nucleus to another",
+        "A metal to a nonmetal",
+        "One neutron to another"
+      ],
+      "correctAnswer": "A metal to a nonmetal",
+      "explanation": "Metals tend to lose valence electrons while nonmetals tend to gain them.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-05-026",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "A cation is an ion with",
+      "options": [
+        "A negative charge",
+        "A positive charge",
+        "No protons",
+        "No electrons at all"
+      ],
+      "correctAnswer": "A positive charge",
+      "explanation": "Cations have more protons than electrons and therefore carry positive charge.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-027",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "An anion is an ion with",
+      "options": [
+        "A negative charge",
+        "A positive charge",
+        "No electrons",
+        "No nucleus"
+      ],
+      "correctAnswer": "A negative charge",
+      "explanation": "Anions have gained electrons and therefore carry negative charge.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-028",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "In a Lewis structure, valence electrons are used to represent",
+      "options": [
+        "Neutrons in the nucleus",
+        "Atomic mass only",
+        "Nuclear radius",
+        "Electrons involved in bonding and outer-shell stability"
+      ],
+      "correctAnswer": "Electrons involved in bonding and outer-shell stability",
+      "explanation": "Lewis structures focus on valence electrons.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-029",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "A covalent molecule forms most directly when atoms",
+      "options": [
+        "Exchange nuclei",
+        "Share protons",
+        "Share electron pairs",
+        "Lose all electrons"
+      ],
+      "correctAnswer": "Share electron pairs",
+      "explanation": "Covalent bonds arise from shared electron pairs.",
+      "xp": 15
+    },
+    {
+      "id": "CHEM-09-05-030",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "hard",
+      "question": "A nonpolar covalent bond is most likely when the bonded atoms",
+      "options": [
+        "Have opposite charges as ions",
+        "Have equal or very similar electronegativities",
+        "Are separated by a metal lattice",
+        "Have no electrons"
+      ],
+      "correctAnswer": "Have equal or very similar electronegativities",
+      "explanation": "Similar electronegativities lead to nearly equal sharing.",
+      "xp": 20
+    },
+    {
+      "id": "CHEM-09-05-031",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "Metallic conductivity is explained by the presence of",
+      "options": [
+        "Mobile delocalized electrons",
+        "Fixed anions only",
+        "Immobile protons",
+        "Shared nuclei"
+      ],
+      "correctAnswer": "Mobile delocalized electrons",
+      "explanation": "Delocalized electrons can move through a metal lattice.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-032",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "question": "The strength of an ionic lattice helps explain why many ionic solids are",
+      "options": [
+        "Soft and highly volatile",
+        "Always gases",
+        "Unable to form crystals",
+        "Hard and high-melting"
+      ],
+      "correctAnswer": "Hard and high-melting",
+      "explanation": "Strong electrostatic attractions produce rigid, high-melting lattices.",
+      "xp": 10
+    },
+    {
+      "id": "CHEM-09-05-033",
+      "grade": 9,
+      "subject": "Chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "question": "If an atom gains three electrons, its ion has a charge of",
+      "options": [
+        "3+",
+        "1−",
+        "3−",
+        "0"
+      ],
+      "correctAnswer": "3−",
+      "explanation": "Each gained electron adds one unit of negative charge.",
+      "xp": 15
+    }
+  ]
+}

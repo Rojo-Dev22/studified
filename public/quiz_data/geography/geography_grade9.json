@@ -1,0 +1,2047 @@
+{
+  "subject": "Geography",
+  "grade": 9,
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": "GEO-09-01-001",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Meaning of Geography",
+      "difficulty": "easy",
+      "question": "A student examines how people use land differently in different places. Which broad purpose of geography is being applied?",
+      "options": [
+        "Understanding relationships between people, places, and environments",
+        "Memorizing capital cities only",
+        "Studying only rocks",
+        "Studying only weather instruments"
+      ],
+      "correctAnswer": "Understanding relationships between people, places, and environments",
+      "explanation": "Geography examines spatial patterns and relationships between human and physical phenomena.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-01-002",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Scope of Geography",
+      "difficulty": "medium",
+      "question": "Which study best fits the scope of geography?",
+      "options": [
+        "Analyzing a chemical reaction in isolation",
+        "Comparing population distribution with physical conditions across regions",
+        "Memorizing a poem",
+        "Studying only one historical ruler"
+      ],
+      "correctAnswer": "Comparing population distribution with physical conditions across regions",
+      "explanation": "Geography connects human and physical patterns across space.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-01-003",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Branches of Geography",
+      "difficulty": "easy",
+      "question": "A researcher studies rainfall, landforms, and rivers. Which branch is most directly involved?",
+      "options": [
+        "Political science",
+        "Human geography only",
+        "Physical geography",
+        "Economics only"
+      ],
+      "correctAnswer": "Physical geography",
+      "explanation": "Physical geography focuses on natural features and processes such as climate, landforms, and drainage.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-01-004",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Branches of Geography",
+      "difficulty": "easy",
+      "question": "A researcher compares settlement patterns, migration, and population density. Which branch is most directly relevant?",
+      "options": [
+        "Meteorology only",
+        "Physical geography only",
+        "Geology only",
+        "Human geography"
+      ],
+      "correctAnswer": "Human geography",
+      "explanation": "Human geography examines population and human patterns across space.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-01-005",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Location, size and shape of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why is a country’s location geographically important?",
+      "options": [
+        "It helps explain connections to neighboring regions, climates, and physical settings",
+        "Location never affects interaction",
+        "Location determines every cultural practice",
+        "Location is unrelated to trade"
+      ],
+      "correctAnswer": "It helps explain connections to neighboring regions, climates, and physical settings",
+      "explanation": "Geographical location influences relationships with neighboring areas and environmental conditions.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-01-006",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Size of Ethiopia",
+      "difficulty": "easy",
+      "question": "Why can the size of a country matter in geographical analysis?",
+      "options": [
+        "Size has no effect on spatial patterns",
+        "It affects the spatial extent of resources, population, and regional variation",
+        "Large countries always have one climate",
+        "Size determines the type of government"
+      ],
+      "correctAnswer": "It affects the spatial extent of resources, population, and regional variation",
+      "explanation": "A country’s size influences the scale at which geographic patterns and regional differences occur.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-01-007",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Shape of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why can national shape matter when studying transportation and regional interaction?",
+      "options": [
+        "Shape determines rainfall exactly",
+        "Shape has no geographic effect",
+        "Shape influences distances, accessibility, and spatial relationships among places",
+        "Shape eliminates regional differences"
+      ],
+      "correctAnswer": "Shape influences distances, accessibility, and spatial relationships among places",
+      "explanation": "Spatial arrangement affects accessibility and connections among regions.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-01-008",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Geological History of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why is geological history useful for understanding Ethiopia’s present landscapes?",
+      "options": [
+        "Geological processes occur only in the past and leave no evidence",
+        "Present landforms have no historical causes",
+        "Geology affects only oceans",
+        "Past geological processes helped form the landforms seen today"
+      ],
+      "correctAnswer": "Past geological processes helped form the landforms seen today",
+      "explanation": "Current landscapes are products of long-term geological processes.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-01-009",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Geological Process in Ethiopia",
+      "difficulty": "medium",
+      "question": "A region shows evidence of uplift and volcanic activity. Which interpretation is most appropriate?",
+      "options": [
+        "Its present relief can be linked to geological processes",
+        "The landscape must be entirely human-made",
+        "Climate alone created every feature",
+        "Population growth caused the geology"
+      ],
+      "correctAnswer": "Its present relief can be linked to geological processes",
+      "explanation": "Uplift and volcanism are geological processes that can shape relief and landforms.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-01-010",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Landform of Ethiopia",
+      "difficulty": "easy",
+      "question": "Why are landforms important to human geography?",
+      "options": [
+        "Landforms affect only tourism",
+        "They can influence settlement, agriculture, transport, and other human activities",
+        "Landforms never affect people",
+        "Only climate matters for settlement"
+      ],
+      "correctAnswer": "They can influence settlement, agriculture, transport, and other human activities",
+      "explanation": "Physical relief can constrain or support different human activities.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-01-011",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Landform of Ethiopia",
+      "difficulty": "hard",
+      "question": "A steep mountainous area has fewer large settlements than a nearby plateau. Which geographic explanation is strongest?",
+      "options": [
+        "Mountains automatically cause drought",
+        "Population always ignores relief",
+        "Relief can affect accessibility, agriculture, and settlement suitability",
+        "Plateaus are always warmer"
+      ],
+      "correctAnswer": "Relief can affect accessibility, agriculture, and settlement suitability",
+      "explanation": "Topography can influence where people settle and which activities are feasible.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-01-012",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Branches of Geography",
+      "difficulty": "medium",
+      "question": "A study combines river systems with patterns of irrigation farming. What is the main strength of this approach?",
+      "options": [
+        "It replaces field observation",
+        "It ignores environmental processes",
+        "It studies only economics",
+        "It connects physical and human geography"
+      ],
+      "correctAnswer": "It connects physical and human geography",
+      "explanation": "Geographic problems often require integrating physical conditions with human activities.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-01-013",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Geological History of Ethiopia",
+      "difficulty": "hard",
+      "question": "Why should current landscapes be interpreted using both geological evidence and present observation?",
+      "options": [
+        "Past processes explain formation while present observation shows current conditions",
+        "Present observation makes geology unnecessary",
+        "Geology explains only population",
+        "Past processes never affect current landscapes"
+      ],
+      "correctAnswer": "Past processes explain formation while present observation shows current conditions",
+      "explanation": "Understanding landscape requires connecting its formation history with current characteristics.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-01-014",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Scope of Geography",
+      "difficulty": "hard",
+      "question": "A study asks why the same environmental condition produces different land uses in two regions. What is the best geographic approach?",
+      "options": [
+        "Assume the same use must occur everywhere",
+        "Compare physical conditions and human decisions in both places",
+        "Study only the climate",
+        "Ignore local institutions"
+      ],
+      "correctAnswer": "Compare physical conditions and human decisions in both places",
+      "explanation": "Geography examines how environmental and human factors interact spatially.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-02-001",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Meaning of weather and climate",
+      "difficulty": "easy",
+      "question": "Which statement correctly distinguishes weather from climate?",
+      "options": [
+        "Weather and climate mean exactly the same thing",
+        "Weather lasts decades and climate lasts minutes",
+        "Weather describes short-term atmospheric conditions, while climate describes longer-term patterns",
+        "Climate refers only to temperature"
+      ],
+      "correctAnswer": "Weather describes short-term atmospheric conditions, while climate describes longer-term patterns",
+      "explanation": "Weather concerns short-term atmospheric conditions; climate summarizes longer-term patterns.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-02-002",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Elements of Weather and Climate",
+      "difficulty": "easy",
+      "question": "Which set contains atmospheric elements studied in weather and climate?",
+      "options": [
+        "Elevation, religion, and GDP only",
+        "Soil color, rock age, and population only",
+        "Road length, trade, and language only",
+        "Temperature, rainfall, wind, and humidity"
+      ],
+      "correctAnswer": "Temperature, rainfall, wind, and humidity",
+      "explanation": "These are common elements used to describe atmospheric conditions.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-02-003",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Controls of weather and Climate in Ethiopia",
+      "difficulty": "medium",
+      "question": "Why can elevation strongly influence climate in Ethiopia?",
+      "options": [
+        "Higher elevations generally have lower temperatures than lower elevations",
+        "Elevation affects only rainfall and never temperature",
+        "Elevation determines longitude",
+        "Elevation changes the length of rivers only"
+      ],
+      "correctAnswer": "Higher elevations generally have lower temperatures than lower elevations",
+      "explanation": "Altitude is an important control of temperature and contributes to Ethiopia’s climatic variation.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-02-004",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Controls of weather and Climate in Ethiopia",
+      "difficulty": "easy",
+      "question": "A town at high elevation is cooler than a lowland town at similar latitude. Which control best explains this difference?",
+      "options": [
+        "Longitude only",
+        "Altitude",
+        "Language",
+        "Population density"
+      ],
+      "correctAnswer": "Altitude",
+      "explanation": "Elevation strongly affects temperature, so places at higher altitude are often cooler.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-02-005",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Climatic regions and seasonal Variation in Ethiopia",
+      "difficulty": "medium",
+      "question": "Why does Ethiopia contain different climatic regions?",
+      "options": [
+        "Only vegetation creates climate",
+        "Every part of Ethiopia receives identical weather",
+        "Variation in elevation, location, relief, and atmospheric conditions creates regional differences",
+        "Population size controls all climate"
+      ],
+      "correctAnswer": "Variation in elevation, location, relief, and atmospheric conditions creates regional differences",
+      "explanation": "Climatic variation results from interacting physical controls.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-02-006",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Agro-climatic Zones of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why are agro-climatic zones useful?",
+      "options": [
+        "They are used only for tourism",
+        "They divide the country only by language",
+        "They replace soil information entirely",
+        "They help relate climate conditions to agricultural possibilities"
+      ],
+      "correctAnswer": "They help relate climate conditions to agricultural possibilities",
+      "explanation": "Agro-climatic classification is useful for understanding agricultural conditions and suitability.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-02-007",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Seasonal Variation",
+      "difficulty": "hard",
+      "question": "Why is seasonal variation important to Ethiopian agriculture?",
+      "options": [
+        "Timing of rainfall and temperature affects planting, growth, and harvesting",
+        "Seasonal variation affects only road traffic",
+        "Agriculture is independent of climate",
+        "Only annual totals matter"
+      ],
+      "correctAnswer": "Timing of rainfall and temperature affects planting, growth, and harvesting",
+      "explanation": "Agricultural decisions depend not only on total rainfall but also on when it occurs.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-02-008",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Seasonal Variation of Temperature",
+      "difficulty": "easy",
+      "question": "If temperatures change systematically between seasons, what geographic concept is being observed?",
+      "options": [
+        "Absolute location",
+        "Seasonal variation",
+        "Population density",
+        "Drainage density"
+      ],
+      "correctAnswer": "Seasonal variation",
+      "explanation": "Seasonal change in temperature is an example of seasonal climatic variation.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-02-009",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Seasonal Variation of Rainfall",
+      "difficulty": "hard",
+      "question": "Two regions receive the same annual rainfall, but one gets most of it in a short season. Why can their agricultural conditions differ?",
+      "options": [
+        "Temperature becomes irrelevant",
+        "Annual rainfall always determines identical farming conditions",
+        "Rainfall timing affects water availability during crop growth",
+        "Soils become identical"
+      ],
+      "correctAnswer": "Rainfall timing affects water availability during crop growth",
+      "explanation": "The seasonal distribution of rainfall can be as important as the annual total for agriculture.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-02-010",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Rainfall Regions of Ethiopia",
+      "difficulty": "medium",
+      "question": "A map shows one part of Ethiopia receives much more rainfall than another. What should a geographer investigate next?",
+      "options": [
+        "Only road length",
+        "Only the number of towns",
+        "Only language differences",
+        "The physical controls and seasonal patterns producing the difference"
+      ],
+      "correctAnswer": "The physical controls and seasonal patterns producing the difference",
+      "explanation": "Geographers explain spatial variation by examining underlying controls and patterns.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-02-011",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Measurements of weather and climate",
+      "difficulty": "easy",
+      "question": "A student records rainfall each day using a standard instrument. What is the main purpose of repeated measurements?",
+      "options": [
+        "To build a reliable record of atmospheric conditions",
+        "To eliminate seasonal variation",
+        "To replace all climate data",
+        "To measure population growth"
+      ],
+      "correctAnswer": "To build a reliable record of atmospheric conditions",
+      "explanation": "Repeated observations help build datasets for analyzing weather and climate patterns.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-02-012",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Measurements of weather and climate",
+      "difficulty": "medium",
+      "question": "If two thermometers give consistently different readings under the same conditions, what should a careful observer consider first?",
+      "options": [
+        "Whether climate has disappeared",
+        "Whether the instruments are calibrated and being used correctly",
+        "Whether population has changed",
+        "Whether maps are inaccurate"
+      ],
+      "correctAnswer": "Whether the instruments are calibrated and being used correctly",
+      "explanation": "Instrument quality and method affect the reliability of measurements.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-02-013",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Elements of Weather and Climate",
+      "difficulty": "medium",
+      "question": "Why should a geographer examine more than temperature when describing climate?",
+      "options": [
+        "Rainfall and wind have no geographic meaning",
+        "Temperature is not part of climate",
+        "Climate includes interacting elements such as rainfall, wind, and humidity",
+        "Only humidity matters"
+      ],
+      "correctAnswer": "Climate includes interacting elements such as rainfall, wind, and humidity",
+      "explanation": "Climate is a combination of atmospheric characteristics rather than a single variable.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-02-014",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Controls of weather and Climate in Ethiopia",
+      "difficulty": "hard",
+      "question": "Why should climate maps be interpreted together with topographic maps in Ethiopia?",
+      "options": [
+        "Maps cannot show climate",
+        "Topography and climate are unrelated",
+        "Climate depends only on population",
+        "Relief and elevation help explain spatial climatic patterns"
+      ],
+      "correctAnswer": "Relief and elevation help explain spatial climatic patterns",
+      "explanation": "Topography, especially elevation, helps explain climatic variation.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-02-015",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Agro-climatic Zones of Ethiopia",
+      "difficulty": "easy",
+      "question": "A farmer chooses crops after examining climate suitability and seasonal rainfall. Which geographic application is this?",
+      "options": [
+        "Using agro-climatic information for agricultural planning",
+        "Using road safety rules",
+        "Using population pyramids",
+        "Using geological dating"
+      ],
+      "correctAnswer": "Using agro-climatic information for agricultural planning",
+      "explanation": "Agro-climatic knowledge can inform decisions about farming and crop suitability.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-02-016",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Rainfall Regions of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why can a rainfall-region map be more useful than a single national rainfall average for planning?",
+      "options": [
+        "An average always shows local patterns better",
+        "It shows spatial differences that an average can hide",
+        "Maps cannot show regional variation",
+        "Rainfall is identical across all locations"
+      ],
+      "correctAnswer": "It shows spatial differences that an average can hide",
+      "explanation": "Spatial maps reveal variation among places that a national average can conceal.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-03-001",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Meaning of Natural Resources",
+      "difficulty": "easy",
+      "question": "Which best describes a natural resource?",
+      "options": [
+        "Only imported products",
+        "Only manufactured goods",
+        "A naturally occurring material or condition that people can use",
+        "Only financial capital"
+      ],
+      "correctAnswer": "A naturally occurring material or condition that people can use",
+      "explanation": "Natural resources are materials or environmental conditions that can support human needs and activities.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-03-002",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Drainage systems of Ethiopia",
+      "difficulty": "easy",
+      "question": "What does a drainage system describe?",
+      "options": [
+        "The pattern of schools",
+        "The distribution of cities",
+        "The national road network",
+        "The network through which water flows across and from an area"
+      ],
+      "correctAnswer": "The network through which water flows across and from an area",
+      "explanation": "Drainage refers to the pattern and network of rivers and streams in an area.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-03-003",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Water resources of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why are Ethiopia’s water resources important to both people and the economy?",
+      "options": [
+        "They support domestic use, agriculture, ecosystems, and other economic activities",
+        "They are useful only for tourism",
+        "They affect only wildlife",
+        "They have no seasonal variation"
+      ],
+      "correctAnswer": "They support domestic use, agriculture, ecosystems, and other economic activities",
+      "explanation": "Water supports multiple human and environmental functions.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-03-004",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Characteristics of Ethiopian Rivers",
+      "difficulty": "easy",
+      "question": "Why can river flow vary substantially between seasons in Ethiopia?",
+      "options": [
+        "River flow is completely independent of rainfall",
+        "Seasonal rainfall patterns influence water availability",
+        "Only road construction changes rivers",
+        "Language controls water flow"
+      ],
+      "correctAnswer": "Seasonal rainfall patterns influence water availability",
+      "explanation": "Many Ethiopian rivers respond to seasonal rainfall patterns.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-03-005",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Lakes of Ethiopia",
+      "difficulty": "easy",
+      "question": "A lake is used for fishing, irrigation, and recreation. What does this demonstrate?",
+      "options": [
+        "That water cannot support economies",
+        "That lakes have only cultural value",
+        "Multiple values of lake resources",
+        "That lakes are unrelated to people"
+      ],
+      "correctAnswer": "Multiple values of lake resources",
+      "explanation": "Lakes can provide environmental, economic, and cultural benefits.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-03-006",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Significance of Ethiopian lakes and Rivers",
+      "difficulty": "medium",
+      "question": "Why should river and lake management consider both current use and long-term sustainability?",
+      "options": [
+        "Water systems recover instantly",
+        "Natural resources cannot be depleted",
+        "Sustainability matters only for forests",
+        "Overuse or degradation can reduce future benefits"
+      ],
+      "correctAnswer": "Overuse or degradation can reduce future benefits",
+      "explanation": "Sustainable management seeks to maintain resource functions for future use.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-03-007",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Formation of Soils in Ethiopia",
+      "difficulty": "medium",
+      "question": "Which factors can contribute to soil formation?",
+      "options": [
+        "Parent material, climate, organisms, relief, and time",
+        "Only rainfall",
+        "Only farming",
+        "Only population density"
+      ],
+      "correctAnswer": "Parent material, climate, organisms, relief, and time",
+      "explanation": "Soil develops through interactions among physical, biological, topographic, and time-related factors.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-03-008",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Types of Soil in Ethiopia",
+      "difficulty": "easy",
+      "question": "Why is identifying soil types useful for agriculture?",
+      "options": [
+        "All soils behave identically",
+        "Different soils have different characteristics that influence suitability and management",
+        "Soil type matters only to mining",
+        "Agriculture does not depend on soil"
+      ],
+      "correctAnswer": "Different soils have different characteristics that influence suitability and management",
+      "explanation": "Soil properties affect fertility, drainage, and the management practices needed for farming.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-03-009",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Major Mineral Resources and their Distribution",
+      "difficulty": "medium",
+      "question": "Why does the geographic distribution of minerals matter economically?",
+      "options": [
+        "Distribution has no transport implications",
+        "Minerals are evenly distributed everywhere",
+        "Resource location influences where extraction and related activities can occur",
+        "Only climate matters"
+      ],
+      "correctAnswer": "Resource location influences where extraction and related activities can occur",
+      "explanation": "Mining and related economic activity are tied to where resources are located.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-03-010",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Biotic Resources of Ethiopia",
+      "difficulty": "easy",
+      "question": "Which is a biotic resource?",
+      "options": [
+        "Clay mineral",
+        "Iron ore",
+        "Granite",
+        "Wildlife"
+      ],
+      "correctAnswer": "Wildlife",
+      "explanation": "Biotic resources come from living components of the environment.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-03-011",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Major Types of Natural Vegetation of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why is natural vegetation important to geographic analysis?",
+      "options": [
+        "It reflects environmental conditions and supports ecosystems and human uses",
+        "Vegetation is unrelated to climate",
+        "Only cities have geographic value",
+        "Vegetation never changes"
+      ],
+      "correctAnswer": "It reflects environmental conditions and supports ecosystems and human uses",
+      "explanation": "Vegetation responds to environmental conditions and provides ecological and economic benefits.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-03-012",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Main Kinds of Wildlife of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why is wildlife conservation also a geographic concern?",
+      "options": [
+        "Wildlife exists independently of habitat",
+        "Wildlife is distributed across particular environments and is affected by human land use",
+        "Conservation affects no landscape",
+        "Only zoology studies habitat"
+      ],
+      "correctAnswer": "Wildlife is distributed across particular environments and is affected by human land use",
+      "explanation": "Wildlife patterns are spatial and linked to habitats and human-environment interactions.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-03-013",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Characteristics of Ethiopian Rivers",
+      "difficulty": "easy",
+      "question": "A river has high discharge during rainy months and low discharge during dry months. Which factor most directly explains this pattern?",
+      "options": [
+        "Road quality",
+        "Population density",
+        "Seasonal variation in rainfall",
+        "Mineral distribution"
+      ],
+      "correctAnswer": "Seasonal variation in rainfall",
+      "explanation": "Seasonal rainfall affects the amount of water entering river systems.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-03-014",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Major Mineral Resources and their Distribution",
+      "difficulty": "hard",
+      "question": "A mining site is far from major markets and roads. Which geographic issue is likely to become important?",
+      "options": [
+        "Population composition only",
+        "Language extinction",
+        "Rainfall measurement only",
+        "Accessibility and transport costs"
+      ],
+      "correctAnswer": "Accessibility and transport costs",
+      "explanation": "The location of resources relative to infrastructure affects economic feasibility and distribution.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-03-015",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Natural Vegetation",
+      "difficulty": "easy",
+      "question": "A region experiences vegetation loss after repeated clearing without regeneration. What resource problem is illustrated?",
+      "options": [
+        "Natural vegetation degradation",
+        "Increase in mineral formation",
+        "Improved soil formation",
+        "Expansion of wetlands"
+      ],
+      "correctAnswer": "Natural vegetation degradation",
+      "explanation": "Repeated clearing without recovery can degrade vegetation resources.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-03-016",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Significance of Ethiopian lakes and Rivers",
+      "difficulty": "hard",
+      "question": "Why can protecting water bodies have benefits beyond water supply?",
+      "options": [
+        "Water bodies affect only drinking water",
+        "Healthy water systems support ecosystems, livelihoods, recreation, and environmental balance",
+        "Ecosystems do not depend on water",
+        "Recreation is unrelated to geography"
+      ],
+      "correctAnswer": "Healthy water systems support ecosystems, livelihoods, recreation, and environmental balance",
+      "explanation": "Rivers and lakes have interconnected environmental and human values.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-04-001",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Concepts of Human Population",
+      "difficulty": "easy",
+      "question": "Why do geographers study population composition?",
+      "options": [
+        "To classify rocks",
+        "To measure river depth only",
+        "To understand characteristics such as age, sex, and other population attributes",
+        "To predict weather each day"
+      ],
+      "correctAnswer": "To understand characteristics such as age, sex, and other population attributes",
+      "explanation": "Population composition describes the characteristics of a population and helps explain social and economic needs.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-04-002",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Trends of Population Growth in Ethiopia",
+      "difficulty": "easy",
+      "question": "Why is a population-growth trend more informative than a single population figure?",
+      "options": [
+        "Population growth is unrelated to time",
+        "A single figure shows all migration patterns",
+        "Trends have no time dimension",
+        "It shows how the population is changing over time"
+      ],
+      "correctAnswer": "It shows how the population is changing over time",
+      "explanation": "Trends reveal direction and pace of change across time.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-04-003",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Population Composition",
+      "difficulty": "medium",
+      "question": "A region has a very large share of children. Which planning need is most likely to be relatively high?",
+      "options": [
+        "Education and child-related services",
+        "Elderly care only",
+        "Mining equipment only",
+        "Road toll collection only"
+      ],
+      "correctAnswer": "Education and child-related services",
+      "explanation": "A youthful population increases demand for schools and other child-related services.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-04-004",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Population Distribution",
+      "difficulty": "easy",
+      "question": "Two regions have equal population totals, but one has much more land area. Which statement is likely true?",
+      "options": [
+        "Their densities must be equal",
+        "Their population densities differ",
+        "The smaller region must have fewer people",
+        "Land area never matters"
+      ],
+      "correctAnswer": "Their population densities differ",
+      "explanation": "Population density relates population size to the area occupied.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-04-005",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Urban and Rural Settlement Patterns",
+      "difficulty": "medium",
+      "question": "Why might rural settlements be more dispersed in one region than another?",
+      "options": [
+        "Rural settlements are identical everywhere",
+        "Settlement pattern is always random",
+        "Differences in water, agriculture, relief, and accessibility can influence settlement pattern",
+        "Only language determines dispersion"
+      ],
+      "correctAnswer": "Differences in water, agriculture, relief, and accessibility can influence settlement pattern",
+      "explanation": "Physical and economic conditions affect where rural communities locate.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-04-006",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Rural Settlements",
+      "difficulty": "medium",
+      "question": "A rural settlement grows along a road connecting farms to a market. Which factor best explains its location?",
+      "options": [
+        "Distance from all services",
+        "Absence of transport",
+        "Lack of resources",
+        "Accessibility and economic connection"
+      ],
+      "correctAnswer": "Accessibility and economic connection",
+      "explanation": "Roads can improve access to markets and services, influencing settlement growth.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-04-007",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Health and disease in Ethiopia",
+      "difficulty": "medium",
+      "question": "Why is disease distribution a geographic issue?",
+      "options": [
+        "Diseases vary across places according to environmental, social, and accessibility conditions",
+        "Disease has no spatial pattern",
+        "Only hospitals determine disease",
+        "Climate never affects health"
+      ],
+      "correctAnswer": "Diseases vary across places according to environmental, social, and accessibility conditions",
+      "explanation": "Health conditions have spatial patterns linked to multiple environmental and human factors.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-04-008",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Impacts of Population Growth on Sustainable Development in Ethiopia",
+      "difficulty": "easy",
+      "question": "Rapid population growth can make sustainable development harder when what occurs?",
+      "options": [
+        "All resources become unlimited",
+        "Demand for land, water, services, and infrastructure grows faster than capacity",
+        "Environmental pressure always falls",
+        "Service needs disappear"
+      ],
+      "correctAnswer": "Demand for land, water, services, and infrastructure grows faster than capacity",
+      "explanation": "Fast growth can increase pressure on resources and services if development does not keep pace.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-04-009",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Language",
+      "difficulty": "easy",
+      "question": "Why is language diversity a geographic topic?",
+      "options": [
+        "Language has no regional pattern",
+        "Language exists independently of place",
+        "Languages have spatial distributions and reflect cultural diversity and interaction",
+        "Only written language matters"
+      ],
+      "correctAnswer": "Languages have spatial distributions and reflect cultural diversity and interaction",
+      "explanation": "Geography considers where cultural traits are distributed and how they vary across space.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-04-010",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Religion",
+      "difficulty": "medium",
+      "question": "Why is religion included in population geography?",
+      "options": [
+        "Religious practices are unrelated to settlement",
+        "Religion never has a spatial pattern",
+        "Religion affects only climate",
+        "Religious groups have geographic distributions and influence cultural landscapes"
+      ],
+      "correctAnswer": "Religious groups have geographic distributions and influence cultural landscapes",
+      "explanation": "Religion is a social characteristic with spatial and cultural dimensions.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-04-011",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Population Distribution",
+      "difficulty": "easy",
+      "question": "A dense population is concentrated near fertile land and reliable water. Which explanation is strongest?",
+      "options": [
+        "Physical resources and agricultural opportunities can attract settlement",
+        "Population ignores resources",
+        "Fertility has no geographic effect",
+        "Water availability cannot influence settlement"
+      ],
+      "correctAnswer": "Physical resources and agricultural opportunities can attract settlement",
+      "explanation": "Resource availability and productive land can influence where populations concentrate.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-04-012",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Health and disease in Ethiopia",
+      "difficulty": "medium",
+      "question": "A remote community has fewer health facilities and longer travel distances to care. Which geographic factor is most directly involved?",
+      "options": [
+        "Language family",
+        "Accessibility",
+        "Mineral distribution",
+        "Map scale"
+      ],
+      "correctAnswer": "Accessibility",
+      "explanation": "The distance and ease of reaching health services are geographic accessibility issues.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-04-013",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Impacts of Population Growth on Sustainable Development in Ethiopia",
+      "difficulty": "hard",
+      "question": "Which policy response best links population growth with sustainable development?",
+      "options": [
+        "Using resources without limits",
+        "Ignoring infrastructure needs",
+        "Expanding services and improving resource management while planning for changing demand",
+        "Reducing all economic activity"
+      ],
+      "correctAnswer": "Expanding services and improving resource management while planning for changing demand",
+      "explanation": "Sustainable planning seeks to match development and resource management with population needs.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-04-014",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Urban and Rural Settlement Patterns",
+      "difficulty": "medium",
+      "question": "Why do urban and rural settlements often show different spatial patterns?",
+      "options": [
+        "Cities never influence surrounding areas",
+        "Urban and rural areas are geographically identical",
+        "Only rainfall distinguishes them",
+        "Their dominant economic functions, densities, and service structures differ"
+      ],
+      "correctAnswer": "Their dominant economic functions, densities, and service structures differ",
+      "explanation": "Urban and rural settlements develop around different functions and levels of concentration.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-04-015",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Population Composition",
+      "difficulty": "medium",
+      "question": "Why can age composition affect economic planning?",
+      "options": [
+        "Different age groups create different demands for education, jobs, and health services",
+        "Age has no policy relevance",
+        "All age groups need identical services",
+        "Population planning depends only on land area"
+      ],
+      "correctAnswer": "Different age groups create different demands for education, jobs, and health services",
+      "explanation": "Age structure influences the types of services and opportunities a population needs.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-05-001",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Major Economic Activities in Ethiopia",
+      "difficulty": "easy",
+      "question": "Which activity is most directly classified as a primary economic activity?",
+      "options": [
+        "Banking",
+        "Crop production",
+        "Retail advertising",
+        "Software design"
+      ],
+      "correctAnswer": "Crop production",
+      "explanation": "Primary activities directly use natural resources, including agriculture.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-05-002",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Subsistence Farming",
+      "difficulty": "easy",
+      "question": "What is the defining feature of subsistence farming?",
+      "options": [
+        "Only industrial crops are grown",
+        "All output is exported",
+        "Production is mainly intended to meet the farmer’s own needs",
+        "Farming is fully mechanized"
+      ],
+      "correctAnswer": "Production is mainly intended to meet the farmer’s own needs",
+      "explanation": "Subsistence farming emphasizes producing for household consumption rather than primarily for commercial sale.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-05-003",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Contribution of subsistence farming to the Ethiopian Economy",
+      "difficulty": "medium",
+      "question": "Why can subsistence farming contribute to the wider economy even when much output is not sold?",
+      "options": [
+        "It prevents all market activity",
+        "Only exports have economic value",
+        "Subsistence farming has no economic effects",
+        "It supports household livelihoods and may reduce food insecurity while using labor and land"
+      ],
+      "correctAnswer": "It supports household livelihoods and may reduce food insecurity while using labor and land",
+      "explanation": "Subsistence production has livelihood and food-security value even when market sales are limited.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-05-004",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Contribution of Cash Crop Production",
+      "difficulty": "easy",
+      "question": "Why can cash crops generate foreign-exchange earnings?",
+      "options": [
+        "They are produced for sale in domestic or international markets and can bring export revenue",
+        "Cash crops are never traded",
+        "Foreign exchange comes only from taxes",
+        "Cash crops are always consumed at home"
+      ],
+      "correctAnswer": "They are produced for sale in domestic or international markets and can bring export revenue",
+      "explanation": "Commercial crops can earn income through market sales and exports.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-05-005",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Problems of Agriculture in Ethiopia",
+      "difficulty": "medium",
+      "question": "Which combination represents common agricultural challenges relevant to geography?",
+      "options": [
+        "Unlimited water and perfect roads",
+        "Variable rainfall, land degradation, limited inputs, and market access problems",
+        "No climate variability",
+        "Complete absence of transport costs"
+      ],
+      "correctAnswer": "Variable rainfall, land degradation, limited inputs, and market access problems",
+      "explanation": "Agriculture is affected by environmental, technological, infrastructural, and market conditions.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-05-006",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Trade",
+      "difficulty": "medium",
+      "question": "Why does trade require more than simply having goods to sell?",
+      "options": [
+        "Only climate determines trade",
+        "Trade occurs without buyers or transport",
+        "Exchange also depends on markets, transport, information, and connectivity",
+        "Goods never need movement"
+      ],
+      "correctAnswer": "Exchange also depends on markets, transport, information, and connectivity",
+      "explanation": "Trade relies on networks connecting producers, buyers, and places.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-05-007",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Transportation in Ethiopia",
+      "difficulty": "easy",
+      "question": "Why can poor transport infrastructure reduce farmers’ market access?",
+      "options": [
+        "Transport matters only to tourists",
+        "It always lowers costs",
+        "Roads have no economic role",
+        "It can increase travel time and costs between farms and markets"
+      ],
+      "correctAnswer": "It can increase travel time and costs between farms and markets",
+      "explanation": "Accessibility and transport costs influence how easily goods reach markets.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-05-008",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Road Safety in Ethiopia",
+      "difficulty": "medium",
+      "question": "Why is road safety a geographic concern rather than only an individual issue?",
+      "options": [
+        "Traffic risk varies across places and is influenced by road conditions, traffic, and land use",
+        "Safety has no spatial dimension",
+        "Roads are unrelated to settlements",
+        "Only drivers create risk"
+      ],
+      "correctAnswer": "Traffic risk varies across places and is influenced by road conditions, traffic, and land use",
+      "explanation": "Road safety has spatial patterns linked to infrastructure and human activity.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-05-009",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Cultural Landscapes in Ethiopia",
+      "difficulty": "easy",
+      "question": "What does a cultural landscape reveal?",
+      "options": [
+        "Only natural rock types",
+        "How human activities and cultural practices have shaped places",
+        "Only weather data",
+        "Only population totals"
+      ],
+      "correctAnswer": "How human activities and cultural practices have shaped places",
+      "explanation": "Cultural landscapes reflect interaction between people, culture, and the environment.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-05-010",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Tourism in Ethiopia",
+      "difficulty": "medium",
+      "question": "Why can tourism be considered an economic activity as well as a cultural activity?",
+      "options": [
+        "Tourism affects only climate",
+        "Tourism involves no local services",
+        "Visitors generate spending while destinations also transmit cultural and heritage value",
+        "Tourism is unrelated to culture"
+      ],
+      "correctAnswer": "Visitors generate spending while destinations also transmit cultural and heritage value",
+      "explanation": "Tourism links economic activity with cultural and natural attractions.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-05-011",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Tourism in Ethiopia",
+      "difficulty": "hard",
+      "question": "A heritage site attracts visitors but suffers from overcrowding. What geographic planning issue is raised?",
+      "options": [
+        "Increasing crowding without limits",
+        "Eliminating all visitors",
+        "Ignoring the environment",
+        "Balancing tourism benefits with conservation and local carrying capacity"
+      ],
+      "correctAnswer": "Balancing tourism benefits with conservation and local carrying capacity",
+      "explanation": "Tourism planning must balance economic benefits with preservation and sustainable use.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-05-012",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Transportation in Ethiopia",
+      "difficulty": "easy",
+      "question": "A new road shortens travel time between a farming area and a city. Which immediate geographic effect is most plausible?",
+      "options": [
+        "Improved accessibility and stronger market connections",
+        "Reduced accessibility",
+        "Complete loss of agriculture",
+        "Automatic population decline"
+      ],
+      "correctAnswer": "Improved accessibility and stronger market connections",
+      "explanation": "Better roads can improve connectivity and access to markets and services.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-05-013",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Cash Crop Production",
+      "difficulty": "hard",
+      "question": "Why can heavy dependence on one cash crop create economic vulnerability?",
+      "options": [
+        "One crop always guarantees stable income",
+        "A price or production shock can strongly affect income when alternatives are limited",
+        "Prices cannot change",
+        "Diversification has no economic role"
+      ],
+      "correctAnswer": "A price or production shock can strongly affect income when alternatives are limited",
+      "explanation": "Dependence on a narrow product base can increase vulnerability to market or environmental shocks.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-05-014",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Major Economic Activities in Ethiopia",
+      "difficulty": "medium",
+      "question": "Why should economic activities be mapped geographically?",
+      "options": [
+        "Maps cannot show economic patterns",
+        "Economic activities occur uniformly everywhere",
+        "Their distribution reflects resources, accessibility, population, and environmental conditions",
+        "Only borders matter"
+      ],
+      "correctAnswer": "Their distribution reflects resources, accessibility, population, and environmental conditions",
+      "explanation": "Spatial distribution helps explain where and why activities occur.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-05-015",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Cultural Landscapes in Ethiopia",
+      "difficulty": "hard",
+      "question": "A community preserves a traditional settlement pattern while adapting buildings to modern needs. What does this illustrate?",
+      "options": [
+        "Only natural processes",
+        "Complete cultural disappearance",
+        "No human-environment interaction",
+        "Continuity and change within a cultural landscape"
+      ],
+      "correctAnswer": "Continuity and change within a cultural landscape",
+      "explanation": "Cultural landscapes can preserve inherited features while also changing through adaptation.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-06-001",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Human Environment Relationship",
+      "difficulty": "easy",
+      "question": "A community changes farming methods after repeated soil loss. Which geographic idea is illustrated?",
+      "options": [
+        "People respond to environmental conditions and also modify them",
+        "Environment and society are unrelated",
+        "Only the environment changes",
+        "Only population matters"
+      ],
+      "correctAnswer": "People respond to environmental conditions and also modify them",
+      "explanation": "Human-environment relationships involve two-way interaction.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-06-002",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Optimum Population and Resource Use",
+      "difficulty": "medium",
+      "question": "Which situation best represents an optimum population concept?",
+      "options": [
+        "Any population regardless of resources",
+        "A population size that allows resources to be used effectively relative to available needs and conditions",
+        "A population with no resources",
+        "A population that always grows indefinitely"
+      ],
+      "correctAnswer": "A population size that allows resources to be used effectively relative to available needs and conditions",
+      "explanation": "The concept concerns the relationship between population size, resources, and productive capacity.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-06-003",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Over Population and Resource Use",
+      "difficulty": "easy",
+      "question": "What is a likely geographic consequence of severe overpopulation relative to available resources?",
+      "options": [
+        "Less demand for housing",
+        "Automatic improvement in resource quality",
+        "Greater pressure on land, water, services, and the environment",
+        "Reduced environmental pressure"
+      ],
+      "correctAnswer": "Greater pressure on land, water, services, and the environment",
+      "explanation": "When population pressure exceeds resource capacity, environmental and service stresses can increase.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-06-004",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Under Population and Resource use",
+      "difficulty": "medium",
+      "question": "Which situation best illustrates underpopulation in relation to resources?",
+      "options": [
+        "Services are overcrowded",
+        "Too many people depend on too little land",
+        "Population density is always high",
+        "Available resources exceed what the existing population can effectively use"
+      ],
+      "correctAnswer": "Available resources exceed what the existing population can effectively use",
+      "explanation": "Underpopulation concerns a situation where population is relatively small compared with available resources and capacity.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-06-005",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Impacts of Rapid Population Growth",
+      "difficulty": "easy",
+      "question": "Why can rapid population growth increase pressure on urban infrastructure?",
+      "options": [
+        "Demand for housing, transport, water, sanitation, and services can rise quickly",
+        "Infrastructure demand always falls",
+        "Cities become less connected",
+        "Population growth reduces service needs"
+      ],
+      "correctAnswer": "Demand for housing, transport, water, sanitation, and services can rise quickly",
+      "explanation": "Fast growth can increase service and infrastructure requirements faster than capacity expands.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-06-006",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Human Environment Relationship",
+      "difficulty": "medium",
+      "question": "A river is diverted for irrigation and downstream wetlands shrink. What does this example demonstrate?",
+      "options": [
+        "Human activity never changes environments",
+        "Human actions can alter physical and ecological systems",
+        "Only weather controls wetlands",
+        "Water systems are independent of people"
+      ],
+      "correctAnswer": "Human actions can alter physical and ecological systems",
+      "explanation": "Human use of resources can change environmental processes and ecosystems.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-06-007",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Optimum Population and Resource Use",
+      "difficulty": "hard",
+      "question": "Why is optimum population not simply the smallest possible population?",
+      "options": [
+        "Population size is irrelevant",
+        "Smaller populations always use resources best",
+        "It is a relationship between population and the effective use of available resources and capacity",
+        "Optimum means zero population"
+      ],
+      "correctAnswer": "It is a relationship between population and the effective use of available resources and capacity",
+      "explanation": "The concept is relational rather than simply numerical.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-06-008",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Over Population and Resource Use",
+      "difficulty": "hard",
+      "question": "A farming area experiences falling soil quality as population pressure rises and fallow periods shorten. Which relationship is most direct?",
+      "options": [
+        "More population always improves soil",
+        "Population reduces land use",
+        "Soil is independent of farming",
+        "Population pressure is increasing pressure on land resources"
+      ],
+      "correctAnswer": "Population pressure is increasing pressure on land resources",
+      "explanation": "Higher demand for land can reduce recovery time and contribute to resource degradation.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-06-009",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Under Population and Resource use",
+      "difficulty": "medium",
+      "question": "A resource-rich area has very few workers and limited economic activity. Which issue best fits the topic?",
+      "options": [
+        "Underuse of available resources because population and capacity are low",
+        "Overpopulation",
+        "Urban congestion",
+        "Excess road traffic"
+      ],
+      "correctAnswer": "Underuse of available resources because population and capacity are low",
+      "explanation": "Underpopulation can be discussed in terms of resources not being fully utilized.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-06-010",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Impacts of Rapid Population Growth",
+      "difficulty": "medium",
+      "question": "Which response most directly supports adaptation to rapid population growth?",
+      "options": [
+        "Ignoring population trends",
+        "Long-term planning for land, water, infrastructure, and services",
+        "Reducing all public services",
+        "Using resources without planning"
+      ],
+      "correctAnswer": "Long-term planning for land, water, infrastructure, and services",
+      "explanation": "Planning helps align resource use and infrastructure with changing population needs.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-07-001",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Natural Resource Degradation",
+      "difficulty": "easy",
+      "question": "What does natural resource degradation mean?",
+      "options": [
+        "The discovery of a new mineral",
+        "An increase in resource quality",
+        "A decline in the quality or productive capacity of natural resources",
+        "The mapping of resources"
+      ],
+      "correctAnswer": "A decline in the quality or productive capacity of natural resources",
+      "explanation": "Degradation means that the condition or productive function of a resource is deteriorating.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-07-002",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Soil Degradation",
+      "difficulty": "easy",
+      "question": "Which practice is most likely to worsen soil degradation on cultivated land?",
+      "options": [
+        "Reducing erosion",
+        "Terracing on suitable slopes",
+        "Maintaining ground cover",
+        "Repeated cultivation and removal of vegetation without adequate conservation"
+      ],
+      "correctAnswer": "Repeated cultivation and removal of vegetation without adequate conservation",
+      "explanation": "Without conservation, repeated cultivation and exposed soil can increase erosion and loss of soil quality.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-07-003",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Vegetation Degradation",
+      "difficulty": "medium",
+      "question": "Why can vegetation loss affect more than plant cover itself?",
+      "options": [
+        "It can increase erosion, reduce habitat, and alter ecosystem functions",
+        "It improves every ecosystem automatically",
+        "Vegetation has no relationship with soil",
+        "Vegetation affects only scenery"
+      ],
+      "correctAnswer": "It can increase erosion, reduce habitat, and alter ecosystem functions",
+      "explanation": "Vegetation supports soil stability, habitats, and ecosystem processes.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-07-004",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Water Degradation",
+      "difficulty": "easy",
+      "question": "Which example best illustrates water-resource degradation?",
+      "options": [
+        "Measuring rainfall",
+        "Pollution that reduces water quality",
+        "Building a water tank carefully",
+        "Mapping a river"
+      ],
+      "correctAnswer": "Pollution that reduces water quality",
+      "explanation": "Water degradation includes processes that reduce the quality or usefulness of water resources.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-07-005",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "GREEN LEGACY movement",
+      "difficulty": "medium",
+      "question": "Why would a large-scale tree-planting movement be relevant to environmental geography?",
+      "options": [
+        "Planting has no environmental effects",
+        "Trees affect only tourism",
+        "Vegetation restoration can support soil protection, ecosystem functions, and landscape management",
+        "Forests do not influence soil"
+      ],
+      "correctAnswer": "Vegetation restoration can support soil protection, ecosystem functions, and landscape management",
+      "explanation": "The curriculum’s Green Legacy topic concerns a broad environmental restoration movement.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-07-006",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "GREEN LEGACY movement",
+      "difficulty": "hard",
+      "question": "A restoration program measures tree survival rather than only the number planted. Why is that better for evaluation?",
+      "options": [
+        "Only publicity matters",
+        "The number planted always proves success",
+        "Survival is unrelated to restoration",
+        "Survival indicates whether planting leads to lasting vegetation establishment"
+      ],
+      "correctAnswer": "Survival indicates whether planting leads to lasting vegetation establishment",
+      "explanation": "Long-term outcomes are more informative than counting initial activities alone.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-07-007",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Soil Degradation",
+      "difficulty": "medium",
+      "question": "A farmer plants along contour lines on a sloping field. What problem is this practice designed to reduce?",
+      "options": [
+        "Soil erosion by slowing runoff",
+        "Water pollution from cities",
+        "Population growth",
+        "Mineral extraction"
+      ],
+      "correctAnswer": "Soil erosion by slowing runoff",
+      "explanation": "Contour-based conservation can reduce the speed of runoff and help limit erosion.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-07-008",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Water Degradation",
+      "difficulty": "hard",
+      "question": "Why can protecting vegetation in a watershed help water resources?",
+      "options": [
+        "Vegetation always increases pollution",
+        "Vegetation can reduce erosion and help regulate runoff and infiltration",
+        "Plants prevent all rainfall",
+        "Water resources are independent of watersheds"
+      ],
+      "correctAnswer": "Vegetation can reduce erosion and help regulate runoff and infiltration",
+      "explanation": "Vegetation contributes to watershed stability and can influence water movement and sediment.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-08-001",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Map and Its Basic Components",
+      "difficulty": "easy",
+      "question": "What is the main purpose of a map?",
+      "options": [
+        "To show only political opinions",
+        "To replace all field observation",
+        "To represent information about places and spatial relationships",
+        "To record only historical dates"
+      ],
+      "correctAnswer": "To represent information about places and spatial relationships",
+      "explanation": "Maps are spatial representations used to communicate geographic information.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-08-002",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Meaning of a Map",
+      "difficulty": "easy",
+      "question": "Why does a map need a clear title?",
+      "options": [
+        "It identifies every road number",
+        "It gives the exact distance to every place",
+        "It replaces the legend",
+        "It tells the reader what the map represents"
+      ],
+      "correctAnswer": "It tells the reader what the map represents",
+      "explanation": "A title establishes the subject and focus of the map.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-08-003",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Scale",
+      "difficulty": "easy",
+      "question": "Why is map scale essential when measuring distance?",
+      "options": [
+        "It provides the relationship between map distance and real-world distance",
+        "It identifies population density",
+        "It shows the direction of north",
+        "It replaces coordinates"
+      ],
+      "correctAnswer": "It provides the relationship between map distance and real-world distance",
+      "explanation": "Scale connects measurements on the map to actual ground distances.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-08-004",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Scale conversion and Measurements on Maps",
+      "difficulty": "medium",
+      "question": "A map uses a scale of 1:100,000. What does 1 cm on the map represent on the ground?",
+      "options": [
+        "100 km",
+        "1 km",
+        "100 m",
+        "10 km"
+      ],
+      "correctAnswer": "1 km",
+      "explanation": "At 1:100,000, 1 cm represents 100,000 cm, which equals 1 km.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-08-005",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Measurement of Distance",
+      "difficulty": "medium",
+      "question": "A route measures 7 cm on a 1:50,000 map. What is the ground distance?",
+      "options": [
+        "0.35 km",
+        "35 km",
+        "3.5 km",
+        "350 km"
+      ],
+      "correctAnswer": "3.5 km",
+      "explanation": "7 cm × 50,000 = 350,000 cm = 3.5 km.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-08-006",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Position on Maps",
+      "difficulty": "easy",
+      "question": "Why are position systems important on maps?",
+      "options": [
+        "They show climate only",
+        "They change the scale automatically",
+        "They remove the need for direction",
+        "They allow places and features to be located consistently"
+      ],
+      "correctAnswer": "They allow places and features to be located consistently",
+      "explanation": "Position systems provide a systematic way to locate geographic features.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-08-007",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Grid References",
+      "difficulty": "medium",
+      "question": "A map reader uses grid references to locate a school. What is the main advantage?",
+      "options": [
+        "A systematic location can be communicated to another map user",
+        "It measures rainfall directly",
+        "It replaces map symbols",
+        "It determines elevation automatically"
+      ],
+      "correctAnswer": "A systematic location can be communicated to another map user",
+      "explanation": "Grid references provide a standardized way to identify locations on a map.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-08-008",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Points Compass Direction",
+      "difficulty": "easy",
+      "question": "A town lies northeast of a village. Which direction should a traveler move from the village?",
+      "options": [
+        "Southwest",
+        "Northeast",
+        "Southeast",
+        "Northwest"
+      ],
+      "correctAnswer": "Northeast",
+      "explanation": "Northeast is the compass direction that lies between north and east.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-08-009",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "North Points",
+      "difficulty": "easy",
+      "question": "Why is a north point necessary on many maps?",
+      "options": [
+        "It changes the map scale",
+        "It gives population totals",
+        "It helps the reader interpret direction and orientation",
+        "It identifies soil type"
+      ],
+      "correctAnswer": "It helps the reader interpret direction and orientation",
+      "explanation": "A north indicator allows users to relate map orientation to geographic directions.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-08-010",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Map Sketching",
+      "difficulty": "medium",
+      "question": "A student sketches a route map and keeps the important relative positions but omits unnecessary detail. Why is this useful?",
+      "options": [
+        "Scale becomes irrelevant in all maps",
+        "A sketch must include every building",
+        "More detail always improves clarity",
+        "A sketch can communicate essential spatial relationships efficiently"
+      ],
+      "correctAnswer": "A sketch can communicate essential spatial relationships efficiently",
+      "explanation": "Map sketches prioritize useful spatial relationships over unnecessary detail.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-08-011",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Interpreting Maps and Graphs",
+      "difficulty": "hard",
+      "question": "A map shows population concentrated near a road corridor. What is the best geographic interpretation?",
+      "options": [
+        "Transport accessibility may be influencing settlement distribution",
+        "Roads never affect settlement",
+        "Population causes roads in every case",
+        "The map proves climate is identical"
+      ],
+      "correctAnswer": "Transport accessibility may be influencing settlement distribution",
+      "explanation": "Spatial patterns can suggest relationships, though additional evidence may be needed to establish causation.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-08-012",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Physical and Human Landscapes",
+      "difficulty": "hard",
+      "question": "A map shows irrigated farms beside a river and roads leading to a town. What is the strongest interpretation?",
+      "options": [
+        "Only rivers matter",
+        "Physical water resources and human infrastructure are interacting to shape land use",
+        "Only roads matter",
+        "The landscape is entirely natural"
+      ],
+      "correctAnswer": "Physical water resources and human infrastructure are interacting to shape land use",
+      "explanation": "Maps can reveal interactions between physical features and human activities.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-08-013",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Interpreting Graphs, Tables and Diagrams",
+      "difficulty": "medium",
+      "question": "A population graph rises rapidly and then levels off. What does the shape directly tell you?",
+      "options": [
+        "It identifies every cause",
+        "It proves why population changed",
+        "The rate or amount of population change differs across the periods shown",
+        "It shows only climate"
+      ],
+      "correctAnswer": "The rate or amount of population change differs across the periods shown",
+      "explanation": "The graph directly shows the pattern of change; explaining causes requires further evidence.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-08-014",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Interpreting Graphs, Tables and Diagrams",
+      "difficulty": "easy",
+      "question": "A table shows two districts with equal population but different land areas. Which measure would best compare how crowded they are spatially?",
+      "options": [
+        "Compass direction",
+        "Absolute rainfall",
+        "Map title",
+        "Population density"
+      ],
+      "correctAnswer": "Population density",
+      "explanation": "Population density relates population to land area and therefore helps compare spatial concentration.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-05-016",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Trade",
+      "difficulty": "medium",
+      "question": "A producer can increase sales after a new market becomes connected by reliable transport. Which geographic relationship is illustrated?",
+      "options": [
+        "Transport connectivity can expand market access",
+        "Transport always reduces production",
+        "Markets depend only on climate",
+        "Trade is independent of location"
+      ],
+      "correctAnswer": "Transport connectivity can expand market access",
+      "explanation": "Better connections can link producers to more buyers and reduce barriers created by distance.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-05-017",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Road Safety in Ethiopia",
+      "difficulty": "hard",
+      "question": "A busy road passes through a densely settled area with many pedestrian crossings. Why might risk increase there?",
+      "options": [
+        "Settlement density eliminates road risk",
+        "Higher interaction between traffic and pedestrians raises exposure to accidents",
+        "Pedestrians never affect road safety",
+        "Road design cannot affect risk"
+      ],
+      "correctAnswer": "Higher interaction between traffic and pedestrians raises exposure to accidents",
+      "explanation": "Road safety varies with traffic, land use, infrastructure, and the number of people interacting with roads.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-06-011",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Human Environment Relationship",
+      "difficulty": "medium",
+      "question": "Farmers terrace a steep slope after observing severe runoff. What does this decision show?",
+      "options": [
+        "Environment has no influence on farming",
+        "People cannot change land use",
+        "People adapt practices in response to environmental conditions",
+        "Terracing is unrelated to runoff"
+      ],
+      "correctAnswer": "People adapt practices in response to environmental conditions",
+      "explanation": "Human-environment interaction includes adapting activities to physical conditions.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-06-012",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Over Population and Resource Use",
+      "difficulty": "easy",
+      "question": "A growing settlement uses the same water source for more households without improving supply. Which pressure is most likely?",
+      "options": [
+        "Lower population density",
+        "Decreasing demand for water",
+        "Improved resource quality",
+        "Increasing demand relative to the available water resource"
+      ],
+      "correctAnswer": "Increasing demand relative to the available water resource",
+      "explanation": "When population rises while supply remains fixed, pressure on the resource can increase.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-07-009",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Natural Resource Degradation",
+      "difficulty": "hard",
+      "question": "A watershed loses vegetation and then experiences more sediment in streams. Which chain is most plausible?",
+      "options": [
+        "Vegetation loss can increase erosion and sediment delivery to water",
+        "Vegetation loss always reduces erosion",
+        "Sediment is unrelated to land cover",
+        "Water quality never responds to erosion"
+      ],
+      "correctAnswer": "Vegetation loss can increase erosion and sediment delivery to water",
+      "explanation": "Reduced vegetation cover can expose soil, increasing erosion and sediment reaching waterways.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-07-010",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "GREEN LEGACY movement",
+      "difficulty": "medium",
+      "question": "Why is restoration monitoring important after a large environmental campaign?",
+      "options": [
+        "Monitoring prevents trees from growing",
+        "It helps determine whether environmental improvements persist beyond the initial activity",
+        "Only planting numbers matter",
+        "Restoration has no measurable outcomes"
+      ],
+      "correctAnswer": "It helps determine whether environmental improvements persist beyond the initial activity",
+      "explanation": "Monitoring helps evaluate whether restoration produces lasting environmental outcomes.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-08-015",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Scale conversion and Measurements on Maps",
+      "difficulty": "medium",
+      "question": "A map scale is 1:200,000. A road measures 4 cm on the map. What is its ground length?",
+      "options": [
+        "80 km",
+        "0.8 km",
+        "8 km",
+        "800 km"
+      ],
+      "correctAnswer": "8 km",
+      "explanation": "4 × 200,000 cm = 800,000 cm = 8 km.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-08-016",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Grid References",
+      "difficulty": "hard",
+      "question": "A student records a feature’s grid reference incorrectly by reversing the two components. What is the likely problem?",
+      "options": [
+        "The map title becomes incorrect",
+        "The map scale changes",
+        "The compass direction changes",
+        "The feature may be placed in the wrong grid square"
+      ],
+      "correctAnswer": "The feature may be placed in the wrong grid square",
+      "explanation": "Grid references depend on following the correct order of the coordinate components.",
+      "xp": 20
+    },
+    {
+      "id": "GEO-09-08-017",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Points Compass Direction",
+      "difficulty": "easy",
+      "question": "A village is directly west of a market. From the market, which direction leads to the village?",
+      "options": [
+        "West",
+        "East",
+        "North",
+        "South"
+      ],
+      "correctAnswer": "West",
+      "explanation": "If one place is west of another, the reverse direction from the second place is east only when the second is west of the first; here the village is west of the market, so west leads to the village.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-08-018",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Interpreting Graphs, Tables and Diagrams",
+      "difficulty": "easy",
+      "question": "A table shows rainfall values for four months. Which calculation would best describe the total rainfall across the four months?",
+      "options": [
+        "Multiply each month by the number of months",
+        "Add the monthly rainfall values",
+        "Subtract the smallest from the largest",
+        "Divide each value by its month number"
+      ],
+      "correctAnswer": "Add the monthly rainfall values",
+      "explanation": "A total is obtained by summing the observations across the stated period.",
+      "xp": 10
+    },
+    {
+      "id": "GEO-09-08-019",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Physical and Human Landscapes",
+      "difficulty": "medium",
+      "question": "A settlement is clustered on relatively level ground while nearby steep slopes remain sparsely occupied. Which interpretation is most reasonable?",
+      "options": [
+        "Settlement patterns are always random",
+        "Slope has no spatial effect",
+        "Relief may be influencing settlement suitability",
+        "Only language explains the distribution"
+      ],
+      "correctAnswer": "Relief may be influencing settlement suitability",
+      "explanation": "Physical relief can influence accessibility, construction, and land-use choices.",
+      "xp": 15
+    },
+    {
+      "id": "GEO-09-08-020",
+      "grade": 9,
+      "subject": "Geography",
+      "topic": "Interpreting Maps and Graphs",
+      "difficulty": "hard",
+      "question": "Two maps show the same road network at different scales. What should a careful reader expect?",
+      "options": [
+        "The road network becomes physically different",
+        "The geographic locations change",
+        "North changes automatically",
+        "The represented ground area and level of detail may differ"
+      ],
+      "correctAnswer": "The represented ground area and level of detail may differ",
+      "explanation": "Map scale affects how much area is shown and how much detail can be represented.",
+      "xp": 20
+    }
+  ]
+}

@@ -1,0 +1,2047 @@
+{
+  "subject": "Mathematics",
+  "grade": 9,
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": "MATH-09-01-001",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "easy",
+      "question": "Given the set A = {x : x ∈ N, x < 7}, which of the following is the correct roster (listing) form of A? (N = {1, 2, 3, ...})",
+      "options": [
+        "{1, 2, 3, 4, 5, 6}",
+        "{1, 2, 3, 4, 5, 6, 7}",
+        "{0, 1, 2, 3, 4, 5, 6}",
+        "{2, 3, 4, 5, 6}"
+      ],
+      "correctAnswer": "{1, 2, 3, 4, 5, 6}",
+      "explanation": "The condition x < 7 excludes 7 itself, and since N begins at 1 (not 0), the roster form lists every natural number strictly less than 7: {1, 2, 3, 4, 5, 6}.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-01-002",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "easy",
+      "question": "Which set-builder description correctly represents the set A = {2, 4, 6, 8, 10}?",
+      "options": [
+        "{x : x is an odd natural number and x ≤ 10}",
+        "{x : x is an even natural number and x ≤ 10}",
+        "{x : x is a multiple of 3 and x ≤ 10}",
+        "{x : x is a natural number and x ≤ 10}"
+      ],
+      "correctAnswer": "{x : x is an even natural number and x ≤ 10}",
+      "explanation": "Every element of A (2, 4, 6, 8, 10) is an even natural number not exceeding 10, and no other even natural numbers up to 10 are missing, so this defining property exactly matches the set.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-01-003",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "easy",
+      "question": "Which of the following is an empty set, given N = {1, 2, 3, ...}?",
+      "options": [
+        "{x : x is an even prime number}",
+        "{x : x ∈ N, x < 2}",
+        "{x : x ∈ N, x < 1}",
+        "{x : x is a whole number less than 5}"
+      ],
+      "correctAnswer": "{x : x ∈ N, x < 1}",
+      "explanation": "Since the smallest natural number is 1, there is no natural number less than 1, so this set has no elements and is the empty set. (Note: {x : x is an even prime number} = {2}, which is not empty.)",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-01-004",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "Let A = {a, b, c} and B = {1, 2, 3}. Which statement about A and B is correct?",
+      "options": [
+        "A = B because they have the same number of elements",
+        "A and B are both empty sets",
+        "A is a subset of B",
+        "A is equivalent to B (n(A) = n(B)) but A ≠ B because their elements are different"
+      ],
+      "correctAnswer": "A is equivalent to B (n(A) = n(B)) but A ≠ B because their elements are different",
+      "explanation": "Two sets are equal only when they contain exactly the same elements. A and B have the same number of elements (3 each), which makes them equivalent, but since their elements differ entirely, they are not equal.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-01-005",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "If a set A has exactly 5 elements, how many proper subsets does A have?",
+      "options": [
+        "31",
+        "32",
+        "16",
+        "10"
+      ],
+      "correctAnswer": "31",
+      "explanation": "A set with n elements has 2^n subsets in total. Here 2^5 = 32 total subsets. A proper subset excludes the set itself, so the number of proper subsets is 32 − 1 = 31.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-01-006",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "Given A = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and B = {3, 6, 9}, what is A − B (the set difference)?",
+      "options": [
+        "{3, 6, 9}",
+        "{1, 2, 4, 5, 7, 8, 10}",
+        "{1, 2, 4, 5, 7, 8, 9, 10}",
+        "{1, 2, 3, 4, 5, 6, 7, 8}"
+      ],
+      "correctAnswer": "{1, 2, 4, 5, 7, 8, 10}",
+      "explanation": "A − B keeps every element of A that is NOT in B. Removing 3, 6, and 9 from A leaves {1, 2, 4, 5, 7, 8, 10}, which has 7 elements.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-01-007",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "Let U = {1, 2, 3, ..., 10} and A = {2, 4, 6, 8, 10}. Find the complement of A, A′, with respect to U.",
+      "options": [
+        "{2, 4, 6, 8, 10}",
+        "{1, 2, 3, ..., 10}",
+        "{1, 3, 5, 7, 9}",
+        "{ } (empty set)"
+      ],
+      "correctAnswer": "{1, 3, 5, 7, 9}",
+      "explanation": "The complement A′ contains every element of the universal set U that is not in A. Removing the even numbers 2, 4, 6, 8, 10 from U leaves the odd numbers {1, 3, 5, 7, 9}.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-01-008",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "If A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7}, find A Δ B (the symmetric difference of A and B).",
+      "options": [
+        "{4, 5}",
+        "{1, 2, 3, 4, 5, 6, 7}",
+        "{1, 2, 3}",
+        "{1, 2, 3, 6, 7}"
+      ],
+      "correctAnswer": "{1, 2, 3, 6, 7}",
+      "explanation": "The symmetric difference A Δ B = (A ∪ B) − (A ∩ B). Here A ∪ B = {1,2,3,4,5,6,7} and A ∩ B = {4,5}, so A Δ B = {1, 2, 3, 6, 7}: the elements that belong to exactly one of the two sets.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-01-009",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "Set A has 3 elements and set B has 4 elements. How many ordered pairs are in the Cartesian product A × B?",
+      "options": [
+        "12",
+        "7",
+        "81",
+        "64"
+      ],
+      "correctAnswer": "12",
+      "explanation": "The number of elements in A × B equals n(A) × n(B), since every element of A is paired with every element of B. Here that is 3 × 4 = 12 ordered pairs.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-01-010",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "hard",
+      "question": "Let U = {1, 2, 3, ..., 20} and let A be the set of prime numbers in U. Find the number of subsets of A.",
+      "options": [
+        "128",
+        "256",
+        "64",
+        "512"
+      ],
+      "correctAnswer": "256",
+      "explanation": "The primes up to 20 are 2, 3, 5, 7, 11, 13, 17, 19 — that is 8 primes, so n(A) = 8. The number of subsets of a set with n elements is 2^n, so A has 2^8 = 256 subsets.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-01-011",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "hard",
+      "question": "In a survey of 100 people, 55 read the Reporter newspaper, 40 read Addis Zemen, and 15 read both. How many people read neither newspaper?",
+      "options": [
+        "15",
+        "35",
+        "20",
+        "5"
+      ],
+      "correctAnswer": "20",
+      "explanation": "Using n(R ∪ A) = n(R) + n(A) − n(R ∩ A) = 55 + 40 − 15 = 80 people read at least one newspaper. Out of 100 people, those who read neither = 100 − 80 = 20.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-01-012",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Sets",
+      "difficulty": "hard",
+      "question": "In a school of 60 students: 30 play football, 25 play basketball, 20 play volleyball, 15 play both football and basketball, 10 play both basketball and volleyball, 12 play both football and volleyball, and 5 play all three sports. How many students play at least one of the three sports?",
+      "options": [
+        "38",
+        "33",
+        "48",
+        "43"
+      ],
+      "correctAnswer": "43",
+      "explanation": "By the inclusion-exclusion principle for three sets: n(F∪B∪V) = n(F)+n(B)+n(V) − [n(F∩B)+n(B∩V)+n(F∩V)] + n(F∩B∩V) = (30+25+20) − (15+10+12) + 5 = 75 − 37 + 5 = 43.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-02-001",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "easy",
+      "question": "Using the divisibility rule for 9, which of the following numbers is exactly divisible by 9?",
+      "options": [
+        "342",
+        "254",
+        "187",
+        "529"
+      ],
+      "correctAnswer": "342",
+      "explanation": "A number is divisible by 9 if the sum of its digits is divisible by 9. For 342: 3+4+2 = 9, which is divisible by 9. The digit sums of 254 (11), 187 (16), and 529 (16) are not multiples of 9.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-02-002",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "medium",
+      "question": "Use Euclid's Division Lemma to find the quotient (q) and remainder (r) when 258 is divided by 13.",
+      "options": [
+        "q = 18, r = 24",
+        "q = 19, r = 11",
+        "q = 20, r = −2",
+        "q = 19, r = 13"
+      ],
+      "correctAnswer": "q = 19, r = 11",
+      "explanation": "Euclid's Division Lemma states a = bq + r where 0 ≤ r < b. Since 13 × 19 = 247 and 258 − 247 = 11, we get q = 19 and r = 11, and indeed 0 ≤ 11 < 13.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-02-003",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "hard",
+      "question": "The GCF of two numbers is 6 and their LCM is 72. If one of the numbers is 18, find the other number.",
+      "options": [
+        "12",
+        "36",
+        "24",
+        "48"
+      ],
+      "correctAnswer": "24",
+      "explanation": "For any two numbers, GCF × LCM = product of the two numbers. So 6 × 72 = 432 = 18 × (other number), giving the other number = 432 ÷ 18 = 24.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-02-004",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "medium",
+      "question": "Convert the repeating decimal 0.7̄ (0.7777...) to a fraction in lowest terms.",
+      "options": [
+        "7/10",
+        "77/100",
+        "7/99",
+        "7/9"
+      ],
+      "correctAnswer": "7/9",
+      "explanation": "Let x = 0.7777.... Then 10x = 7.7777.... Subtracting, 10x − x = 7.7777... − 0.7777... = 7, so 9x = 7, giving x = 7/9.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-02-005",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "easy",
+      "question": "Which of the following rational numbers, when written in decimal form, terminates?",
+      "options": [
+        "7/8",
+        "5/6",
+        "4/15",
+        "2/9"
+      ],
+      "correctAnswer": "7/8",
+      "explanation": "A fraction in lowest terms produces a terminating decimal only if the denominator's only prime factors are 2 and/or 5. Since 8 = 2³, 7/8 terminates (= 0.875). The denominators 6, 15, and 9 each contain the prime factor 3, so those fractions produce repeating decimals.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-02-006",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "easy",
+      "question": "Which of the following numbers is irrational?",
+      "options": [
+        "√16",
+        "√2",
+        "22/7",
+        "0.25"
+      ],
+      "correctAnswer": "√2",
+      "explanation": "√2 cannot be written as a ratio of two integers and its decimal expansion never terminates or repeats, so it is irrational. √16 = 4 (rational), and both 22/7 and 0.25 are rational numbers even though 22/7 approximates π.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-02-007",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "medium",
+      "question": "Between which two consecutive integers does √50 lie?",
+      "options": [
+        "6 and 7",
+        "8 and 9",
+        "7 and 8",
+        "5 and 6"
+      ],
+      "correctAnswer": "7 and 8",
+      "explanation": "Since 7² = 49 and 8² = 64, and 49 < 50 < 64, it follows that 7 < √50 < 8, so √50 lies between 7 and 8.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-02-008",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "easy",
+      "question": "Evaluate |−9| + |4|.",
+      "options": [
+        "−13",
+        "5",
+        "−5",
+        "13"
+      ],
+      "correctAnswer": "13",
+      "explanation": "The absolute value of a number is its distance from zero, so |−9| = 9 and |4| = 4. Adding these gives 9 + 4 = 13.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-02-009",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "medium",
+      "question": "Simplify using the laws of exponents: (2³ × 2⁴) ÷ 2⁵",
+      "options": [
+        "4",
+        "8",
+        "2",
+        "16"
+      ],
+      "correctAnswer": "4",
+      "explanation": "When multiplying powers with the same base, add the exponents; when dividing, subtract them: 2^(3+4−5) = 2² = 4.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-02-010",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "medium",
+      "question": "Which interval notation correctly represents −3 < x ≤ 5?",
+      "options": [
+        "[−3, 5]",
+        "(−3, 5]",
+        "(−3, 5)",
+        "[−3, 5)"
+      ],
+      "correctAnswer": "(−3, 5]",
+      "explanation": "A parenthesis is used for an endpoint that is excluded (strict inequality, −3 < x), and a square bracket is used for an endpoint that is included (x ≤ 5). This gives the interval (−3, 5].",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-02-011",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "hard",
+      "question": "A measured length is recorded as 0.004650 m. How many significant figures does this measurement have?",
+      "options": [
+        "7",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "explanation": "Leading zeros (the zeros before the first nonzero digit) are never significant, so the 0.00 at the start does not count. The significant digits are 4, 6, 5, and 0 — the trailing zero counts because it appears after the decimal point following nonzero digits. This gives 4 significant figures.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-02-012",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "easy",
+      "question": "Express 45,600,000 in scientific notation.",
+      "options": [
+        "4.56 × 10⁶",
+        "45.6 × 10⁶",
+        "4.56 × 10⁸",
+        "4.56 × 10⁷"
+      ],
+      "correctAnswer": "4.56 × 10⁷",
+      "explanation": "In scientific notation, a number is written as a × 10ⁿ where 1 ≤ a < 10. Moving the decimal point in 45,600,000 seven places to the left gives 4.56 × 10⁷.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-02-013",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "medium",
+      "question": "Simplify and express in scientific notation: (3 × 10⁴) × (2 × 10⁻⁶)",
+      "options": [
+        "6 × 10⁻²",
+        "6 × 10⁻¹⁰",
+        "6 × 10²",
+        "5 × 10⁻²"
+      ],
+      "correctAnswer": "6 × 10⁻²",
+      "explanation": "Multiply the coefficients and add the exponents of 10 separately: (3 × 2) × 10^(4 + (−6)) = 6 × 10⁻².",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-02-014",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "medium",
+      "question": "Rationalize the denominator of 5/√5 and simplify.",
+      "options": [
+        "5√5",
+        "√5",
+        "1",
+        "√5/5"
+      ],
+      "correctAnswer": "√5",
+      "explanation": "Multiply numerator and denominator by √5: (5 × √5)/(√5 × √5) = 5√5/5 = √5. Note that √5/5 is actually the rationalized form of 1/√5, a different expression — a common mix-up.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-02-015",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "hard",
+      "question": "Rationalize the denominator of 1/(√7 − √2).",
+      "options": [
+        "(√7 − √2)/5",
+        "(√7 + √2)/9",
+        "(√7 + √2)/5",
+        "(√7 + √2)/−5"
+      ],
+      "correctAnswer": "(√7 + √2)/5",
+      "explanation": "Multiply numerator and denominator by the conjugate (√7 + √2): the denominator becomes (√7)² − (√2)² = 7 − 2 = 5, giving (√7 + √2)/5.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-02-016",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "The Number System",
+      "difficulty": "hard",
+      "question": "A rectangular plot of land has a length of 3.5 × 10³ m and a width of 2 × 10² m. Find its area in scientific notation.",
+      "options": [
+        "7 × 10⁴ m²",
+        "70 × 10⁴ m²",
+        "7 × 10⁶ m²",
+        "7 × 10⁵ m²"
+      ],
+      "correctAnswer": "7 × 10⁵ m²",
+      "explanation": "Multiply the coefficients and add the exponents: (3.5 × 2) × 10^(3+2) = 7 × 10⁵ m². Note that 70 × 10⁴ equals the same value but is not in proper scientific notation, since the coefficient must be between 1 and 10.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-03-001",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "easy",
+      "question": "Solve for x: 3x − 7 = 2x + 5",
+      "options": [
+        "x = 12",
+        "x = 2",
+        "x = −12",
+        "x = 7"
+      ],
+      "correctAnswer": "x = 12",
+      "explanation": "Subtract 2x from both sides: x − 7 = 5. Add 7 to both sides: x = 12.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-03-002",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "medium",
+      "question": "The sum of a number and twice its value is 45. Find the number.",
+      "options": [
+        "9",
+        "15",
+        "22.5",
+        "45"
+      ],
+      "correctAnswer": "15",
+      "explanation": "Let the number be x. Then x + 2x = 45, so 3x = 45, giving x = 15.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-03-003",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "medium",
+      "question": "Which ordered pair (x, y) is the solution to the system: x + y = 10 and x − y = 4?",
+      "options": [
+        "(3, 7)",
+        "(6, 4)",
+        "(7, 3)",
+        "(8, 2)"
+      ],
+      "correctAnswer": "(7, 3)",
+      "explanation": "Adding the two equations eliminates y: (x+y)+(x−y) = 10+4, so 2x = 14, x = 7. Substituting back, 7 + y = 10 gives y = 3. Check: 7 − 3 = 4 ✓.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-03-004",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "medium",
+      "question": "Use the elimination method to solve the system: 2x + y = 7 and x − y = 2",
+      "options": [
+        "(1, 3)",
+        "(2, 3)",
+        "(4, −1)",
+        "(3, 1)"
+      ],
+      "correctAnswer": "(3, 1)",
+      "explanation": "Adding the two equations eliminates y: (2x+y)+(x−y) = 7+2, so 3x = 9, giving x = 3. Substituting into x − y = 2 gives 3 − y = 2, so y = 1.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-03-005",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "hard",
+      "question": "The sum of two numbers is 18 and their difference is 4. Find the larger number.",
+      "options": [
+        "11",
+        "7",
+        "14",
+        "9"
+      ],
+      "correctAnswer": "11",
+      "explanation": "Let the numbers be x and y with x + y = 18 and x − y = 4. Adding the equations: 2x = 22, so x = 11 (the larger number), and y = 7.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-03-006",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "medium",
+      "question": "Solve for x: |2x − 3| = 7",
+      "options": [
+        "x = 5 only",
+        "x = 5 or x = −2",
+        "x = −5 or x = 2",
+        "x = 2 or x = −2"
+      ],
+      "correctAnswer": "x = 5 or x = −2",
+      "explanation": "An absolute value equation |A| = k (k > 0) splits into two cases: A = k or A = −k. Case 1: 2x − 3 = 7 gives x = 5. Case 2: 2x − 3 = −7 gives x = −2.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-03-007",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "medium",
+      "question": "Solve by factorization: x² − 5x + 6 = 0",
+      "options": [
+        "x = −2 or x = −3",
+        "x = 1 or x = 6",
+        "x = 2 or x = 3",
+        "x = 2 or x = −3"
+      ],
+      "correctAnswer": "x = 2 or x = 3",
+      "explanation": "We need two numbers that multiply to 6 and add to −5: those are −2 and −3. So x² − 5x + 6 = (x−2)(x−3) = 0, giving x = 2 or x = 3.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-03-008",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "hard",
+      "question": "Solve by factorization: 2x² + x − 6 = 0",
+      "options": [
+        "x = −3/2 or x = 2",
+        "x = 2 or x = −3",
+        "x = 3 or x = −2",
+        "x = 3/2 or x = −2"
+      ],
+      "correctAnswer": "x = 3/2 or x = −2",
+      "explanation": "Factor as (2x − 3)(x + 2) = 0, since this expands to 2x² + 4x − 3x − 6 = 2x² + x − 6 ✓. Setting each factor to zero: 2x − 3 = 0 gives x = 3/2, and x + 2 = 0 gives x = −2.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-03-009",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "medium",
+      "question": "To solve x² − 6x = −5 by completing the square, what number must be added to both sides?",
+      "options": [
+        "9",
+        "6",
+        "3",
+        "36"
+      ],
+      "correctAnswer": "9",
+      "explanation": "To complete the square for x² + bx, add (b/2)². Here b = −6, so (−6/2)² = (−3)² = 9. Adding 9 to both sides gives x² − 6x + 9 = 4, i.e., (x−3)² = 4.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-03-010",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "hard",
+      "question": "Use the discriminant to determine the nature of the roots of 2x² − 4x + 5 = 0.",
+      "options": [
+        "Two distinct real roots",
+        "No real roots (the roots are complex)",
+        "One real root and one complex root",
+        "Two equal real roots"
+      ],
+      "correctAnswer": "No real roots (the roots are complex)",
+      "explanation": "The discriminant is D = b² − 4ac = (−4)² − 4(2)(5) = 16 − 40 = −24. Since D < 0, the equation has no real roots; its two roots are complex (and always occur as a conjugate pair, never one real and one complex).",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-03-011",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "hard",
+      "question": "A quadratic equation has roots 3 and −5. Using r₁+r₂ = −b/a and r₁×r₂ = c/a, find the equation in the form x² + bx + c = 0.",
+      "options": [
+        "x² − 2x + 15 = 0",
+        "x² − 2x − 15 = 0",
+        "x² + 2x − 15 = 0",
+        "x² + 2x + 15 = 0"
+      ],
+      "correctAnswer": "x² + 2x − 15 = 0",
+      "explanation": "Sum of roots = 3 + (−5) = −2, and product of roots = 3 × (−5) = −15. Since the equation is x² − (sum)x + (product) = 0, we get x² − (−2)x + (−15) = x² + 2x − 15 = 0.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-03-012",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "easy",
+      "question": "Solve for x: √(x + 3) = 5",
+      "options": [
+        "x = 25",
+        "x = 28",
+        "x = 5",
+        "x = 22"
+      ],
+      "correctAnswer": "x = 22",
+      "explanation": "Square both sides to remove the radical: x + 3 = 25, so x = 22. Checking: √(22+3) = √25 = 5 ✓.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-03-013",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "easy",
+      "question": "Solve for x: 2^x = 32",
+      "options": [
+        "x = 5",
+        "x = 4",
+        "x = 16",
+        "x = 6"
+      ],
+      "correctAnswer": "x = 5",
+      "explanation": "Since 32 = 2⁵, the equation 2^x = 2⁵ gives x = 5, because when the bases are equal, the exponents must also be equal.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-03-014",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "medium",
+      "question": "Abebe is 3 years older than twice his sister's age. If the sum of their ages is 30, find the sister's age.",
+      "options": [
+        "21",
+        "9",
+        "15",
+        "12"
+      ],
+      "correctAnswer": "9",
+      "explanation": "Let the sister's age be x, so Abebe's age is 2x + 3. Their sum: x + (2x+3) = 30, so 3x = 27, giving x = 9. (Abebe would then be 21.)",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-03-015",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "hard",
+      "question": "A rectangular field has a length that is 5 m more than its width. If the area of the field is 150 m², find the width.",
+      "options": [
+        "15 m",
+        "7.5 m",
+        "10 m",
+        "12 m"
+      ],
+      "correctAnswer": "10 m",
+      "explanation": "Let the width be w, so the length is w + 5. Then w(w+5) = 150, giving w² + 5w − 150 = 0, which factors as (w+15)(w−10) = 0. Since width must be positive, w = 10 m (and the length is 15 m).",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-03-016",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Equations",
+      "difficulty": "hard",
+      "question": "The product of two consecutive positive integers is 132. Find the integers.",
+      "options": [
+        "12 and 13",
+        "10 and 11",
+        "−12 and −11",
+        "11 and 12"
+      ],
+      "correctAnswer": "11 and 12",
+      "explanation": "Let the integers be x and x+1. Then x(x+1) = 132, so x² + x − 132 = 0, which factors as (x+12)(x−11) = 0. Since the integers must be positive, x = 11, giving the integers 11 and 12. (Note: −12 and −11 also multiply to 132, but they are not positive, so they don't satisfy the condition.)",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-04-001",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "easy",
+      "question": "Solve the inequality: 2x − 5 < 9",
+      "options": [
+        "x < 7",
+        "x > 7",
+        "x < −7",
+        "x < 19"
+      ],
+      "correctAnswer": "x < 7",
+      "explanation": "Add 5 to both sides: 2x < 14. Divide both sides by 2 (a positive number, so the inequality sign stays the same): x < 7.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-04-002",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "medium",
+      "question": "Solve the inequality: −3x + 6 ≥ 0",
+      "options": [
+        "x ≥ 2",
+        "x ≤ 2",
+        "x ≤ −2",
+        "x ≥ −2"
+      ],
+      "correctAnswer": "x ≤ 2",
+      "explanation": "Subtract 6: −3x ≥ −6. Divide both sides by −3; since we divide by a negative number, the inequality sign must flip: x ≤ 2.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-04-003",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "easy",
+      "question": "Which point satisfies both inequalities: y > x AND y < −x + 6?",
+      "options": [
+        "(4, 1)",
+        "(0, 0)",
+        "(1, 3)",
+        "(5, 5)"
+      ],
+      "correctAnswer": "(1, 3)",
+      "explanation": "Testing (1, 3): is 3 > 1? Yes. Is 3 < −1+6 = 5? Yes. Both conditions hold. (For (4,1): 1 > 4 is false. For (5,5): 5 > 5 is false since the inequality is strict.)",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-04-004",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "hard",
+      "question": "Which ordered pair satisfies the system: 2x + y ≤ 8, x − y ≥ −2, and x ≥ 0?",
+      "options": [
+        "(5, 3)",
+        "(4, 5)",
+        "(−1, 4)",
+        "(3, 2)"
+      ],
+      "correctAnswer": "(3, 2)",
+      "explanation": "Testing (3,2): 2(3)+2 = 8 ≤ 8 ✓; 3−2 = 1 ≥ −2 ✓; x = 3 ≥ 0 ✓. All three conditions hold. (5,3) fails the first inequality: 2(5)+3=13 > 8. (−1,4) fails x ≥ 0.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-04-005",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "medium",
+      "question": "Solve the inequality: |x − 4| < 3",
+      "options": [
+        "1 < x < 7",
+        "1 ≤ x ≤ 7",
+        "x < 1 or x > 7",
+        "−7 < x < −1"
+      ],
+      "correctAnswer": "1 < x < 7",
+      "explanation": "For |A| < k, the solution is −k < A < k. So −3 < x−4 < 3. Adding 4 to all three parts: 1 < x < 7.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-04-006",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "hard",
+      "question": "Solve the inequality: |2x + 1| ≥ 5",
+      "options": [
+        "x ≥ 2 only",
+        "x ≥ 2 or x ≤ −3",
+        "x ≤ 2 or x ≥ −3",
+        "−3 ≤ x ≤ 2"
+      ],
+      "correctAnswer": "x ≥ 2 or x ≤ −3",
+      "explanation": "For |A| ≥ k, the solution splits into A ≥ k or A ≤ −k. So 2x+1 ≥ 5 gives x ≥ 2, and 2x+1 ≤ −5 gives x ≤ −3. The solution is the union of both regions, not the interval between them.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-04-007",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "medium",
+      "question": "Solve the inequality using sign analysis: (x − 2)(x + 3) > 0",
+      "options": [
+        "−3 < x < 2",
+        "x < 2 or x > −3",
+        "x < −3 or x > 2",
+        "−3 ≤ x ≤ 2"
+      ],
+      "correctAnswer": "x < −3 or x > 2",
+      "explanation": "The critical points are x = 2 and x = −3. Testing each region: for x < −3 the product is positive, for −3 < x < 2 it is negative, and for x > 2 it is positive again. Since we want the product to be positive, the solution is x < −3 or x > 2.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-04-008",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "hard",
+      "question": "Solve the inequality: x² − 4x − 5 ≤ 0",
+      "options": [
+        "x ≤ −1 or x ≥ 5",
+        "x ≤ 5",
+        "−5 ≤ x ≤ 1",
+        "−1 ≤ x ≤ 5"
+      ],
+      "correctAnswer": "−1 ≤ x ≤ 5",
+      "explanation": "Factor: x² − 4x − 5 = (x−5)(x+1) ≤ 0, with critical points x = −1 and x = 5. Since the parabola opens upward, the expression is ≤ 0 between the roots (inclusive), giving −1 ≤ x ≤ 5.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-04-009",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "medium",
+      "question": "Solve the inequality: x² < 9",
+      "options": [
+        "−3 < x < 3",
+        "x < 3",
+        "x < −3 or x > 3",
+        "x < 9"
+      ],
+      "correctAnswer": "−3 < x < 3",
+      "explanation": "x² < 9 means x must be within 3 units of zero in both directions, so −3 < x < 3. It is a common mistake to write only x < 3, which incorrectly includes very negative numbers like x = −100.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-04-010",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "medium",
+      "question": "Solve the inequality: x² − 9x + 20 ≥ 0",
+      "options": [
+        "4 ≤ x ≤ 5",
+        "x ≤ 4 or x ≥ 5",
+        "x ≥ 5",
+        "x ≤ 4"
+      ],
+      "correctAnswer": "x ≤ 4 or x ≥ 5",
+      "explanation": "Factor: (x−4)(x−5) ≥ 0, with roots x = 4 and x = 5. Since the parabola opens upward, the expression is ≥ 0 outside the roots (inclusive), giving x ≤ 4 or x ≥ 5.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-04-011",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "medium",
+      "question": "A student must score more than 70 total marks across two tests to pass. If she scored 32 on the first test, what inequality gives the possible scores (x) she needs on the second test?",
+      "options": [
+        "x ≥ 38",
+        "x > 102",
+        "x > 38",
+        "x > 70"
+      ],
+      "correctAnswer": "x > 38",
+      "explanation": "Let x be the score on the second test. The total must exceed 70: 32 + x > 70. Subtracting 32 from both sides gives x > 38.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-04-012",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Solving Inequalities",
+      "difficulty": "hard",
+      "question": "A company earns a profit of $150 per unit sold and has fixed costs of $2000. How many units must be sold for the profit to exceed $10,000?",
+      "options": [
+        "More than 66 units",
+        "More than 80 units (at least 80)",
+        "More than 94 units",
+        "More than 80 units (at least 81)"
+      ],
+      "correctAnswer": "More than 80 units (at least 81)",
+      "explanation": "Profit P = 150x − 2000, and we need 150x − 2000 > 10000. Solving: 150x > 12000, so x > 80. Since 80 itself gives exactly 150(80) − 2000 = 10000 (not more than 10000), and the number of units must be a whole number, at least 81 units must be sold.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-05-001",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "easy",
+      "question": "A right triangle has legs of length 6 cm and 8 cm. Find the length of the hypotenuse.",
+      "options": [
+        "10 cm",
+        "14 cm",
+        "7 cm",
+        "12 cm"
+      ],
+      "correctAnswer": "10 cm",
+      "explanation": "By the Pythagorean theorem, hypotenuse² = 6² + 8² = 36 + 64 = 100, so the hypotenuse = √100 = 10 cm.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-05-002",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "medium",
+      "question": "The hypotenuse of a right triangle is 13 cm and one leg is 5 cm. Find the length of the other leg.",
+      "options": [
+        "8 cm",
+        "12 cm",
+        "14 cm",
+        "18 cm"
+      ],
+      "correctAnswer": "12 cm",
+      "explanation": "By the Pythagorean theorem: leg² = 13² − 5² = 169 − 25 = 144, so the other leg = √144 = 12 cm.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-05-003",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "medium",
+      "question": "A triangle has sides 9 cm, 12 cm, and 15 cm. Is it a right triangle, and why?",
+      "options": [
+        "No, because 9² + 12² ≠ 15²",
+        "Yes, because 9 + 12 = 21 > 15",
+        "Yes, because 9² + 12² = 15²",
+        "No, because it is an isosceles triangle"
+      ],
+      "correctAnswer": "Yes, because 9² + 12² = 15²",
+      "explanation": "By the converse of the Pythagorean theorem, a triangle with sides a, b, c (c largest) is right-angled if a² + b² = c². Here 9² + 12² = 81 + 144 = 225 = 15², confirming it is a right triangle.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-05-004",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "easy",
+      "question": "In a right triangle, the side opposite angle θ is 3 and the hypotenuse is 5. Find sin θ.",
+      "options": [
+        "4/5",
+        "5/3",
+        "3/4",
+        "3/5"
+      ],
+      "correctAnswer": "3/5",
+      "explanation": "sin θ = opposite/hypotenuse = 3/5.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-05-005",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "medium",
+      "question": "In a right triangle, the side adjacent to angle θ is 4 and the side opposite θ is 3. Find tan θ.",
+      "options": [
+        "3/4",
+        "4/3",
+        "3/5",
+        "4/5"
+      ],
+      "correctAnswer": "3/4",
+      "explanation": "tan θ = opposite/adjacent = 3/4.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-05-006",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "medium",
+      "question": "In a right triangle, cos θ = 12/13. Find sin θ.",
+      "options": [
+        "13/12",
+        "5/13",
+        "12/5",
+        "5/12"
+      ],
+      "correctAnswer": "5/13",
+      "explanation": "If cos θ = 12/13 = adjacent/hypotenuse, then by the Pythagorean theorem the opposite side is √(13² − 12²) = √(169−144) = √25 = 5. So sin θ = opposite/hypotenuse = 5/13.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-05-007",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "hard",
+      "question": "A ladder leans against a wall, making a 60° angle with the ground. If the foot of the ladder is 4 m from the wall, find the length of the ladder (cos 60° = 0.5).",
+      "options": [
+        "6.93 m",
+        "2 m",
+        "8 m",
+        "4 m"
+      ],
+      "correctAnswer": "8 m",
+      "explanation": "The angle with the ground is adjacent to the 4 m distance, so cos 60° = adjacent/hypotenuse = 4/L. Then L = 4/cos60° = 4/0.5 = 8 m. (Using tan instead of cos incorrectly gives 4 × tan60° ≈ 6.93 m.)",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-05-008",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "hard",
+      "question": "From a point on the ground 30 m from the base of a tower, the angle of elevation to the top of the tower is 45°. Find the height of the tower.",
+      "options": [
+        "15 m",
+        "60 m",
+        "42.4 m",
+        "30 m"
+      ],
+      "correctAnswer": "30 m",
+      "explanation": "tan(angle of elevation) = height/distance, so tan45° = height/30. Since tan45° = 1, the height = 30 × 1 = 30 m.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-05-009",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "medium",
+      "question": "Find the value of sin 30° + cos 60°.",
+      "options": [
+        "1",
+        "0.5",
+        "0",
+        "1.5"
+      ],
+      "correctAnswer": "1",
+      "explanation": "sin30° = 0.5 and cos60° = 0.5, so their sum is 0.5 + 0.5 = 1.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-05-010",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Introduction to Trigonometry",
+      "difficulty": "hard",
+      "question": "A tree casts a shadow 12 m long when the angle of elevation of the sun is 30°. Find the height of the tree to one decimal place (tan 30° ≈ 0.577).",
+      "options": [
+        "20.8 m",
+        "6.9 m",
+        "10.4 m",
+        "6.0 m"
+      ],
+      "correctAnswer": "6.9 m",
+      "explanation": "tan(angle of elevation) = height/shadow length, so height = 12 × tan30° ≈ 12 × 0.577 ≈ 6.9 m. (Dividing 12 by tan30° instead, or using cos30° by mistake, gives the wrong distractor values.)",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-06-001",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "easy",
+      "question": "Find the sum of the interior angles of a heptagon (7-sided polygon).",
+      "options": [
+        "720°",
+        "1080°",
+        "900°",
+        "540°"
+      ],
+      "correctAnswer": "900°",
+      "explanation": "The sum of interior angles of a convex polygon with n sides is (n−2) × 180°. For n = 7: (7−2) × 180° = 5 × 180° = 900°.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-06-002",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "medium",
+      "question": "The sum of the interior angles of a regular polygon is 1440°. How many sides does it have?",
+      "options": [
+        "8",
+        "9",
+        "12",
+        "10"
+      ],
+      "correctAnswer": "10",
+      "explanation": "Using (n−2) × 180° = 1440°, divide both sides by 180°: n − 2 = 8, so n = 10.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-06-003",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "easy",
+      "question": "What is the sum of the exterior angles of any convex polygon, regardless of the number of sides?",
+      "options": [
+        "360°",
+        "180°",
+        "720°",
+        "(n−2) × 180°"
+      ],
+      "correctAnswer": "360°",
+      "explanation": "For any convex polygon, the exterior angles (one at each vertex, taken in the same rotational direction) always sum to exactly 360°, since together they represent one full turn around the polygon.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-06-004",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "medium",
+      "question": "Each exterior angle of a regular polygon measures 24°. How many sides does the polygon have?",
+      "options": [
+        "12",
+        "15",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "15",
+      "explanation": "For a regular polygon, each exterior angle = 360°/n. So 24° = 360°/n, giving n = 360/24 = 15.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-06-005",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "medium",
+      "question": "Find the measure of each interior angle of a regular decagon (10 sides).",
+      "options": [
+        "150°",
+        "162°",
+        "144°",
+        "140°"
+      ],
+      "correctAnswer": "144°",
+      "explanation": "Sum of interior angles = (10−2)×180° = 1440°. Since all interior angles of a regular polygon are equal, each one measures 1440°/10 = 144°.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-06-006",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "medium",
+      "question": "Find the measure of each interior angle of a regular hexagon.",
+      "options": [
+        "108°",
+        "135°",
+        "144°",
+        "120°"
+      ],
+      "correctAnswer": "120°",
+      "explanation": "Sum of interior angles = (6−2)×180° = 720°. Each interior angle = 720°/6 = 120°.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-06-007",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "hard",
+      "question": "A regular polygon has an interior angle that is 5 times its exterior angle. How many sides does it have?",
+      "options": [
+        "12",
+        "6",
+        "10",
+        "15"
+      ],
+      "correctAnswer": "12",
+      "explanation": "Let the exterior angle be x, so the interior angle is 5x. Since interior and exterior angles are supplementary, x + 5x = 180°, giving 6x = 180°, so x = 30°. The number of sides n = 360°/x = 360°/30° = 12.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-06-008",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "easy",
+      "question": "How many lines of symmetry does a regular pentagon have?",
+      "options": [
+        "4",
+        "5",
+        "10",
+        "2"
+      ],
+      "correctAnswer": "5",
+      "explanation": "A regular polygon with n sides has exactly n lines of symmetry. A regular pentagon has 5 sides, so it has 5 lines of symmetry.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-06-009",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "medium",
+      "question": "Find the measure of the central angle of a regular octagon.",
+      "options": [
+        "36°",
+        "60°",
+        "45°",
+        "40°"
+      ],
+      "correctAnswer": "45°",
+      "explanation": "The central angle of a regular polygon equals 360°/n. For an octagon (n=8): 360°/8 = 45°.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-06-010",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "hard",
+      "question": "A regular hexagon has a side length of 8 cm. Using the relationship apothem = (side × √3)/2, find the apothem.",
+      "options": [
+        "8 cm",
+        "8√3 cm",
+        "6 cm",
+        "4√3 cm (≈ 6.93 cm)"
+      ],
+      "correctAnswer": "4√3 cm (≈ 6.93 cm)",
+      "explanation": "Apothem = (side × √3)/2 = (8 × √3)/2 = 4√3 cm, which is approximately 6.93 cm.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-06-011",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "hard",
+      "question": "A regular octagon has a perimeter of 40 cm and an apothem of 4.83 cm. Using Area = (1/2) × perimeter × apothem, find its area to the nearest whole number.",
+      "options": [
+        "97 cm²",
+        "48 cm²",
+        "24 cm²",
+        "193 cm²"
+      ],
+      "correctAnswer": "97 cm²",
+      "explanation": "Area = (1/2) × 40 × 4.83 = 96.6 ≈ 97 cm². Forgetting the factor of 1/2 gives the incorrect distractor 193 cm².",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-06-012",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Regular Polygons",
+      "difficulty": "medium",
+      "question": "A regular hexagon is inscribed in a circle of radius 6 cm, with all vertices on the circle. Find the length of each side of the hexagon.",
+      "options": [
+        "3 cm",
+        "6 cm",
+        "12 cm",
+        "6√3 cm"
+      ],
+      "correctAnswer": "6 cm",
+      "explanation": "A regular hexagon inscribed in a circle can be divided into 6 equilateral triangles, each with two sides equal to the radius and a central angle of 60°. Since these triangles are equilateral, the side length of the hexagon equals the radius: 6 cm.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-07-001",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "easy",
+      "question": "Two triangles have all three pairs of corresponding sides equal in length. Which congruency criterion proves they are congruent?",
+      "options": [
+        "ASA",
+        "AAA",
+        "SSS",
+        "SAS"
+      ],
+      "correctAnswer": "SSS",
+      "explanation": "When all three corresponding sides of two triangles are equal, the Side-Side-Side (SSS) criterion proves the triangles are congruent. Note that AAA (equal corresponding angles) proves similarity, not congruence, since the triangles could be different sizes.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-07-002",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "medium",
+      "question": "Triangle ABC has AB = 5 cm, ∠B = 50°, BC = 7 cm. Triangle DEF has DE = 5 cm, ∠E = 50°, EF = 7 cm. Which criterion proves these triangles are congruent?",
+      "options": [
+        "ASA",
+        "AAS",
+        "SSS",
+        "SAS"
+      ],
+      "correctAnswer": "SAS",
+      "explanation": "Here two sides (5 cm and 7 cm) and the included angle between them (50°, between AB and BC, and between DE and EF) are equal, which is the Side-Angle-Side (SAS) congruency criterion.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-07-003",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "easy",
+      "question": "Which condition must be true for two polygons to be similar?",
+      "options": [
+        "Corresponding angles are equal and corresponding sides are proportional",
+        "Corresponding sides are equal and corresponding angles are proportional",
+        "All sides of the polygons must be equal",
+        "Only corresponding angles need to be equal; sides can be any length"
+      ],
+      "correctAnswer": "Corresponding angles are equal and corresponding sides are proportional",
+      "explanation": "Two polygons are similar when their corresponding angles are equal and their corresponding sides are in the same ratio (proportional). Equal angles alone are sufficient only for triangles (AA similarity), not for polygons with more sides.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-07-004",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "medium",
+      "question": "Triangle PQR ~ Triangle XYZ with a scale factor of 3:2 (PQR : XYZ). If XY = 8 cm, find PQ.",
+      "options": [
+        "16 cm",
+        "12 cm",
+        "6 cm",
+        "5.33 cm"
+      ],
+      "correctAnswer": "12 cm",
+      "explanation": "Since PQR corresponds to XYZ with ratio 3:2, PQ/XY = 3/2. So PQ = 8 × (3/2) = 12 cm.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-07-005",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "medium",
+      "question": "Two triangles have two pairs of corresponding angles equal to 40° and 70°. What can be concluded?",
+      "options": [
+        "No conclusion can be made without side lengths",
+        "They are congruent by ASA",
+        "They are similar by AA similarity",
+        "They are similar only if the third pair of angles also happens to match"
+      ],
+      "correctAnswer": "They are similar by AA similarity",
+      "explanation": "By the AA (Angle-Angle) similarity criterion, if two angles of one triangle equal two angles of another, the triangles are similar — the third angle automatically matches since all triangle angles sum to 180°. However, without side length information, congruency cannot be concluded.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-07-006",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "hard",
+      "question": "In triangles ABC and DEF, AB/DE = BC/EF = 2, and ∠B = ∠E. Are the triangles similar, and by which criterion?",
+      "options": [
+        "Yes, by AA similarity",
+        "Yes, by SSS similarity",
+        "No, equal angles with only two proportional sides is not enough",
+        "Yes, by SAS similarity"
+      ],
+      "correctAnswer": "Yes, by SAS similarity",
+      "explanation": "When two pairs of corresponding sides are in the same ratio and the included angle between them is equal, the SAS similarity criterion applies. Here AB/DE = BC/EF with ∠B (between AB and BC) equal to ∠E (between DE and EF), so the triangles are similar by SAS.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-07-007",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "medium",
+      "question": "A triangle has sides 6, 8, and 10. Another triangle has sides 9, 12, and 15. Are the triangles similar, and by which criterion?",
+      "options": [
+        "Yes, by SSS similarity",
+        "Yes, by SAS similarity",
+        "No, the ratios are not equal",
+        "Yes, by AA similarity"
+      ],
+      "correctAnswer": "Yes, by SSS similarity",
+      "explanation": "Check the ratios of corresponding sides: 9/6 = 1.5, 12/8 = 1.5, 15/10 = 1.5. Since all three ratios are equal, the triangles are similar by the SSS similarity criterion.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-07-008",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "easy",
+      "question": "Two similar triangles have a scale factor of 3:5. What is the ratio of their perimeters?",
+      "options": [
+        "5:3",
+        "3:5",
+        "9:25",
+        "15:8"
+      ],
+      "correctAnswer": "3:5",
+      "explanation": "For similar figures, the ratio of perimeters is always equal to the scale factor (ratio of corresponding sides), so the ratio of perimeters is also 3:5. (Squaring the ratio, as in 9:25, applies to areas, not perimeters.)",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-07-009",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "medium",
+      "question": "The perimeters of two similar polygons are 24 cm and 36 cm. Find the ratio of their corresponding side lengths.",
+      "options": [
+        "3:2",
+        "4:9",
+        "2:3",
+        "1:2"
+      ],
+      "correctAnswer": "2:3",
+      "explanation": "For similar polygons, the ratio of corresponding sides equals the ratio of their perimeters: 24:36, which simplifies to 2:3.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-07-010",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "medium",
+      "question": "Two similar triangles have a scale factor of 4:7. Find the ratio of their areas.",
+      "options": [
+        "4:7",
+        "8:14",
+        "28:49",
+        "16:49"
+      ],
+      "correctAnswer": "16:49",
+      "explanation": "For similar figures, the ratio of areas equals the square of the scale factor of corresponding sides: (4:7)² = 16:49.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-07-011",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "hard",
+      "question": "The areas of two similar polygons are 50 cm² and 128 cm². Find the ratio of their corresponding side lengths.",
+      "options": [
+        "5:8",
+        "25:64",
+        "8:5",
+        "7:11"
+      ],
+      "correctAnswer": "5:8",
+      "explanation": "The ratio of areas is 50:128 = 25:64. Since the ratio of areas equals the square of the ratio of sides, the ratio of sides is √25 : √64 = 5:8.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-07-012",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "hard",
+      "question": "A model of a building is built at a scale of 1:200. If the model's base area is 3 m², what is the actual base area of the building?",
+      "options": [
+        "600 m²",
+        "120,000 m²",
+        "60,000 m²",
+        "240,000 m²"
+      ],
+      "correctAnswer": "120,000 m²",
+      "explanation": "Since areas scale with the square of the linear scale factor, the area scale factor is 200² = 40,000. The actual area = 3 × 40,000 = 120,000 m². (Using the linear factor 200 directly instead of squaring it gives the incorrect distractor 600 m².)",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-07-013",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "medium",
+      "question": "A tree casts a shadow 15 m long. At the same time, a 2 m tall pole casts a shadow 3 m long. Using similar triangles, find the height of the tree.",
+      "options": [
+        "22.5 m",
+        "7.5 m",
+        "10 m",
+        "13 m"
+      ],
+      "correctAnswer": "10 m",
+      "explanation": "Since the sun's rays create similar triangles for both objects, height/shadow is constant: (tree height)/15 = 2/3. So tree height = 15 × (2/3) = 10 m.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-07-014",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Congruency and Similarity",
+      "difficulty": "hard",
+      "question": "Two poles of heights 4 m and 6 m cast shadows at the same time. If the shorter pole's shadow is 5 m, find the length of the taller pole's shadow.",
+      "options": [
+        "3.33 m",
+        "9 m",
+        "5 m",
+        "7.5 m"
+      ],
+      "correctAnswer": "7.5 m",
+      "explanation": "Using similar triangles, the ratio of height to shadow is the same for both poles: 4/5 = 6/x. Solving: x = (6 × 5)/4 = 7.5 m.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-08-001",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "easy",
+      "question": "Which of the following is a vector quantity?",
+      "options": [
+        "Displacement",
+        "Mass",
+        "Distance",
+        "Speed"
+      ],
+      "correctAnswer": "Displacement",
+      "explanation": "A vector quantity has both magnitude and direction. Displacement specifies how far and in which direction an object has moved, while mass, distance, and speed are scalar quantities that have magnitude only.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-08-002",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "medium",
+      "question": "Which statement correctly distinguishes a vector from a scalar quantity?",
+      "options": [
+        "A scalar has both magnitude and direction",
+        "A vector has both magnitude and direction, while a scalar has only magnitude",
+        "A vector has only direction, and a scalar has only magnitude",
+        "Both vectors and scalars require a direction to be fully defined"
+      ],
+      "correctAnswer": "A vector has both magnitude and direction, while a scalar has only magnitude",
+      "explanation": "A vector needs both a magnitude (size) and a direction to be completely described (e.g., 10 km east), while a scalar is fully described by its magnitude alone (e.g., 10 km).",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-08-003",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "easy",
+      "question": "Vector a = (3, 4). Find its magnitude.",
+      "options": [
+        "7",
+        "25",
+        "5",
+        "1"
+      ],
+      "correctAnswer": "5",
+      "explanation": "The magnitude of a vector (x, y) is √(x² + y²). Here |a| = √(3² + 4²) = √(9+16) = √25 = 5.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-08-004",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "medium",
+      "question": "Two vectors are said to be equal when...",
+      "options": [
+        "they have the same starting point",
+        "they have the same magnitude only",
+        "they have the same direction only",
+        "they have the same magnitude and the same direction"
+      ],
+      "correctAnswer": "they have the same magnitude and the same direction",
+      "explanation": "Vectors are considered equal if they have exactly the same magnitude and point in exactly the same direction — their starting position does not matter, since vectors are free to be moved without changing their identity.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-08-005",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "hard",
+      "question": "Vector p = (6, −2) and vector q = (−6, 2). What is the relationship between p and q?",
+      "options": [
+        "q is the opposite (negative) of p",
+        "p and q are equal vectors",
+        "p and q have different magnitudes",
+        "p and q are perpendicular"
+      ],
+      "correctAnswer": "q is the opposite (negative) of p",
+      "explanation": "Notice that q = −p, since each component of q is the negative of the corresponding component of p. Opposite vectors have the same magnitude but point in exactly opposite directions (they are anti-parallel, not perpendicular).",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-08-006",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "easy",
+      "question": "Given vectors a = (2, 3) and b = (4, −1), find a + b.",
+      "options": [
+        "(2, 4)",
+        "(6, 2)",
+        "(6, −2)",
+        "(−2, 4)"
+      ],
+      "correctAnswer": "(6, 2)",
+      "explanation": "Vectors are added component-wise: a + b = (2+4, 3+(−1)) = (6, 2).",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-08-007",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "medium",
+      "question": "Given a = (5, 2) and b = (1, 4), find a − b.",
+      "options": [
+        "(−4, 2)",
+        "(6, 6)",
+        "(4, −2)",
+        "(4, 2)"
+      ],
+      "correctAnswer": "(4, −2)",
+      "explanation": "Subtract component-wise: a − b = (5−1, 2−4) = (4, −2).",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-08-008",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "medium",
+      "question": "If vector v = (3, −6), find 2v.",
+      "options": [
+        "(6, −6)",
+        "(1.5, −3)",
+        "(5, −4)",
+        "(6, −12)"
+      ],
+      "correctAnswer": "(6, −12)",
+      "explanation": "To multiply a vector by a scalar, multiply every component by that scalar: 2v = (2×3, 2×(−6)) = (6, −12).",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-08-009",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "hard",
+      "question": "Using the triangle law of vector addition, if vector AB = (3, 5) and vector BC = (−2, 4), find vector AC.",
+      "options": [
+        "(1, 9)",
+        "(1, −1)",
+        "(5, 1)",
+        "(5, 9)"
+      ],
+      "correctAnswer": "(1, 9)",
+      "explanation": "By the triangle law, AC = AB + BC = (3+(−2), 5+4) = (1, 9).",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-08-010",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "hard",
+      "question": "Vectors a and b satisfy a + b = (7, 1) and a − b = (3, 5). Find vector a.",
+      "options": [
+        "(2, −2)",
+        "(5, 3)",
+        "(10, 6)",
+        "(3, 5)"
+      ],
+      "correctAnswer": "(5, 3)",
+      "explanation": "Adding the two given equations eliminates b: (a+b)+(a−b) = 2a = (7+3, 1+5) = (10, 6), so a = (5, 3). (Solving for b instead gives (2, −2), a common mix-up.)",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-08-011",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "medium",
+      "question": "Points A(2, 3) and B(7, −1) are given. Find the position vector AB.",
+      "options": [
+        "(−5, 4)",
+        "(9, 2)",
+        "(5, −4)",
+        "(5, 4)"
+      ],
+      "correctAnswer": "(5, −4)",
+      "explanation": "The vector from A to B is found by subtracting the position vector of A from that of B: AB = B − A = (7−2, −1−3) = (5, −4).",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-08-012",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "hard",
+      "question": "The position vector of point P is (4, −2). Q is the midpoint of PR, where R has position vector (10, 6). Find the position vector of Q.",
+      "options": [
+        "(6, 4)",
+        "(3, 4)",
+        "(14, 4)",
+        "(7, 2)"
+      ],
+      "correctAnswer": "(7, 2)",
+      "explanation": "The midpoint formula averages the corresponding coordinates: Q = ((4+10)/2, (−2+6)/2) = (7, 2).",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-08-013",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "medium",
+      "question": "A boat's velocity relative to the water is (4, 0) km/h (eastward), and the water current's velocity is (0, 3) km/h (northward). Find the magnitude of the boat's resultant velocity relative to the ground.",
+      "options": [
+        "5 km/h",
+        "7 km/h",
+        "1 km/h",
+        "12 km/h"
+      ],
+      "correctAnswer": "5 km/h",
+      "explanation": "The resultant velocity vector is (4,0)+(0,3) = (4,3). Its magnitude is √(4²+3²) = √25 = 5 km/h. (Simply adding the two magnitudes, 4+3=7, ignores the fact that velocity is a vector.)",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-08-014",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Vectors in Two Dimensions",
+      "difficulty": "hard",
+      "question": "Two forces act on an object: F1 = (3, 4) N and F2 = (−1, 2) N. Find the magnitude of the net (resultant) force.",
+      "options": [
+        "7.24 N",
+        "2√10 N (≈ 6.32 N)",
+        "8 N",
+        "4 N"
+      ],
+      "correctAnswer": "2√10 N (≈ 6.32 N)",
+      "explanation": "The net force is F1 + F2 = (3+(−1), 4+2) = (2, 6). Its magnitude is √(2²+6²) = √40 = 2√10 ≈ 6.32 N. (Adding the individual magnitudes |F1|=5N and |F2|=√5≈2.24N directly, giving ≈7.24N, incorrectly ignores the vectors' directions.)",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-09-001",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "easy",
+      "question": "A researcher records the number of students in each classroom (e.g., 45, 50, 38). What type of data is this?",
+      "options": [
+        "Qualitative data",
+        "Continuous data",
+        "Quantitative discrete data",
+        "Secondary data"
+      ],
+      "correctAnswer": "Quantitative discrete data",
+      "explanation": "The number of students is a countable numerical quantity that can only take whole-number values, which makes it quantitative and discrete (not continuous, which would allow any value within a range, like height or weight).",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-09-002",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "medium",
+      "question": "A student measures the heights of classmates directly, rather than using data already published by someone else. This is an example of:",
+      "options": [
+        "Secondary data",
+        "Discrete data",
+        "Qualitative data",
+        "Primary data"
+      ],
+      "correctAnswer": "Primary data",
+      "explanation": "Primary data is collected firsthand by the researcher for a specific purpose (such as directly measuring heights), while secondary data is data that already exists, collected by someone else for another purpose.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-09-003",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "medium",
+      "question": "The scores of 20 students in a quiz are summarized in this frequency table: Score 5 (frequency 3), Score 6 (frequency 5), Score 7 (frequency 8), Score 8 (frequency 4). What is the modal score?",
+      "options": [
+        "7",
+        "8",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "7",
+      "explanation": "The mode is the value that occurs most frequently. Since a score of 7 has the highest frequency (8 students), the modal score is 7.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-09-004",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "medium",
+      "question": "A grouped frequency distribution has class intervals 10–20, 20–30, and 30–40 with frequencies 4, 10, and 6 respectively. Which is the modal class?",
+      "options": [
+        "10–20",
+        "20–30",
+        "30–40",
+        "Cannot be determined"
+      ],
+      "correctAnswer": "20–30",
+      "explanation": "The modal class is the class interval with the highest frequency. Since 20–30 has the highest frequency (10), it is the modal class.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-09-005",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "easy",
+      "question": "Find the mean of the data set: 4, 8, 6, 10, 7",
+      "options": [
+        "8",
+        "6",
+        "7",
+        "35"
+      ],
+      "correctAnswer": "7",
+      "explanation": "The mean is the sum of the values divided by the number of values: (4+8+6+10+7)/5 = 35/5 = 7.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-09-006",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "medium",
+      "question": "Find the median of the data set: 12, 7, 15, 9, 21, 18",
+      "options": [
+        "12",
+        "15",
+        "13",
+        "13.5"
+      ],
+      "correctAnswer": "13.5",
+      "explanation": "First arrange the data in order: 7, 9, 12, 15, 18, 21. With 6 values (an even number), the median is the average of the two middle values (12 and 15): (12+15)/2 = 13.5.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-09-007",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "hard",
+      "question": "The mean of 8 numbers is 15. If one of the numbers, 20, is removed, find the new mean of the remaining 7 numbers.",
+      "options": [
+        "100/7 (≈14.3)",
+        "15",
+        "12.5",
+        "20"
+      ],
+      "correctAnswer": "100/7 (≈14.3)",
+      "explanation": "The original total sum = 8 × 15 = 120. Removing 20 leaves a new sum of 120 − 20 = 100. The new mean (over the remaining 7 numbers) is 100/7 ≈ 14.3. (Dividing by 8 instead of 7, or adding instead of subtracting 20, gives the incorrect distractors.)",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-09-008",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "medium",
+      "question": "Find the range of the data set: 23, 45, 12, 38, 29",
+      "options": [
+        "45",
+        "33",
+        "12",
+        "57"
+      ],
+      "correctAnswer": "33",
+      "explanation": "The range is the difference between the highest and lowest values: 45 − 12 = 33.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-09-009",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "hard",
+      "question": "Which of the following statements about standard deviation is correct?",
+      "options": [
+        "Standard deviation is unaffected by outliers",
+        "Standard deviation can be negative if the data contains negative values",
+        "A smaller standard deviation indicates that data points are closer to the mean",
+        "Standard deviation is measured in squared units of the original data"
+      ],
+      "correctAnswer": "A smaller standard deviation indicates that data points are closer to the mean",
+      "explanation": "Standard deviation measures how spread out the data is around the mean, in the same units as the original data (unlike variance, which is in squared units). It is always non-negative and is, in fact, sensitive to outliers, since extreme values increase the spread.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-09-010",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "hard",
+      "question": "Find the (population) variance of the data set: 2, 4, 6, 8, 10",
+      "options": [
+        "40",
+        "6",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "8",
+      "explanation": "The mean is (2+4+6+8+10)/5 = 6. The deviations from the mean are −4, −2, 0, 2, 4, and their squares are 16, 4, 0, 4, 16, which sum to 40. The variance is this sum divided by the number of values: 40/5 = 8.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-09-011",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "easy",
+      "question": "A single fair die is rolled. What is the probability of getting a number greater than 4?",
+      "options": [
+        "1/3",
+        "1/2",
+        "1/6",
+        "2/3"
+      ],
+      "correctAnswer": "1/3",
+      "explanation": "The numbers greater than 4 on a standard die are 5 and 6, giving 2 favorable outcomes out of 6 total outcomes: 2/6 = 1/3.",
+      "xp": 10
+    },
+    {
+      "id": "MATH-09-09-012",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "medium",
+      "question": "A bag contains 5 red, 3 blue, and 2 green balls. If one ball is drawn at random, find the probability that it is NOT blue.",
+      "options": [
+        "3/10",
+        "7/10",
+        "1/2",
+        "3/7"
+      ],
+      "correctAnswer": "7/10",
+      "explanation": "There are 10 balls in total and 3 are blue, so P(blue) = 3/10. The probability of NOT blue is 1 − 3/10 = 7/10.",
+      "xp": 15
+    },
+    {
+      "id": "MATH-09-09-013",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "hard",
+      "question": "A coin is tossed twice. Using a tree diagram of all outcomes, find the probability of getting exactly one head.",
+      "options": [
+        "1/4",
+        "1/3",
+        "1/2",
+        "3/4"
+      ],
+      "correctAnswer": "1/2",
+      "explanation": "The equally likely outcomes are HH, HT, TH, TT (4 total). Exactly one head occurs in HT and TH, giving 2 favorable outcomes out of 4: 2/4 = 1/2.",
+      "xp": 20
+    },
+    {
+      "id": "MATH-09-09-014",
+      "grade": 9,
+      "subject": "Mathematics",
+      "topic": "Statistics and Probability",
+      "difficulty": "hard",
+      "question": "A box contains 4 red and 6 blue marbles. Two marbles are drawn one after another without replacement. Find the probability that both are red.",
+      "options": [
+        "4/25",
+        "1/15",
+        "2/9",
+        "2/15"
+      ],
+      "correctAnswer": "2/15",
+      "explanation": "Without replacement, P(both red) = (4/10) × (3/9) = 12/90 = 2/15. (Using 4/10 × 4/10 = 4/25 incorrectly assumes replacement.)",
+      "xp": 20
+    }
+  ]
+}

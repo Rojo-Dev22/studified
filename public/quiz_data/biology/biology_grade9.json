@@ -1,0 +1,2047 @@
+{
+  "subject": "Biology",
+  "grade": 9,
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": "BIO-09-01-001",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "easy",
+      "question": "Biology is the science that studies",
+      "options": [
+        "Only rocks",
+        "Living organisms and life processes",
+        "Only chemical equations",
+        "Only planets"
+      ],
+      "correctAnswer": "Living organisms and life processes",
+      "explanation": "Biology focuses on living organisms and the processes of life.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-01-002",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "easy",
+      "question": "Why do scientists use the scientific method?",
+      "options": [
+        "To investigate questions systematically using evidence",
+        "To guarantee every hypothesis is true",
+        "To replace observation with opinion",
+        "To avoid testing"
+      ],
+      "correctAnswer": "To investigate questions systematically using evidence",
+      "explanation": "The scientific method provides a structured approach to evidence-based investigation.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-01-003",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "medium",
+      "question": "A student notices that a plant near a window grows faster. This first step is an",
+      "options": [
+        "Conclusion",
+        "Control variable",
+        "Final report",
+        "Observation"
+      ],
+      "correctAnswer": "Observation",
+      "explanation": "Noticing a pattern is an observation that can lead to a question.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-01-004",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "medium",
+      "question": "A proposed explanation that can be tested is a",
+      "options": [
+        "Conclusion",
+        "Taxonomic rank",
+        "Hypothesis",
+        "Safety rule"
+      ],
+      "correctAnswer": "Hypothesis",
+      "explanation": "A hypothesis is a testable proposed explanation.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-01-005",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "hard",
+      "question": "Which tool is most appropriate for measuring liquid volume in a laboratory?",
+      "options": [
+        "Thermometer",
+        "Graduated cylinder",
+        "Balance",
+        "Microscope"
+      ],
+      "correctAnswer": "Graduated cylinder",
+      "explanation": "A graduated cylinder is designed to measure liquid volume.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-01-006",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "easy",
+      "question": "A field biologist wants to estimate the number of plants in a defined area. A useful field tool is a",
+      "options": [
+        "Quadrat",
+        "Test tube",
+        "Bunsen burner",
+        "Microscope slide"
+      ],
+      "correctAnswer": "Quadrat",
+      "explanation": "Quadrats help sample organisms within a defined area.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-01-007",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "easy",
+      "question": "The microscope part that holds the objective lenses is the",
+      "options": [
+        "Stage clips",
+        "Eyepiece only",
+        "Diaphragm",
+        "Revolving nosepiece"
+      ],
+      "correctAnswer": "Revolving nosepiece",
+      "explanation": "The revolving nosepiece carries and allows selection of objective lenses.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-01-008",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "medium",
+      "question": "The stage of a light microscope is used to",
+      "options": [
+        "Magnify the image",
+        "Illuminate the specimen",
+        "Support the specimen slide",
+        "Rotate the objectives"
+      ],
+      "correctAnswer": "Support the specimen slide",
+      "explanation": "The stage supports the slide in position for observation.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-01-009",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "medium",
+      "question": "The coarse adjustment knob is mainly used for",
+      "options": [
+        "Changing specimen color",
+        "Large changes in focus",
+        "Changing slide size",
+        "Measuring mass"
+      ],
+      "correctAnswer": "Large changes in focus",
+      "explanation": "The coarse focus makes large adjustments to bring the image into approximate focus.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-01-010",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "hard",
+      "question": "When beginning microscope observation, it is generally safest to start with",
+      "options": [
+        "The lowest-power objective",
+        "The highest-power objective",
+        "No objective",
+        "Only oil immersion"
+      ],
+      "correctAnswer": "The lowest-power objective",
+      "explanation": "Starting with low power makes locating and focusing the specimen easier.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-01-011",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "easy",
+      "question": "A microscope should be carried by",
+      "options": [
+        "Holding only the eyepiece",
+        "Grabbing the slide",
+        "Holding the objective",
+        "Supporting the arm and base"
+      ],
+      "correctAnswer": "Supporting the arm and base",
+      "explanation": "The arm and base provide safe support when carrying the microscope.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-01-012",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "easy",
+      "question": "Why should food and drinks be kept away from the laboratory?",
+      "options": [
+        "To improve microscope magnification",
+        "To increase accuracy",
+        "To reduce contamination and safety risks",
+        "To shorten experiments"
+      ],
+      "correctAnswer": "To reduce contamination and safety risks",
+      "explanation": "Laboratory materials may be hazardous or contaminated, so food and drinks create avoidable risk.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-01-013",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "medium",
+      "question": "A control group is used mainly to",
+      "options": [
+        "Guarantee the hypothesis is correct",
+        "Provide a comparison for the experimental treatment",
+        "Increase sample size automatically",
+        "Replace measurements"
+      ],
+      "correctAnswer": "Provide a comparison for the experimental treatment",
+      "explanation": "A control provides a baseline against which the treatment can be compared.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-01-014",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "medium",
+      "question": "The dependent variable is the variable that",
+      "options": [
+        "Is measured as the outcome",
+        "Is deliberately changed",
+        "Is always constant",
+        "Cannot be observed"
+      ],
+      "correctAnswer": "Is measured as the outcome",
+      "explanation": "The dependent variable is the measured response to the independent variable.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-01-015",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "hard",
+      "question": "A lab report’s conclusion should",
+      "options": [
+        "Introduce new unrelated data",
+        "Repeat the title only",
+        "Ignore results",
+        "State what the results suggest in relation to the question or hypothesis"
+      ],
+      "correctAnswer": "State what the results suggest in relation to the question or hypothesis",
+      "explanation": "The conclusion interprets the results in relation to the investigation.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-01-016",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "easy",
+      "question": "A field biologist records bird species at dawn. Which tool category is most relevant?",
+      "options": [
+        "Chemical reagents",
+        "Only microscopes",
+        "Field tools",
+        "Office printers"
+      ],
+      "correctAnswer": "Field tools",
+      "explanation": "Field tools support observation and sampling outside the laboratory.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-01-017",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "easy",
+      "question": "Which microscope component controls the amount of light reaching the specimen?",
+      "options": [
+        "Stage",
+        "Diaphragm",
+        "Arm",
+        "Nosepiece"
+      ],
+      "correctAnswer": "Diaphragm",
+      "explanation": "The diaphragm regulates light passing through the specimen.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-01-018",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "medium",
+      "question": "The eyepiece is also called the",
+      "options": [
+        "Ocular lens",
+        "Stage clip",
+        "Arm",
+        "Base"
+      ],
+      "correctAnswer": "Ocular lens",
+      "explanation": "The eyepiece is the ocular lens through which the specimen is viewed.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-01-019",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "medium",
+      "question": "If an experiment is repeated with the same procedure and gives similar results, this supports",
+      "options": [
+        "Proof that the hypothesis is always true",
+        "Elimination of all error",
+        "A change in variables",
+        "Reliability of the procedure"
+      ],
+      "correctAnswer": "Reliability of the procedure",
+      "explanation": "Repeatability strengthens confidence in the reliability of the method.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-01-020",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Introduction to Biology, scientific method, tools and microscope",
+      "difficulty": "hard",
+      "question": "Which safety practice is most appropriate when handling an unknown biological sample?",
+      "options": [
+        "Taste the sample",
+        "Smell it closely",
+        "Follow protective procedures and avoid direct contact",
+        "Handle it with bare hands"
+      ],
+      "correctAnswer": "Follow protective procedures and avoid direct contact",
+      "explanation": "Protective procedures reduce exposure to potentially hazardous material.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-02-001",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "easy",
+      "question": "Which characteristic is shared by all living organisms?",
+      "options": [
+        "They all move from place to place",
+        "They carry out life processes such as metabolism",
+        "They all make food",
+        "They all have roots"
+      ],
+      "correctAnswer": "They carry out life processes such as metabolism",
+      "explanation": "Living things perform core life processes, though the form varies among organisms.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-02-002",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "easy",
+      "question": "Taxonomy is the science concerned with",
+      "options": [
+        "Naming and classifying organisms",
+        "Measuring rainfall",
+        "Studying prices",
+        "Mapping roads"
+      ],
+      "correctAnswer": "Naming and classifying organisms",
+      "explanation": "Taxonomy organizes organisms and provides naming systems.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-02-003",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "medium",
+      "question": "Which taxonomic rank is the broadest among these?",
+      "options": [
+        "Genus",
+        "Species",
+        "Family",
+        "Kingdom"
+      ],
+      "correctAnswer": "Kingdom",
+      "explanation": "Kingdom is broader than family, genus and species in the basic hierarchy.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-02-004",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "medium",
+      "question": "The taxonomic sequence from broad to narrow is",
+      "options": [
+        "Species, genus, family, kingdom, class, order, phylum",
+        "Kingdom, class, phylum, genus, order, family, species",
+        "Kingdom, phylum, class, order, family, genus, species",
+        "Phylum, kingdom, family, class, species, order, genus"
+      ],
+      "correctAnswer": "Kingdom, phylum, class, order, family, genus, species",
+      "explanation": "This is the standard simplified Linnaean hierarchy from broad to narrow.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-02-005",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "hard",
+      "question": "Why is classification useful?",
+      "options": [
+        "It makes organisms identical",
+        "It organizes biodiversity and helps identify relationships among organisms",
+        "It removes variation",
+        "It prevents naming"
+      ],
+      "correctAnswer": "It organizes biodiversity and helps identify relationships among organisms",
+      "explanation": "Classification organizes biological diversity and facilitates communication about organisms.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-02-006",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "easy",
+      "question": "In binomial nomenclature, a scientific name contains",
+      "options": [
+        "Genus and species names",
+        "Family and kingdom only",
+        "Two common names",
+        "Order and class"
+      ],
+      "correctAnswer": "Genus and species names",
+      "explanation": "Binomial nomenclature uses two parts: genus and specific epithet.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-02-007",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "easy",
+      "question": "Which scientific name formatting is correct in principle?",
+      "options": [
+        "Both words capitalized",
+        "Both lowercase in every format",
+        "Only the species word capitalized",
+        "Genus capitalized and specific epithet lowercase"
+      ],
+      "correctAnswer": "Genus capitalized and specific epithet lowercase",
+      "explanation": "Scientific names conventionally capitalize the genus and lowercase the specific epithet.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-02-008",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "medium",
+      "question": "A bacterium belongs to Kingdom Monera in the five-kingdom system because it is",
+      "options": [
+        "Multicellular eukaryotic animal",
+        "A vascular plant",
+        "Prokaryotic",
+        "A fungus"
+      ],
+      "correctAnswer": "Prokaryotic",
+      "explanation": "Monera includes prokaryotic organisms in the five-kingdom scheme.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-02-009",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "medium",
+      "question": "Protists are generally",
+      "options": [
+        "All prokaryotes",
+        "Mostly unicellular eukaryotic organisms with varied characteristics",
+        "All fungi",
+        "All mammals"
+      ],
+      "correctAnswer": "Mostly unicellular eukaryotic organisms with varied characteristics",
+      "explanation": "Protista includes diverse eukaryotes, many of them unicellular.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-02-010",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "hard",
+      "question": "Fungi obtain nutrients mainly by",
+      "options": [
+        "Absorbing nutrients from their surroundings",
+        "Ingesting food like mammals",
+        "Photosynthesizing in all cases",
+        "Fixing nitrogen only"
+      ],
+      "correctAnswer": "Absorbing nutrients from their surroundings",
+      "explanation": "Fungi digest externally and absorb dissolved nutrients.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-02-011",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "easy",
+      "question": "Plants are generally characterized by",
+      "options": [
+        "Lack of cells",
+        "No genetic material",
+        "Absence of membranes",
+        "Photosynthesis and cellulose-containing cell walls"
+      ],
+      "correctAnswer": "Photosynthesis and cellulose-containing cell walls",
+      "explanation": "Plants are multicellular eukaryotes with cell walls and many photosynthetic members.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-02-012",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "easy",
+      "question": "Animals generally obtain food by",
+      "options": [
+        "Photosynthesis in every case",
+        "Absorbing minerals only",
+        "Ingesting other organisms or organic matter",
+        "Using chloroplasts"
+      ],
+      "correctAnswer": "Ingesting other organisms or organic matter",
+      "explanation": "Animals are heterotrophic and generally ingest food.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-02-013",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "medium",
+      "question": "An organism is placed into a classification group primarily by",
+      "options": [
+        "Its habitat alone",
+        "Shared characteristics and relationships",
+        "Its size only",
+        "Its color only"
+      ],
+      "correctAnswer": "Shared characteristics and relationships",
+      "explanation": "Classification relies on characteristics and inferred relationships rather than one superficial feature.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-02-014",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "medium",
+      "question": "The role of a taxonomist includes",
+      "options": [
+        "Describing, identifying and classifying organisms",
+        "Measuring blood pressure only",
+        "Operating microscopes only",
+        "Producing maps only"
+      ],
+      "correctAnswer": "Describing, identifying and classifying organisms",
+      "explanation": "Taxonomists study organism identity, names and classification.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-02-015",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "hard",
+      "question": "A common Ethiopian plant or animal can be studied scientifically by",
+      "options": [
+        "Assigning a name without evidence",
+        "Using only its local nickname",
+        "Ignoring comparison with other organisms",
+        "Using its observable characteristics and appropriate classification criteria"
+      ],
+      "correctAnswer": "Using its observable characteristics and appropriate classification criteria",
+      "explanation": "Scientific identification uses observable and comparative evidence.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-02-016",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "easy",
+      "question": "Which characteristic is NOT required for every living organism in exactly the same form?",
+      "options": [
+        "Response to stimuli",
+        "Metabolism",
+        "Movement from place to place",
+        "Reproduction at the species level"
+      ],
+      "correctAnswer": "Movement from place to place",
+      "explanation": "Not all organisms move from place to place, but living systems show core life processes.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-02-017",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "easy",
+      "question": "The genus name in a binomial scientific name should begin with",
+      "options": [
+        "A number",
+        "A capital letter",
+        "A lowercase letter only",
+        "A symbol"
+      ],
+      "correctAnswer": "A capital letter",
+      "explanation": "The genus is conventionally capitalized.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-02-018",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "medium",
+      "question": "Which kingdom contains organisms with chitin in their cell walls and absorptive nutrition?",
+      "options": [
+        "Fungi",
+        "Plantae",
+        "Animalia",
+        "Monera"
+      ],
+      "correctAnswer": "Fungi",
+      "explanation": "Fungi have characteristic cell walls containing chitin and absorb nutrients.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-02-019",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "medium",
+      "question": "A group containing several closely related species is called a",
+      "options": [
+        "Kingdom",
+        "Class",
+        "Phylum",
+        "Genus"
+      ],
+      "correctAnswer": "Genus",
+      "explanation": "A genus groups closely related species in the taxonomic hierarchy.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-02-020",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Characteristics and classification of organisms",
+      "difficulty": "hard",
+      "question": "Scientific names reduce confusion because",
+      "options": [
+        "They replace all local names",
+        "They make organisms identical",
+        "They provide standardized names used across languages and regions",
+        "They depend on one language only"
+      ],
+      "correctAnswer": "They provide standardized names used across languages and regions",
+      "explanation": "Standardized scientific naming improves communication among scientists.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-03-001",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "easy",
+      "question": "Cell theory states that",
+      "options": [
+        "Only plants have cells",
+        "All living organisms are composed of cells and cells arise from existing cells",
+        "Cells come from nonliving matter spontaneously",
+        "Cells have no common principles"
+      ],
+      "correctAnswer": "All living organisms are composed of cells and cells arise from existing cells",
+      "explanation": "Cell theory includes that organisms are made of cells and new cells arise from existing cells.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-03-002",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "easy",
+      "question": "The cell membrane mainly functions to",
+      "options": [
+        "Regulate movement of substances into and out of the cell",
+        "Produce light",
+        "Store genetic information only",
+        "Make bones"
+      ],
+      "correctAnswer": "Regulate movement of substances into and out of the cell",
+      "explanation": "The cell membrane controls exchange between the cell and its environment.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-03-003",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "medium",
+      "question": "The nucleus of a typical eukaryotic cell contains",
+      "options": [
+        "Cell wall only",
+        "Digestive enzymes only",
+        "Chlorophyll only",
+        "Genetic material"
+      ],
+      "correctAnswer": "Genetic material",
+      "explanation": "The nucleus houses most of the cell’s genetic material in eukaryotes.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-03-004",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "medium",
+      "question": "Mitochondria are strongly associated with",
+      "options": [
+        "Photosynthesis only",
+        "Cell wall synthesis only",
+        "Energy-releasing cellular respiration",
+        "Protein storage only"
+      ],
+      "correctAnswer": "Energy-releasing cellular respiration",
+      "explanation": "Mitochondria are major sites of aerobic cellular respiration in eukaryotic cells.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-03-005",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "hard",
+      "question": "Plant cells differ from animal cells because plant cells typically have",
+      "options": [
+        "No membrane",
+        "A cell wall and chloroplasts",
+        "No nucleus in mature tissues",
+        "No cytoplasm"
+      ],
+      "correctAnswer": "A cell wall and chloroplasts",
+      "explanation": "Plant cells commonly have cellulose cell walls and chloroplasts in photosynthetic tissues.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-03-006",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "easy",
+      "question": "A prokaryotic cell differs from a eukaryotic cell because it",
+      "options": [
+        "Lacks a membrane-bound nucleus",
+        "Has no DNA",
+        "Always lacks ribosomes",
+        "Is always multicellular"
+      ],
+      "correctAnswer": "Lacks a membrane-bound nucleus",
+      "explanation": "Prokaryotes do not have a membrane-bound nucleus.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-03-007",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "easy",
+      "question": "If a cell is placed in a solution where water concentration is higher outside than inside, water tends to move",
+      "options": [
+        "Out of the cell only",
+        "Nowhere",
+        "Through active transport only",
+        "Into the cell by osmosis"
+      ],
+      "correctAnswer": "Into the cell by osmosis",
+      "explanation": "Water moves across a selectively permeable membrane toward the region with lower water concentration.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-03-008",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "medium",
+      "question": "Diffusion is movement of particles from",
+      "options": [
+        "Lower to higher using no energy",
+        "Equal concentration to higher",
+        "Higher concentration to lower concentration",
+        "The nucleus to the membrane only"
+      ],
+      "correctAnswer": "Higher concentration to lower concentration",
+      "explanation": "Diffusion is passive movement down a concentration gradient.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-03-009",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "medium",
+      "question": "Active transport requires",
+      "options": [
+        "No membrane proteins",
+        "Energy to move substances against a concentration gradient",
+        "No cellular energy",
+        "Only water"
+      ],
+      "correctAnswer": "Energy to move substances against a concentration gradient",
+      "explanation": "Active transport uses energy to move substances against their concentration gradient.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-03-010",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "hard",
+      "question": "A cell taking up ions against their concentration gradient is most likely using",
+      "options": [
+        "Active transport",
+        "Simple diffusion",
+        "Osmosis",
+        "Filtration only"
+      ],
+      "correctAnswer": "Active transport",
+      "explanation": "Movement against a concentration gradient requires active transport.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-03-011",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "easy",
+      "question": "Which sequence goes from smaller to larger level of biological organization?",
+      "options": [
+        "Organism, organ, tissue, cell, system",
+        "Tissue, cell, organism, organ, system",
+        "Cell, organ system, tissue, organ, organism",
+        "Cell, tissue, organ, organ system, organism"
+      ],
+      "correctAnswer": "Cell, tissue, organ, organ system, organism",
+      "explanation": "This sequence increases in structural complexity.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-03-012",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "easy",
+      "question": "A group of similar cells performing a common function forms a",
+      "options": [
+        "Molecule",
+        "Organism",
+        "Tissue",
+        "Population"
+      ],
+      "correctAnswer": "Tissue",
+      "explanation": "A tissue is a group of similar cells with related functions.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-03-013",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "medium",
+      "question": "An organ is made of",
+      "options": [
+        "Only one molecule",
+        "Different tissues working together",
+        "Only one cell type in every case",
+        "Only atoms"
+      ],
+      "correctAnswer": "Different tissues working together",
+      "explanation": "Organs generally contain multiple tissues organized for a function.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-03-014",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "medium",
+      "question": "A plant cell becomes swollen in water because",
+      "options": [
+        "Water enters by osmosis and the cell wall resists excessive expansion",
+        "Water leaves by diffusion",
+        "The nucleus pumps water out",
+        "The cell loses all solutes"
+      ],
+      "correctAnswer": "Water enters by osmosis and the cell wall resists excessive expansion",
+      "explanation": "Osmosis brings water into the cell, while the cell wall limits expansion.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-03-015",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "hard",
+      "question": "Microscope observation of a cell usually requires magnification to",
+      "options": [
+        "Change the cell into another type",
+        "Increase its mass",
+        "Create new organelles",
+        "Make structures large enough to distinguish"
+      ],
+      "correctAnswer": "Make structures large enough to distinguish",
+      "explanation": "Magnification enlarges the image so structures can be resolved and observed.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-03-016",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "easy",
+      "question": "The cytoplasm is important because it",
+      "options": [
+        "Stores the organism’s skeleton",
+        "Makes all sunlight",
+        "Contains organelles and is the site of many cellular reactions",
+        "Exists only outside the cell"
+      ],
+      "correctAnswer": "Contains organelles and is the site of many cellular reactions",
+      "explanation": "Many cellular processes occur in the cytoplasm around the organelles.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-03-017",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "easy",
+      "question": "Which structure is especially important for photosynthesis in plant cells?",
+      "options": [
+        "Nucleus",
+        "Chloroplast",
+        "Lysosome",
+        "Centrioles"
+      ],
+      "correctAnswer": "Chloroplast",
+      "explanation": "Chloroplasts contain the machinery for photosynthesis.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-03-018",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "medium",
+      "question": "A red blood cell placed in a very concentrated salt solution would tend to",
+      "options": [
+        "Lose water",
+        "Gain water until it bursts",
+        "Divide by mitosis",
+        "Carry out photosynthesis"
+      ],
+      "correctAnswer": "Lose water",
+      "explanation": "Water leaves the cell by osmosis when the surrounding solution is more concentrated.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-03-019",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "medium",
+      "question": "Facilitated diffusion differs from simple diffusion because it",
+      "options": [
+        "Always requires ATP",
+        "Moves particles against a gradient",
+        "Occurs only in plants",
+        "Uses membrane proteins while still moving down a gradient"
+      ],
+      "correctAnswer": "Uses membrane proteins while still moving down a gradient",
+      "explanation": "Facilitated diffusion uses transport proteins but does not require cellular energy for movement down the gradient.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-03-020",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Cells and transport",
+      "difficulty": "hard",
+      "question": "Which level comes directly above an organ in organization?",
+      "options": [
+        "Cell",
+        "Tissue",
+        "Organ system",
+        "Molecule"
+      ],
+      "correctAnswer": "Organ system",
+      "explanation": "Organ systems consist of organs working together.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-04-001",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "easy",
+      "question": "The main biological purpose of reproduction is to",
+      "options": [
+        "Increase body size only",
+        "Produce new individuals and continue the species",
+        "Provide energy immediately",
+        "Remove all variation"
+      ],
+      "correctAnswer": "Produce new individuals and continue the species",
+      "explanation": "Reproduction produces offspring and supports continuity of populations and species.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-04-002",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "easy",
+      "question": "Asexual reproduction usually involves",
+      "options": [
+        "One parent and no fusion of gametes",
+        "Two parents and fertilization",
+        "Only mammals",
+        "Only seed plants"
+      ],
+      "correctAnswer": "One parent and no fusion of gametes",
+      "explanation": "Asexual reproduction generally uses one parent without gamete fusion.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-04-003",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "medium",
+      "question": "Binary fission is commonly associated with",
+      "options": [
+        "Flower pollination",
+        "Fragmenting a leaf",
+        "Budding only",
+        "Single-celled organisms dividing into two cells"
+      ],
+      "correctAnswer": "Single-celled organisms dividing into two cells",
+      "explanation": "Binary fission is a common form of asexual reproduction in some unicellular organisms.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-04-004",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "medium",
+      "question": "Fragmentation occurs when",
+      "options": [
+        "Two gametes fuse",
+        "A seed forms after fertilization",
+        "A parent breaks into pieces that can develop into new individuals",
+        "A cell produces sperm"
+      ],
+      "correctAnswer": "A parent breaks into pieces that can develop into new individuals",
+      "explanation": "Fragmentation involves separation into pieces capable of developing further.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-04-005",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "hard",
+      "question": "Budding involves",
+      "options": [
+        "A seed germinating",
+        "A new individual developing as an outgrowth from the parent",
+        "A cell dividing equally only",
+        "Gametes joining"
+      ],
+      "correctAnswer": "A new individual developing as an outgrowth from the parent",
+      "explanation": "In budding, a smaller outgrowth develops from the parent.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-04-006",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "easy",
+      "question": "Vegetative propagation in plants can occur through",
+      "options": [
+        "Structures such as stems, roots or leaves",
+        "Sperm cells only",
+        "Animal embryos only",
+        "Blood cells"
+      ],
+      "correctAnswer": "Structures such as stems, roots or leaves",
+      "explanation": "Vegetative propagation uses vegetative plant parts rather than seeds.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-04-007",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "easy",
+      "question": "Sexual reproduction differs because it usually involves",
+      "options": [
+        "Only one parent in every case",
+        "No genetic contribution from parents",
+        "No cell division",
+        "Fusion of gametes"
+      ],
+      "correctAnswer": "Fusion of gametes",
+      "explanation": "Sexual reproduction involves gametes and typically combines genetic material from two parents.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-04-008",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "medium",
+      "question": "Primary sexual characteristics are mainly related to",
+      "options": [
+        "Height and voice only",
+        "Hair style",
+        "Reproductive organs and their functions",
+        "Learned behavior only"
+      ],
+      "correctAnswer": "Reproductive organs and their functions",
+      "explanation": "Primary sexual characteristics concern reproductive structures and functions.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-04-009",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "medium",
+      "question": "Which is a secondary sexual characteristic?",
+      "options": [
+        "Formation of sperm in testes",
+        "Voice deepening during male puberty",
+        "Development of ovaries before birth",
+        "Fertilization"
+      ],
+      "correctAnswer": "Voice deepening during male puberty",
+      "explanation": "Voice changes are secondary sexual characteristics associated with puberty.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-04-010",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "hard",
+      "question": "The testes are primarily responsible for",
+      "options": [
+        "Producing sperm and male sex hormones",
+        "Producing ova",
+        "Implanting embryos",
+        "Storing urine"
+      ],
+      "correctAnswer": "Producing sperm and male sex hormones",
+      "explanation": "Testes produce sperm and secrete male sex hormones.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-04-011",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "easy",
+      "question": "The ovaries are primarily responsible for",
+      "options": [
+        "Producing sperm",
+        "Digesting food",
+        "Filtering blood",
+        "Producing ova and female sex hormones"
+      ],
+      "correctAnswer": "Producing ova and female sex hormones",
+      "explanation": "Ovaries produce eggs and hormones such as estrogen and progesterone.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-04-012",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "easy",
+      "question": "Fertilization in humans usually occurs when",
+      "options": [
+        "An embryo leaves the uterus",
+        "A sperm divides by budding",
+        "A sperm cell fuses with an egg cell",
+        "Menstruation begins"
+      ],
+      "correctAnswer": "A sperm cell fuses with an egg cell",
+      "explanation": "Fertilization is the fusion of male and female gametes.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-04-013",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "medium",
+      "question": "Implantation refers to",
+      "options": [
+        "Fusion of sperm and egg",
+        "Attachment of the early embryo to the uterine lining",
+        "Release of an egg from the ovary",
+        "Birth of the baby"
+      ],
+      "correctAnswer": "Attachment of the early embryo to the uterine lining",
+      "explanation": "Implantation occurs when the developing embryo attaches to the uterine lining.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-04-014",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "medium",
+      "question": "A barrier method of birth control works mainly by",
+      "options": [
+        "Preventing sperm from reaching the egg",
+        "Increasing ovulation",
+        "Causing infection",
+        "Increasing fertilization"
+      ],
+      "correctAnswer": "Preventing sperm from reaching the egg",
+      "explanation": "Barrier methods physically block sperm from reaching the egg.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-04-015",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "hard",
+      "question": "One important way to reduce STI transmission is",
+      "options": [
+        "Sharing needles",
+        "Ignoring symptoms",
+        "Sharing personal blades",
+        "Using appropriate protection and avoiding risky exposure"
+      ],
+      "correctAnswer": "Using appropriate protection and avoiding risky exposure",
+      "explanation": "Protection and reducing exposure can lower STI transmission risk.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-04-016",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "easy",
+      "question": "A key advantage of asexual reproduction is that it",
+      "options": [
+        "Always increases genetic variation",
+        "Requires fertilization",
+        "Can produce offspring without finding a mate",
+        "Occurs only in humans"
+      ],
+      "correctAnswer": "Can produce offspring without finding a mate",
+      "explanation": "Asexual reproduction can occur with one parent and no mating or fertilization.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-04-017",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "easy",
+      "question": "Pollination in flowering plants occurs when",
+      "options": [
+        "Sperm fuses with egg immediately",
+        "Pollen reaches the receptive part of a flower",
+        "A seed is dispersed",
+        "An embryo implants in a uterus"
+      ],
+      "correctAnswer": "Pollen reaches the receptive part of a flower",
+      "explanation": "Pollination is the transfer of pollen to the appropriate female part of the flower.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-04-018",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "medium",
+      "question": "The uterus is the organ where",
+      "options": [
+        "The embryo develops during pregnancy",
+        "Sperm are produced",
+        "Ova are produced",
+        "Urine is stored"
+      ],
+      "correctAnswer": "The embryo develops during pregnancy",
+      "explanation": "The uterus provides the environment for development of the embryo and fetus.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-04-019",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "medium",
+      "question": "Menstruation occurs when",
+      "options": [
+        "Fertilization occurs",
+        "An embryo implants",
+        "A baby is born",
+        "The uterine lining is shed when pregnancy has not occurred"
+      ],
+      "correctAnswer": "The uterine lining is shed when pregnancy has not occurred",
+      "explanation": "Menstruation involves shedding of the uterine lining when pregnancy does not occur.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-04-020",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Reproduction",
+      "difficulty": "hard",
+      "question": "STIs can spread through sexual contact because",
+      "options": [
+        "They are caused only by poor nutrition",
+        "They are always inherited genetically",
+        "Infectious agents can be transferred between people during exposure",
+        "They cannot enter the body"
+      ],
+      "correctAnswer": "Infectious agents can be transferred between people during exposure",
+      "explanation": "Many STIs are caused by infectious agents that can pass between people through sexual contact.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-05-001",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "easy",
+      "question": "Food is important mainly because it",
+      "options": [
+        "Replaces oxygen",
+        "Provides nutrients and energy needed for body functions",
+        "Makes all diseases impossible",
+        "Eliminates the need for water"
+      ],
+      "correctAnswer": "Provides nutrients and energy needed for body functions",
+      "explanation": "Food supplies energy and nutrients for growth, maintenance and other functions.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-05-002",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "easy",
+      "question": "Nutrients are substances that",
+      "options": [
+        "The body needs for energy, growth, repair and regulation",
+        "Are always medicines",
+        "Are only carbohydrates",
+        "Cannot be absorbed"
+      ],
+      "correctAnswer": "The body needs for energy, growth, repair and regulation",
+      "explanation": "Nutrients support essential body processes.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-05-003",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "medium",
+      "question": "A balanced diet should provide",
+      "options": [
+        "Only protein",
+        "Only carbohydrates",
+        "Only vitamins",
+        "Appropriate amounts of different nutrients and energy"
+      ],
+      "correctAnswer": "Appropriate amounts of different nutrients and energy",
+      "explanation": "A balanced diet supplies a suitable range and amount of nutrients.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-05-004",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "medium",
+      "question": "A deficiency of iron is commonly associated with",
+      "options": [
+        "Scurvy",
+        "Rickets",
+        "Anemia",
+        "Goiter only"
+      ],
+      "correctAnswer": "Anemia",
+      "explanation": "Iron deficiency can reduce hemoglobin production and contribute to anemia.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-05-005",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "hard",
+      "question": "Vitamin C deficiency can lead to",
+      "options": [
+        "Rickets",
+        "Scurvy",
+        "Anemia only",
+        "Diabetes"
+      ],
+      "correctAnswer": "Scurvy",
+      "explanation": "Vitamin C deficiency is associated with scurvy.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-05-006",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "easy",
+      "question": "Malnutrition can result from",
+      "options": [
+        "Too little, too much or imbalanced intake of nutrients",
+        "Only overeating",
+        "Only infection",
+        "Only dehydration"
+      ],
+      "correctAnswer": "Too little, too much or imbalanced intake of nutrients",
+      "explanation": "Malnutrition includes both deficiencies and excesses or imbalances.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-05-007",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "easy",
+      "question": "Excessive use of psychoactive substances can",
+      "options": [
+        "Guarantee better concentration",
+        "Prevent addiction",
+        "Improve every body system",
+        "Damage health and impair judgment"
+      ],
+      "correctAnswer": "Damage health and impair judgment",
+      "explanation": "Substance abuse can harm physical and mental health and impair judgment.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-05-008",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "medium",
+      "question": "An infectious disease is one that",
+      "options": [
+        "Is always inherited",
+        "Is never caused by microbes",
+        "Can be caused by a pathogen and transmitted between hosts",
+        "Cannot spread"
+      ],
+      "correctAnswer": "Can be caused by a pathogen and transmitted between hosts",
+      "explanation": "Infectious diseases are caused by infectious agents and can be transmitted.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-05-009",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "medium",
+      "question": "Which is generally non-infectious?",
+      "options": [
+        "Malaria",
+        "Diabetes",
+        "Tuberculosis",
+        "Influenza"
+      ],
+      "correctAnswer": "Diabetes",
+      "explanation": "Diabetes is a non-infectious disease and is not spread from person to person like infections.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-05-010",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "hard",
+      "question": "A balanced diet is especially important during growth because",
+      "options": [
+        "The body needs nutrients for tissue development and maintenance",
+        "Growth uses no energy",
+        "Children need only water",
+        "Protein becomes unnecessary"
+      ],
+      "correctAnswer": "The body needs nutrients for tissue development and maintenance",
+      "explanation": "Growth increases the need for energy and nutrients.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-05-011",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "easy",
+      "question": "Which practice helps prevent infectious disease?",
+      "options": [
+        "Sharing contaminated needles",
+        "Ignoring symptoms",
+        "Unsafe food handling",
+        "Good hygiene and appropriate sanitation"
+      ],
+      "correctAnswer": "Good hygiene and appropriate sanitation",
+      "explanation": "Hygiene and sanitation reduce exposure to infectious agents.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-05-012",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "easy",
+      "question": "Vaccination primarily works by",
+      "options": [
+        "Killing all microbes in the environment",
+        "Replacing nutrition",
+        "Preparing the immune system to respond to a specific pathogen",
+        "Preventing all diseases forever"
+      ],
+      "correctAnswer": "Preparing the immune system to respond to a specific pathogen",
+      "explanation": "Vaccines stimulate immune memory or preparedness for specific infections.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-05-013",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "medium",
+      "question": "Substance abuse can create social problems because it may",
+      "options": [
+        "Improve every decision",
+        "Impair judgment and affect relationships and responsibilities",
+        "Guarantee employment",
+        "Remove all stress safely"
+      ],
+      "correctAnswer": "Impair judgment and affect relationships and responsibilities",
+      "explanation": "Substance abuse can affect judgment, behavior and social functioning.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-05-014",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "medium",
+      "question": "A nutrition label is useful because it",
+      "options": [
+        "Provides information about nutrient content and amounts",
+        "Guarantees the food is healthy for everyone",
+        "Eliminates dietary needs",
+        "Replaces medical advice"
+      ],
+      "correctAnswer": "Provides information about nutrient content and amounts",
+      "explanation": "Labels help consumers evaluate nutrient content and make informed choices.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-05-015",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "hard",
+      "question": "A person who regularly eats a varied diet containing vegetables, grains, protein sources and adequate water is most likely aiming for",
+      "options": [
+        "Single-nutrient nutrition",
+        "Malnutrition",
+        "Substance dependence",
+        "Balanced nutrition"
+      ],
+      "correctAnswer": "Balanced nutrition",
+      "explanation": "Variety and appropriate quantities support balanced nutrition.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-05-016",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "easy",
+      "question": "Carbohydrates are important mainly because they",
+      "options": [
+        "Build all bones directly",
+        "Act only as hormones",
+        "Provide a major source of energy",
+        "Replace oxygen"
+      ],
+      "correctAnswer": "Provide a major source of energy",
+      "explanation": "Carbohydrates commonly provide energy for body functions.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-05-017",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "easy",
+      "question": "Proteins are especially important for",
+      "options": [
+        "Providing no energy",
+        "Growth and tissue repair",
+        "Forming only water",
+        "Preventing all infections"
+      ],
+      "correctAnswer": "Growth and tissue repair",
+      "explanation": "Proteins provide materials for growth, repair and body functions.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-05-018",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "medium",
+      "question": "A lack of vitamin D is associated with",
+      "options": [
+        "Rickets",
+        "Scurvy",
+        "Malaria",
+        "Influenza"
+      ],
+      "correctAnswer": "Rickets",
+      "explanation": "Vitamin D deficiency can contribute to poor bone mineralization and rickets.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-05-019",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "medium",
+      "question": "A non-infectious disease differs from an infectious disease because it",
+      "options": [
+        "Always has no cause",
+        "Must be inherited",
+        "Cannot affect health seriously",
+        "Is not transmitted as an infection from one host to another"
+      ],
+      "correctAnswer": "Is not transmitted as an infection from one host to another",
+      "explanation": "Non-infectious diseases are not spread through infectious agents between hosts.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-05-020",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Human health, nutrition and disease",
+      "difficulty": "hard",
+      "question": "A major reason for adequate clean water in health is that it",
+      "options": [
+        "Replaces every nutrient",
+        "Stops all viruses",
+        "Supports body functions and helps prevent some water-related diseases",
+        "Eliminates the need for food"
+      ],
+      "correctAnswer": "Supports body functions and helps prevent some water-related diseases",
+      "explanation": "Water is essential to body processes and safe water reduces certain disease risks.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-06-001",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "easy",
+      "question": "Ecology is the study of",
+      "options": [
+        "Only human anatomy",
+        "Interactions among organisms and between organisms and their environment",
+        "Only chemical bonds",
+        "Only rocks"
+      ],
+      "correctAnswer": "Interactions among organisms and between organisms and their environment",
+      "explanation": "Ecology examines relationships among organisms and with their environments.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-06-002",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "easy",
+      "question": "Which is a biotic component of an ecosystem?",
+      "options": [
+        "A grass plant",
+        "Temperature",
+        "Water",
+        "Soil minerals"
+      ],
+      "correctAnswer": "A grass plant",
+      "explanation": "Biotic components are living organisms.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-06-003",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "medium",
+      "question": "Which is an abiotic component?",
+      "options": [
+        "Bacteria",
+        "Trees",
+        "Birds",
+        "Sunlight"
+      ],
+      "correctAnswer": "Sunlight",
+      "explanation": "Abiotic factors are nonliving environmental components such as sunlight.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-06-004",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "medium",
+      "question": "The smallest ecological level in the usual sequence is",
+      "options": [
+        "Ecosystem",
+        "Biome",
+        "Organism",
+        "Biosphere"
+      ],
+      "correctAnswer": "Organism",
+      "explanation": "An organism is an individual living entity and the smallest level listed.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-06-005",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "hard",
+      "question": "A population is",
+      "options": [
+        "All species on Earth",
+        "Members of the same species living in an area",
+        "All abiotic factors",
+        "A single organ"
+      ],
+      "correctAnswer": "Members of the same species living in an area",
+      "explanation": "A population is a group of individuals of the same species in an area.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-06-006",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "easy",
+      "question": "A community consists of",
+      "options": [
+        "Populations of different species living and interacting in an area",
+        "One individual only",
+        "Abiotic factors only",
+        "One species everywhere"
+      ],
+      "correctAnswer": "Populations of different species living and interacting in an area",
+      "explanation": "A community contains multiple interacting populations.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-06-007",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "easy",
+      "question": "An ecosystem includes",
+      "options": [
+        "Only animals",
+        "Only plants",
+        "Only climate",
+        "Living organisms plus their physical environment"
+      ],
+      "correctAnswer": "Living organisms plus their physical environment",
+      "explanation": "An ecosystem includes biotic communities and abiotic components with their interactions.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-06-008",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "medium",
+      "question": "A biome is characterized mainly by",
+      "options": [
+        "One individual organism",
+        "One local population",
+        "Broad climate and dominant vegetation patterns",
+        "A single soil particle"
+      ],
+      "correctAnswer": "Broad climate and dominant vegetation patterns",
+      "explanation": "Biomes are large ecological regions defined largely by climate and characteristic vegetation.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-06-009",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "medium",
+      "question": "Ecological succession is",
+      "options": [
+        "A sudden weather event",
+        "A gradual change in community composition over time",
+        "Daily feeding",
+        "An individual’s growth"
+      ],
+      "correctAnswer": "A gradual change in community composition over time",
+      "explanation": "Succession describes orderly changes in communities over time.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-06-010",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "hard",
+      "question": "The first organisms to colonize a newly exposed area are called",
+      "options": [
+        "Pioneer species",
+        "Top predators",
+        "Decomposers only",
+        "Dominant consumers"
+      ],
+      "correctAnswer": "Pioneer species",
+      "explanation": "Pioneer species are among the first colonizers in succession.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-06-011",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "easy",
+      "question": "Predation is a relationship in which",
+      "options": [
+        "Both organisms always benefit",
+        "Neither organism is affected",
+        "Both are harmed equally",
+        "One organism kills and consumes another"
+      ],
+      "correctAnswer": "One organism kills and consumes another",
+      "explanation": "Predation benefits the predator and harms the prey.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-06-012",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "easy",
+      "question": "Mutualism is a relationship in which",
+      "options": [
+        "One benefits and the other is harmed",
+        "Both are always harmed",
+        "Both interacting species benefit",
+        "Neither is affected"
+      ],
+      "correctAnswer": "Both interacting species benefit",
+      "explanation": "Mutualism benefits both partners.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-06-013",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "medium",
+      "question": "Competition occurs when organisms",
+      "options": [
+        "Always live independently",
+        "Require the same limited resource",
+        "Share unlimited resources",
+        "Never interact"
+      ],
+      "correctAnswer": "Require the same limited resource",
+      "explanation": "Competition arises when organisms depend on limited resources or conditions.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-06-014",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "medium",
+      "question": "Decomposers are ecologically important because they",
+      "options": [
+        "Break down dead organic matter and recycle nutrients",
+        "Stop all energy flow",
+        "Produce sunlight",
+        "Eliminate producers"
+      ],
+      "correctAnswer": "Break down dead organic matter and recycle nutrients",
+      "explanation": "Decomposers return nutrients to ecosystems by breaking down organic material.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-06-015",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "hard",
+      "question": "A pond with fish, algae, water, microbes and sunlight is an example of",
+      "options": [
+        "A single population",
+        "A biome only",
+        "An individual organism",
+        "An ecosystem"
+      ],
+      "correctAnswer": "An ecosystem",
+      "explanation": "The pond contains interacting biotic and abiotic components, forming an ecosystem.",
+      "xp": 20
+    },
+    {
+      "id": "BIO-09-06-016",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "easy",
+      "question": "A population of lions and a population of zebras living together in the same area form part of a",
+      "options": [
+        "Single organism",
+        "Biome only",
+        "Community",
+        "One species"
+      ],
+      "correctAnswer": "Community",
+      "explanation": "A community contains populations of different species in the same area.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-06-017",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "easy",
+      "question": "Which factor can limit a population’s size?",
+      "options": [
+        "Unlimited space in every habitat",
+        "Availability of food",
+        "No competition",
+        "Perfect weather permanently"
+      ],
+      "correctAnswer": "Availability of food",
+      "explanation": "Resources such as food can limit population growth.",
+      "xp": 10
+    },
+    {
+      "id": "BIO-09-06-018",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "medium",
+      "question": "Primary succession begins in an area that",
+      "options": [
+        "Lacks a developed soil community and previously established ecosystem",
+        "Already contains a mature forest",
+        "Has a complete established community",
+        "Is always a city"
+      ],
+      "correctAnswer": "Lacks a developed soil community and previously established ecosystem",
+      "explanation": "Primary succession begins where a community develops on a largely newly exposed surface.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-06-019",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "medium",
+      "question": "A lichen colonizing bare rock is an example of",
+      "options": [
+        "A top predator",
+        "A primary consumer only",
+        "A decomposer-only community",
+        "A pioneer organism"
+      ],
+      "correctAnswer": "A pioneer organism",
+      "explanation": "Lichens can act as pioneer organisms during primary succession.",
+      "xp": 15
+    },
+    {
+      "id": "BIO-09-06-020",
+      "grade": 9,
+      "subject": "Biology",
+      "topic": "Ecology",
+      "difficulty": "hard",
+      "question": "Parasitism differs from mutualism because in parasitism",
+      "options": [
+        "Both benefit",
+        "Neither is affected",
+        "One organism benefits while the other is harmed",
+        "Both are harmed equally"
+      ],
+      "correctAnswer": "One organism benefits while the other is harmed",
+      "explanation": "Parasitism benefits the parasite while harming the host.",
+      "xp": 20
+    }
+  ]
+}

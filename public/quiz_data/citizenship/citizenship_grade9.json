@@ -1,0 +1,2047 @@
+{
+  "subject": "Citizenship",
+  "grade": 9,
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": "CIV-09-01-001",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "easy",
+      "question": "Ethics is primarily concerned with",
+      "options": [
+        "Weather patterns",
+        "Principles about right and wrong conduct",
+        "Market prices",
+        "Physical growth"
+      ],
+      "correctAnswer": "Principles about right and wrong conduct",
+      "explanation": "Ethics examines principles and standards used to judge conduct as right or wrong.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-01-002",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "easy",
+      "question": "A student returns a lost wallet instead of keeping it. Which value is most clearly demonstrated?",
+      "options": [
+        "Honesty",
+        "Popularity",
+        "Competition",
+        "Convenience"
+      ],
+      "correctAnswer": "Honesty",
+      "explanation": "Returning property honestly demonstrates honesty and integrity.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-01-003",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "medium",
+      "question": "Why are ethical values important to citizens?",
+      "options": [
+        "They eliminate all disagreement.",
+        "They replace laws completely.",
+        "They guarantee wealth.",
+        "They guide responsible conduct and strengthen trust in society."
+      ],
+      "correctAnswer": "They guide responsible conduct and strengthen trust in society.",
+      "explanation": "Ethical values support responsible behavior, trust and social cooperation.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-01-004",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "medium",
+      "question": "A nurse keeps patient information private unless disclosure is properly justified. This is an example of",
+      "options": [
+        "Historical chronology",
+        "Market equilibrium",
+        "Applied ethics",
+        "Cultural diffusion"
+      ],
+      "correctAnswer": "Applied ethics",
+      "explanation": "Applied ethics uses ethical principles in real-life professional situations.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-01-005",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "hard",
+      "question": "A class leader gives every student an equal opportunity to speak. This best demonstrates",
+      "options": [
+        "Dishonesty",
+        "Fairness",
+        "Favoritism",
+        "Indifference"
+      ],
+      "correctAnswer": "Fairness",
+      "explanation": "Fairness involves impartial treatment and equal opportunity.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-01-006",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "easy",
+      "question": "A citizen admits a mistake and corrects it even when no one noticed. This behavior shows",
+      "options": [
+        "Integrity",
+        "Carelessness",
+        "Deception",
+        "Peer pressure"
+      ],
+      "correctAnswer": "Integrity",
+      "explanation": "Integrity means acting consistently with ethical principles even without external pressure.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-01-007",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "easy",
+      "question": "Which situation best illustrates respect?",
+      "options": [
+        "Interrupting to dominate the discussion",
+        "Mocking a different opinion",
+        "Ignoring everyone else",
+        "Listening seriously when another person expresses a different view"
+      ],
+      "correctAnswer": "Listening seriously when another person expresses a different view",
+      "explanation": "Respect includes recognizing the dignity and viewpoints of others.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-01-008",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "medium",
+      "question": "Applied ethics is needed because",
+      "options": [
+        "Ethical questions exist only in textbooks",
+        "Every situation has no moral dimension",
+        "Ethical principles must be applied to concrete situations and choices",
+        "Rules never need interpretation"
+      ],
+      "correctAnswer": "Ethical principles must be applied to concrete situations and choices",
+      "explanation": "Real-life decisions require ethical reasoning in specific contexts.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-01-009",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "medium",
+      "question": "A student finds a leaked exam paper and refuses to use it. This most directly protects",
+      "options": [
+        "Personal advantage",
+        "Academic integrity",
+        "Rumor spreading",
+        "Privacy invasion"
+      ],
+      "correctAnswer": "Academic integrity",
+      "explanation": "Refusing unfair advantages protects honesty and integrity in learning.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-01-010",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "hard",
+      "question": "Which action is least consistent with responsible ethical citizenship?",
+      "options": [
+        "Using public property for private benefit without permission",
+        "Respecting shared resources",
+        "Admitting mistakes",
+        "Helping others"
+      ],
+      "correctAnswer": "Using public property for private benefit without permission",
+      "explanation": "Misusing shared resources violates responsibility toward the community.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-01-011",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "easy",
+      "question": "A good ethical decision should consider",
+      "options": [
+        "Only personal convenience",
+        "Only popularity",
+        "Only immediate reward",
+        "The likely effects of the action and the values involved"
+      ],
+      "correctAnswer": "The likely effects of the action and the values involved",
+      "explanation": "Ethical reasoning considers principles and consequences rather than convenience alone.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-01-012",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "easy",
+      "question": "Why can ethical values reduce conflict?",
+      "options": [
+        "They force everyone to think identically.",
+        "They remove cultural differences.",
+        "They encourage fair, respectful and responsible behavior.",
+        "They eliminate rules."
+      ],
+      "correctAnswer": "They encourage fair, respectful and responsible behavior.",
+      "explanation": "Shared ethical standards can support respectful cooperation and reduce harmful behavior.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-01-013",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "medium",
+      "question": "A citizen refuses a bribe even when it would be personally beneficial. This best shows",
+      "options": [
+        "Indifference",
+        "Integrity and resistance to corruption",
+        "Opportunism",
+        "Carelessness"
+      ],
+      "correctAnswer": "Integrity and resistance to corruption",
+      "explanation": "Rejecting improper personal gain demonstrates integrity.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-01-014",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "medium",
+      "question": "Which example best illustrates responsibility?",
+      "options": [
+        "Completing a civic duty even when it is inconvenient",
+        "Blaming others automatically",
+        "Ignoring consequences",
+        "Breaking rules for friends"
+      ],
+      "correctAnswer": "Completing a civic duty even when it is inconvenient",
+      "explanation": "Responsibility means accepting obligations and acting on them.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-01-015",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethics and ethical values",
+      "difficulty": "hard",
+      "question": "Ethical values are most effective when they are",
+      "options": [
+        "Used only when being watched",
+        "Memorized without practice",
+        "Applied only to strangers",
+        "Applied consistently in everyday decisions"
+      ],
+      "correctAnswer": "Applied consistently in everyday decisions",
+      "explanation": "Ethics has practical value when principles guide actual behavior.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-02-001",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "easy",
+      "question": "Digital technology refers most directly to tools that",
+      "options": [
+        "Only grow crops",
+        "Replace all human judgment",
+        "Process, store or communicate information electronically",
+        "Operate without information"
+      ],
+      "correctAnswer": "Process, store or communicate information electronically",
+      "explanation": "Digital technologies handle information using electronic systems.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-02-002",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "easy",
+      "question": "A positive digital culture encourages users to",
+      "options": [
+        "Share every password",
+        "Use technology respectfully and responsibly",
+        "Post private data publicly",
+        "Insult others anonymously"
+      ],
+      "correctAnswer": "Use technology respectfully and responsibly",
+      "explanation": "Responsible digital culture includes respectful and safe use.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-02-003",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "medium",
+      "question": "One purpose of digital technology in education is to",
+      "options": [
+        "Support access to information and learning resources",
+        "Eliminate the need for teachers in every case",
+        "Guarantee correct information online",
+        "Prevent communication"
+      ],
+      "correctAnswer": "Support access to information and learning resources",
+      "explanation": "Digital tools can expand access to learning resources and communication.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-02-004",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "medium",
+      "question": "Which behavior best follows a code of conduct for digital technology?",
+      "options": [
+        "Posting it without asking",
+        "Using a friend’s account",
+        "Sharing confidential information",
+        "Obtaining permission before sharing another person’s private photo"
+      ],
+      "correctAnswer": "Obtaining permission before sharing another person’s private photo",
+      "explanation": "Respecting privacy and consent is a responsible digital practice.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-02-005",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "hard",
+      "question": "An effective online message should be",
+      "options": [
+        "Deliberately vague",
+        "Insulting",
+        "Clear, respectful and appropriate to the audience",
+        "Filled with unverified claims"
+      ],
+      "correctAnswer": "Clear, respectful and appropriate to the audience",
+      "explanation": "Good digital communication should be understandable and respectful.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-02-006",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "easy",
+      "question": "Before forwarding a sensational claim, a responsible user should first",
+      "options": [
+        "Forward it quickly",
+        "Check the credibility of the information",
+        "Delete all contacts",
+        "Change the password"
+      ],
+      "correctAnswer": "Check the credibility of the information",
+      "explanation": "Verification helps reduce misinformation.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-02-007",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "easy",
+      "question": "Which is a challenge associated with digital media?",
+      "options": [
+        "Misinformation can spread quickly",
+        "All information becomes accurate",
+        "Privacy becomes irrelevant",
+        "Communication always improves"
+      ],
+      "correctAnswer": "Misinformation can spread quickly",
+      "explanation": "Digital media can amplify false or misleading information rapidly.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-02-008",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "medium",
+      "question": "Using a strong password and keeping it private mainly helps protect",
+      "options": [
+        "Road safety",
+        "Agricultural yield",
+        "Market supply",
+        "Account security"
+      ],
+      "correctAnswer": "Account security",
+      "explanation": "Strong, private credentials reduce the risk of unauthorized access.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-02-009",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "medium",
+      "question": "A user receives an insulting message. Which response is most responsible?",
+      "options": [
+        "Threaten the sender",
+        "Publish private details",
+        "Avoid escalating the conflict and use appropriate reporting or support channels",
+        "Forward the insult to everyone"
+      ],
+      "correctAnswer": "Avoid escalating the conflict and use appropriate reporting or support channels",
+      "explanation": "Responsible users avoid retaliation and use proper channels for harmful content.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-02-010",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "hard",
+      "question": "Which action best demonstrates digital citizenship?",
+      "options": [
+        "Copying any work without attribution",
+        "Respecting intellectual property when using online material",
+        "Creating fake accounts to deceive others",
+        "Sharing private conversations publicly"
+      ],
+      "correctAnswer": "Respecting intellectual property when using online material",
+      "explanation": "Digital citizenship includes respecting ownership and privacy.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-02-011",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "easy",
+      "question": "A student uses a group chat to coordinate a project. The best practice is to",
+      "options": [
+        "Keep messages relevant and respectful",
+        "Send unrelated messages repeatedly",
+        "Exclude members intentionally",
+        "Share private data without consent"
+      ],
+      "correctAnswer": "Keep messages relevant and respectful",
+      "explanation": "Purposeful, respectful communication makes digital collaboration effective.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-02-012",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "easy",
+      "question": "Why can anonymity online create ethical challenges?",
+      "options": [
+        "It guarantees truthfulness",
+        "It makes all users identifiable",
+        "It prevents misinformation",
+        "It may reduce accountability for harmful behavior"
+      ],
+      "correctAnswer": "It may reduce accountability for harmful behavior",
+      "explanation": "Anonymity can make some users feel less accountable for harmful actions.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-02-013",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "medium",
+      "question": "A website asks for unnecessary personal information. A cautious user should",
+      "options": [
+        "Provide everything immediately",
+        "Share another person’s data",
+        "Question whether the information is needed before providing it",
+        "Ignore privacy concerns"
+      ],
+      "correctAnswer": "Question whether the information is needed before providing it",
+      "explanation": "Limiting unnecessary disclosure is a core privacy practice.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-02-014",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "medium",
+      "question": "Which online behavior most clearly reduces misunderstanding?",
+      "options": [
+        "Replying immediately while angry",
+        "Reading the message carefully before responding emotionally",
+        "Using ambiguous insults",
+        "Assuming intent without context"
+      ],
+      "correctAnswer": "Reading the message carefully before responding emotionally",
+      "explanation": "Careful reading and calm responses reduce avoidable misunderstandings.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-02-015",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Digital technology culture and communication",
+      "difficulty": "hard",
+      "question": "Digital technology should be used in ways that",
+      "options": [
+        "Improve communication and problem-solving while respecting rights",
+        "Ignore privacy",
+        "Encourage harassment",
+        "Replace all face-to-face responsibility"
+      ],
+      "correctAnswer": "Improve communication and problem-solving while respecting rights",
+      "explanation": "Responsible digital use balances benefits with rights and ethical duties.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-03-001",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "easy",
+      "question": "A constitution primarily provides",
+      "options": [
+        "A list of market prices",
+        "A weather forecast",
+        "A business plan",
+        "A framework for governing a state and organizing powers and rights"
+      ],
+      "correctAnswer": "A framework for governing a state and organizing powers and rights",
+      "explanation": "A constitution establishes core rules, institutions and rights for governance.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-03-002",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "easy",
+      "question": "Constitutionalism means that",
+      "options": [
+        "Leaders have unlimited power",
+        "Laws apply only to citizens",
+        "Government power is limited and exercised according to constitutional rules",
+        "Courts are unnecessary"
+      ],
+      "correctAnswer": "Government power is limited and exercised according to constitutional rules",
+      "explanation": "Constitutionalism emphasizes limits on government power under constitutional rules.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-03-003",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "medium",
+      "question": "Why is separation or distribution of powers important?",
+      "options": [
+        "It removes accountability",
+        "It can reduce concentration and abuse of power.",
+        "It makes laws unnecessary",
+        "It guarantees agreement on every issue"
+      ],
+      "correctAnswer": "It can reduce concentration and abuse of power.",
+      "explanation": "Distributing powers creates checks and reduces excessive concentration of authority.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-03-004",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "medium",
+      "question": "A right written in a constitution is most effectively protected when",
+      "options": [
+        "Institutions and rules provide mechanisms to respect and enforce it",
+        "Officials can ignore it",
+        "Only one person decides its meaning",
+        "Citizens never discuss it"
+      ],
+      "correctAnswer": "Institutions and rules provide mechanisms to respect and enforce it",
+      "explanation": "Rights require institutions and procedures that make them meaningful in practice.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-03-005",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "hard",
+      "question": "Which action best reflects constitutionalism?",
+      "options": [
+        "An official ignores a court order",
+        "A leader changes rules for personal benefit",
+        "A citizen is punished without legal basis",
+        "A public institution accepts a lawful court decision even when it dislikes the result"
+      ],
+      "correctAnswer": "A public institution accepts a lawful court decision even when it dislikes the result",
+      "explanation": "Constitutionalism requires institutions to operate within legal and constitutional limits.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-03-006",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "easy",
+      "question": "Why are constitutional rules important for government?",
+      "options": [
+        "They prevent all policy change",
+        "They eliminate disagreement",
+        "They establish predictable procedures and limits on authority",
+        "They guarantee economic growth"
+      ],
+      "correctAnswer": "They establish predictable procedures and limits on authority",
+      "explanation": "Constitutions provide stable rules and define the scope of state power.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-03-007",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "easy",
+      "question": "Ethiopian constitutional experience is relevant to citizenship because it helps students understand",
+      "options": [
+        "Only ancient geography",
+        "How constitutional arrangements and governance have developed over time",
+        "Only economic accounting",
+        "Only natural science"
+      ],
+      "correctAnswer": "How constitutional arrangements and governance have developed over time",
+      "explanation": "Studying constitutional experience connects citizens to the development of governance in Ethiopia.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-03-008",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "medium",
+      "question": "A government official who uses public office for personal gain is violating the principle of",
+      "options": [
+        "Accountable constitutional government",
+        "Scientific method",
+        "Market equilibrium",
+        "Digital literacy"
+      ],
+      "correctAnswer": "Accountable constitutional government",
+      "explanation": "Constitutional governance includes accountability and lawful exercise of power.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-03-009",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "medium",
+      "question": "Which statement best distinguishes a constitution from constitutionalism?",
+      "options": [
+        "They are identical in every respect.",
+        "A constitution concerns weather.",
+        "Constitutionalism means unlimited power.",
+        "A constitution is the framework of basic rules; constitutionalism is the principle that power should be limited by those rules."
+      ],
+      "correctAnswer": "A constitution is the framework of basic rules; constitutionalism is the principle that power should be limited by those rules.",
+      "explanation": "The constitution provides the rules; constitutionalism emphasizes adherence to limits and lawful government.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-03-010",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "hard",
+      "question": "If a law conflicts with a constitutional provision, constitutionalism requires",
+      "options": [
+        "Ignoring the constitution",
+        "Allowing any official to choose the result",
+        "Following the applicable constitutional framework and lawful review procedures",
+        "Ending all courts"
+      ],
+      "correctAnswer": "Following the applicable constitutional framework and lawful review procedures",
+      "explanation": "Constitutional systems provide lawful mechanisms to address conflicts with higher constitutional rules.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-03-011",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "easy",
+      "question": "A constitution can help protect citizens by",
+      "options": [
+        "Guaranteeing equal wealth",
+        "Recognizing rights and defining institutional responsibilities",
+        "Removing all social differences",
+        "Making elections unnecessary"
+      ],
+      "correctAnswer": "Recognizing rights and defining institutional responsibilities",
+      "explanation": "Constitutions can recognize rights and establish institutional duties.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-03-012",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "easy",
+      "question": "Which situation most clearly reflects limited government?",
+      "options": [
+        "An official cannot exercise a power that the legal framework does not authorize",
+        "An official can act without rules",
+        "A leader is above the law",
+        "Rules apply selectively"
+      ],
+      "correctAnswer": "An official cannot exercise a power that the legal framework does not authorize",
+      "explanation": "Limited government means public power is constrained by law.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-03-013",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "medium",
+      "question": "Constitutionalism is weakened when",
+      "options": [
+        "Courts review government action",
+        "Citizens know their rights",
+        "Institutions follow procedures",
+        "Public officials routinely disregard legal limits"
+      ],
+      "correctAnswer": "Public officials routinely disregard legal limits",
+      "explanation": "Ignoring legal and constitutional limits undermines constitutionalism.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-03-014",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "medium",
+      "question": "Why should citizens understand the constitution?",
+      "options": [
+        "It makes citizens above the law",
+        "It removes responsibilities",
+        "It helps them understand rights, duties and how public institutions are organized",
+        "It prevents civic participation"
+      ],
+      "correctAnswer": "It helps them understand rights, duties and how public institutions are organized",
+      "explanation": "Constitutional knowledge supports informed citizenship.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-03-015",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Constitution and constitutionalism",
+      "difficulty": "hard",
+      "question": "A citizen challenging an unlawful government action through legal procedures demonstrates",
+      "options": [
+        "Rejection of all government",
+        "Use of constitutional and legal mechanisms",
+        "Market behavior",
+        "Cultural isolation"
+      ],
+      "correctAnswer": "Use of constitutional and legal mechanisms",
+      "explanation": "Lawful civic challenge is compatible with constitutionalism and rule-based governance.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-04-001",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "easy",
+      "question": "Indigenous knowledge is generally understood as",
+      "options": [
+        "Knowledge developed and passed within local communities over time",
+        "Only laboratory knowledge",
+        "Any rumor on social media",
+        "Knowledge imported from a distant society"
+      ],
+      "correctAnswer": "Knowledge developed and passed within local communities over time",
+      "explanation": "Indigenous knowledge is locally developed and transmitted across generations.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-04-002",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "easy",
+      "question": "A farmer uses a traditional local method for conserving soil based on community experience. This is an example of",
+      "options": [
+        "Digital misinformation",
+        "Macroeconomic policy",
+        "Constitutional law",
+        "Indigenous knowledge applied to resource management"
+      ],
+      "correctAnswer": "Indigenous knowledge applied to resource management",
+      "explanation": "Local experience can produce practical knowledge for managing resources.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-04-003",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "medium",
+      "question": "Why can indigenous knowledge contribute to responsible citizenship?",
+      "options": [
+        "It must always replace scientific knowledge",
+        "It applies only to history",
+        "It can promote community responsibility, practical problem-solving and respect for local experience.",
+        "It prevents innovation"
+      ],
+      "correctAnswer": "It can promote community responsibility, practical problem-solving and respect for local experience.",
+      "explanation": "Indigenous knowledge can support responsibility and problem-solving while complementing other forms of knowledge.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-04-004",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "medium",
+      "question": "A community elder helps resolve a dispute using an accepted traditional process. This illustrates the role of",
+      "options": [
+        "A financial market",
+        "An indigenous social institution",
+        "A digital platform",
+        "A laboratory"
+      ],
+      "correctAnswer": "An indigenous social institution",
+      "explanation": "Indigenous social institutions can help communities manage relationships and resolve problems.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-04-005",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "hard",
+      "question": "Which approach best respects indigenous knowledge while evaluating it responsibly?",
+      "options": [
+        "Preserve useful practices while examining evidence and context",
+        "Accept every claim without question",
+        "Reject all traditional practices",
+        "Use only foreign ideas"
+      ],
+      "correctAnswer": "Preserve useful practices while examining evidence and context",
+      "explanation": "Respect does not require abandoning critical evaluation.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-04-006",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "easy",
+      "question": "A community organizes collective work to repair a shared water source. This most clearly shows",
+      "options": [
+        "Individual isolation",
+        "Market monopoly",
+        "Digital security",
+        "Community cooperation through a social institution"
+      ],
+      "correctAnswer": "Community cooperation through a social institution",
+      "explanation": "Collective institutions can mobilize people for shared community needs.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-04-007",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "easy",
+      "question": "Passing a farming practice from grandparents to younger generations demonstrates",
+      "options": [
+        "Random guessing",
+        "Market equilibrium",
+        "Intergenerational transmission of knowledge",
+        "Foreign policy"
+      ],
+      "correctAnswer": "Intergenerational transmission of knowledge",
+      "explanation": "Indigenous knowledge often moves across generations through teaching and practice.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-04-008",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "medium",
+      "question": "Which outcome best shows responsible use of indigenous knowledge?",
+      "options": [
+        "Using a practice blindly in every setting",
+        "Using locally appropriate practices to address a community problem while considering safety",
+        "Preventing all innovation",
+        "Rejecting local experience"
+      ],
+      "correctAnswer": "Using locally appropriate practices to address a community problem while considering safety",
+      "explanation": "Responsible use considers usefulness, context and safety.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-04-009",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "medium",
+      "question": "Why can indigenous social institutions strengthen communities?",
+      "options": [
+        "They can provide trusted ways to cooperate, support members and resolve disputes",
+        "They remove all diversity",
+        "They make laws unnecessary",
+        "They prevent dialogue"
+      ],
+      "correctAnswer": "They can provide trusted ways to cooperate, support members and resolve disputes",
+      "explanation": "Community institutions can organize cooperation and social support.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-04-010",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "hard",
+      "question": "A traditional early-warning practice helps villagers prepare for seasonal hazards. Its civic value is strongest when it",
+      "options": [
+        "Is treated as unquestionable in all circumstances",
+        "Is kept secret from the community",
+        "Replaces every modern service",
+        "Supports collective preparedness and responsible action"
+      ],
+      "correctAnswer": "Supports collective preparedness and responsible action",
+      "explanation": "Knowledge is valuable when it improves practical community resilience.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-04-011",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "easy",
+      "question": "A student documents an oral community practice accurately before sharing it. This demonstrates",
+      "options": [
+        "Deliberate distortion",
+        "Privacy violation by default",
+        "Respectful preservation of indigenous knowledge",
+        "Rejection of local culture"
+      ],
+      "correctAnswer": "Respectful preservation of indigenous knowledge",
+      "explanation": "Accurate documentation can help preserve knowledge while respecting its context.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-04-012",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "easy",
+      "question": "Which is the best reason to study indigenous knowledge?",
+      "options": [
+        "It proves every traditional belief is scientifically correct",
+        "It can reveal locally developed solutions and cultural experience relevant to community life",
+        "It makes external knowledge unnecessary",
+        "It applies only to museums"
+      ],
+      "correctAnswer": "It can reveal locally developed solutions and cultural experience relevant to community life",
+      "explanation": "Indigenous knowledge can contain useful local solutions and cultural experience.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-04-013",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "medium",
+      "question": "A community uses customary mediation before escalating a minor disagreement. This can contribute to",
+      "options": [
+        "Peaceful problem resolution",
+        "Increased conflict",
+        "Economic scarcity",
+        "Digital overload"
+      ],
+      "correctAnswer": "Peaceful problem resolution",
+      "explanation": "Mediation can help resolve disputes constructively.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-04-014",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "medium",
+      "question": "Indigenous knowledge is most accurately viewed as",
+      "options": [
+        "A replacement for all science",
+        "A collection of entertainment stories only",
+        "A type of currency",
+        "A resource that can complement other knowledge systems"
+      ],
+      "correctAnswer": "A resource that can complement other knowledge systems",
+      "explanation": "It can complement scientific and other knowledge when evaluated appropriately.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-04-015",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Indigenous knowledge and social institutions",
+      "difficulty": "hard",
+      "question": "Responsible citizenship can be supported by indigenous social institutions when they",
+      "options": [
+        "Promote exclusion and violence",
+        "Prevent all change",
+        "Encourage cooperation, accountability and community problem-solving",
+        "Ignore community needs"
+      ],
+      "correctAnswer": "Encourage cooperation, accountability and community problem-solving",
+      "explanation": "Institutions strengthen citizenship when they support constructive collective action.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-05-001",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "easy",
+      "question": "Culture includes",
+      "options": [
+        "Only clothing",
+        "Shared ways of life, values, practices and meanings within a group",
+        "Only language",
+        "Only religion"
+      ],
+      "correctAnswer": "Shared ways of life, values, practices and meanings within a group",
+      "explanation": "Culture encompasses a broad set of learned shared practices and meanings.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-05-002",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "easy",
+      "question": "Multiculturalism emphasizes",
+      "options": [
+        "The coexistence and recognition of different cultures within a society",
+        "Forcing one culture on everyone",
+        "Eliminating differences",
+        "Separating all groups permanently"
+      ],
+      "correctAnswer": "The coexistence and recognition of different cultures within a society",
+      "explanation": "Multiculturalism recognizes multiple cultural identities within society.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-05-003",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "medium",
+      "question": "A key pillar of a multicultural society is",
+      "options": [
+        "Compulsory cultural uniformity",
+        "Exclusion",
+        "Discrimination",
+        "Mutual respect among cultural groups"
+      ],
+      "correctAnswer": "Mutual respect among cultural groups",
+      "explanation": "Respect supports peaceful coexistence among diverse groups.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-05-004",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "medium",
+      "question": "Which is a form of diversity?",
+      "options": [
+        "Identical opinions",
+        "Uniformity of dress by law",
+        "Language diversity",
+        "One occupation for everyone"
+      ],
+      "correctAnswer": "Language diversity",
+      "explanation": "Language is one dimension of human diversity.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-05-005",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "hard",
+      "question": "A school celebrates several cultural traditions while maintaining equal treatment for students. This demonstrates",
+      "options": [
+        "Cultural exclusion",
+        "Multicultural inclusion",
+        "Forced assimilation",
+        "Discrimination"
+      ],
+      "correctAnswer": "Multicultural inclusion",
+      "explanation": "Including multiple traditions with equal treatment reflects multicultural inclusion.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-05-006",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "easy",
+      "question": "Why is culture learned rather than inherited biologically?",
+      "options": [
+        "People acquire cultural practices through social interaction and transmission",
+        "Genes contain every cultural rule",
+        "Culture never changes",
+        "Only adults have culture"
+      ],
+      "correctAnswer": "People acquire cultural practices through social interaction and transmission",
+      "explanation": "Culture is learned and transmitted socially.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-05-007",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "easy",
+      "question": "A multicultural society is most stable when differences are",
+      "options": [
+        "Used to justify unequal treatment",
+        "Suppressed completely",
+        "Kept invisible",
+        "Recognized while common rights and responsibilities are respected"
+      ],
+      "correctAnswer": "Recognized while common rights and responsibilities are respected",
+      "explanation": "Recognition of diversity can coexist with shared civic rights and duties.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-05-008",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "medium",
+      "question": "Which situation best shows cultural tolerance?",
+      "options": [
+        "Ridiculing unfamiliar practices",
+        "Banning all differences",
+        "Allowing others to practice their lawful traditions even when they differ from one’s own",
+        "Refusing dialogue"
+      ],
+      "correctAnswer": "Allowing others to practice their lawful traditions even when they differ from one’s own",
+      "explanation": "Tolerance involves allowing lawful differences without hostility.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-05-009",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "medium",
+      "question": "A student learns that two communities have different wedding traditions. The best response is to",
+      "options": [
+        "Mock one tradition",
+        "Understand the practices in their cultural context rather than assume one is universally correct",
+        "Assume the difference proves inferiority",
+        "Demand identical customs"
+      ],
+      "correctAnswer": "Understand the practices in their cultural context rather than assume one is universally correct",
+      "explanation": "Cultural understanding requires context rather than immediate judgment.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-05-010",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "hard",
+      "question": "Why can language diversity be valuable?",
+      "options": [
+        "It preserves different cultural knowledge and forms of expression",
+        "It makes communication impossible",
+        "It removes shared identity",
+        "It guarantees conflict"
+      ],
+      "correctAnswer": "It preserves different cultural knowledge and forms of expression",
+      "explanation": "Languages can carry cultural knowledge, identity and expression.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-05-011",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "easy",
+      "question": "Which policy best supports multiculturalism?",
+      "options": [
+        "Privileges based solely on ethnicity",
+        "Banning minority languages",
+        "Forcing one cultural style",
+        "Equal civic rights combined with respect for cultural diversity"
+      ],
+      "correctAnswer": "Equal civic rights combined with respect for cultural diversity",
+      "explanation": "Equal rights and recognition of diversity support multicultural societies.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-05-012",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "easy",
+      "question": "Cultural diversity becomes a social strength when",
+      "options": [
+        "Differences are used to create exclusion",
+        "Groups refuse any interaction",
+        "Different perspectives contribute to cooperation and problem-solving",
+        "One group controls all opportunities"
+      ],
+      "correctAnswer": "Different perspectives contribute to cooperation and problem-solving",
+      "explanation": "Diverse perspectives can enrich social problem-solving when managed inclusively.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-05-013",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "medium",
+      "question": "Which statement about multiculturalism is most appropriate?",
+      "options": [
+        "It means groups never interact",
+        "It requires both recognition of diversity and a basis for living together peacefully.",
+        "It requires cultural isolation",
+        "It eliminates common civic rules"
+      ],
+      "correctAnswer": "It requires both recognition of diversity and a basis for living together peacefully.",
+      "explanation": "Multiculturalism combines diversity with shared coexistence.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-05-014",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "medium",
+      "question": "A school avoids stereotypes by teaching students to distinguish individuals from assumptions about groups. This supports",
+      "options": [
+        "Respectful management of diversity",
+        "Cultural exclusion",
+        "Digital literacy",
+        "Economic planning"
+      ],
+      "correctAnswer": "Respectful management of diversity",
+      "explanation": "Avoiding stereotypes is important for respectful relations in diverse societies.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-05-015",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Multiculturalism and diversity",
+      "difficulty": "hard",
+      "question": "Which action best demonstrates appreciation of diversity without discrimination?",
+      "options": [
+        "Favoring one group regardless of behavior",
+        "Rejecting all differences",
+        "Using stereotypes to assign roles",
+        "Learning about another group while applying the same standards of dignity and rights to everyone"
+      ],
+      "correctAnswer": "Learning about another group while applying the same standards of dignity and rights to everyone",
+      "explanation": "Appreciation of diversity should remain consistent with equal dignity and rights.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-06-001",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "easy",
+      "question": "Unity in diversity means",
+      "options": [
+        "Forcing everyone to be identical",
+        "Separating communities completely",
+        "Maintaining common belonging while recognizing differences among people",
+        "Ignoring all differences"
+      ],
+      "correctAnswer": "Maintaining common belonging while recognizing differences among people",
+      "explanation": "Unity in diversity combines shared identity with respect for differences.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-06-002",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "easy",
+      "question": "Which is an element of diversity?",
+      "options": [
+        "A single legal age",
+        "Religion",
+        "One fixed occupation",
+        "One national language only"
+      ],
+      "correctAnswer": "Religion",
+      "explanation": "Religion can be a dimension of social diversity.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-06-003",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "medium",
+      "question": "Accommodating diversity means",
+      "options": [
+        "Making fair arrangements that allow lawful differences to participate in society",
+        "Excluding minorities",
+        "Treating differences as problems",
+        "Demanding complete uniformity"
+      ],
+      "correctAnswer": "Making fair arrangements that allow lawful differences to participate in society",
+      "explanation": "Accommodation seeks workable, fair arrangements for diverse needs.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-06-004",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "medium",
+      "question": "A school provides reasonable arrangements so students with different cultural practices can participate. This is",
+      "options": [
+        "Forced assimilation",
+        "Exclusion",
+        "Indifference",
+        "Accommodation of diversity"
+      ],
+      "correctAnswer": "Accommodation of diversity",
+      "explanation": "Accommodation allows participation while respecting legitimate differences.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-06-005",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "hard",
+      "question": "Why is diversity management important in Ethiopia?",
+      "options": [
+        "It removes cultural identities",
+        "It guarantees no disagreement",
+        "It can help reduce conflict and strengthen cooperation among diverse communities.",
+        "It requires one culture"
+      ],
+      "correctAnswer": "It can help reduce conflict and strengthen cooperation among diverse communities.",
+      "explanation": "Constructive diversity management supports peaceful cooperation in a diverse society.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-06-006",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "easy",
+      "question": "A community creates a forum where different groups discuss shared local problems. This most directly promotes",
+      "options": [
+        "Isolation",
+        "Unity through dialogue and cooperation",
+        "Cultural suppression",
+        "Political exclusion"
+      ],
+      "correctAnswer": "Unity through dialogue and cooperation",
+      "explanation": "Dialogue creates opportunities to find shared interests and solutions.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-06-007",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "easy",
+      "question": "A rule that applies differently only because of a person’s ethnic background is inconsistent with",
+      "options": [
+        "Equal treatment and fair diversity management",
+        "Respectful accommodation",
+        "Unity in diversity",
+        "Civic equality"
+      ],
+      "correctAnswer": "Equal treatment and fair diversity management",
+      "explanation": "Unjustified differential treatment undermines fairness and inclusion.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-06-008",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "medium",
+      "question": "Which action best strengthens national unity?",
+      "options": [
+        "Mocking local traditions",
+        "Forcing identical customs",
+        "Avoiding all interaction",
+        "Building common civic goals while respecting lawful cultural differences"
+      ],
+      "correctAnswer": "Building common civic goals while respecting lawful cultural differences",
+      "explanation": "Shared civic goals can create common identity while diversity is respected.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-06-009",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "medium",
+      "question": "When groups disagree about a cultural practice, a constructive first step is to",
+      "options": [
+        "Use threats",
+        "Exclude one group",
+        "Identify shared interests and discuss lawful options for accommodation",
+        "Assume bad intentions"
+      ],
+      "correctAnswer": "Identify shared interests and discuss lawful options for accommodation",
+      "explanation": "Shared interests and dialogue can turn difference into a manageable issue.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-06-010",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "hard",
+      "question": "Diversity management is most effective when it is based on",
+      "options": [
+        "Stereotypes",
+        "Fairness, inclusion and constructive dialogue",
+        "Rumor",
+        "Collective punishment"
+      ],
+      "correctAnswer": "Fairness, inclusion and constructive dialogue",
+      "explanation": "Good diversity management relies on fair and inclusive processes.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-06-011",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "easy",
+      "question": "A national event includes music and traditions from several communities under one shared theme. This can symbolize",
+      "options": [
+        "Unity in diversity",
+        "Cultural competition",
+        "Isolation",
+        "Uniformity"
+      ],
+      "correctAnswer": "Unity in diversity",
+      "explanation": "Shared events can express common belonging while recognizing differences.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-06-012",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "easy",
+      "question": "Which situation best shows that diversity does not necessarily weaken unity?",
+      "options": [
+        "Each group refuses contact",
+        "One group is excluded",
+        "All traditions are banned",
+        "Different communities cooperate on a shared environmental project while maintaining distinct traditions"
+      ],
+      "correctAnswer": "Different communities cooperate on a shared environmental project while maintaining distinct traditions",
+      "explanation": "Common goals can unite people despite cultural differences.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-06-013",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "medium",
+      "question": "A public service uses clear, equal criteria rather than cultural stereotypes. This supports",
+      "options": [
+        "Discrimination",
+        "Exclusion",
+        "Fair diversity management",
+        "Cultural domination"
+      ],
+      "correctAnswer": "Fair diversity management",
+      "explanation": "Fair criteria reduce bias and support equal participation.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-06-014",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "medium",
+      "question": "Why is dialogue important in diverse societies?",
+      "options": [
+        "It guarantees everyone will agree",
+        "It helps groups explain needs, resolve misunderstandings and find workable agreements.",
+        "It replaces all laws",
+        "It eliminates identity"
+      ],
+      "correctAnswer": "It helps groups explain needs, resolve misunderstandings and find workable agreements.",
+      "explanation": "Dialogue helps manage differences constructively.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-06-015",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "National unity through diversity",
+      "difficulty": "hard",
+      "question": "A strong national identity is most compatible with diversity when",
+      "options": [
+        "Citizens share civic responsibilities and respect one another’s identities",
+        "One culture is declared superior",
+        "Differences are prohibited",
+        "Citizens stop interacting"
+      ],
+      "correctAnswer": "Citizens share civic responsibilities and respect one another’s identities",
+      "explanation": "Common civic responsibility can coexist with diverse identities.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-07-001",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "easy",
+      "question": "Problem solving begins most effectively by",
+      "options": [
+        "Choosing a solution immediately",
+        "Blaming someone",
+        "Ignoring the evidence",
+        "Clearly identifying the problem"
+      ],
+      "correctAnswer": "Clearly identifying the problem",
+      "explanation": "A clear problem definition guides the search for appropriate solutions.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-07-002",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "easy",
+      "question": "Why is defining a problem important?",
+      "options": [
+        "It guarantees one solution",
+        "It removes uncertainty completely",
+        "It prevents effort from being directed at the wrong issue",
+        "It avoids gathering information"
+      ],
+      "correctAnswer": "It prevents effort from being directed at the wrong issue",
+      "explanation": "A well-defined problem focuses analysis on the actual issue.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-07-003",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "medium",
+      "question": "A good problem solver is likely to",
+      "options": [
+        "Reject all alternatives",
+        "Consider evidence before deciding",
+        "Act only on emotion",
+        "Avoid feedback"
+      ],
+      "correctAnswer": "Consider evidence before deciding",
+      "explanation": "Evidence-based reasoning improves the quality of decisions.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-07-004",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "medium",
+      "question": "After identifying a problem, a useful next step is to",
+      "options": [
+        "Generate possible solutions",
+        "Choose the first idea automatically",
+        "Stop collecting information",
+        "Assign blame"
+      ],
+      "correctAnswer": "Generate possible solutions",
+      "explanation": "Generating alternatives widens the range of possible solutions.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-07-005",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "hard",
+      "question": "Which approach best tests whether a proposed solution works?",
+      "options": [
+        "Assume success immediately",
+        "Ignore evidence",
+        "Change the problem statement",
+        "Monitor results and compare them with the intended outcome"
+      ],
+      "correctAnswer": "Monitor results and compare them with the intended outcome",
+      "explanation": "Evaluation requires checking actual outcomes against goals.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-07-006",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "easy",
+      "question": "A student tries one study method, reviews the results and then adjusts it. This demonstrates",
+      "options": [
+        "Rigid thinking",
+        "Avoidance",
+        "Iterative problem solving",
+        "Guessing"
+      ],
+      "correctAnswer": "Iterative problem solving",
+      "explanation": "Iterative problem solving uses results to improve the next attempt.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-07-007",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "easy",
+      "question": "A good problem solver should distinguish",
+      "options": [
+        "Evidence from measurement",
+        "Facts from assumptions",
+        "Causes from outcomes",
+        "Options from alternatives"
+      ],
+      "correctAnswer": "Facts from assumptions",
+      "explanation": "Separating facts from assumptions reduces reasoning errors.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-07-008",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "medium",
+      "question": "When several solutions seem possible, a useful criterion is",
+      "options": [
+        "Expected effectiveness and feasibility",
+        "Which idea sounds funniest",
+        "Which one requires no thought",
+        "Which one is newest only"
+      ],
+      "correctAnswer": "Expected effectiveness and feasibility",
+      "explanation": "Solutions should be assessed for likely effectiveness and practicality.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-07-009",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "medium",
+      "question": "A team disagrees about a solution. Which response best supports problem solving?",
+      "options": [
+        "Stop listening",
+        "Vote without discussion",
+        "Personalize the disagreement",
+        "Compare the evidence for each proposal against shared criteria"
+      ],
+      "correctAnswer": "Compare the evidence for each proposal against shared criteria",
+      "explanation": "Shared criteria and evidence keep disagreements focused on the problem.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-07-010",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "hard",
+      "question": "Why is feedback useful in problem solving?",
+      "options": [
+        "It guarantees agreement",
+        "It replaces thinking",
+        "It reveals what worked and what needs adjustment",
+        "It makes evidence unnecessary"
+      ],
+      "correctAnswer": "It reveals what worked and what needs adjustment",
+      "explanation": "Feedback provides information for improving the solution.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-07-011",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "easy",
+      "question": "A community lists causes of a waste problem before selecting an intervention. This improves problem solving by",
+      "options": [
+        "Avoiding analysis",
+        "Addressing root causes rather than only symptoms",
+        "Choosing randomly",
+        "Ignoring relationships"
+      ],
+      "correctAnswer": "Addressing root causes rather than only symptoms",
+      "explanation": "Understanding causes can lead to solutions that address the source of the problem.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-07-012",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "easy",
+      "question": "Which behavior is least characteristic of a good problem solver?",
+      "options": [
+        "Refusing to reconsider a decision when new evidence appears",
+        "Gathering information",
+        "Comparing alternatives",
+        "Reviewing results"
+      ],
+      "correctAnswer": "Refusing to reconsider a decision when new evidence appears",
+      "explanation": "Good problem solvers remain open to relevant new evidence.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-07-013",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "medium",
+      "question": "Brainstorming is most useful when the goal is to",
+      "options": [
+        "Judge every idea immediately",
+        "Choose only familiar solutions",
+        "End discussion quickly",
+        "Generate multiple possible ideas before evaluating them"
+      ],
+      "correctAnswer": "Generate multiple possible ideas before evaluating them",
+      "explanation": "Brainstorming expands the range of potential solutions before evaluation.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-07-014",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "medium",
+      "question": "A solution is implemented, but the problem continues. The best response is to",
+      "options": [
+        "Assume the problem is impossible",
+        "Blame one person",
+        "Evaluate the implementation and revise the approach using evidence",
+        "Hide the results"
+      ],
+      "correctAnswer": "Evaluate the implementation and revise the approach using evidence",
+      "explanation": "Persistent problems require evaluation and possible revision.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-07-015",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Problem-solving skills",
+      "difficulty": "hard",
+      "question": "A student improves problem-solving skill by",
+      "options": [
+        "Avoiding challenging tasks",
+        "Practicing structured analysis, reflection and feedback",
+        "Relying only on first impressions",
+        "Never reviewing outcomes"
+      ],
+      "correctAnswer": "Practicing structured analysis, reflection and feedback",
+      "explanation": "Practice and reflection strengthen structured problem-solving ability.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-08-001",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "easy",
+      "question": "Foreign relations refer to",
+      "options": [
+        "Interactions between a country and other states or external actors",
+        "Only relations inside one family",
+        "Only local business exchange",
+        "Only environmental processes"
+      ],
+      "correctAnswer": "Interactions between a country and other states or external actors",
+      "explanation": "Foreign relations concern a country’s interactions beyond its borders.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-08-002",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "easy",
+      "question": "An instrument of foreign policy can include",
+      "options": [
+        "Cell division",
+        "Soil formation",
+        "Taxonomic naming",
+        "Diplomacy"
+      ],
+      "correctAnswer": "Diplomacy",
+      "explanation": "Diplomacy is a standard instrument through which states conduct foreign policy.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-08-003",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "medium",
+      "question": "Why do states maintain foreign relations?",
+      "options": [
+        "To eliminate all borders",
+        "To stop communication",
+        "To pursue national interests, cooperation and security among other aims",
+        "To avoid every agreement"
+      ],
+      "correctAnswer": "To pursue national interests, cooperation and security among other aims",
+      "explanation": "Foreign relations help states pursue interests and manage cooperation and conflict.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-08-004",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "medium",
+      "question": "A government sends representatives to negotiate with another state. This is an example of",
+      "options": [
+        "Military production",
+        "Diplomatic engagement",
+        "Ecological management",
+        "Household consumption"
+      ],
+      "correctAnswer": "Diplomatic engagement",
+      "explanation": "Negotiation through representatives is a diplomatic activity.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-08-005",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "hard",
+      "question": "Regional cooperation can help East African states by",
+      "options": [
+        "Addressing shared challenges through coordination",
+        "Eliminating all national sovereignty",
+        "Preventing trade automatically",
+        "Removing cultural differences"
+      ],
+      "correctAnswer": "Addressing shared challenges through coordination",
+      "explanation": "Regional cooperation can support joint responses to shared issues.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-08-006",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "easy",
+      "question": "A country signs an agreement after negotiations with neighboring states. The agreement is an example of a",
+      "options": [
+        "Ecological succession",
+        "Household budget",
+        "Taxonomic hierarchy",
+        "Diplomatic instrument or outcome"
+      ],
+      "correctAnswer": "Diplomatic instrument or outcome",
+      "explanation": "Agreements can result from diplomatic foreign-policy activity.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-08-007",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "easy",
+      "question": "Which situation most directly concerns foreign policy?",
+      "options": [
+        "A family chooses a meal",
+        "A school selects a textbook",
+        "A government decides how to cooperate with neighboring states on regional security",
+        "A farmer rotates crops"
+      ],
+      "correctAnswer": "A government decides how to cooperate with neighboring states on regional security",
+      "explanation": "Foreign policy concerns how a state manages external relations.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-08-008",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "medium",
+      "question": "A state uses cultural exchange programs to strengthen relationships abroad. This demonstrates",
+      "options": [
+        "Internal taxation",
+        "A non-military instrument of foreign policy",
+        "Market equilibrium",
+        "Biological adaptation"
+      ],
+      "correctAnswer": "A non-military instrument of foreign policy",
+      "explanation": "Cultural exchange can be used to build relationships and influence peacefully.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-08-009",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "medium",
+      "question": "Why is geography relevant to East African foreign relations?",
+      "options": [
+        "Neighboring states share borders, resources and regional issues",
+        "Geography determines every policy automatically",
+        "Borders have no effect",
+        "All states have identical interests"
+      ],
+      "correctAnswer": "Neighboring states share borders, resources and regional issues",
+      "explanation": "Geographic proximity creates shared opportunities and challenges.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-08-010",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "hard",
+      "question": "A regional drought affects several neighboring countries. Cooperation on water management would illustrate",
+      "options": [
+        "Domestic consumer demand",
+        "Taxonomic classification",
+        "Individual entrepreneurship",
+        "A shared regional interest"
+      ],
+      "correctAnswer": "A shared regional interest",
+      "explanation": "Cross-border resource and environmental issues can create incentives for cooperation.",
+      "xp": 20
+    },
+    {
+      "id": "CIV-09-08-011",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "easy",
+      "question": "Foreign policy should be based on",
+      "options": [
+        "Random personal preference",
+        "Rumor alone",
+        "Clearly considered national interests and external circumstances",
+        "No assessment of consequences"
+      ],
+      "correctAnswer": "Clearly considered national interests and external circumstances",
+      "explanation": "Foreign policy decisions should consider national goals and the external environment.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-08-012",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "easy",
+      "question": "Which action is least consistent with constructive foreign relations?",
+      "options": [
+        "Negotiating agreements",
+        "Refusing all communication with neighboring states regardless of the issue",
+        "Participating in regional dialogue",
+        "Using diplomacy"
+      ],
+      "correctAnswer": "Refusing all communication with neighboring states regardless of the issue",
+      "explanation": "Constructive relations require communication and engagement where appropriate.",
+      "xp": 10
+    },
+    {
+      "id": "CIV-09-08-013",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "medium",
+      "question": "A state participates in regional meetings to coordinate economic cooperation. This most directly uses",
+      "options": [
+        "Diplomacy and regional cooperation",
+        "Taxonomy",
+        "Local land management",
+        "Microscope skills"
+      ],
+      "correctAnswer": "Diplomacy and regional cooperation",
+      "explanation": "Regional meetings are diplomatic mechanisms for coordinating cooperation.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-08-014",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "medium",
+      "question": "The role of foreign policy can include",
+      "options": [
+        "Eliminating all disagreements",
+        "Controlling other societies completely",
+        "Replacing domestic law",
+        "Protecting interests while promoting peaceful cooperation"
+      ],
+      "correctAnswer": "Protecting interests while promoting peaceful cooperation",
+      "explanation": "Foreign policy balances national interests with external relations and cooperation.",
+      "xp": 15
+    },
+    {
+      "id": "CIV-09-08-015",
+      "grade": 9,
+      "subject": "Citizenship",
+      "topic": "Ethiopia’s foreign relations in East Africa",
+      "difficulty": "hard",
+      "question": "A country uses negotiation instead of immediate confrontation to resolve a border issue. This is most consistent with",
+      "options": [
+        "Isolation",
+        "Unilateral punishment",
+        "Peaceful diplomacy",
+        "Market competition"
+      ],
+      "correctAnswer": "Peaceful diplomacy",
+      "explanation": "Negotiation is a peaceful instrument for managing interstate disagreements.",
+      "xp": 20
+    }
+  ]
+}

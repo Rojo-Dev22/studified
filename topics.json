@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "grades": {
+    "9": {
+      "biology": [
+        {
+          "id": "bio-01",
+          "name": "Introduction to Biology"
+        },
+        {
+          "id": "bio-02",
+          "name": "Characteristics and Classification of Organisms"
+        },
+        {
+          "id": "bio-03",
+          "name": "Cells"
+        },
+        {
+          "id": "bio-04",
+          "name": "Reproduction"
+        },
+        {
+          "id": "bio-05",
+          "name": "Human Health, Nutrition and Disease"
+        },
+        {
+          "id": "bio-06",
+          "name": "Ecology"
+        }
+      ],
+      "chemistry": [
+        {
+          "id": "chem-01",
+          "name": "Chemistry and Its Importance"
+        },
+        {
+          "id": "chem-02",
+          "name": "Measurements and Scientific Methods"
+        },
+        {
+          "id": "chem-03",
+          "name": "Atomic Structure"
+        },
+        {
+          "id": "chem-04",
+          "name": "Periodic Classification"
+        },
+        {
+          "id": "chem-05",
+          "name": "Chemical Bonding"
+        }
+      ],
+      "physics": [
+        {
+          "id": "phy-01",
+          "name": "Physics and Human Society"
+        },
+        {
+          "id": "phy-02",
+          "name": "Physical Quantities"
+        },
+        {
+          "id": "phy-03",
+          "name": "Motion in a Straight Line"
+        },
+        {
+          "id": "phy-04",
+          "name": "Force, Work, Energy and Power"
+        },
+        {
+          "id": "phy-05",
+          "name": "Simple Machines"
+        },
+        {
+          "id": "phy-06",
+          "name": "Mechanical Oscillation and Sound Waves"
+        },
+        {
+          "id": "phy-07",
+          "name": "Temperature and Thermometry"
+        }
+      ],
+      "mathematics": [
+        {
+          "id": "math-01",
+          "name": "Sets"
+        },
+        {
+          "id": "math-02",
+          "name": "Number System"
+        },
+        {
+          "id": "math-03",
+          "name": "Solving Equations"
+        },
+        {
+          "id": "math-04",
+          "name": "Inequalities"
+        },
+        {
+          "id": "math-05",
+          "name": "Introduction to Trigonometry"
+        },
+        {
+          "id": "math-06",
+          "name": "Regular Polygons"
+        },
+        {
+          "id": "math-07",
+          "name": "Congruency and Similarity"
+        },
+        {
+          "id": "math-08",
+          "name": "Two-Dimensional Vectors"
+        },
+        {
+          "id": "math-09",
+          "name": "Statistics and Probability"
+        }
+      ],
+      "economics": [
+        {
+          "id": "econ-01",
+          "name": "Introducing Economics"
+        },
+        {
+          "id": "econ-02",
+          "name": "Basic Economic Problems and Economic Systems"
+        },
+        {
+          "id": "econ-03",
+          "name": "Economic Resources and Markets"
+        },
+        {
+          "id": "econ-04",
+          "name": "Demand, Supply and Market Equilibrium"
+        },
+        {
+          "id": "econ-05",
+          "name": "Production and Cost"
+        },
+        {
+          "id": "econ-06",
+          "name": "Money"
+        },
+        {
+          "id": "econ-07",
+          "name": "Macroeconomics"
+        },
+        {
+          "id": "econ-08",
+          "name": "Basic Entrepreneurship"
+        }
+      ],
+      "geography": [
+        {
+          "id": "geo-01",
+          "name": "Geological History and Topography of Ethiopia"
+        },
+        {
+          "id": "geo-02",
+          "name": "Climate of Ethiopia"
+        },
+        {
+          "id": "geo-03",
+          "name": "Natural Resources of Ethiopia"
+        },
+        {
+          "id": "geo-04",
+          "name": "Population and Demographics of Ethiopia"
+        },
+        {
+          "id": "geo-05",
+          "name": "Economic and Cultural Activities of Ethiopia"
+        },
+        {
+          "id": "geo-06",
+          "name": "Human-Nature Interactions"
+        },
+        {
+          "id": "geo-07",
+          "name": "Contemporary Geographic Issues and Public Concerns"
+        },
+        {
+          "id": "geo-08",
+          "name": "Geographic Inquiry Skills, Maps, Scale and Graphs"
+        }
+      ],
+      "history": [
+        {
+          "id": "hist-01",
+          "name": "The Discipline of History and Human Evolution"
+        },
+        {
+          "id": "hist-02",
+          "name": "Ancient World Civilizations"
+        },
+        {
+          "id": "hist-03",
+          "name": "Peoples and States of Ethiopia and the Horn of Africa to the End of the 13th Century"
+        },
+        {
+          "id": "hist-04",
+          "name": "The Middle Ages and Early Modern Period"
+        },
+        {
+          "id": "hist-05",
+          "name": "Africa to 1500"
+        },
+        {
+          "id": "hist-06",
+          "name": "Africa and the Outside World, 1500–1880s"
+        },
+        {
+          "id": "hist-07",
+          "name": "Ethiopia from the 13th to the Mid-16th Century"
+        },
+        {
+          "id": "hist-08",
+          "name": "Ethiopia from the Mid-16th to the Mid-19th Century"
+        },
+        {
+          "id": "hist-09",
+          "name": "The Age of Revolutions"
+        }
+      ],
+      "citizenship": [
+        {
+          "id": "civ-01",
+          "name": "Ethical Values"
+        },
+        {
+          "id": "civ-02",
+          "name": "Culture of Using Digital Technology"
+        },
+        {
+          "id": "civ-03",
+          "name": "Constitution and Constitutionalism"
+        },
+        {
+          "id": "civ-04",
+          "name": "Indigenous Knowledge"
+        },
+        {
+          "id": "civ-05",
+          "name": "Multiculturalism in Ethiopia"
+        },
+        {
+          "id": "civ-06",
+          "name": "National Unity Through Diversity"
+        },
+        {
+          "id": "civ-07",
+          "name": "Problem Solving Skills"
+        },
+        {
+          "id": "civ-08",
+          "name": "Ethiopia's Foreign Relations in East Africa"
+        }
+      ]
+    },
+    "10": {},
+    "11": {},
+    "12": {}
+  }
+}

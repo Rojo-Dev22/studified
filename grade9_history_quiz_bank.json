@@ -1,0 +1,2047 @@
+{
+  "subject": "History",
+  "grade": 9,
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": "HIST-09-01-001",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Meaning of Prehistory and History",
+      "difficulty": "easy",
+      "question": "Which distinction best separates prehistory from history in the curriculum?",
+      "options": [
+        "Prehistory deals with periods before written records, while history uses evidence about the human past including written records",
+        "Prehistory concerns only Africa, while history concerns only Europe",
+        "Prehistory begins after the invention of states, while history ends before states",
+        "Prehistory is about geography, while history is about economics"
+      ],
+      "correctAnswer": "Prehistory deals with periods before written records, while history uses evidence about the human past including written records",
+      "explanation": "The key distinction is the availability and use of written records; history can use written and other evidence to reconstruct the past.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-01-002",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The Discipline of History",
+      "difficulty": "medium",
+      "question": "A historian compares several accounts of the same event mainly to determine what?",
+      "options": [
+        "Which account uses the longest sentences",
+        "How evidence and interpretations differ",
+        "Which author used the most dates",
+        "Which source is oldest regardless of evidence"
+      ],
+      "correctAnswer": "How evidence and interpretations differ",
+      "explanation": "Historical study requires evaluating evidence and understanding that interpretations can differ.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-01-003",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Importance of History",
+      "difficulty": "easy",
+      "question": "A community studies earlier droughts before planning water use. Which benefit of history is most directly demonstrated?",
+      "options": [
+        "Predicting every future event exactly",
+        "Replacing scientific observation",
+        "Using knowledge of past experience to inform present decisions",
+        "Avoiding the use of evidence"
+      ],
+      "correctAnswer": "Using knowledge of past experience to inform present decisions",
+      "explanation": "History can help people understand earlier experiences and use that understanding when making present decisions.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-01-004",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Historiography and Historical interpretations",
+      "difficulty": "medium",
+      "question": "Two historians use the same primary evidence but reach different conclusions. What is the best explanation?",
+      "options": [
+        "Historical evidence has no value",
+        "Only one historian can legally use the evidence",
+        "The evidence automatically changes when interpreted",
+        "Historical interpretation can differ because historians select and interpret evidence differently"
+      ],
+      "correctAnswer": "Historical interpretation can differ because historians select and interpret evidence differently",
+      "explanation": "Historiography examines how historical interpretations are constructed and why interpretations can differ.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-01-005",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Sources of History",
+      "difficulty": "easy",
+      "question": "A researcher wants evidence from an object made during the period being studied. Which is a primary source?",
+      "options": [
+        "An artifact produced in the period studied",
+        "A later historian’s summary",
+        "A modern textbook chapter",
+        "A recent exam guide"
+      ],
+      "correctAnswer": "An artifact produced in the period studied",
+      "explanation": "A primary source originates from the period under investigation; an artifact can provide direct evidence about that period.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-01-006",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Sources of History",
+      "difficulty": "medium",
+      "question": "A historian cross-checks a traveler’s account with archaeological evidence. What is the main purpose?",
+      "options": [
+        "To replace all written evidence",
+        "To strengthen interpretation by comparing independent evidence",
+        "To make the account longer",
+        "To avoid chronology"
+      ],
+      "correctAnswer": "To strengthen interpretation by comparing independent evidence",
+      "explanation": "Comparing different kinds of evidence helps a historian evaluate reliability and build a stronger interpretation.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-01-007",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Dating in History",
+      "difficulty": "easy",
+      "question": "Why is dating important when reconstructing a sequence of historical events?",
+      "options": [
+        "It identifies the color of artifacts",
+        "It proves every source is accurate",
+        "It helps establish chronological relationships",
+        "It eliminates the need for interpretation"
+      ],
+      "correctAnswer": "It helps establish chronological relationships",
+      "explanation": "Dating allows historians to place evidence and events in chronological order.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-01-008",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Theories of Human Evolution",
+      "difficulty": "medium",
+      "question": "Which statement best reflects a scientific approach to theories of human evolution?",
+      "options": [
+        "A theory is accepted because it is repeated often",
+        "Evidence is unnecessary if a theory sounds logical",
+        "A theory can never change once proposed",
+        "A theory is evaluated using evidence and can be revised as evidence changes"
+      ],
+      "correctAnswer": "A theory is evaluated using evidence and can be revised as evidence changes",
+      "explanation": "Scientific explanations are evaluated against evidence and may be refined when new evidence becomes available.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-01-009",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Africa and Human Evolution",
+      "difficulty": "easy",
+      "question": "Why is Africa important in the study of human evolution?",
+      "options": [
+        "Because important evidence about early human evolution has been found in Africa",
+        "Because all later human history occurred only in Africa",
+        "Because no human fossils have been found elsewhere",
+        "Because agriculture began everywhere at the same time"
+      ],
+      "correctAnswer": "Because important evidence about early human evolution has been found in Africa",
+      "explanation": "The curriculum emphasizes Africa’s major role in evidence for human evolution.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-01-010",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The Stone Age",
+      "difficulty": "easy",
+      "question": "A group relies mainly on chipped stone tools and hunting-gathering. Which broad period does this most closely describe?",
+      "options": [
+        "The Industrial Revolution",
+        "The Stone Age",
+        "The Renaissance",
+        "The Age of Explorations"
+      ],
+      "correctAnswer": "The Stone Age",
+      "explanation": "Chipped stone tools and hunting-gathering are characteristic features associated with the Stone Age.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-01-011",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The Stone Age",
+      "difficulty": "medium",
+      "question": "Which development would most strongly indicate a transition away from a purely mobile hunting-gathering lifestyle?",
+      "options": [
+        "More seasonal movement",
+        "Greater use of animal tracks",
+        "Increased reliance on fixed settlements and food production",
+        "More temporary camps"
+      ],
+      "correctAnswer": "Increased reliance on fixed settlements and food production",
+      "explanation": "Permanent or more stable settlement and food production mark an important shift in human ways of life.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-01-012",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The Emergence of States",
+      "difficulty": "medium",
+      "question": "Which combination is most closely associated with the emergence of early states?",
+      "options": [
+        "No social organization and no specialization",
+        "Complete absence of agriculture",
+        "Only hunting and seasonal movement",
+        "Permanent communities, organized authority, and increasing social complexity"
+      ],
+      "correctAnswer": "Permanent communities, organized authority, and increasing social complexity",
+      "explanation": "Early states developed with more complex societies, organized authority, and settled communities.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-01-013",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The Emergence of States",
+      "difficulty": "hard",
+      "question": "Why could food surplus contribute to state formation?",
+      "options": [
+        "It could support specialists and non-farming activities",
+        "It prevented population growth",
+        "It removed the need for leadership",
+        "It made trade impossible"
+      ],
+      "correctAnswer": "It could support specialists and non-farming activities",
+      "explanation": "Surplus production can support people performing specialized roles and help sustain organized institutions.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-01-014",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Dating in History",
+      "difficulty": "easy",
+      "question": "If Source A is securely dated earlier than Source B, what can the historian conclude with greatest confidence?",
+      "options": [
+        "Source A was produced after Source B",
+        "Source A belongs to an earlier point in time than Source B",
+        "Source B must be less reliable",
+        "The events described by A and B were identical"
+      ],
+      "correctAnswer": "Source A belongs to an earlier point in time than Source B",
+      "explanation": "Reliable dating allows a relative chronological comparison.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-02-001",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Ancient Egypt",
+      "difficulty": "easy",
+      "question": "Why was the Nile especially important to the development of ancient Egypt?",
+      "options": [
+        "It eliminated the need for government",
+        "It prevented all outside contact",
+        "It provided a major source of water and supported agriculture",
+        "It was used only for religious ceremonies"
+      ],
+      "correctAnswer": "It provided a major source of water and supported agriculture",
+      "explanation": "The Nile supported agricultural production and human settlement, making it central to Egyptian civilization.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-02-002",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Ancient Egypt",
+      "difficulty": "medium",
+      "question": "A historian examines pyramids, tomb inscriptions, and agricultural records together. What is the strongest reason for using all three?",
+      "options": [
+        "Agriculture records describe religion only",
+        "Only inscriptions are historical sources",
+        "Tombs prove every political event",
+        "Each provides a different kind of evidence about Egyptian society"
+      ],
+      "correctAnswer": "Each provides a different kind of evidence about Egyptian society",
+      "explanation": "Different sources can reveal political, social, economic, and religious dimensions of a civilization.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-02-003",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Nubia",
+      "difficulty": "medium",
+      "question": "When comparing Nubia with Egypt, which approach is historically strongest?",
+      "options": [
+        "Examine both interaction and the distinct development of Nubian states",
+        "Treat Nubia only as an extension of Egypt",
+        "Assume neighboring societies could not trade",
+        "Ignore geographical setting"
+      ],
+      "correctAnswer": "Examine both interaction and the distinct development of Nubian states",
+      "explanation": "The curriculum treats Nubia as a civilization that interacted with Egypt while having its own history.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-02-004",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Mesopotamia",
+      "difficulty": "easy",
+      "question": "Why did Mesopotamia become an important setting for early civilization?",
+      "options": [
+        "Its mountains prevented settlement",
+        "Its river-valley environment supported agriculture and urban development",
+        "Its lack of water encouraged intensive farming",
+        "Its deserts made cities unnecessary"
+      ],
+      "correctAnswer": "Its river-valley environment supported agriculture and urban development",
+      "explanation": "The river systems of Mesopotamia supported agriculture and helped sustain complex settlements.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-02-005",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Persia",
+      "difficulty": "medium",
+      "question": "An empire governs distant territories through organized administration and regional officials. Which feature of the Persian state does this illustrate?",
+      "options": [
+        "City-state fragmentation",
+        "Nomadic isolation",
+        "Imperial administration",
+        "Complete political decentralization"
+      ],
+      "correctAnswer": "Imperial administration",
+      "explanation": "Managing a large empire required administrative structures linking the center with provinces.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-02-006",
+      "grade": 9,
+      "subject": "History",
+      "topic": "India",
+      "difficulty": "medium",
+      "question": "Why should an ancient civilization be studied through both cultural and political evidence?",
+      "options": [
+        "Because trade and religion are unrelated",
+        "Because cultural evidence is never historical",
+        "Because rulers created every social practice",
+        "Because political structures and cultural practices together show how societies functioned"
+      ],
+      "correctAnswer": "Because political structures and cultural practices together show how societies functioned",
+      "explanation": "Civilizations are multidimensional; political, economic, social, and cultural evidence complement one another.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-02-007",
+      "grade": 9,
+      "subject": "History",
+      "topic": "China",
+      "difficulty": "easy",
+      "question": "A dynasty loses legitimacy and is replaced after prolonged political disorder. Which concept in the curriculum best helps interpret this pattern?",
+      "options": [
+        "Dynastic change within the Chinese historical tradition",
+        "Stone Age subsistence",
+        "Feudal Europe",
+        "Trans-Saharan trade"
+      ],
+      "correctAnswer": "Dynastic change within the Chinese historical tradition",
+      "explanation": "The history of ancient China includes changing dynasties and ideas explaining cycles of political legitimacy.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-02-008",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Maya",
+      "difficulty": "medium",
+      "question": "Which feature would most likely indicate a highly developed urban civilization such as the Maya?",
+      "options": [
+        "Complete absence of agriculture",
+        "Complex cities, organized institutions, and specialized knowledge",
+        "No social organization",
+        "Only temporary camps"
+      ],
+      "correctAnswer": "Complex cities, organized institutions, and specialized knowledge",
+      "explanation": "The Maya developed complex urban and cultural systems rather than simple temporary settlements.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-02-009",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Inca",
+      "difficulty": "easy",
+      "question": "A state connects distant communities through organized roads and administration. Which civilization is most closely associated with this pattern in the curriculum?",
+      "options": [
+        "Nubia",
+        "Maya",
+        "Inca",
+        "Phoenicia"
+      ],
+      "correctAnswer": "Inca",
+      "explanation": "The Inca established an extensive political system connecting territories across the Andes.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-02-010",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Aztecs",
+      "difficulty": "medium",
+      "question": "A historian studying the Aztec state wants to understand both expansion and everyday life. Which evidence combination is most useful?",
+      "options": [
+        "Only physical geography",
+        "Only battle dates",
+        "Only modern tourism brochures",
+        "Political evidence plus evidence of economic and social organization"
+      ],
+      "correctAnswer": "Political evidence plus evidence of economic and social organization",
+      "explanation": "Understanding a civilization requires connecting political power with how people produced, exchanged, and organized life.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-02-011",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Ancient Greek Civilization",
+      "difficulty": "easy",
+      "question": "Why is the study of ancient Greek civilization important to understanding political history?",
+      "options": [
+        "It provides examples of city-state political organization and civic life",
+        "It introduced the first industrial factories",
+        "It ended all slavery in the ancient world",
+        "It created the modern nation-state system"
+      ],
+      "correctAnswer": "It provides examples of city-state political organization and civic life",
+      "explanation": "Greek history includes influential forms of city-state organization and political participation.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-02-012",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Ancient Greek Civilization",
+      "difficulty": "medium",
+      "question": "Two Greek city-states organize political participation differently. What does this best demonstrate?",
+      "options": [
+        "Greek cities had identical governments",
+        "Political institutions can vary even among societies sharing a broader culture",
+        "Ancient societies had no political institutions",
+        "Geography never affected political organization"
+      ],
+      "correctAnswer": "Political institutions can vary even among societies sharing a broader culture",
+      "explanation": "The Greek world contained different city-states with different political systems and practices.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-02-013",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Ancient Roman Civilization",
+      "difficulty": "medium",
+      "question": "Which development best explains Rome’s long-term influence as a civilization?",
+      "options": [
+        "Its rejection of cities",
+        "Its complete isolation from neighbors",
+        "Its political institutions, law, infrastructure, and territorial expansion",
+        "Its absence of administration"
+      ],
+      "correctAnswer": "Its political institutions, law, infrastructure, and territorial expansion",
+      "explanation": "Rome’s influence was broad because political, legal, administrative, and infrastructural developments reinforced one another.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-02-014",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Ancient Roman Civilization",
+      "difficulty": "hard",
+      "question": "A historian compares Roman roads and provincial administration. What broader process is being examined?",
+      "options": [
+        "How prehistory replaced history",
+        "How agriculture ended in Rome",
+        "How city-states became isolated",
+        "How infrastructure supported imperial control and integration"
+      ],
+      "correctAnswer": "How infrastructure supported imperial control and integration",
+      "explanation": "Roads and administration could help connect territories and strengthen imperial governance.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-02-015",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Rise and spread of Christianity",
+      "difficulty": "medium",
+      "question": "Which factor would most directly help explain the spread of a religion across many regions?",
+      "options": [
+        "Networks of travel, communication, communities, and teaching",
+        "Complete geographic isolation",
+        "The absence of urban centers",
+        "The end of all political authority"
+      ],
+      "correctAnswer": "Networks of travel, communication, communities, and teaching",
+      "explanation": "Religious ideas can spread through human networks that connect communities across regions.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-02-016",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Rise and spread of Christianity",
+      "difficulty": "hard",
+      "question": "Why should the rise and spread of Christianity be studied historically rather than as a single event?",
+      "options": [
+        "It occurred in one day",
+        "Its development involved processes, communities, institutions, and changing political contexts over time",
+        "It was unrelated to society",
+        "It left no historical evidence"
+      ],
+      "correctAnswer": "Its development involved processes, communities, institutions, and changing political contexts over time",
+      "explanation": "Historical change is usually a process involving multiple factors rather than a single moment.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-03-001",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Languages, Religions and Peoples of Ethiopia and the Horn",
+      "difficulty": "medium",
+      "question": "Why is language useful to historians studying the peoples of Ethiopia and the Horn?",
+      "options": [
+        "It proves all groups share one origin",
+        "It identifies political borders perfectly",
+        "It can provide evidence about relationships, movement, and cultural interaction",
+        "It replaces archaeological evidence"
+      ],
+      "correctAnswer": "It can provide evidence about relationships, movement, and cultural interaction",
+      "explanation": "Language patterns can contribute evidence about peoples, contacts, and historical change.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-03-002",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Languages Families",
+      "difficulty": "easy",
+      "question": "Grouping languages into families is useful because it can reveal what?",
+      "options": [
+        "The location of every ancient capital",
+        "The exact age of every speaker",
+        "The current population of every region",
+        "Historical relationships among languages"
+      ],
+      "correctAnswer": "Historical relationships among languages",
+      "explanation": "Language families help scholars study relationships and historical development among languages.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-03-003",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Major Religions of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why does religion matter in the historical study of Ethiopia?",
+      "options": [
+        "Religious traditions influenced institutions, culture, and social life",
+        "Religion had no social effects",
+        "Religious history is separate from political history",
+        "Only modern events were religious"
+      ],
+      "correctAnswer": "Religious traditions influenced institutions, culture, and social life",
+      "explanation": "Major religions have shaped institutions, identities, cultural practices, and historical relationships.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-03-004",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Settlement Pattern of Peoples of Ethiopia",
+      "difficulty": "medium",
+      "question": "Why is settlement pattern important to historical interpretation?",
+      "options": [
+        "Settlement location had no effect on history",
+        "Where people settled affected interactions, economies, and political relationships",
+        "Only rulers chose settlement locations",
+        "Settlement patterns are always random"
+      ],
+      "correctAnswer": "Where people settled affected interactions, economies, and political relationships",
+      "explanation": "Geography and settlement influence how communities interact and how states and economies develop.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-03-005",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Pre-Aksumite States and their Geographical Setting",
+      "difficulty": "medium",
+      "question": "Why is geographical setting important when studying pre-Aksumite states?",
+      "options": [
+        "It removes the need for archaeological evidence",
+        "It determines every political decision",
+        "It helps explain access to resources, routes, and neighboring regions",
+        "It proves one state was always dominant"
+      ],
+      "correctAnswer": "It helps explain access to resources, routes, and neighboring regions",
+      "explanation": "Geographical location shapes opportunities for settlement, trade, and interaction.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-03-006",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Aksumite Kingdom",
+      "difficulty": "hard",
+      "question": "Which combination would most strongly help a historian study the Aksumite Kingdom?",
+      "options": [
+        "Only climate data",
+        "Only modern maps",
+        "Only legends",
+        "Inscriptions, coins, archaeological remains, and external accounts"
+      ],
+      "correctAnswer": "Inscriptions, coins, archaeological remains, and external accounts",
+      "explanation": "Aksum can be studied through multiple forms of historical evidence, each revealing different dimensions.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-03-007",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Aksumite Kingdom",
+      "difficulty": "medium",
+      "question": "A state issues its own coinage and participates in long-distance trade. What does this most strongly suggest?",
+      "options": [
+        "Economic and political organization supported wider regional connections",
+        "The state had no administration",
+        "The population was entirely nomadic",
+        "Trade was absent"
+      ],
+      "correctAnswer": "Economic and political organization supported wider regional connections",
+      "explanation": "Coinage and trade indicate organized economic activity and links beyond the immediate region.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-03-008",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Aksumite Kingdom",
+      "difficulty": "hard",
+      "question": "Why are external written accounts valuable but not sufficient when studying Aksum?",
+      "options": [
+        "They are always completely accurate",
+        "They provide outside observations that should be compared with local evidence",
+        "They replace archaeology",
+        "They contain no interpretation"
+      ],
+      "correctAnswer": "They provide outside observations that should be compared with local evidence",
+      "explanation": "External accounts can add evidence, but historians should compare them with other sources and consider perspective.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-03-009",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Zagwe Dynasty",
+      "difficulty": "medium",
+      "question": "A historian examines monumental religious architecture associated with the Zagwe period. What can this evidence most directly illuminate?",
+      "options": [
+        "Modern industrialization",
+        "The exact population of every village",
+        "Religious and political priorities of the period",
+        "Ancient Chinese politics"
+      ],
+      "correctAnswer": "Religious and political priorities of the period",
+      "explanation": "Monumental religious architecture can reveal the importance of religion, resources, organization, and political authority.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-03-010",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Zagwe Dynasty",
+      "difficulty": "hard",
+      "question": "Which historical method is strongest when interpreting a major architectural achievement from the Zagwe period?",
+      "options": [
+        "Ignore who organized its construction",
+        "Assume the building explains every event",
+        "Use only modern opinions",
+        "Combine the physical evidence with historical and cultural context"
+      ],
+      "correctAnswer": "Combine the physical evidence with historical and cultural context",
+      "explanation": "Historical interpretation improves when material evidence is considered within its political, religious, and social context.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-03-011",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The Sultanate of Shewa",
+      "difficulty": "easy",
+      "question": "Why is studying the Sultanate of Shewa important to the history of the region?",
+      "options": [
+        "It shows the development of Muslim political organization in the Ethiopian and Horn context",
+        "It proves only Christian states existed",
+        "It is unrelated to trade and settlement",
+        "It ended before any regional interaction"
+      ],
+      "correctAnswer": "It shows the development of Muslim political organization in the Ethiopian and Horn context",
+      "explanation": "The curriculum includes the Sultanate of Shewa as part of the political history of the region.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-03-012",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The Sultanate of Shewa",
+      "difficulty": "medium",
+      "question": "A historian compares Muslim and Christian states in the region. What is the strongest reason for doing so?",
+      "options": [
+        "To prove one religion had no history",
+        "To understand interaction, competition, coexistence, and change",
+        "To avoid studying geography",
+        "To assume conflict was constant"
+      ],
+      "correctAnswer": "To understand interaction, competition, coexistence, and change",
+      "explanation": "Comparative study can reveal relationships and political dynamics rather than treating states in isolation.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-03-013",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Aksumite Kingdom",
+      "difficulty": "hard",
+      "question": "Which development would most directly strengthen a kingdom’s ability to participate in regional trade?",
+      "options": [
+        "Reducing communication",
+        "Eliminating markets",
+        "Reliable production, political stability, and access to trade routes",
+        "Avoiding neighboring regions"
+      ],
+      "correctAnswer": "Reliable production, political stability, and access to trade routes",
+      "explanation": "Trade depends on production, organization, connectivity, and relative stability.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-03-014",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Languages, Religions and Peoples of Ethiopia and the Horn",
+      "difficulty": "easy",
+      "question": "Why should historians avoid treating Ethiopia and the Horn as culturally uniform?",
+      "options": [
+        "Geography prevented all interaction",
+        "All communities historically had identical institutions",
+        "Diversity began only recently",
+        "The region contains diverse peoples, languages, religions, and settlement patterns"
+      ],
+      "correctAnswer": "The region contains diverse peoples, languages, religions, and settlement patterns",
+      "explanation": "The curriculum explicitly addresses linguistic, religious, and settlement diversity.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-04-001",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The Middle Ages in Europe",
+      "difficulty": "easy",
+      "question": "Which broad feature best characterizes medieval European history as studied in the curriculum?",
+      "options": [
+        "Political, social, economic, and religious institutions changed over time",
+        "Europe had no political structures",
+        "All societies were identical",
+        "Trade and cities disappeared permanently"
+      ],
+      "correctAnswer": "Political, social, economic, and religious institutions changed over time",
+      "explanation": "The medieval period involved changing political, social, economic, and religious systems.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-04-002",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Dark Age",
+      "difficulty": "hard",
+      "question": "Why is the term \"Dark Age\" better treated cautiously by historians?",
+      "options": [
+        "It proves no culture existed",
+        "It can oversimplify a complex period that included both decline and continuity",
+        "It is a precise scientific measurement",
+        "It means all of Europe was equally poor"
+      ],
+      "correctAnswer": "It can oversimplify a complex period that included both decline and continuity",
+      "explanation": "Historical labels should be interpreted critically because they may simplify complex developments.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-04-003",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Feudal Society",
+      "difficulty": "easy",
+      "question": "A lord grants land or protection in exchange for services and obligations. Which system does this most closely illustrate?",
+      "options": [
+        "Ancient Egyptian administration",
+        "Industrial capitalism",
+        "Feudal society",
+        "Mercantilism"
+      ],
+      "correctAnswer": "Feudal society",
+      "explanation": "Feudal relations involved reciprocal obligations linked to land, protection, and service.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-04-004",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Feudal Society",
+      "difficulty": "medium",
+      "question": "Which economic condition would most support a predominantly feudal rural society?",
+      "options": [
+        "Nationwide rail networks",
+        "Large-scale factory production",
+        "A purely cashless global economy",
+        "Land-based production and localized obligations"
+      ],
+      "correctAnswer": "Land-based production and localized obligations",
+      "explanation": "Feudal society was strongly connected to agrarian production and localized social relationships.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-04-005",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Byzantine Empire",
+      "difficulty": "medium",
+      "question": "Why is the Byzantine Empire important in the study of the medieval world?",
+      "options": [
+        "It preserved and transformed elements of Roman political and cultural traditions",
+        "It ended the Roman legacy completely",
+        "It existed only in western Europe",
+        "It had no connection to Christianity"
+      ],
+      "correctAnswer": "It preserved and transformed elements of Roman political and cultural traditions",
+      "explanation": "The Byzantine Empire is historically significant for its continuation and transformation of Roman traditions in the eastern Mediterranean.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-04-006",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Rise and Expansion of Islam",
+      "difficulty": "medium",
+      "question": "Which combination best explains how Islam could expand beyond its place of origin?",
+      "options": [
+        "Isolation from neighboring societies",
+        "Political organization, trade, travel, communication, and religious communities",
+        "A ban on travel",
+        "The absence of cities"
+      ],
+      "correctAnswer": "Political organization, trade, travel, communication, and religious communities",
+      "explanation": "Expansion occurred through interacting political, social, religious, and economic processes.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-04-007",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Rise and Expansion of Islam",
+      "difficulty": "hard",
+      "question": "Why is it historically weak to explain the spread of Islam using only military conquest?",
+      "options": [
+        "Trade was impossible in the medieval world",
+        "Military activity never occurred",
+        "Religious, commercial, cultural, and social processes also affected its expansion",
+        "Religion had no communities"
+      ],
+      "correctAnswer": "Religious, commercial, cultural, and social processes also affected its expansion",
+      "explanation": "Historical change usually has multiple causes, and the curriculum highlights the broader expansion of Islam.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-04-008",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Expansion of the Ottoman Empire",
+      "difficulty": "medium",
+      "question": "An empire controls strategic territories connecting regions. Why could such geography strengthen imperial power?",
+      "options": [
+        "Population automatically declines",
+        "Geography has no political importance",
+        "Trade becomes impossible",
+        "Control of routes and key regions can improve communication, trade, and military movement"
+      ],
+      "correctAnswer": "Control of routes and key regions can improve communication, trade, and military movement",
+      "explanation": "Strategic geography can support political and economic power by connecting or controlling important routes.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-04-009",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Dynastic Cycle in China",
+      "difficulty": "easy",
+      "question": "A dynasty becomes unstable, loses authority, and is replaced by another. Which concept best captures this pattern?",
+      "options": [
+        "Dynastic cycle",
+        "Feudal contract",
+        "Renaissance humanism",
+        "Industrialization"
+      ],
+      "correctAnswer": "Dynastic cycle",
+      "explanation": "The dynastic cycle is a framework for understanding repeated changes of ruling dynasties in China.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-04-010",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Development of Early Capitalism",
+      "difficulty": "medium",
+      "question": "Which change would most directly encourage the development of early capitalism?",
+      "options": [
+        "Complete disappearance of trade",
+        "Expanding markets, investment, and profit-oriented production",
+        "Return to purely subsistence exchange",
+        "Prohibition of private enterprise"
+      ],
+      "correctAnswer": "Expanding markets, investment, and profit-oriented production",
+      "explanation": "Early capitalism developed alongside expanding commerce and increasingly profit-oriented economic activity.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-04-011",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Age of Explorations and Discoveries",
+      "difficulty": "easy",
+      "question": "Why did improved navigation matter to European exploration?",
+      "options": [
+        "It prevented contact between regions",
+        "It ended the need for ships",
+        "It made longer and more reliable voyages possible",
+        "It eliminated commercial motives"
+      ],
+      "correctAnswer": "It made longer and more reliable voyages possible",
+      "explanation": "Navigation and related maritime knowledge supported longer-distance exploration.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-04-012",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Age of Explorations and Discoveries",
+      "difficulty": "hard",
+      "question": "A historian links exploration to trade, technology, and political competition. What is the advantage of this explanation?",
+      "options": [
+        "It assumes technology alone caused exploration",
+        "It reduces history to a single cause",
+        "It ignores economic motives",
+        "It accounts for multiple interacting causes"
+      ],
+      "correctAnswer": "It accounts for multiple interacting causes",
+      "explanation": "Historical developments such as exploration usually result from several interacting motives and enabling conditions.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-04-013",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Renaissance",
+      "difficulty": "easy",
+      "question": "Which intellectual shift is most associated with the Renaissance?",
+      "options": [
+        "Renewed interest in classical learning and human-centered inquiry",
+        "Complete rejection of classical texts",
+        "The end of art and literature",
+        "Decline of all education"
+      ],
+      "correctAnswer": "Renewed interest in classical learning and human-centered inquiry",
+      "explanation": "The Renaissance is associated with renewed classical learning and changing approaches to art, knowledge, and human experience.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-04-014",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Reformation",
+      "difficulty": "medium",
+      "question": "Which condition would most directly help a reform movement challenge an established church structure?",
+      "options": [
+        "A ban on printing and communication",
+        "Criticism of existing practices combined with new channels for circulating ideas",
+        "Complete agreement with church authorities",
+        "The absence of literacy"
+      ],
+      "correctAnswer": "Criticism of existing practices combined with new channels for circulating ideas",
+      "explanation": "The Reformation was aided by criticism, intellectual change, and broader circulation of ideas.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-04-015",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Industrial Revolution",
+      "difficulty": "easy",
+      "question": "Which change best indicates the Industrial Revolution rather than a traditional agrarian economy?",
+      "options": [
+        "Decline of manufacturing",
+        "Dependence only on hand tools",
+        "Mechanized factory production and large-scale industrial organization",
+        "Complete rural isolation"
+      ],
+      "correctAnswer": "Mechanized factory production and large-scale industrial organization",
+      "explanation": "Industrialization involved mechanization, factories, and new production systems.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-04-016",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Industrial Revolution",
+      "difficulty": "hard",
+      "question": "Why could industrialization produce both economic growth and social problems?",
+      "options": [
+        "Economic growth and social change never occur together",
+        "Industrialization affected only machines",
+        "Factories eliminated all poverty immediately",
+        "Higher production could coexist with difficult labor conditions and rapid urban change"
+      ],
+      "correctAnswer": "Higher production could coexist with difficult labor conditions and rapid urban change",
+      "explanation": "Industrialization changed production while also reshaping work, cities, and social conditions.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-05-001",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Languages and Peoples of Africa",
+      "difficulty": "easy",
+      "question": "Why is linguistic diversity important when studying African history?",
+      "options": [
+        "It provides evidence of diverse peoples and historical interactions",
+        "It proves all groups were isolated",
+        "It determines modern borders exactly",
+        "It replaces all historical sources"
+      ],
+      "correctAnswer": "It provides evidence of diverse peoples and historical interactions",
+      "explanation": "Language is one source for understanding the diversity and relationships of African peoples.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-05-002",
+      "grade": 9,
+      "subject": "History",
+      "topic": "States in North Africa",
+      "difficulty": "medium",
+      "question": "A North African state develops around trade routes linking the Mediterranean and interior Africa. What does this suggest about the region?",
+      "options": [
+        "North Africa was isolated from the interior",
+        "North Africa participated in wider economic and cultural networks",
+        "Mediterranean contact was impossible",
+        "Trade had no geographic dimension"
+      ],
+      "correctAnswer": "North Africa participated in wider economic and cultural networks",
+      "explanation": "North African states were connected to broader regional networks through trade and geography.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-05-003",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Spread of Islam and its Impact in West Africa",
+      "difficulty": "medium",
+      "question": "Which change could result from the spread of Islam in a West African trading society?",
+      "options": [
+        "The disappearance of local cultures",
+        "The end of all trade",
+        "New religious institutions and stronger connections to wider commercial networks",
+        "Immediate political unification of all states"
+      ],
+      "correctAnswer": "New religious institutions and stronger connections to wider commercial networks",
+      "explanation": "The spread of Islam affected religion, institutions, learning, and trade relationships.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-05-004",
+      "grade": 9,
+      "subject": "History",
+      "topic": "States in Western Africa",
+      "difficulty": "easy",
+      "question": "Why did West African states benefit from controlling trade routes?",
+      "options": [
+        "Trade prevented urban growth",
+        "Trade always reduced state revenue",
+        "Routes had no economic value",
+        "Trade could generate wealth and strengthen political authority"
+      ],
+      "correctAnswer": "Trade could generate wealth and strengthen political authority",
+      "explanation": "Control of trade routes could provide revenue and strengthen centers of political power.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-05-005",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Equatorial, Central and Eastern Africa",
+      "difficulty": "medium",
+      "question": "A historian compares states from different regions of Africa rather than treating the continent as one political unit. Why is this better?",
+      "options": [
+        "It recognizes regional diversity in institutions, environments, and historical development",
+        "Africa had one government",
+        "Regions were identical",
+        "Political differences appeared only after 1500"
+      ],
+      "correctAnswer": "It recognizes regional diversity in institutions, environments, and historical development",
+      "explanation": "Africa contained many societies with different environments and political histories.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-05-006",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Southern Africa",
+      "difficulty": "medium",
+      "question": "Why should environmental setting be considered when studying states in southern Africa?",
+      "options": [
+        "Environment determines every historical event",
+        "Environment can shape settlement, economic activity, and patterns of interaction",
+        "Environment is irrelevant to migration",
+        "States developed without resources"
+      ],
+      "correctAnswer": "Environment can shape settlement, economic activity, and patterns of interaction",
+      "explanation": "Historical societies adapted to their environments, which influenced economic and settlement patterns.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-05-007",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Africa’s Intra and Inter-continental Relations",
+      "difficulty": "easy",
+      "question": "A port links an African society with merchants from another continent. Which concept is most directly illustrated?",
+      "options": [
+        "Prehistory only",
+        "Complete isolation",
+        "Inter-continental relations",
+        "Feudal obligation"
+      ],
+      "correctAnswer": "Inter-continental relations",
+      "explanation": "Contact across continents through trade or other forms of exchange is an example of inter-continental relations.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-05-008",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Trans-Saharan trade",
+      "difficulty": "medium",
+      "question": "Why were trans-Saharan routes historically important?",
+      "options": [
+        "They eliminated desert adaptation",
+        "They prevented exchange across the Sahara",
+        "They were used only by armies",
+        "They connected North Africa with West African economies and communities"
+      ],
+      "correctAnswer": "They connected North Africa with West African economies and communities",
+      "explanation": "Trans-Saharan trade linked regions north and south of the Sahara and supported the movement of goods and ideas.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-05-009",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Trans-Saharan trade",
+      "difficulty": "hard",
+      "question": "Which factor was essential to making long-distance desert trade possible?",
+      "options": [
+        "Organized routes, knowledge of the desert, and dependable transport systems",
+        "Permanent forests across the Sahara",
+        "No need for water",
+        "Complete absence of risk"
+      ],
+      "correctAnswer": "Organized routes, knowledge of the desert, and dependable transport systems",
+      "explanation": "Successful desert trade required adaptation, route knowledge, and organized transport.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-05-010",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Early Contacts with the Outside World",
+      "difficulty": "hard",
+      "question": "When studying early African contacts with outsiders, why should historians examine both African and foreign sources?",
+      "options": [
+        "Foreign sources are automatically correct",
+        "Different sources can reveal different perspectives and reduce one-sided interpretation",
+        "African sources cannot describe contact",
+        "Only modern sources matter"
+      ],
+      "correctAnswer": "Different sources can reveal different perspectives and reduce one-sided interpretation",
+      "explanation": "Comparing perspectives helps historians evaluate bias and understand interaction more fully.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-05-011",
+      "grade": 9,
+      "subject": "History",
+      "topic": "States in Western Africa",
+      "difficulty": "medium",
+      "question": "A ruler controls a major commercial center and collects taxes from merchants. What does this imply about state capacity?",
+      "options": [
+        "Merchants were outside the economy",
+        "The state had no economic role",
+        "The state had institutions capable of regulating and benefiting from commerce",
+        "Taxes prevent political authority"
+      ],
+      "correctAnswer": "The state had institutions capable of regulating and benefiting from commerce",
+      "explanation": "Taxation and regulation indicate organized authority over economic activity.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-05-012",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Spread of Islam and its Impact in West Africa",
+      "difficulty": "hard",
+      "question": "Why might Islam spread especially effectively along trade routes?",
+      "options": [
+        "Religion spreads only through conquest",
+        "Trade prevents cultural exchange",
+        "Merchants never settle or communicate",
+        "Traders and scholars carried beliefs and practices between connected communities"
+      ],
+      "correctAnswer": "Traders and scholars carried beliefs and practices between connected communities",
+      "explanation": "Trade routes create repeated contact among communities, enabling cultural as well as economic exchange.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-05-013",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Africa’s Intra and Inter-continental Relations",
+      "difficulty": "easy",
+      "question": "Which evidence best demonstrates intra-continental interaction in Africa?",
+      "options": [
+        "Movement of goods and ideas between African regions",
+        "Only European maps",
+        "A single isolated village",
+        "A modern airline ticket"
+      ],
+      "correctAnswer": "Movement of goods and ideas between African regions",
+      "explanation": "Intra-continental relations involve interactions among African regions themselves.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-05-014",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Early Contacts with the Outside World",
+      "difficulty": "hard",
+      "question": "Why can outside contact produce both opportunities and risks for a society?",
+      "options": [
+        "Contact always benefits everyone equally",
+        "It can expand trade and knowledge while also creating competition, inequality, or exploitation",
+        "Contact always destroys every local institution",
+        "Trade has no social effects"
+      ],
+      "correctAnswer": "It can expand trade and knowledge while also creating competition, inequality, or exploitation",
+      "explanation": "Historical contacts often produce mixed consequences rather than a single uniform outcome.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-06-001",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Contact with the Outside World",
+      "difficulty": "hard",
+      "question": "Which question is most appropriate when evaluating early European-African contact?",
+      "options": [
+        "Did contact have only one outcome?",
+        "Which side was always completely passive?",
+        "Who benefited, what changed, and how did African societies respond?",
+        "Were all African societies identical?"
+      ],
+      "correctAnswer": "Who benefited, what changed, and how did African societies respond?",
+      "explanation": "A balanced historical approach examines actors, consequences, and responses rather than assuming one-sided change.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-06-002",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Slavery",
+      "difficulty": "medium",
+      "question": "Why is slavery best studied as a historical system rather than only as an individual act?",
+      "options": [
+        "It was unrelated to political power",
+        "It affected only one person at a time",
+        "It had no economic dimension",
+        "It involved institutions, trade networks, coercion, and large-scale social effects"
+      ],
+      "correctAnswer": "It involved institutions, trade networks, coercion, and large-scale social effects",
+      "explanation": "Slavery operated through wider economic and political systems with lasting social consequences.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-06-003",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Slavery",
+      "difficulty": "hard",
+      "question": "A trading network expands because enslaved people are treated as commodities. What does this reveal about the system?",
+      "options": [
+        "Economic incentives could reinforce human exploitation",
+        "Trade automatically reduced violence",
+        "Markets made slavery disappear",
+        "Economic motives were irrelevant"
+      ],
+      "correctAnswer": "Economic incentives could reinforce human exploitation",
+      "explanation": "The history of slavery is closely connected to economic and political incentives as well as coercion.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-06-004",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The “Legitimate” Trade",
+      "difficulty": "medium",
+      "question": "Why did the term \"legitimate trade\" arise in the nineteenth-century context?",
+      "options": [
+        "All African trade ended",
+        "Trade in commodities was increasingly presented as an alternative to the slave trade",
+        "Europe stopped overseas commerce",
+        "Trade became purely local"
+      ],
+      "correctAnswer": "Trade in commodities was increasingly presented as an alternative to the slave trade",
+      "explanation": "The concept refers to commercial exchange increasingly framed as distinct from slave trading.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-06-005",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The “Legitimate” Trade",
+      "difficulty": "easy",
+      "question": "A region shifts from exporting enslaved people toward exporting agricultural commodities. What type of change is this?",
+      "options": [
+        "A return to prehistory",
+        "An end to all trade",
+        "A change in the dominant form of external commerce",
+        "A purely political revolution"
+      ],
+      "correctAnswer": "A change in the dominant form of external commerce",
+      "explanation": "The shift represents changing patterns of participation in international trade.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-06-006",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The White Settlement in South Africa",
+      "difficulty": "medium",
+      "question": "Why is white settlement in South Africa important to African history?",
+      "options": [
+        "It affected only religion",
+        "It had no impact beyond Europe",
+        "It eliminated all local societies",
+        "It affected land, labor, political power, and relations among communities"
+      ],
+      "correctAnswer": "It affected land, labor, political power, and relations among communities",
+      "explanation": "Settlement altered patterns of land ownership, labor, and political authority.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-06-007",
+      "grade": 9,
+      "subject": "History",
+      "topic": "The White Settlement in South Africa",
+      "difficulty": "medium",
+      "question": "A new settler community controls more land and labor resources. Which historical consequence is most likely to require investigation?",
+      "options": [
+        "Changes in power and competition over resources",
+        "No change in social relations",
+        "Only artistic change",
+        "Only language spelling"
+      ],
+      "correctAnswer": "Changes in power and competition over resources",
+      "explanation": "Control over land and labor can transform political and social relationships.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-06-008",
+      "grade": 9,
+      "subject": "History",
+      "topic": "European Explorers and Missionaries",
+      "difficulty": "hard",
+      "question": "Why should explorers’ and missionaries’ accounts be evaluated critically?",
+      "options": [
+        "They were written without any viewpoint",
+        "They recorded observations from particular perspectives and purposes",
+        "They are always false",
+        "They are not historical sources"
+      ],
+      "correctAnswer": "They recorded observations from particular perspectives and purposes",
+      "explanation": "Sources reflect the context and purpose of their authors, so historians should evaluate perspective and bias.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-06-009",
+      "grade": 9,
+      "subject": "History",
+      "topic": "European Explorers and Missionaries",
+      "difficulty": "medium",
+      "question": "Which outcome could result from missionary activity in African societies?",
+      "options": [
+        "No cultural contact",
+        "Only military conquest",
+        "Religious and educational change alongside new cultural interactions",
+        "Immediate disappearance of all local traditions"
+      ],
+      "correctAnswer": "Religious and educational change alongside new cultural interactions",
+      "explanation": "Missionary activity could affect religion, education, and cultural exchange in different ways.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-06-010",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Contact with the Outside World",
+      "difficulty": "hard",
+      "question": "A historian notices that contact brought both new goods and new pressures on local communities. Which conclusion is best?",
+      "options": [
+        "Local responses never matter",
+        "Contact has one universal result",
+        "Economic change is always positive",
+        "Historical contact can produce mixed and uneven consequences"
+      ],
+      "correctAnswer": "Historical contact can produce mixed and uneven consequences",
+      "explanation": "The effects of contact vary across groups and may include both opportunities and harms.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-07-001",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Solomonic Dynasty & Christian Kingdom",
+      "difficulty": "easy",
+      "question": "Why is the Solomonic period important in Ethiopian political history?",
+      "options": [
+        "It shaped a major Christian kingdom and its political institutions",
+        "It ended all regional diversity",
+        "It was outside Ethiopian history",
+        "It occurred after the nineteenth century"
+      ],
+      "correctAnswer": "It shaped a major Christian kingdom and its political institutions",
+      "explanation": "The curriculum emphasizes the Solomonic dynasty and Christian kingdom from the thirteenth to sixteenth centuries.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-07-002",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Solomonic Dynasty & Christian Kingdom",
+      "difficulty": "hard",
+      "question": "A historian studies royal legitimacy, religion, and administration together. Why?",
+      "options": [
+        "They are unrelated topics",
+        "They can jointly explain how a kingdom maintained political authority",
+        "Only religion mattered",
+        "Administration existed without rulers"
+      ],
+      "correctAnswer": "They can jointly explain how a kingdom maintained political authority",
+      "explanation": "Political legitimacy, religious institutions, and administration can reinforce one another in state formation and rule.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-07-003",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Muslim Principalities",
+      "difficulty": "easy",
+      "question": "Why is the study of Muslim principalities essential to the history of medieval Ethiopia?",
+      "options": [
+        "It concerns only North Africa",
+        "It proves Christian kingdoms were absent",
+        "It reveals the region’s political and religious diversity and interaction",
+        "It has no relation to trade"
+      ],
+      "correctAnswer": "It reveals the region’s political and religious diversity and interaction",
+      "explanation": "The curriculum explicitly includes Muslim principalities as part of Ethiopia’s historical landscape.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-07-004",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Relationship Between Christian Kingdom and Sultanate of Adal",
+      "difficulty": "hard",
+      "question": "Which historical approach best explains relations between the Christian kingdom and Adal?",
+      "options": [
+        "Ignore geography",
+        "Assume relations were always peaceful",
+        "Assume conflict had one cause only",
+        "Examine warfare, diplomacy, competition, and changing regional conditions together"
+      ],
+      "correctAnswer": "Examine warfare, diplomacy, competition, and changing regional conditions together",
+      "explanation": "The relationship involved complex political and military dynamics rather than a single permanent pattern.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-07-005",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Relationship Between Christian Kingdom and Sultanate of Adal",
+      "difficulty": "medium",
+      "question": "Why can control of territory and trade routes be important in understanding regional conflict?",
+      "options": [
+        "Economic and strategic resources can shape political and military decisions",
+        "Trade never influences politics",
+        "Territory has no historical importance",
+        "Conflict occurs without interests"
+      ],
+      "correctAnswer": "Economic and strategic resources can shape political and military decisions",
+      "explanation": "States often compete over strategically or economically important spaces.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-07-006",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Political and socio-economic conditions of southern and central states",
+      "difficulty": "medium",
+      "question": "Why should southern and central Ethiopian states be studied separately as well as comparatively?",
+      "options": [
+        "All states were identical",
+        "Each had distinctive political and socio-economic conditions while also interacting with others",
+        "No regional interaction occurred",
+        "Only one region had political institutions"
+      ],
+      "correctAnswer": "Each had distinctive political and socio-economic conditions while also interacting with others",
+      "explanation": "Regional comparison works best when differences and connections are both considered.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-07-007",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Population Movements, Expansion and Integration",
+      "difficulty": "medium",
+      "question": "A population movement brings new communities into sustained contact with others. Which outcome is most historically plausible?",
+      "options": [
+        "Integration is impossible",
+        "Nothing can change",
+        "New political, economic, and cultural relationships may develop",
+        "Only language changes and nothing else"
+      ],
+      "correctAnswer": "New political, economic, and cultural relationships may develop",
+      "explanation": "Population movement can reshape institutions, economies, identities, and intergroup relations.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-07-008",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Population Movements, Expansion and Integration",
+      "difficulty": "hard",
+      "question": "Why should population movement not automatically be described as either entirely peaceful or entirely violent?",
+      "options": [
+        "Population movement has no social effects",
+        "All migration is peaceful",
+        "All expansion is violent",
+        "Historical movements can include migration, competition, alliance, and conflict in different contexts"
+      ],
+      "correctAnswer": "Historical movements can include migration, competition, alliance, and conflict in different contexts",
+      "explanation": "Historical processes are often mixed and vary by place and time.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-07-009",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Gadaa System of the Oromo",
+      "difficulty": "easy",
+      "question": "What is the Gadaa system most appropriately studied as in the curriculum?",
+      "options": [
+        "A system of social and political organization among the Oromo",
+        "A European feudal institution",
+        "A medieval Chinese dynasty",
+        "A trade route"
+      ],
+      "correctAnswer": "A system of social and political organization among the Oromo",
+      "explanation": "The curriculum explicitly identifies Gadaa as an Oromo system of governance and social organization.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-07-010",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Gadaa System of the Oromo",
+      "difficulty": "medium",
+      "question": "A governance system distributes authority through defined age-based stages and offices. Which feature would a historian investigate in studying Gadaa?",
+      "options": [
+        "Only military technology",
+        "How social organization and political authority are structured",
+        "Only trade taxes",
+        "Only religious buildings"
+      ],
+      "correctAnswer": "How social organization and political authority are structured",
+      "explanation": "The study of Gadaa includes understanding how governance and social organization operate.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-07-011",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Moggasa and Guddifacha",
+      "difficulty": "medium",
+      "question": "Why are Moggasa and Guddifacha relevant to the study of social integration?",
+      "options": [
+        "They are forms of taxation",
+        "They describe industrial factory work",
+        "They illustrate mechanisms through which relationships and incorporation can be created",
+        "They are Roman military ranks"
+      ],
+      "correctAnswer": "They illustrate mechanisms through which relationships and incorporation can be created",
+      "explanation": "The curriculum includes Moggasa and Guddifacha within discussions of Oromo social and political processes.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-07-012",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Egalitarian System of Governance",
+      "difficulty": "medium",
+      "question": "What is a key analytical question when examining an egalitarian governance system?",
+      "options": [
+        "How empires tax colonies",
+        "How a single absolute ruler controls everything",
+        "How factories are owned",
+        "How authority is distributed and checked within the community"
+      ],
+      "correctAnswer": "How authority is distributed and checked within the community",
+      "explanation": "Egalitarian systems can be studied by examining distribution of authority and participation.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-07-013",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Egalitarian System of Governance",
+      "difficulty": "easy",
+      "question": "Why is comparing governance systems historically useful?",
+      "options": [
+        "It shows that societies can organize authority in different ways",
+        "It proves one system is universal",
+        "It eliminates the need for evidence",
+        "It makes all societies identical"
+      ],
+      "correctAnswer": "It shows that societies can organize authority in different ways",
+      "explanation": "Comparative history helps identify variation in institutions and political organization.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-07-014",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Population Movements, Expansion and Integration",
+      "difficulty": "hard",
+      "question": "Which factor would most help explain whether a population movement results in integration rather than long-term separation?",
+      "options": [
+        "Only the number of people moving",
+        "Patterns of interaction, institutions, and relationships between groups",
+        "Only the color of clothing",
+        "Only the season of movement"
+      ],
+      "correctAnswer": "Patterns of interaction, institutions, and relationships between groups",
+      "explanation": "Integration depends on how groups interact and what social and political structures develop around that interaction.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-08-001",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Peoples and states of eastern, central, southern and western regions",
+      "difficulty": "easy",
+      "question": "Why does the curriculum examine multiple regional states in Ethiopia?",
+      "options": [
+        "To avoid studying local history",
+        "To prove regions never interacted",
+        "To show political diversity and regional developments rather than a single uniform history",
+        "To focus only on foreign powers"
+      ],
+      "correctAnswer": "To show political diversity and regional developments rather than a single uniform history",
+      "explanation": "The curriculum emphasizes peoples and states across several regions, highlighting diversity and interaction.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-08-002",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Gondarine Period",
+      "difficulty": "medium",
+      "question": "Which feature would a historian most likely investigate when studying the Gondarine period?",
+      "options": [
+        "Only European industrialization",
+        "Only prehistoric tools",
+        "Only West African trade",
+        "Political organization, cultural developments, and the role of the capital"
+      ],
+      "correctAnswer": "Political organization, cultural developments, and the role of the capital",
+      "explanation": "The Gondarine period is studied as a major phase of Ethiopian political and cultural history.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-08-003",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Zemene-Mesafint",
+      "difficulty": "easy",
+      "question": "What does the term Zemene-Mesafint refer to in the curriculum?",
+      "options": [
+        "The Era of Warlords",
+        "The Age of Discoveries",
+        "The Stone Age",
+        "The Roman Republic"
+      ],
+      "correctAnswer": "The Era of Warlords",
+      "explanation": "The curriculum explicitly labels Zemene-Mesafint as the Era of Warlords.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-08-004",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Zemene-Mesafint",
+      "difficulty": "medium",
+      "question": "A central authority weakens while regional leaders gain greater power. Which political pattern does this illustrate?",
+      "options": [
+        "Complete centralization",
+        "Decentralization of effective political power",
+        "Industrial capitalism",
+        "Colonial independence"
+      ],
+      "correctAnswer": "Decentralization of effective political power",
+      "explanation": "The Zemene-Mesafint is associated with strong regional power and weakened central authority.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-08-005",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Yejju Dynasty",
+      "difficulty": "medium",
+      "question": "Why should the Yejju Dynasty be studied within the broader context of the Zemene-Mesafint?",
+      "options": [
+        "It was unrelated to Ethiopian politics",
+        "It occurred in ancient Egypt",
+        "Its rise is connected to the regional political dynamics of that period",
+        "It belongs to the Renaissance"
+      ],
+      "correctAnswer": "Its rise is connected to the regional political dynamics of that period",
+      "explanation": "The Yejju Dynasty formed part of the political landscape of the Era of Warlords.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-08-006",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Kingdom of Shewa",
+      "difficulty": "hard",
+      "question": "A regional kingdom expands its political influence beyond its original core. Which process should a historian investigate?",
+      "options": [
+        "Only weather changes",
+        "Only religious rituals",
+        "Only foreign industrialization",
+        "Expansion, integration, diplomacy, and administration"
+      ],
+      "correctAnswer": "Expansion, integration, diplomacy, and administration",
+      "explanation": "Political expansion can involve multiple processes, not simply military conquest.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-08-007",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Gondarine Period",
+      "difficulty": "medium",
+      "question": "Why is a capital city historically important beyond its location?",
+      "options": [
+        "It can concentrate political, religious, cultural, and economic institutions",
+        "A capital has no effect on institutions",
+        "All people must live there",
+        "Only soldiers use capitals"
+      ],
+      "correctAnswer": "It can concentrate political, religious, cultural, and economic institutions",
+      "explanation": "Capitals can become centers where multiple dimensions of political and cultural life converge.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-08-008",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Zemene-Mesafint",
+      "difficulty": "hard",
+      "question": "Which source-comparison strategy is most useful for studying an era of political fragmentation?",
+      "options": [
+        "Use one ruler’s account only",
+        "Compare accounts from different regions and perspectives",
+        "Ignore regional evidence",
+        "Use modern summaries without checking sources"
+      ],
+      "correctAnswer": "Compare accounts from different regions and perspectives",
+      "explanation": "Fragmented political contexts require attention to multiple regional perspectives and sources.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-08-009",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Yejju Dynasty",
+      "difficulty": "medium",
+      "question": "What historical question best connects the Yejju Dynasty to broader Ethiopian political history?",
+      "options": [
+        "How the Maya used calendars",
+        "How Roman roads were built",
+        "How regional power interacted with struggles over central authority",
+        "How industrial factories spread"
+      ],
+      "correctAnswer": "How regional power interacted with struggles over central authority",
+      "explanation": "The Yejju period is best understood within the changing balance between regional and central power.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-08-010",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Kingdom of Shewa",
+      "difficulty": "hard",
+      "question": "Why should the history of Shewa include attention to both internal development and external relationships?",
+      "options": [
+        "States exist independently of their surroundings",
+        "External relations never matter",
+        "Internal development happens without society",
+        "Political growth is shaped by institutions within a state and its interactions with neighbors"
+      ],
+      "correctAnswer": "Political growth is shaped by institutions within a state and its interactions with neighbors",
+      "explanation": "A state’s trajectory depends on both internal organization and relationships with other political communities.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-09-001",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Industrial Capitalism in Europe",
+      "difficulty": "easy",
+      "question": "What distinguishes industrial capitalism from an earlier mainly agrarian economy?",
+      "options": [
+        "Large-scale mechanized production and capital investment become more important",
+        "Agriculture disappears completely",
+        "Trade ends",
+        "All production becomes household production"
+      ],
+      "correctAnswer": "Large-scale mechanized production and capital investment become more important",
+      "explanation": "Industrial capitalism is characterized by industrial production, investment, and changing labor organization.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-09-002",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Political, Economic, and Social Effects of Industrial Revolution",
+      "difficulty": "medium",
+      "question": "Which is an example of a social effect of industrialization?",
+      "options": [
+        "The invention of ancient writing",
+        "Rapid urbanization and changes in labor conditions",
+        "The decline of all cities",
+        "The end of all migration"
+      ],
+      "correctAnswer": "Rapid urbanization and changes in labor conditions",
+      "explanation": "Industrialization transformed work and contributed to rapid urban growth and changing social relations.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-09-003",
+      "grade": 9,
+      "subject": "History",
+      "topic": "French Revolution",
+      "difficulty": "medium",
+      "question": "Which condition best helps explain why a political revolution can emerge?",
+      "options": [
+        "Political change happens without social conditions",
+        "A revolution requires only a new invention",
+        "Grievances, unequal institutions, economic pressures, and political conflict can combine",
+        "Revolutions are always caused by one person"
+      ],
+      "correctAnswer": "Grievances, unequal institutions, economic pressures, and political conflict can combine",
+      "explanation": "Revolutions usually emerge from interacting political, social, and economic pressures.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-09-004",
+      "grade": 9,
+      "subject": "History",
+      "topic": "French Revolution",
+      "difficulty": "hard",
+      "question": "Why is the French Revolution historically significant beyond France itself?",
+      "options": [
+        "It ended before ideas spread",
+        "It affected only one village",
+        "It had no political consequences",
+        "It influenced ideas about political authority, citizenship, and social order"
+      ],
+      "correctAnswer": "It influenced ideas about political authority, citizenship, and social order",
+      "explanation": "The Revolution had broader consequences for political thought and institutions.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-09-005",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Napoleonic Era",
+      "difficulty": "easy",
+      "question": "A ruler uses military victories to expand political influence across Europe. Which aspect of the Napoleonic Era does this illustrate?",
+      "options": [
+        "Military expansion and reorganization of political power",
+        "The rise of ancient agriculture",
+        "The spread of prehistory",
+        "Industrial machine design only"
+      ],
+      "correctAnswer": "Military expansion and reorganization of political power",
+      "explanation": "Napoleon’s era involved major military campaigns and changes in political control across Europe.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-09-006",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Napoleonic Era",
+      "difficulty": "hard",
+      "question": "Why did Napoleon’s expansion have consequences beyond battlefield victories?",
+      "options": [
+        "Wars never affect politics",
+        "It altered political boundaries, institutions, and relationships among European states",
+        "Political institutions remained unchanged",
+        "Trade completely stopped everywhere"
+      ],
+      "correctAnswer": "It altered political boundaries, institutions, and relationships among European states",
+      "explanation": "Military expansion can produce wider political and institutional consequences.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-09-007",
+      "grade": 9,
+      "subject": "History",
+      "topic": "American War of Independence",
+      "difficulty": "medium",
+      "question": "Which idea is central to understanding the political significance of the American War of Independence?",
+      "options": [
+        "Rejection of all representative institutions",
+        "Return to feudal obligations",
+        "Challenges to external rule and debates about political authority",
+        "The end of Atlantic trade"
+      ],
+      "correctAnswer": "Challenges to external rule and debates about political authority",
+      "explanation": "The struggle centered on political authority, governance, and independence.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-09-008",
+      "grade": 9,
+      "subject": "History",
+      "topic": "American War of Independence",
+      "difficulty": "hard",
+      "question": "A colonial population resists authority from a distant government. Which historical question is most useful?",
+      "options": [
+        "Why was agriculture impossible?",
+        "What weather pattern caused every battle?",
+        "Why did all colonies agree on everything?",
+        "What political, economic, and ideological grievances encouraged resistance?"
+      ],
+      "correctAnswer": "What political, economic, and ideological grievances encouraged resistance?",
+      "explanation": "Understanding the causes requires examining multiple interacting grievances and ideas.",
+      "xp": 20
+    },
+    {
+      "id": "HIST-09-09-009",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Congress of Vienna",
+      "difficulty": "easy",
+      "question": "What was a major purpose of the Congress of Vienna?",
+      "options": [
+        "To reorganize European political relations after the Napoleonic Wars",
+        "To begin the Industrial Revolution",
+        "To create ancient Greek city-states",
+        "To abolish all monarchies"
+      ],
+      "correctAnswer": "To reorganize European political relations after the Napoleonic Wars",
+      "explanation": "The Congress sought a new European political order after the upheavals of the Napoleonic period.",
+      "xp": 10
+    },
+    {
+      "id": "HIST-09-09-010",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Congress of Vienna",
+      "difficulty": "medium",
+      "question": "Why is the Congress of Vienna best understood as part of a broader process rather than an isolated meeting?",
+      "options": [
+        "It had no relation to the Napoleonic Wars",
+        "Its decisions were connected to the attempt to stabilize Europe after prolonged warfare",
+        "It concerned only industrial technology",
+        "It occurred before the French Revolution"
+      ],
+      "correctAnswer": "Its decisions were connected to the attempt to stabilize Europe after prolonged warfare",
+      "explanation": "The Congress responded to the political disruption created by the revolutionary and Napoleonic era.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-05-015",
+      "grade": 9,
+      "subject": "History",
+      "topic": "States in North Africa",
+      "difficulty": "medium",
+      "question": "A historian finds evidence that a North African state used taxation on long-distance trade. What does this most directly indicate?",
+      "options": [
+        "No political administration",
+        "Complete absence of trade",
+        "Organized authority over economic activity",
+        "Only religious authority"
+      ],
+      "correctAnswer": "Organized authority over economic activity",
+      "explanation": "Taxation of trade indicates that political institutions could regulate and benefit from economic activity.",
+      "xp": 15
+    },
+    {
+      "id": "HIST-09-06-011",
+      "grade": 9,
+      "subject": "History",
+      "topic": "Slavery",
+      "difficulty": "hard",
+      "question": "When studying the effects of slavery on African societies, why should population and economic consequences be considered together?",
+      "options": [
+        "Economic systems cannot affect population",
+        "Population and economy were unrelated",
+        "Only European societies changed",
+        "Large-scale forced movement could affect both communities and patterns of production"
+      ],
+      "correctAnswer": "Large-scale forced movement could affect both communities and patterns of production",
+      "explanation": "Slavery could reshape communities, labor, population patterns, and economic relationships, so its effects need to be examined together.",
+      "xp": 20
+    }
+  ]
+}

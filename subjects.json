@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "subjects": [
+    {
+      "id": "biology",
+      "name": "Biology",
+      "grades": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "questionBankPattern": "biology/biology_grade{grade}.json"
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "grades": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "questionBankPattern": "chemistry/chemistry_grade{grade}.json"
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "grades": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "questionBankPattern": "physics/physics_grade{grade}.json"
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "grades": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "questionBankPattern": "mathematics/mathematics_grade{grade}.json"
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "grades": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "questionBankPattern": "economics/economics_grade{grade}.json"
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "grades": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "questionBankPattern": "geography/geography_grade{grade}.json"
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "grades": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "questionBankPattern": "history/history_grade{grade}.json"
+    },
+    {
+      "id": "citizenship",
+      "name": "Citizenship",
+      "grades": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "questionBankPattern": "citizenship/citizenship_grade{grade}.json"
+    }
+  ]
+}

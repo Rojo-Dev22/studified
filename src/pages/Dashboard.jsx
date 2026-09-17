@@ -9,7 +9,7 @@ import AnimatedBackground from '../components/ui/AnimatedBackground';
 import CoinWallet from '../components/ui/CoinWallet';
 import { getLevelFromXP, getTitleFromLevel, formatNumber } from '../lib/gameUtils';
 import { getTowerStreak } from '@/components/minigames/gameShared';
-import ActiveQuests from '../components/dashboard/ActiveQuests';
+import QuizMeWidget from '../components/dashboard/QuizMeWidget';
 import StatsGrid from '../components/dashboard/StatsGrid';
 import RecentActivity from '../components/dashboard/RecentActivity';
 
@@ -105,7 +105,7 @@ export default function Dashboard() {
 
       {/* Active Tasks & Activity */}
       <motion.div variants={itemVariants} className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        <ActiveQuests />
+        <QuizMeWidget />
         <RecentActivity />
       </motion.div>
       </motion.div>

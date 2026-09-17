@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "sourceOfTruth": "question bank JSON files",
+  "grades": {
+    "9": {
+      "biology": {
+        "file": "biology/biology_grade9.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "chemistry": {
+        "file": "chemistry/chemistry_grade9.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "physics": {
+        "file": "physics/physics_grade9.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "mathematics": {
+        "file": "mathematics/mathematics_grade9.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "economics": {
+        "file": "economics/economics_grade9.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "geography": {
+        "file": "geography/geography_grade9.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "history": {
+        "file": "history/history_grade9.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "citizenship": {
+        "file": "citizenship/citizenship_grade9.json",
+        "totalQuestions": 0,
+        "topics": {}
+      }
+    },
+    "10": {
+      "biology": {
+        "file": "biology/biology_grade10.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "chemistry": {
+        "file": "chemistry/chemistry_grade10.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "physics": {
+        "file": "physics/physics_grade10.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "mathematics": {
+        "file": "mathematics/mathematics_grade10.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "economics": {
+        "file": "economics/economics_grade10.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "geography": {
+        "file": "geography/geography_grade10.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "history": {
+        "file": "history/history_grade10.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "citizenship": {
+        "file": "citizenship/citizenship_grade10.json",
+        "totalQuestions": 0,
+        "topics": {}
+      }
+    },
+    "11": {
+      "biology": {
+        "file": "biology/biology_grade11.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "chemistry": {
+        "file": "chemistry/chemistry_grade11.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "physics": {
+        "file": "physics/physics_grade11.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "mathematics": {
+        "file": "mathematics/mathematics_grade11.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "economics": {
+        "file": "economics/economics_grade11.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "geography": {
+        "file": "geography/geography_grade11.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "history": {
+        "file": "history/history_grade11.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "citizenship": {
+        "file": "citizenship/citizenship_grade11.json",
+        "totalQuestions": 0,
+        "topics": {}
+      }
+    },
+    "12": {
+      "biology": {
+        "file": "biology/biology_grade12.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "chemistry": {
+        "file": "chemistry/chemistry_grade12.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "physics": {
+        "file": "physics/physics_grade12.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "mathematics": {
+        "file": "mathematics/mathematics_grade12.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "economics": {
+        "file": "economics/economics_grade12.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "geography": {
+        "file": "geography/geography_grade12.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "history": {
+        "file": "history/history_grade12.json",
+        "totalQuestions": 0,
+        "topics": {}
+      },
+      "citizenship": {
+        "file": "citizenship/citizenship_grade12.json",
+        "totalQuestions": 0,
+        "topics": {}
+      }
+    }
+  }
+}
